@@ -253,6 +253,14 @@ export const myData = {
 
           <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472479605_931530099131377_129277406917368155_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=WIWT6obSThAQ7kNvgFLcKY0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHfJ1hIRyJx4t3_x_JPzMwtXvSlnEKQBlkJynv7oeJ08g&oe=67BD9443">
           
+          <div>
+            <p>
+              الطريقة الجديدة بتسمحلي اسوي سكريبت يصير يعمل تحديث لحاله بعد هيك :)) الكسل بيعمل هيك هعهع
+            </p>
+          </div>
+
+          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474355084_2354022718280983_2327790046152618455_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=kb6v9XZd4GQQ7kNvgEMaWUE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEB44gBKy65G0iUNoieLF6qEHyGDll3RbC-xEDnSs8kcw&oe=67BD971A">
+          
           </div>
         </div>
       `,
