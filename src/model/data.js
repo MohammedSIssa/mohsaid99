@@ -250,7 +250,9 @@ export const myData = {
               الطريقة الجديدة للتحديث، صرت بس مرة وحدة اسوي تحديث بطريقة أسهل
             </p>
           </div>
+
           <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472479605_931530099131377_129277406917368155_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=WIWT6obSThAQ7kNvgFLcKY0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHfJ1hIRyJx4t3_x_JPzMwtXvSlnEKQBlkJynv7oeJ08g&oe=67BD9443">
+          
           </div>
         </div>
       `,
