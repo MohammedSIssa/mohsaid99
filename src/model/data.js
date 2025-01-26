@@ -221,6 +221,19 @@ export const myData = {
           <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474063234_583727251203817_4913141970604426519_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IheNKSaOLVsQ7kNvgHaRUoB&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFE-sjbDWrj_dGYLu1GkUU42nJ4rBdIPIrezyg3ko-Cwg&oe=67BBFAD0">
 
           <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475038210_1951275948614506_4459232782963396948_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=G0i671-UBx8Q7kNvgGLryay&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHQDs-vq6lxUepc7VALL80751_HbNgQO9YFvO0ebJVGSg&oe=67BBF1F3">
+          
+          <div>
+            <p>
+              عملت تحديث على الجيت هب تعت الموقع هاد وربطتها بالكود تاع التطوير
+              عملت فرع خاص للموقع الجاهز بعد كل تحديث وفرع خاص للكود اللي بيطور الموقع
+              عموما هيك بيكون أسهل للتحديث والتطوير ولقدام بيريحني اكتر
+            </p>
+          </div>
+
+          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474177234_1674726356792840_8521125464609773872_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=UwyzNODTw5sQ7kNvgEkse8t&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGySwaooYJPfhAEvKIN9GCa3JIg8l2je99v_UWb9aYf8A&oe=67BD6F40">
+
+          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474923639_1320811169059834_2756497527334045870_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=QAP2TUc_QIUQ7kNvgGUUiYH&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGkyzjKMasQcl4QRMt8pP_-C1oLWx_W6ecelXYtTncJHA&oe=67BD7EF0">
+          
           </div>
         </div>
       `,
