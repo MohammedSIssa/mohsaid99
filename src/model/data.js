@@ -221,7 +221,7 @@ export const myData = {
           <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474063234_583727251203817_4913141970604426519_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IheNKSaOLVsQ7kNvgHaRUoB&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFE-sjbDWrj_dGYLu1GkUU42nJ4rBdIPIrezyg3ko-Cwg&oe=67BBFAD0">
 
           <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475038210_1951275948614506_4459232782963396948_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=G0i671-UBx8Q7kNvgGLryay&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHQDs-vq6lxUepc7VALL80751_HbNgQO9YFvO0ebJVGSg&oe=67BBF1F3">
-          
+
           <div>
             <p>
               عملت تحديث على الجيت هب تعت الموقع هاد وربطتها بالكود تاع التطوير
@@ -236,6 +236,21 @@ export const myData = {
 
           <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474923639_1320811169059834_2756497527334045870_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=QAP2TUc_QIUQ7kNvgGUUiYH&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGkyzjKMasQcl4QRMt8pP_-C1oLWx_W6ecelXYtTncJHA&oe=67BD7EF0">
           
+          <div>
+            <p>
+            الطريقة القديمة لتحديث الموقع كل مرة
+            </p>
+          </div>
+
+
+          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474771748_900036532201265_841289598436129373_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=aU49hW5NoI0Q7kNvgHsN5Jr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGNIWU5YMBp8jCbtCqmNPyzQeFwBxRHpM6YXiEvXeJ4OQ&oe=67BD9B03">
+
+          <div>
+            <p>
+              الطريقة الجديدة للتحديث، صرت بس مرة وحدة اسوي تحديث
+            </p>
+          </div>
+          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472479605_931530099131377_129277406917368155_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=WIWT6obSThAQ7kNvgFLcKY0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHfJ1hIRyJx4t3_x_JPzMwtXvSlnEKQBlkJynv7oeJ08g&oe=67BD9443">
           </div>
         </div>
       `,
