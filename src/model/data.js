@@ -293,14 +293,14 @@ export const myData = {
           <p>Read 10 Books</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="10" value="0"></div>
+            <div class="progress-bar" goal="10" value="1"></div>
           </div>
         </div>
         <div class="goal">
           <p>Duolingo 500 Days Streak</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="500" value="152"></div>
+            <div class="progress-bar" goal="500" value="157"></div>
           </div>
         </div>
       `,
