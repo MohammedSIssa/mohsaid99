@@ -33,7 +33,7 @@ export function drawGoalsBar(bars) {
 
     let barWidth = Math.round((barValue * 100) / barMax);
     progressValues[i].textContent = `${barWidth}%`
-    progressValues[i].style.left = barWidth > 10 ? `${barWidth - 6}%` : `${barWidth}%`
+    progressValues[i].style.left = barWidth > 6 ? `${barWidth - 6}%` : `${barWidth}%`
     bar.style.width = `${barWidth}%`;
   });
 }
