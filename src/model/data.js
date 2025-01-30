@@ -277,7 +277,7 @@ export const myData = {
             <div class="quote-box">
               <p class="post-quote">
                 <q>
-                  النجاح ليس صدفة، بل نتيجة عمل
+                  لا تتردد
                 </q>
               </p>
             </div>
