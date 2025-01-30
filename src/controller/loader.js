@@ -26,14 +26,14 @@ export function load(data) {
   }
 }
 export function drawGoalsBar(bars) {
-  let progressValues = document.querySelectorAll('.progress-value')
+  let progressValues = document.querySelectorAll(".progress-value");
   bars.forEach((bar, i) => {
     let barMax = +bar.getAttribute("goal");
     let barValue = +bar.getAttribute("value");
-
     let barWidth = Math.round((barValue * 100) / barMax);
-    progressValues[i].textContent = `${barWidth}%`
-    progressValues[i].style.left = barWidth > 6 ? `${barWidth - 6}%` : `${barWidth}%`
+    progressValues[i].textContent = `${barWidth}%`;
+    progressValues[i].style.left =
+      barWidth >= 6 ? `${barWidth - 6}%` : `${barWidth}%`;
     bar.style.width = `${barWidth}%`;
   });
 }
