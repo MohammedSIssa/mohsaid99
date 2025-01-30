@@ -265,6 +265,56 @@ export const myData = {
         </div>
       `,
     },
+    {
+      id: 5,
+      durationAr: "من 28 يناير إلى 3 مارس",
+      overallAr: "الأسبوع الحالي",
+      year: "2025",
+      "content-ar": `
+        <div class="content">
+          <div class="text-box">
+            
+            <div class="quote-box">
+              <p class="post-quote">
+                <q>
+                  النجاح ليس صدفة، بل نتيجة عمل
+                </q>
+              </p>
+            </div>
+
+            <div>
+              <p class="count">
+                الأسبوع رقم 5
+              </p>
+            </div>
+
+            <div>
+              <p>
+                عملت مشروع على موضوع اللينكد ليست، الموضوع اخدته بالجامعة ومن زمان فاهمه عشان هيك عملته بوقت سريع
+              </p>
+            </div>
+
+            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475738577_2640142949509400_7726497277794726485_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=dCnKtuMcAyAQ7kNvgEy1y3p&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEbCyRHX6ys1ZllM2Xm974CJ5XFjIdBcqTfSSOjlR_hGg&oe=67C2DD73">
+
+            <img class="small-img" src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/475444685_1589260115047779_179092329602943634_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=AIQxtc44fTwQ7kNvgFkEdOF&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gExiWXmhvAotm83EmP8kJ4a-dzhQczdTx24v3S5ZOIMjQ&oe=67C2F566">
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474971775_1120093293209453_1204208754708328375_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=JQrKvNa4OBAQ7kNvgF3kBAp&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG6GbfVJIrFY6N4KJH9zhPz-xdlYVsoQSqkc4TM0kJtfQ&oe=67C2D8CF">
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474749504_1172393884511507_1568729987438083929_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LgZwejVZiCYQ7kNvgFai_CP&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEPTVcYH1Ar-y4nRCm0nnyluBuX4rFwNRIT7il34H4Lvw&oe=67C2D576">
+
+            <div>
+              <p>
+                بعد هيك حليت كمان سؤال من بروجكت اولر، قعد معي 3 ساعات بالحل لكن بالاخر لقيت الحل الصح
+              </p>
+            </div>
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472321571_951310346709449_4034236862477589989_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EeM8R5yRCwkQ7kNvgEgk84S&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG_Ib4KCWXs5MQWiOjD91W1M3xCXS7wVUTRYh_y5PB3zQ&oe=67C2F3D9">
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474846430_1665333664195128_3862952651409731924_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=z2Bj6sKpyAIQ7kNvgHJfyRd&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG98seitIVvYwpjek8OAuBh5AZ1SVHKZzJ6fp_dYSPtkw&oe=67C2C807">
+          </div>
+        </div>
+      `,
+    },
   ],
   blogs: [],
   goals: [
@@ -286,7 +336,7 @@ export const myData = {
           <p>Solve 50 Project Euler Problems</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="50" value="16"></div>
+            <div class="progress-bar" goal="50" value="17"></div>
           </div>
         </div>
         <div class="goal">
