@@ -267,7 +267,7 @@ export const myData = {
     },
     {
       id: 5,
-      durationAr: "من 29 يناير إلى 3 فبراير",
+      durationAr: "من 29 يناير إلى 4 فبراير",
       overallAr: "الأسبوع الحالي",
       year: "2025",
       "content-ar": `
