@@ -337,7 +337,7 @@ export const myData = {
           <p>Become a Full-Stack Web Developer</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="600" value="172"></div>
+            <div class="progress-bar" goal="600" value="174"></div>
           </div>
         </div>
         <div class="goal">
