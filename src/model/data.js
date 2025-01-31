@@ -277,7 +277,7 @@ export const myData = {
             <div class="quote-box">
               <p class="post-quote">
                 <q>
-                  لا تتردد
+                    سر الحياة هو أن تبذل في سبيل غاية
                 </q>
               </p>
             </div>
