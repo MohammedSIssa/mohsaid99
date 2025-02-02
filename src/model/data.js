@@ -369,7 +369,7 @@ export const myData = {
           <p>Solve 50 Project Euler Problems</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="50" value="17"></div>
+            <div class="progress-bar" goal="50" value="19"></div>
           </div>
         </div>
         <div class="goal">
