@@ -319,6 +319,31 @@ export const myData = {
             </div>
             <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474879084_620635786996365_6776726646353991806_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EJLwruqNLv4Q7kNvgGAiK5e&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEFNcyX20BdoIix9wP0RLp1y3OiUNimmlNuilKkplB-dA&oe=67C44A5C">
 
+            <div>
+              <p>
+                رجعت أحل أسئلة وحليت السؤال 18 و19
+              </p>
+            </div>
+
+            <div>
+              <p>
+                سؤال المثلث
+              </p>
+            </div>
+            
+            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474863896_4041063419464484_4785460043116615011_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=VK43EYhTebgQ7kNvgHXCmps&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG2YJ76dPEbgyrgwOKzKVhsH9EfZlDRrZ-sI2_GwhlA-A&oe=67C6E650">
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475834331_1007252274549438_1087318500629231050_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9ZNELNeOt_YQ7kNvgHTwGjS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFsF_rJ6NKpPP5fQCGAofybimLL3sXPfisImNtXl5Qf_w&oe=67C6BD33">
+            
+            <div>
+              <p>
+                سؤال عد أيام الأحد اللي كانت بأول يوم بالشهر من سنة 1901 لسنة 2000
+              </p>
+            </div>
+            
+            <img src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/475510754_1355403605454726_5093542029576569861_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=t0wxfb1-0xkQ7kNvgFIWDjB&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gFAZqyf6w6w6sTOuyT7Ijo3Y2kisIdYxYXMtn99fF6lfg&oe=67C6E856">
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474971213_8538434332924135_8206121960522336755_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Zdq3Yjy0Tc0Q7kNvgHf7oo5&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHOCbFbSYzPj_KK6rR2Lks1EZda74ChMmrQImn1ku5DqA&oe=67C6E4A6">
           </div>
         </div>
       `,
