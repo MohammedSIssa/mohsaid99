@@ -268,7 +268,7 @@ export const myData = {
     {
       id: 5,
       durationAr: "من 29 يناير إلى 4 فبراير",
-      overallAr: "مشروع برمجة، حل أسئلة",
+      overallAr: "حل كمان اسئلة، مشاريع برمجة خفيفة",
       year: "2025",
       "content-ar": `
         <div class="content">
