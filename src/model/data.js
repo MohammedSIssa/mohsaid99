@@ -268,7 +268,7 @@ export const myData = {
     {
       id: 5,
       durationAr: "من 29 يناير إلى 4 فبراير",
-      overallAr: "الأسبوع الحالي",
+      overallAr: "مشروع برمجة، حل أسئلة",
       year: "2025",
       "content-ar": `
         <div class="content">
@@ -304,30 +304,27 @@ export const myData = {
 
             <div>
               <p>
-                بعد هيك حليت كمان سؤال من بروجكت اولر، قعد معي 3 ساعات بالحل لكن بالاخر لقيت الحل الصح
-              </p>
-            </div>
-
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472321571_951310346709449_4034236862477589989_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EeM8R5yRCwkQ7kNvgEgk84S&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG_Ib4KCWXs5MQWiOjD91W1M3xCXS7wVUTRYh_y5PB3zQ&oe=67C2F3D9">
-
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475549502_3067438160062356_4871348150315234470_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=y2N-HTrRZ98Q7kNvgHn07Pd&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGKkfcwkoxThiOvT5ePEDUHCJCNzkdeJ_xxrFQnBfv-nA&oe=67C4088F">
-          
-            <div>
-              <p>
                 بعدين تعلمت كيف اسوي اختبارات على الكود، الاختبارات بتصير اوتوماتيك عشان اسرع، الاختبارات للكود بتخليني دايما متاكد انه اي تغيير بيصير مش هيعمل مشاكل
               </p>
             </div>
+
             <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474879084_620635786996365_6776726646353991806_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EJLwruqNLv4Q7kNvgGAiK5e&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEFNcyX20BdoIix9wP0RLp1y3OiUNimmlNuilKkplB-dA&oe=67C44A5C">
 
             <div>
               <p>
-                رجعت أحل أسئلة وحليت السؤال 18 و19
+                حليت الأسئلة رقم 17 18 19 20 من بروجت اولر
               </p>
             </div>
 
+            <div><p>17</p></div>
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472321571_951310346709449_4034236862477589989_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EeM8R5yRCwkQ7kNvgEgk84S&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG_Ib4KCWXs5MQWiOjD91W1M3xCXS7wVUTRYh_y5PB3zQ&oe=67C2F3D9">
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475549502_3067438160062356_4871348150315234470_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=y2N-HTrRZ98Q7kNvgHn07Pd&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGKkfcwkoxThiOvT5ePEDUHCJCNzkdeJ_xxrFQnBfv-nA&oe=67C4088F">
+
             <div>
               <p>
-                سؤال المثلث
+                18
               </p>
             </div>
             
@@ -337,13 +334,24 @@ export const myData = {
             
             <div>
               <p>
-                سؤال عد أيام الأحد اللي كانت بأول يوم بالشهر من سنة 1901 لسنة 2000
+                19
               </p>
             </div>
             
             <img src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/475510754_1355403605454726_5093542029576569861_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=t0wxfb1-0xkQ7kNvgFIWDjB&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gFAZqyf6w6w6sTOuyT7Ijo3Y2kisIdYxYXMtn99fF6lfg&oe=67C6E856">
 
             <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474971213_8538434332924135_8206121960522336755_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Zdq3Yjy0Tc0Q7kNvgHf7oo5&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHOCbFbSYzPj_KK6rR2Lks1EZda74ChMmrQImn1ku5DqA&oe=67C6E4A6">
+          
+            <div>
+              <p>
+                20
+              </p>
+            </div>
+
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475403879_1146500663593196_7318253083240476571_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=4j7R4JbWgecQ7kNvgFhZg88&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFr19tuEj0uPHThVMct06aeY8ijL_AWsm11gc1TaKnDSA&oe=67C95FD8">
+
+            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475818046_4023093704685674_8378444377602333974_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=vwIAeA9tsagQ7kNvgGRg8vY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGrfIVzo4p_BvBhEuV2b2vymNXZVGx-NMbfLKzHiRnC9w&oe=67C93645">
+
           </div>
         </div>
       `,
@@ -369,7 +377,7 @@ export const myData = {
           <p>Solve 50 Project Euler Problems</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="50" value="19"></div>
+            <div class="progress-bar" goal="50" value="20"></div>
           </div>
         </div>
         <div class="goal">
