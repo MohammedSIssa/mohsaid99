@@ -356,6 +356,26 @@ export const myData = {
         </div>
       `,
     },
+    {
+      id: 6,
+      durationAr: "من 5 فبراير إلى 11 فبراير",
+      overallAr: "الأسبوع الحالي",
+      year: "2025",
+      "content-ar": `
+        <div class="content">
+          <div class="text-box">
+            
+            <div class="quote-box">
+              <p class="post-quote">
+                <q>
+                    الأمر يستحق المحاولة
+                </q>
+              </p>
+            </div>
+          </div>
+        </div>
+      `
+    }
   ],
   blogs: [],
   goals: [
