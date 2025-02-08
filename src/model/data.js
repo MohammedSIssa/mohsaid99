@@ -391,7 +391,7 @@ export const myData = {
           <p>Duolingo 500 Days Streak</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="500" value="163"></div>
+            <div class="progress-bar" goal="500" value="165"></div>
           </div>
         </div>
       `,
