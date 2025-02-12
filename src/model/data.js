@@ -359,7 +359,7 @@ export const myData = {
     {
       id: 6,
       durationAr: "من 5 فبراير إلى 11 فبراير",
-      overallAr: "الأسبوع الحالي",
+      overallAr: "بطاريات، مشروع حساب سريع",
       year: "2025",
       "content-ar": `
         <div class="content">
