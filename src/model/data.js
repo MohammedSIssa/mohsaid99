@@ -375,14 +375,14 @@ export const myData = {
 
             <div>
               <p>
-                بطاريات
+                اتسليت بالشغل على بطاريات ليثيوم كانو عندي من كم سنة وجبتهم معي من غزة
               </p>
             </div>
             <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/476109362_1895309024543512_7132614035407411906_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=--qvUtYtfSkQ7kNvgHr2AQi&_nc_oc=Adj-ucZEv-VY-fslnbo9XFz6qTIz2D38cCezbkeMHPt3YigVcG87yA9qxmJvwXHJQMKsfGKVC1Zifwvpgvh_jGpV&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGPk9da1QsFRcFgYtr31XGvpGkfidT3-TeUdBdcmk1OTA&oe=67D3F43B">
             
             <div>
               <p>
-                مشروع عالسريع هيك الفكرة تعته
+                وعملت مشروع حساب، بس لسا مش عارف كيف اطبقه باشي مفيد، لسا لقدام في براسي فكرة بحاول اطبقها منه
               </p>
             </div>
             <img src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/476575379_3399566283528973_8975973926137574907_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Wz4Fhof2GXMQ7kNvgGCHJe3&_nc_oc=AdiEWTelW4_-eGj6nAYuIKQUTbSAdWPKI6gw5cGfytiXGti6Pu84qDdMQ6Q5pqb52Vs&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gFc9PxRL-1_d2NpkChtL_YfPmX-YZMAu4dUi78pwJW9sA&oe=67D3F076">
