@@ -422,10 +422,10 @@ export const myData = {
           </div>
         </div>
         <div class="goal">
-          <p>Duolingo 500 Days Streak</p>
+          <p>Duolingo 400 Days Streak</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="500" value="165"></div>
+            <div class="progress-bar" goal="400" value="170"></div>
           </div>
         </div>
       `,
