@@ -28,14 +28,14 @@ export const myData = {
               </p>
             </div>
             
-            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472952301_1622255235096672_2625751805603823917_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=QZbGSSJ4NiIQ7kNvgHHO2rM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHCYagm4L_LTHRicUepCL5JGiH0RksiR_8xMun4K7Amyg&oe=67B031D5">
+            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473696435_626985770023270_7351703151279511743_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=u2U89eVZ8M0Q7kNvgEhdjWc&_nc_oc=AdhTr4V4ESe5gXZkE2CosedNEp-gfk5ja7RyUnTyTvJJE3h_BeGgHyCWM6s2PFZPciM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gF2TUzH580U9Xkfdeb9WzqG1LeJ3Xb-3zbTDoc4_T8XvA&oe=67D968B6">
             
             <div>
               <p>
                 حليت 16 سؤال، من أصل 50 سؤال بدي أحلهم بهاد السنة
               </p>
             </div>
-            <img class="small-img" alt="project eular pic" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473064594_1072389231308335_1461982118862557067_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Tj2DvdF893QQ7kNvgEjI3Td&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGC9da_Labfg6QQMPCjLKZGdciU9qrJ5eWLuIgM54ehhQ&oe=67B04DE3">
+            <img class="small-img" alt="project eular pic" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/472952301_1622255235096672_2625751805603823917_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_CPxUKw5mG0Q7kNvgHUXlFV&_nc_oc=AdgYp1kE2IfpQ0cQLH96gTYzShMySeID4zyREmNr_YzsLxtCJXV0Az6ImPTn4QAY6c8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gFiSL8RhxcaMVVgtn68K0RjPR7Ocu87-A7zVLB_QOnP6Q&oe=67D94895">
             
             <div>
               <p>
@@ -75,14 +75,14 @@ export const myData = {
               </p>
             </div>
   
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473185305_1124854055460184_5402093845210325637_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qY8_pr9yNmcQ7kNvgHoIB1b&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHRX_Yqz7aN9-nt94x31s8qsugxDI3Kj4hvYMwwiUUbIA&oe=67ADE4AE">
+            <img src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473453082_1700926707131287_4185262630411760056_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=XRAoQFgvvgYQ7kNvgGJrU93&_nc_oc=AdibdYfJ5vxOQhukPg2gVRAs9G8pR3TOa4fTGSi9MHNPRdzPyiGMYEeb0nGRPrzza0A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gHwlJtQW1LlgByUDVzGJZHgwd-V7bbj7Nw09NfIYbZ7Yg&oe=67D9512A">
             <div>
               <p>
                 الشكل الأولي للموقع
               </p>
             </div>
   
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472719468_1103342567920564_2910878705705666284_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Qk9eFFVN0QoQ7kNvgHYUqZL&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEQULOz_u3XaA_oyMX8RcG-57UQGsk0fbcxO77hZHFmDg&oe=67ADC676">
+            <img src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/472719468_1103342567920564_2910878705705666284_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_dtN3ydvftMQ7kNvgHCH3Xs&_nc_oc=Adgkhx5-cKIF4q2FRVEOCiOAVPl83RfELIHnFRWKOV5JnYUCFr-x1-LFcHa29msszbY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gH70JICkHePola_jEuSppx7I8c06NHKyKk906vMdbQbYg&oe=67D947F6">
             
             <div>
               <p>
@@ -90,13 +90,13 @@ export const myData = {
               </p>
             </div>
   
-            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473649156_576764025254955_5902855516072431880_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Doz5lsOXTyoQ7kNvgH5WXtT&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gE-w72JVBF24NQpaz2GNDrzbs-I5Ut5O53uqfDrDeaFLg&oe=67ADCCEA">
+            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473649156_576764025254955_5902855516072431880_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=HAHUZP8d8v4Q7kNvgHGr9eS&_nc_oc=AdhAXZZYRQr3vbmdiJJW-z7_c74algj4UYZg_tPHPTtC5jVH-HC7m7U9D31_4XmCK58&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gGa0gAUmndw3V8xLwKn39zXUq5W0DNI-LkT_LCmmgqUQA&oe=67D94E6A">
             
             <div>
               <p>
                 الشكل على الشاشات الأكبر هيك
               </p>
-              <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473504323_1268831614398764_5613916280664234189_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ro7IiyvOozEQ7kNvgE6I5Ww&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGDSkqGeFGNfeIOM4tsa1Gp8H2NXKE6qpQ4pGVYgoqUWQ&oe=67ADCDFC">
+              <img src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473504323_1268831614398764_5613916280664234189_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Zzir-wK0XWAQ7kNvgGdldpd&_nc_oc=Adj-7XMlZOmEy9KXmNcPxcLYF4B5wK7rtksspx3wsZojTo-3RGs9aaJg1-09HyJzKgk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gEle01a4droiJZw4CLED92TYhBjvRRVfM_hRHLRGaEWzg&oe=67D94F7C">
             </div>
   
             <div>
@@ -105,7 +105,7 @@ export const myData = {
               </p>
             </div>
             
-            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473098376_1107212037751648_5625160027593154118_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=V8PlobIAZAIQ7kNvgEYf4YB&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHx9uaHR0rZCHXXzUGhM9VdPuCx99fOOiBecrPZbfi9Qg&oe=67AF2818">
+            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473098376_1107212037751648_5625160027593154118_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=uqOOL_aqM1kQ7kNvgEJJo14&_nc_oc=AdjZ1QR_-zsDWNSAu1tIc6le4gm4voTfTO0Gwc1w9ZeVBfbOQ4988HB2mkSu0C3ZYiI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gHtxOV69yttF9FbtyIluq6ehNKbH8D4Jme6bpa6p1WjcQ&oe=67D95818">
           
           </div> <!-- End of text-box div -->
         </div> <!-- End of content div -->
@@ -386,6 +386,27 @@ export const myData = {
               </p>
             </div>
             <img src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/476575379_3399566283528973_8975973926137574907_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Wz4Fhof2GXMQ7kNvgGCHJe3&_nc_oc=AdiEWTelW4_-eGj6nAYuIKQUTbSAdWPKI6gw5cGfytiXGti6Pu84qDdMQ6Q5pqb52Vs&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gFc9PxRL-1_d2NpkChtL_YfPmX-YZMAu4dUi78pwJW9sA&oe=67D3F076">
+          </div>
+        </div>
+      `
+    },
+    {
+      id: 7,
+      durationAr: "من 12 فبراير إلى 18 فبراير",
+      overallAr: "الاسبوع الحالي",
+      year: "2025",
+      "content-ar": `
+        <div class="content">
+          <div class="text-box">
+            
+            <div class="quote-box">
+              <p class="post-quote">
+                <q>
+                    مياه النهر لا تكف عن الجريان
+                </q>
+              </p>
+            </div>
+
           </div>
         </div>
       `
