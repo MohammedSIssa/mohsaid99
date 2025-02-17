@@ -393,7 +393,7 @@ export const myData = {
     {
       id: 7,
       durationAr: "من 12 فبراير إلى 18 فبراير",
-      overallAr: "الاسبوع الحالي",
+      overallAr: "Jest",
       year: "2025",
       "content-ar": `
         <div class="content">
