@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: row-reverse;
   }
+
+  * {
+    border: 1px dashed red;
+  }
   .btn {
     display: flex;
     align-items: center;
@@ -78,6 +82,7 @@
   }
   #root .content .text-box img{
     width: 100%;
+    max-width: 1000px;
   }
   #root .content .text-box img.small-img {
     width: min(80%, 550px);
