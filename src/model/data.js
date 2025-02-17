@@ -408,7 +408,7 @@ export const myData = {
             </div>
 
             <div>
-              <p>Learing more about testing javascript using jest</p>
+              <p>Learning more about testing code javascript using jest, unit testing, mocking, and more</p>
             </div>
             <img src="https://i.imgur.com/IJbvdgS.png">
 
