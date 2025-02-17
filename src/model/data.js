@@ -407,6 +407,11 @@ export const myData = {
               </p>
             </div>
 
+            <div>
+              <p>Learing more about testing javascript using jest</p>
+            </div>
+            <img src="https://i.imgur.com/IJbvdgS.png">
+
           </div>
         </div>
       `
