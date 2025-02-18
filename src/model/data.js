@@ -75,7 +75,7 @@ export const myData = {
               </p>
             </div>
   
-            <img src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473453082_1700926707131287_4185262630411760056_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=XRAoQFgvvgYQ7kNvgGJrU93&_nc_oc=AdibdYfJ5vxOQhukPg2gVRAs9G8pR3TOa4fTGSi9MHNPRdzPyiGMYEeb0nGRPrzza0A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gHwlJtQW1LlgByUDVzGJZHgwd-V7bbj7Nw09NfIYbZ7Yg&oe=67D9512A">
+            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473453082_1700926707131287_4185262630411760056_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=XRAoQFgvvgYQ7kNvgGJrU93&_nc_oc=AdibdYfJ5vxOQhukPg2gVRAs9G8pR3TOa4fTGSi9MHNPRdzPyiGMYEeb0nGRPrzza0A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gHwlJtQW1LlgByUDVzGJZHgwd-V7bbj7Nw09NfIYbZ7Yg&oe=67D9512A">
             <div>
               <p>
                 الشكل الأولي للموقع
