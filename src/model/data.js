@@ -1,7 +1,9 @@
+let ID = 1
+
 export const myData = {
   weeks: [
     {
-      id: 1,
+      id: ID++,
       durationAr: "من 1 يناير إلى 7 يناير",
       overallAr: "حل أسئلة برمجة",
       year: "2025",
@@ -47,7 +49,7 @@ export const myData = {
       `,
     },
     {
-      id: 2,
+      id: ID++,
       durationAr: "من 8 يناير إلى 14 يناير",
       overallAr: "برمجة هاد الموقع",
       year: "2025",
@@ -112,7 +114,7 @@ export const myData = {
       `,
     },
     {
-      id: 3,
+      id: ID++,
       durationAr: "من 15 يناير إلى 21 يناير",
       overallAr: "todolist برنامج",
       year: "2025",
@@ -183,7 +185,7 @@ export const myData = {
       `,
     },
     {
-      id: 4,
+      id: ID++,
       durationAr: "من 22 يناير إلى 28 يناير",
       overallAr: "تحديث: اضافة زر الاهداف وبرمجتها بالموقع",
       year: "2025",
@@ -266,7 +268,7 @@ export const myData = {
       `,
     },
     {
-      id: 5,
+      id: ID++,
       durationAr: "من 29 يناير إلى 4 فبراير",
       overallAr: "حل كمان اسئلة، مشاريع برمجة خفيفة",
       year: "2025",
@@ -357,7 +359,7 @@ export const myData = {
       `,
     },
     {
-      id: 6,
+      id: ID++,
       durationAr: "من 5 فبراير إلى 11 فبراير",
       overallAr: "بطاريات، مشروع حساب سريع",
       year: "2025",
@@ -391,9 +393,9 @@ export const myData = {
       `
     },
     {
-      id: 7,
+      id: ID++,
       durationAr: "من 12 فبراير إلى 18 فبراير",
-      overallAr: "Jest",
+      overallAr: "مشوار غزة",
       year: "2025",
       "content-ar": `
         <div class="content">
@@ -401,26 +403,252 @@ export const myData = {
             <div class="quote-box">
               <p class="post-quote">
                 <q>
-                    Rome Wasn't Built in a Day
+                    مياه النهر لا تتوقف عن الجريان
                 </q>
               </p>
             </div>
           
               <div>
                 <p>
-                  Learning about Jest, a testing tool that works on javascript code. and about Mocks, and more..
+                  مشوار غزة
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/IJbvdgS.png">
+              <div>
+                <p>
+                  بداية التوثيق، الساعة اربعة وعشرة، من شرق النصيرات، شارع صلاح الدين
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/cU4WuBP.png" class="small-img">
+                
+              <img src="https://i.imgur.com/hp5KLw8.png" class="">
                 
               <div>
                 <p>
-                  Then I made a script that generates HTML for each week. Makes it easier for me to add new events in each week :)
+                  مشينا لحد ما وصلنا الوادي، طابور السيارات واصل من هناك لحد نتساريم
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/onNM5Ns.png" class="small-img">
+                
+              <div>
+                <p>
+                  قررنا هنمشي، الوقت المتوقع للوصول لحد شقة ايمان اختي هو ساعتين حسب البرنامج مهو كاتب
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/Nxm5hpM.png" class="small-img">
+                
+              <div>
+                <p>
+                  كنا متحيرين بالأول، هل نمشي مع طريق السيارات ولا نضل ماشيين عدل على شارع صلاح الدين، بالاخر قررنا بنضل ماشيين عدل
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  كان على التطبيق عندي مبينها أحمر عشان هيك كنا مترددين
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/OfVO4kH.png" class="small-img">
+                
+              <img src="https://i.imgur.com/zDMNXM9.png" class="small-img">
+                
+              <img src="https://i.imgur.com/mpQjhhX.png" class="small-img">
+                
+              <img src="https://i.imgur.com/GTFiOTt.png" class="small-img">
+                
+              <img src="https://i.imgur.com/UpxUyZv.png" class="small-img">
+                
+              <div>
+                <p>
+                  دخلنا بالمنطقة الحمرة، ضلينا ماشيين ولا حدا الو عندنا، الطريق كان مدمر وكله رمل في رمل ما في نتفة اسفلت بالطريق
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  هي صور واحنابموازاة الممر، مطرح تفتيش السيارات قبل الدخول للشمال
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/4fyrGi8.png" class="">
+                
+              <img src="https://i.imgur.com/Ns50vOm.png" class="">
+                
+              <div>
+                <p>
+                  ضل للطريق مسافة ساعة ونص مشي
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/T9t96QM.png" class="small-img">
+                
+              <div>
+                <p>
+                  الشمس قربت تغرب
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/qpa1S8B.png" class="">
+                
+              <div>
+                <p>
+                  طلعنا من المنطقة الحمرة
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  ضايل ساعة مشي للوصول
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/1fbtNdd.png" class="small-img">
+                
+              <div>
+                <p>
+                  وصلنا دوار شارع رقم 10، الزيتون
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  اخدنا بريك بسيط هناك، بعديها أذن المغرب
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/v40itB7.png" class="">
+                
+              <img src="https://i.imgur.com/vwglhhw.jpeg" class="small-img">
+                
+              <div>
+                <p>
+                  دخلنا الزيتون، وبطريقنا للساحة، ومن هناك للجندي
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/MhMz09U.png" class="">
+                
+              <img src="https://i.imgur.com/eZryNnb.png" class="">
+                
+              <img src="https://i.imgur.com/sBkaojm.png" class="">
+                
+              <img src="https://i.imgur.com/P61KpTW.png" class="">
+                
+              <img src="https://i.imgur.com/5ggZlFa.png" class="small-img">
+                
+              <div>
+                <p>
+                  وصلنا الساحة، لقينا كاظم فاتح والحياة منتعشة بالمنطقة
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  مش ضايل غير نص ساعة مشي عشان نوصل الشقة
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/WOUuHyc.png" class="">
+                
+              <img src="https://i.imgur.com/owuyMsG.png" class="small-img">
+                
+              <div>
+                <p>
+                  ميلنا على محل بلالين، صورت كم صورة لحجات عجبوني
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/HpdvAER.png" class="small-img">
+                
+              <img src="https://i.imgur.com/a9udB3Y.png" class="small-img">
+                
+              <img src="https://i.imgur.com/SNedkgi.png" class="small-img">
+                
+              <img src="https://i.imgur.com/vZrwnPu.png" class="small-img">
+                
+              <img src="https://i.imgur.com/MaLpeXA.png" class="small-img">
+                
+              <div>
+                <p>
+                  وصلنا الشقة واخيرااا
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/Nr3qGpU.png" class="">
+                
+              <img src="https://i.imgur.com/6vRHPOq.png" class="">
+                
+              <img src="https://i.imgur.com/PpH01LA.png" class="">
+                
+              <div>
+                <p>
+                  وصلنا عال7 العشا، اكلنا لقمة وارتحنا الليلة
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  لما صحينا افطرنا وبلشنا شغل بالشقة، رتبناها كلها وخلصنا منها العصر
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  بعد هيك روحنا على الدير
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  صور من مشوار الرواح، عن طريق شارع الرشيد
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/8ZRyMo7.png" class="">
+                
+              <img src="https://i.imgur.com/fGjfHCK.png" class="">
+                
+              <div>
+                <p>
+                  
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  لحقت تعملت اشي بهالاسبوع
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/IJbvdgS.png" class="">
+                
+              <div>
+                <p>
+                  سويت سكريبت يسهل عليا تنزيل الاسبابيع بهاد الموقع
                 </p>
               </div>
               
               <img src="https://i.imgur.com/LnzchVo.png" class="small-img">
+                
+              <div>
+                <p>
+                  السكريبت هيعمل كل الكود لحاله، انا بس بدخله الكلام ورابط الصور بس
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/fRHY5OE.png" class="small-img">
+                
+              <div>
+                <p>
+                  بعدين باخر يوم بالاسبوع نزلت مشوار غزة
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/NvCQlT9.jpeg" class="small-img">
                 
           </div>
         </div>
@@ -432,7 +660,7 @@ export const myData = {
     {
       id: 1,
       durationAr: "أهداف السنة",
-      overallAr: "تعلم برمجة مواقع فل ستاك، قراءة كتب جديدة",
+      overallAr: "Full-stack Web Dev, Make reading a habit again, stay consistent",
       year: "2025",
       "content-ar": `
         <div class="goals">
