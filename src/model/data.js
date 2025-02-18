@@ -632,7 +632,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/LnzchVo.png" class="small-img">
+              <img src="https://i.imgur.com/S4ZbZT8.png" class="small-img">
                 
               <div>
                 <p>
