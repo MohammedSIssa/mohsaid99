@@ -398,20 +398,30 @@ export const myData = {
       "content-ar": `
         <div class="content">
           <div class="text-box">
-            
             <div class="quote-box">
               <p class="post-quote">
                 <q>
-                    مياه النهر لا تكف عن الجريان
+                    Rome Wasn't Built in a Day
                 </q>
               </p>
             </div>
-
-            <div>
-              <p>Learning more about testing javascript code using jest - unit testing, mocking, and more..</p>
-            </div>
-            <img src="https://i.imgur.com/IJbvdgS.png">
-
+          
+              <div>
+                <p>
+                  Learning about Jest, a testing tool that works on javascript code. and about Mocks, and more..
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/IJbvdgS.png">
+                
+              <div>
+                <p>
+                  Then I made a script that generates HTML for each week. Makes it easier for me to add new events in each week :)
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/LnzchVo.png" class="small-img">
+                
           </div>
         </div>
       `
