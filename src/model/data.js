@@ -642,6 +642,8 @@ export const myData = {
               
               <img src="https://i.imgur.com/fRHY5OE.png" class="small-img">
                 
+              <img src="https://i.imgur.com/AKUl3Rk.png" class="small-img">
+                
               <div>
                 <p>
                   بعدين باخر يوم بالاسبوع نزلت مشوار غزة
