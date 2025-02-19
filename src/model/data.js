@@ -667,6 +667,59 @@ export const myData = {
           </div>
         </div>
       `
+    },
+    {
+      id: ID++,
+      durationAr: "من 19 يناير إلى 25 يناير",
+      overallAr: "",
+      year: "2025",
+      'content-ar': 
+      `
+        <div class="content">
+          <div class="text-box">
+            <div class="quote-box">
+              <p class="post-quote">
+                <q>
+                    إذا أرادَ اللَّهُ بِعبدٍ خيرًا استَعملَهُ. قيلَ وما استَعملَهُ؟ قالَ: يفتَحُ لَهُ عملٌ صالِحٌ بينَ يدَي موتِهِ حتَّى يَرضى عنهُ مَن حولَه
+                </q>
+              </p>
+            </div>
+          
+              <div>
+                <p>
+                  خلصت كورس الجافاسكريبت
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/0mzRSaB.png" class="small-img">
+                
+              <div>
+                <p>
+                  كان اخر مشروع مطلوب من الكورس باسم
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  Battleships
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  سويته ب3 ساعات، مكانش سهل ومكانش صعب
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/vfLWKqB.png" class="small-img">
+                
+              <img src="https://i.imgur.com/ukr7Z3d.png" class="small-img">
+                
+              <img src="https://i.imgur.com/G3sVAqb.png" class="small-img">
+                
+          </div>
+        </div>
+      `
     }
   ],
   blogs: [],
