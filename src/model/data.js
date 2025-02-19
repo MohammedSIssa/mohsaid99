@@ -670,7 +670,7 @@ export const myData = {
     },
     {
       id: ID++,
-      durationAr: "من 19 يناير إلى 25 يناير",
+      durationAr: "من 19 فبراير إلى 25 فبراير",
       overallAr: "",
       year: "2025",
       'content-ar': 
@@ -680,7 +680,7 @@ export const myData = {
             <div class="quote-box">
               <p class="post-quote">
                 <q>
-                    إذا أرادَ اللَّهُ بِعبدٍ خيرًا استَعملَهُ. قيلَ وما استَعملَهُ؟ قالَ: يفتَحُ لَهُ عملٌ صالِحٌ بينَ يدَي موتِهِ حتَّى يَرضى عنهُ مَن حولَه
+                    من لا يتقدم يتأخر
                 </q>
               </p>
             </div>
