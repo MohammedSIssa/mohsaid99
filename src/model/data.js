@@ -671,7 +671,7 @@ export const myData = {
     {
       id: ID++,
       durationAr: "من 19 فبراير إلى 25 فبراير",
-      overallAr: "",
+      overallAr: "خلصت كورس جافاسكريبت",
       year: "2025",
       'content-ar': 
       `
@@ -682,6 +682,12 @@ export const myData = {
                 <q>
                     من لا يتقدم يتأخر
                 </q>
+              </p>
+            </div>
+
+            <div>
+              <p class="count">
+                الأسبوع رقم 8
               </p>
             </div>
           
@@ -716,6 +722,28 @@ export const myData = {
               <img src="https://i.imgur.com/ukr7Z3d.png" class="small-img">
                 
               <img src="https://i.imgur.com/G3sVAqb.png" class="small-img">
+                
+              <div>
+                <p>
+                  حليت سؤال رقم 22
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/zgKEirM.png" class="">
+                
+              <div>
+                <p>
+                  برمجت الرسمة هاد، بتخليني اكتب قديش تعملت بكل يوم بالاسبوع
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  راح ا ضيفها على الموقع عن قريب، لسا ما جربت ادمجها على الكود، الاسبوع الجاي تقريبا بتجهز
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/fsjAtLQ.png" class="small-img">
                 
           </div>
         </div>
