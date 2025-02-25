@@ -76,4 +76,39 @@
   main {
     width: 100%;
   }
+
+  .weekly-progress-container { 
+    width: 300px !important;
+  }
+
+  .chart .x p {
+    font-size: 12px !important;
+  }
+
+  .chart .y {
+    height: 100% !important;
+    left: -40px !important;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .chart .y p {
+    font-size: 12px  !important;
+    margin-bottom: 0 !important;
+  }
+
+  .weekly-text {
+    font-size: 18px !important;
+  }
+
+  .chart .drawing {
+    height: 220px;
+    width: 300px !important;
+  }
+
+  span.total-hours {
+    top: -65px;
+    font-size: 12px;
+  }
 }
