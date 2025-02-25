@@ -755,7 +755,7 @@ export const myData = {
     {
       id: 1,
       durationAr: "أهداف السنة",
-      overallAr: "Become a Full-stack Web Developer, Make reading a habit again, stay consistent",
+      overallAr: "Full-stack Web Developer, Stay Consistent",
       year: "2025",
       "content-ar": `
         <div class="goals">
