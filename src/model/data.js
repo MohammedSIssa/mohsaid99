@@ -750,6 +750,61 @@ export const myData = {
           </div>
         </div>
       `
+    },
+    {
+      id: ID++,
+      durationAr: "من 26 فبراير إلى 4 مارس",
+      overallAr: "",
+      year: "2025",
+      'content-ar': 
+      `
+        <div class="content">
+          <div class="text-box">
+            <div class="quote-box">
+              <p class="post-quote">
+                <q>
+                    إنَّ السَّعادة في معناها الوحيد المُمكن: هي الصُّلح بينَ الظَّاهر والباطن، هيَ الصُّلح بين الإنسانِ ونفسه
+                </q>
+              </p>
+            </div>
+
+            <div>
+              <p class="count">
+                الأسبوع رقم 9
+              </p>
+            </div>
+          
+              <div>
+                <p>
+                  دمج الرسمة بالموقع
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  للاسف مازبط معي، الستايلات بتدخل في بعض مش راضي يزبط عالموقع
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  بس لقيت حل، هضيفها ك صورة على الموقع
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  هتكون هيك، اشي مقبول 
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/jGAr4gf.png" class="small-img">
+                
+              <img src="https://i.imgur.com/ipnctsO.png" class="">
+                
+          </div>
+        </div>
+      `
     }
   ],
   blogs: [],
@@ -757,7 +812,7 @@ export const myData = {
     {
       id: 1,
       durationAr: "أهداف السنة",
-      overallAr: "Full-stack Web Developer, Stay Consistent",
+      overallAr: "Full-stack Web Developer",
       year: "2025",
       "content-ar": `
         <div class="goals">
@@ -769,24 +824,24 @@ export const myData = {
           </div>
         </div>
         <div class="goal">
-          <p>Solve 50 Project Euler Problems</p>
+          <p>Project Euler Level 1</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="50" value="22"></div>
+            <div class="progress-bar" goal="50" value="23"></div>
           </div>
         </div>
         <div class="goal">
           <p>Read 10 Books</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="10" value="2"></div>
+            <div class="progress-bar" goal="10" value="3"></div>
           </div>
         </div>
         <div class="goal">
           <p>Duolingo 400 Days Streak</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="400" value="183"></div>
+            <div class="progress-bar" goal="400" value="185"></div>
           </div>
         </div>
       `,
