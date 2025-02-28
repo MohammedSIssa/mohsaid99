@@ -30,14 +30,14 @@ export const myData = {
               </p>
             </div>
             
-            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473696435_626985770023270_7351703151279511743_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=u2U89eVZ8M0Q7kNvgEhdjWc&_nc_oc=AdhTr4V4ESe5gXZkE2CosedNEp-gfk5ja7RyUnTyTvJJE3h_BeGgHyCWM6s2PFZPciM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gF2TUzH580U9Xkfdeb9WzqG1LeJ3Xb-3zbTDoc4_T8XvA&oe=67D968B6">
+            <img class="small-img" src="https://i.imgur.com/PK0BXVx.jpeg">
             
             <div>
               <p>
                 حليت 16 سؤال، من أصل 50 سؤال بدي أحلهم بهاد السنة
               </p>
             </div>
-            <img class="small-img" alt="project eular pic" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/472952301_1622255235096672_2625751805603823917_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_CPxUKw5mG0Q7kNvgHUXlFV&_nc_oc=AdgYp1kE2IfpQ0cQLH96gTYzShMySeID4zyREmNr_YzsLxtCJXV0Az6ImPTn4QAY6c8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gFiSL8RhxcaMVVgtn68K0RjPR7Ocu87-A7zVLB_QOnP6Q&oe=67D94895">
+            <img class="small-img" alt="project eular pic" src="https://i.imgur.com/C3OM08R.jpeg">
             
             <div>
               <p>
