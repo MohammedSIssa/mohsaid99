@@ -754,7 +754,7 @@ export const myData = {
     {
       id: ID++,
       durationAr: "من 26 فبراير إلى 4 مارس",
-      overallAr: "",
+      overallAr: "الأسبوع الحالي",
       year: "2025",
       'content-ar': 
       `
