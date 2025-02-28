@@ -77,14 +77,14 @@ export const myData = {
               </p>
             </div>
   
-            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473453082_1700926707131287_4185262630411760056_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=XRAoQFgvvgYQ7kNvgGJrU93&_nc_oc=AdibdYfJ5vxOQhukPg2gVRAs9G8pR3TOa4fTGSi9MHNPRdzPyiGMYEeb0nGRPrzza0A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gHwlJtQW1LlgByUDVzGJZHgwd-V7bbj7Nw09NfIYbZ7Yg&oe=67D9512A">
+            <img class="small-img" src="https://i.imgur.com/a4QOAMo.jpeg">
             <div>
               <p>
                 الشكل الأولي للموقع
               </p>
             </div>
   
-            <img src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/472719468_1103342567920564_2910878705705666284_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_dtN3ydvftMQ7kNvgHCH3Xs&_nc_oc=Adgkhx5-cKIF4q2FRVEOCiOAVPl83RfELIHnFRWKOV5JnYUCFr-x1-LFcHa29msszbY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gH70JICkHePola_jEuSppx7I8c06NHKyKk906vMdbQbYg&oe=67D947F6">
+            <img src="https://i.imgur.com/FKy14XK.jpeg">
             
             <div>
               <p>
@@ -92,13 +92,13 @@ export const myData = {
               </p>
             </div>
   
-            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473649156_576764025254955_5902855516072431880_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=HAHUZP8d8v4Q7kNvgHGr9eS&_nc_oc=AdhAXZZYRQr3vbmdiJJW-z7_c74algj4UYZg_tPHPTtC5jVH-HC7m7U9D31_4XmCK58&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gGa0gAUmndw3V8xLwKn39zXUq5W0DNI-LkT_LCmmgqUQA&oe=67D94E6A">
+            <img class="small-img" src="https://i.imgur.com/irrN5sh.jpeg">
             
             <div>
               <p>
                 الشكل على الشاشات الأكبر هيك
               </p>
-              <img src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473504323_1268831614398764_5613916280664234189_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Zzir-wK0XWAQ7kNvgGdldpd&_nc_oc=Adj-7XMlZOmEy9KXmNcPxcLYF4B5wK7rtksspx3wsZojTo-3RGs9aaJg1-09HyJzKgk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gEle01a4droiJZw4CLED92TYhBjvRRVfM_hRHLRGaEWzg&oe=67D94F7C">
+              <img src="https://i.imgur.com/mFnu2wz.jpeg">
             </div>
   
             <div>
@@ -107,7 +107,7 @@ export const myData = {
               </p>
             </div>
             
-            <img class="small-img" src="https://scontent.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473098376_1107212037751648_5625160027593154118_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=uqOOL_aqM1kQ7kNvgEJJo14&_nc_oc=AdjZ1QR_-zsDWNSAu1tIc6le4gm4voTfTO0Gwc1w9ZeVBfbOQ4988HB2mkSu0C3ZYiI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fgza2-5.fna&oh=03_Q7cD1gHtxOV69yttF9FbtyIluq6ehNKbH8D4Jme6bpa6p1WjcQ&oe=67D95818">
+            <img class="small-img" src="https://i.imgur.com/nLRIDzc.jpeg">
           
           </div> <!-- End of text-box div -->
         </div> <!-- End of content div -->
@@ -147,15 +147,11 @@ export const myData = {
             </p>
           </div>
         
-          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473580584_1589517811681307_6742146940368943388_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=BIWQB6HWnc8Q7kNvgEKugi8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEQEmKkakbn6Cgy5MBhSqHnFO33_YlYvRvrbhyKbc3hBQ&oe=67B5A735">
-  
-          <div>
-            <p>
-              وهي اللي مطلوب من المشروع اعمله
-            </p>
-          </div>
+          <img src="https://i.imgur.com/tJ62dMa.png">
 
-          <img class="small-img" src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/473056195_1592299984983956_4773092253594252725_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=jlOUE6LVpu8Q7kNvgFBapZ9&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gHyc3nITXaHiPmHOhL-Mut34fYr2KoQKYmvVGT7ix46mw&oe=67B59269">
+          <img src="https://i.imgur.com/w4iAX8i.png">
+
+          <img src="https://i.imgur.com/49FbM1g.png">
         
           <div>
             <p>
@@ -163,22 +159,22 @@ export const myData = {
             </p>
           </div>
 
-          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473579497_835027215379550_7090660851038192190_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zX51oBF20c0Q7kNvgHfbSZt&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGlpudKF2K4R4HGzQaPSleLMTU1D4-3GwbTgddkhe2lNg&oe=67B5A4C9">
+          <img src="https://i.imgur.com/DpJH25o.png">
 
-          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473598694_627153623137677_3419785326934642955_n.png?_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=5oYnkaTS504Q7kNvgHMPtws&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gF2dVOd1M-wLWZyhruCuCX0ru8ufDLCvjJ0PJK-TDohMQ&oe=67B5D294">
+          <img class="small-img" src="https://i.imgur.com/QG2bSCf.png">
         
           <div>
             <p>
               المشروع خلص برمجة وتصميم وجهز بعد يومين شغل
             </p>
           </div>
-          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474054834_1293871188589623_5493088919307718504_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=sg-Btp3D5V4Q7kNvgG69qu5&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGMyDZpir_le7BYbB0sYQV-fA2TzgqRMbCobxBxVVuMLQ&oe=67B6FB37">
+          <img src="https://i.imgur.com/kBNLBC3.png">
 
-          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473183937_2325259884515528_1270149524624042991_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=r81H_VkVGj0Q7kNvgEMdKb_&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGqzP8qyplSd4i67rJ9lqSQmxDPcdK6tMqBGogrdyIKPQ&oe=67B7011F">
+          <img class="small-img" src="https://i.imgur.com/lAti3Mb.png">
 
-          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/473821352_1158452332324931_704962921524850772_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=VlBTXTNlmLgQ7kNvgEt5HRx&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEU6tsijMQCTtQaSDjx4xApFxasFKKNtb78lncRF8Il3w&oe=67B72253">
+          <img src="https://i.imgur.com/GOzoRfv.png">
 
-          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474061658_1032990445245368_5481644340204430928_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=YrXYlRB822QQ7kNvgFesGrf&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gE3tMYEcqYTb-L0Y_2mKWpyWvo19tFvkSbqyfGOstTmdA&oe=67B71E9C">
+          <img src="https://i.imgur.com/P14lZeI.png">
 
         </div> <!-- end of .text-box -->
       </div> <!-- end of .content -->
