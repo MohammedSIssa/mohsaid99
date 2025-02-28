@@ -208,17 +208,17 @@ export const myData = {
             </p>
           </div>
 
-          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474073667_468636946130342_2259590288086221166_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=sIgvhDyM-iQQ7kNvgEXELsB&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFTIrQSWWt_XRWpfLdyyzObsrPBSglVLUJIc3E2ABOzeg&oe=67BC1760">
+          <img class="small-img" src="https://i.imgur.com/tjP7X6Q.png">
 
-          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472831080_649413734416799_6033805500391952736_n.png?_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=sdVTDZ1M-B8Q7kNvgEqkIr-&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEN8QuzT_GP6nsXlee-LuF3k1H_C_vBNl-nV8wkCE96EQ&oe=67BC2428">
+          <img src="https://i.imgur.com/LqwR8zt.png">
 
-          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472831080_1560584481258438_1001751137291446491_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Zzvb6zO9Ue0Q7kNvgGnqu1L&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGmdnCh1xIs89YFlgI7hVo25cx0xLY5awre3cBQLpOAhg&oe=67BC0047">
+          <img class="small-img" src="https://i.imgur.com/RxEEsQp.jpeg">
 
-          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474455709_896029809097223_2334009604449952129_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=l9ha8N065F4Q7kNvgEUUUna&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHScUQMgWBfIMF-ok3upKa5jgVLdNcOWVPllxGSZBG74w&oe=67BC0AE3">
+          <img class="small-img" src="https://i.imgur.com/IkzqJcg.png">
 
-          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474063234_583727251203817_4913141970604426519_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IheNKSaOLVsQ7kNvgHaRUoB&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFE-sjbDWrj_dGYLu1GkUU42nJ4rBdIPIrezyg3ko-Cwg&oe=67BBFAD0">
+          <img class="small-img" src="https://i.imgur.com/SU4bCmH.jpeg">
 
-          <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475038210_1951275948614506_4459232782963396948_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=G0i671-UBx8Q7kNvgGLryay&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHQDs-vq6lxUepc7VALL80751_HbNgQO9YFvO0ebJVGSg&oe=67BBF1F3">
+          <img class="small-img" src="https://i.imgur.com/t4JAx08.png">
 
           <div>
             <p>
