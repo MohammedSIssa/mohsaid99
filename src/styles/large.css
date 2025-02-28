@@ -85,6 +85,6 @@
     max-width: 1000px;
   }
   #root .content .text-box img.small-img {
-    width: min(80%, 550px);
+    width: min(80%, 650px);
   }
 }
