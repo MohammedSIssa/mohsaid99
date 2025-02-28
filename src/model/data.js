@@ -802,6 +802,22 @@ export const myData = {
                 
               <img src="https://i.imgur.com/ipnctsO.png" class="">
                 
+              <div>
+                <p>
+                  حليت سؤال رقم 23 من بروجكت اولر
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  السؤال كان عبارة عن ايجاد مجموع الأعداد التي تعتبر ليست جمع لعددين حاصل مجموع عواملهم اكبر منهم
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/ZLxeGL0.jpeg" class="small-img">
+                
+              <img src="https://i.imgur.com/LgsSBoe.png" class="small-img">
+                
           </div>
         </div>
       `
