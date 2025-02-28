@@ -296,13 +296,13 @@ export const myData = {
               </p>
             </div>
 
-            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475738577_2640142949509400_7726497277794726485_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=dCnKtuMcAyAQ7kNvgEy1y3p&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEbCyRHX6ys1ZllM2Xm974CJ5XFjIdBcqTfSSOjlR_hGg&oe=67C2DD73">
+            <img class="small-img" src="https://i.imgur.com/zdpT84t.png">
 
-            <img class="small-img" src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/475444685_1589260115047779_179092329602943634_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=AIQxtc44fTwQ7kNvgFkEdOF&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gExiWXmhvAotm83EmP8kJ4a-dzhQczdTx24v3S5ZOIMjQ&oe=67C2F566">
+            <img class="small-img" src="https://i.imgur.com/XixYDKs.png">
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474971775_1120093293209453_1204208754708328375_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=JQrKvNa4OBAQ7kNvgF3kBAp&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG6GbfVJIrFY6N4KJH9zhPz-xdlYVsoQSqkc4TM0kJtfQ&oe=67C2D8CF">
+            <img src="https://i.imgur.com/Ef9w84c.png">
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474749504_1172393884511507_1568729987438083929_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LgZwejVZiCYQ7kNvgFai_CP&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEPTVcYH1Ar-y4nRCm0nnyluBuX4rFwNRIT7il34H4Lvw&oe=67C2D576">
+            <img src="https://i.imgur.com/ka2g2Vc.png">
 
             <div>
               <p>
@@ -310,7 +310,7 @@ export const myData = {
               </p>
             </div>
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474879084_620635786996365_6776726646353991806_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EJLwruqNLv4Q7kNvgGAiK5e&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEFNcyX20BdoIix9wP0RLp1y3OiUNimmlNuilKkplB-dA&oe=67C44A5C">
+            <img src="https://i.imgur.com/W9siGTo.png">
 
             <div>
               <p>
@@ -320,9 +320,9 @@ export const myData = {
 
             <div><p>17</p></div>
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/472321571_951310346709449_4034236862477589989_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EeM8R5yRCwkQ7kNvgEgk84S&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG_Ib4KCWXs5MQWiOjD91W1M3xCXS7wVUTRYh_y5PB3zQ&oe=67C2F3D9">
+            <img src="https://i.imgur.com/xDt04xT.png">
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475549502_3067438160062356_4871348150315234470_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=y2N-HTrRZ98Q7kNvgHn07Pd&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGKkfcwkoxThiOvT5ePEDUHCJCNzkdeJ_xxrFQnBfv-nA&oe=67C4088F">
+            <img src="https://i.imgur.com/E0O4gvv.png">
 
             <div>
               <p>
@@ -330,9 +330,9 @@ export const myData = {
               </p>
             </div>
             
-            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474863896_4041063419464484_4785460043116615011_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=VK43EYhTebgQ7kNvgHXCmps&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG2YJ76dPEbgyrgwOKzKVhsH9EfZlDRrZ-sI2_GwhlA-A&oe=67C6E650">
+            <img class="small-img" src="https://i.imgur.com/WOQvw2O.png">
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475834331_1007252274549438_1087318500629231050_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9ZNELNeOt_YQ7kNvgHTwGjS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFsF_rJ6NKpPP5fQCGAofybimLL3sXPfisImNtXl5Qf_w&oe=67C6BD33">
+            <img src="https://i.imgur.com/zsq7hA7.png">
             
             <div>
               <p>
@@ -340,9 +340,9 @@ export const myData = {
               </p>
             </div>
             
-            <img src="https://instagram.fgza2-5.fna.fbcdn.net/v/t1.15752-9/475510754_1355403605454726_5093542029576569861_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=t0wxfb1-0xkQ7kNvgFIWDjB&_nc_zt=23&_nc_ht=instagram.fgza2-5.fna&oh=03_Q7cD1gFAZqyf6w6w6sTOuyT7Ijo3Y2kisIdYxYXMtn99fF6lfg&oe=67C6E856">
+            <img src="https://i.imgur.com/IELnbJy.png">
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474971213_8538434332924135_8206121960522336755_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Zdq3Yjy0Tc0Q7kNvgHf7oo5&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHOCbFbSYzPj_KK6rR2Lks1EZda74ChMmrQImn1ku5DqA&oe=67C6E4A6">
+            <img src="https://i.imgur.com/na5pqDE.png">
           
             <div>
               <p>
@@ -350,9 +350,9 @@ export const myData = {
               </p>
             </div>
 
-            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475403879_1146500663593196_7318253083240476571_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=4j7R4JbWgecQ7kNvgFhZg88&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFr19tuEj0uPHThVMct06aeY8ijL_AWsm11gc1TaKnDSA&oe=67C95FD8">
+            <img src="https://i.imgur.com/mN10RBW.png">
 
-            <img class="small-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475818046_4023093704685674_8378444377602333974_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=vwIAeA9tsagQ7kNvgGRg8vY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGrfIVzo4p_BvBhEuV2b2vymNXZVGx-NMbfLKzHiRnC9w&oe=67C93645">
+            <img class="small-img" src="https://i.imgur.com/bgwtR9M.png">
 
           </div>
         </div>
