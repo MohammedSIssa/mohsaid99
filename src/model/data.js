@@ -881,7 +881,7 @@ export const myData = {
           <p>Project Euler Level 1</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="50" value="23"></div>
+            <div class="progress-bar" goal="50" value="25"></div>
           </div>
         </div>
         <div class="goal">
