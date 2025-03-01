@@ -814,6 +814,54 @@ export const myData = {
                 
               <img src="https://i.imgur.com/LgsSBoe.png" class="small-img">
                 
+              <div>
+                <p>
+                  Changed images CDN from instagram to imgur
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  كنت برفع صور الموقع هاد على الانستا بعدين اخد الرابط واضيفه هان
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  بس الانستا طلع كل شهر بيسوي تحديث لرابط الصور، فصارت مشكلة
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  غيرته لموقع تاني بيعطي روابط ثابتة
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  وكمان سويت تحسينات لحجم الصور، صارو اصغر بنسبة 90 بالمية
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  From 40 MB to 4 MB
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/54F7Qnh.jpeg" class="">
+                
+              <div>
+                <p>
+                  حليت سؤال رقم 25
+                </p>
+              </div>
+              
+              <img src="https://i.imgur.com/FhLBL3X.jpeg" class="small-img">
+                
+              <img src="https://i.imgur.com/dMLOdZN.jpeg" class="small-img">
+                
           </div>
         </div>
       `
