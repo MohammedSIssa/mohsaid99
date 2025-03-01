@@ -782,12 +782,6 @@ export const myData = {
                 </p>
               </div>
               
-              <div>
-                <p>
-                  هتكون هيك، اشي مقبول 
-                </p>
-              </div>
-              
               <img src="https://i.imgur.com/jGAr4gf.png" class="small-img">
                 
               <img src="https://i.imgur.com/ipnctsO.png" class="">
@@ -835,12 +829,6 @@ export const myData = {
               <div>
                 <p>
                   وكمان سويت تحسينات لحجم الصور، صارو اصغر بنسبة 90 بالمية
-                </p>
-              </div>
-              
-              <div>
-                <p>
-                  From 40 MB to 4 MB
                 </p>
               </div>
               
