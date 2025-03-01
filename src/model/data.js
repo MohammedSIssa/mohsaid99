@@ -428,9 +428,9 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/cU4WuBP.png" class="small-img">
+              <img src="https://i.imgur.com/X2ZjXUu.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/hp5KLw8.png" class="">
+              <img src="https://i.imgur.com/m8VLAmF.jpeg" class="">
                 
               <div>
                 <p>
@@ -438,7 +438,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/onNM5Ns.png" class="small-img">
+              <img src="https://i.imgur.com/sTXQdYe.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -446,7 +446,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/Nxm5hpM.png" class="small-img">
+              <img src="https://i.imgur.com/VC9kcA9.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -460,15 +460,15 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/OfVO4kH.png" class="small-img">
+              <img src="https://i.imgur.com/HYmkDSY.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/zDMNXM9.png" class="small-img">
+              <img src="https://i.imgur.com/20LxI4E.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/mpQjhhX.png" class="small-img">
+              <img src="https://i.imgur.com/AD2KBFW.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/GTFiOTt.png" class="small-img">
+              <img src="https://i.imgur.com/pDtNLP6.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/UpxUyZv.png" class="small-img">
+              <img src="https://i.imgur.com/rdTULeW.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -482,9 +482,9 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/4fyrGi8.png" class="">
+              <img src="https://i.imgur.com/fixdzRv.jpeg" class="">
                 
-              <img src="https://i.imgur.com/Ns50vOm.png" class="">
+              <img src="https://i.imgur.com/nPzLUFn.jpeg" class="">
                 
               <div>
                 <p>
@@ -492,7 +492,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/T9t96QM.png" class="small-img">
+              <img src="https://i.imgur.com/BclUKTc.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -500,7 +500,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/qpa1S8B.png" class="">
+              <img src="https://i.imgur.com/ZZGxpk2.jpeg" class="">
                 
               <div>
                 <p>
@@ -514,7 +514,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/1fbtNdd.png" class="small-img">
+              <img src="https://i.imgur.com/wygTMFc.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -528,9 +528,9 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/v40itB7.png" class="">
+              <img src="https://i.imgur.com/yBPuQLr.jpeg" class="">
                 
-              <img src="https://i.imgur.com/vwglhhw.jpeg" class="small-img">
+              <img src="https://i.imgur.com/tqpdTD7.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -538,15 +538,15 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/MhMz09U.png" class="">
+              <img src="https://i.imgur.com/pN7nxZA.jpeg" class="">
                 
-              <img src="https://i.imgur.com/eZryNnb.png" class="">
+              <img src="https://i.imgur.com/gGq2s8b.jpeg" class="">
                 
-              <img src="https://i.imgur.com/sBkaojm.png" class="">
+              <img src="https://i.imgur.com/3gnHvkO.jpeg" class="">
                 
-              <img src="https://i.imgur.com/P61KpTW.png" class="">
+              <img src="https://i.imgur.com/84hpJ2F.jpeg" class="">
                 
-              <img src="https://i.imgur.com/5ggZlFa.png" class="small-img">
+              <img src="https://i.imgur.com/4oY1dKl.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -560,9 +560,9 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/WOUuHyc.png" class="">
+              <img src="https://i.imgur.com/mVPbp5W.jpeg" class="">
                 
-              <img src="https://i.imgur.com/owuyMsG.png" class="small-img">
+              <img src="https://i.imgur.com/1Z09aML.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -570,15 +570,15 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/HpdvAER.png" class="small-img">
+              <img src="https://i.imgur.com/bgTZQTm.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/a9udB3Y.png" class="small-img">
+              <img src="https://i.imgur.com/9rtjPYU.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/SNedkgi.png" class="small-img">
+              <img src="https://i.imgur.com/TNgt0hU.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/vZrwnPu.png" class="small-img">
+              <img src="https://i.imgur.com/ARtWhUq.jpeg" class="small-img">
                 
-              <img src="https://i.imgur.com/MaLpeXA.png" class="small-img">
+              <img src="https://i.imgur.com/Yofru3E.jpeg" class="small-img">
                 
               <div>
                 <p>
@@ -586,11 +586,11 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/Nr3qGpU.png" class="">
+              <img src="https://i.imgur.com/FudeUnZ.jpeg" class="">
                 
-              <img src="https://i.imgur.com/6vRHPOq.png" class="">
+              <img src="https://i.imgur.com/zQ89o9m.jpeg" class="">
                 
-              <img src="https://i.imgur.com/PpH01LA.png" class="">
+              <img src="https://i.imgur.com/oWt1jdu.jpeg" class="">
                 
               <div>
                 <p>
@@ -616,9 +616,9 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/8ZRyMo7.png" class="">
+              <img src="https://i.imgur.com/YsaEeUF.jpeg" class="">
                 
-              <img src="https://i.imgur.com/fGjfHCK.png" class="">
+              <img src="https://i.imgur.com/dSly3x0.jpeg" class="">
                 
               <div>
                 <p>
@@ -632,7 +632,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/IJbvdgS.png" class="">
+              <img src="https://i.imgur.com/jQO0hM4.jpeg" class="">
                 
               <div>
                 <p>
@@ -658,7 +658,7 @@ export const myData = {
                 </p>
               </div>
               
-              <img src="https://i.imgur.com/NvCQlT9.jpeg" class="small-img">
+              <img src="https://i.imgur.com/YB82TZg.jpeg" class="small-img">
                 
           </div>
         </div>
