@@ -862,7 +862,7 @@ export const myData = {
           <p>Become a Full-Stack Web Developer</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="600" value="212"></div>
+            <div class="progress-bar" goal="600" value="225"></div>
           </div>
         </div>
         <div class="goal">
@@ -883,7 +883,7 @@ export const myData = {
           <p>Duolingo 400 Days Streak</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="400" value="185"></div>
+            <div class="progress-bar" goal="400" value="188"></div>
           </div>
         </div>
       `,
