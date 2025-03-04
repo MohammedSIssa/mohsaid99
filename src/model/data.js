@@ -858,7 +858,7 @@ export const myData = {
       year: "2025",
       "content-ar": `
         <div class="goals">
-        
+
         <div class="goal">
           <p>Become a Full-Stack Web Developer</p>
           <div class="loading">
@@ -887,7 +887,7 @@ export const myData = {
           <p>Duolingo 400 Days Streak</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="400" value="188"></div>
+            <div class="progress-bar" goal="400" value="189"></div>
           </div>
         </div>
       `,
