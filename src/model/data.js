@@ -858,13 +858,15 @@ export const myData = {
       year: "2025",
       "content-ar": `
         <div class="goals">
+        
         <div class="goal">
           <p>Become a Full-Stack Web Developer</p>
           <div class="loading">
             <div class="progress-value"></div>
-            <div class="progress-bar" goal="600" value="225"></div>
+            <div class="progress-bar" goal="600" value="250"></div>
           </div>
         </div>
+
         <div class="goal">
           <p>Project Euler Level 1</p>
           <div class="loading">
@@ -872,6 +874,7 @@ export const myData = {
             <div class="progress-bar" goal="50" value="25"></div>
           </div>
         </div>
+
         <div class="goal">
           <p>Read 10 Books</p>
           <div class="loading">
@@ -879,6 +882,7 @@ export const myData = {
             <div class="progress-bar" goal="10" value="3"></div>
           </div>
         </div>
+
         <div class="goal">
           <p>Duolingo 400 Days Streak</p>
           <div class="loading">
