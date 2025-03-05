@@ -152,6 +152,10 @@ body.Arabic #root {
 #root .content .text-box p {
   font-weight: 450;
 }
+#root .content .text-box h3 {
+  font-weight: 450;
+  color: #e4e4e4;
+}
 #root .content .text-box img {
   margin-bottom: 80px;
 }
