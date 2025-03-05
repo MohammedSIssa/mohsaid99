@@ -4,9 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
-  --nav-bg-color: #000;
-  --nav-font-color: #d9d9d9;
-  --nav-btn-hover-color: #000;
+  --nav-bg-color: #080808;
+  --nav-font-color: #CCCCCC;
+  --nav-btn-hover-color: var(--nav-bg-color);
   --root-bg-color: var(--nav-bg-color);
   --root-font-color: var(--nav-font-color);
   --logo-en-font: "Dancing Script", sans-serif, system-ui;
@@ -67,7 +67,7 @@ nav ul {
   gap: 20px;
   background-color: var(--nav-btn-hover-color);
   overflow-x: auto;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #333;
   width: 100%;
 }
 body.Arabic .posts {
@@ -198,7 +198,7 @@ p.count {
   padding: 20px 0;
   color: white;
   width: min(80%, 600px);
-  background-color: black;
+  background-color: var(--nav-bg-color);
   display: flex;
   flex-direction: column;
 }
