@@ -877,7 +877,7 @@ export const myData = {
               
               <img src="https://i.imgur.com/Sn3VjvR.jpeg" class="">
 
-              <img src="https://i.imgur.com/GYOUzdq.jpeg" class="small-img">
+              <img src="https://i.imgur.com/GYOUzdq.jpeg" class="">
                 
           </div>
         </div>
