@@ -787,9 +787,9 @@ export const myData = {
               <img src="https://i.imgur.com/ipnctsO.png" class="">
                 
               <div>
-                <p>
+                <h3>
                   حليت سؤال رقم 23 من بروجكت اولر
-                </p>
+                </h3>
               </div>
               
               <div>
@@ -823,13 +823,25 @@ export const myData = {
               <img src="https://i.imgur.com/54F7Qnh.jpeg" class="">
                 
               <div>
-                <p>
-                  حليت سؤال رقم 25
-                </p>
+                <h3>
+                  السؤال رقم 25 - أول عدد فيبوناتشي فيه 1000 رقم
+                </h3>
               </div>
               
               <img src="https://i.imgur.com/FhLBL3X.jpeg" class="small-img">
                 
+              <div>
+                <h3>
+                  كيف حل السؤال؟
+                </h3>
+              </div>
+
+              <div>
+                <p>
+                  بمشي بسلسلة فيبوناتشي وحدة وحدة، كل مرة بحسب عدد الارقام بالعدد، لحد ما أوصل لعدد فيه 1000 رقم، بعد هيك بوقف اللوب وبطبع ترتيب العدد
+                </p>
+              </div>
+
               <img src="https://i.imgur.com/dMLOdZN.jpeg" class="small-img">
                 
               <div>
