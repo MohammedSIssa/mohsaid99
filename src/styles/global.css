@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --nav-bg-color: #000;
-  --nav-font-color: #ffffff;
+  --nav-font-color: #d9d9d9;
   --nav-btn-hover-color: #000;
   --root-bg-color: var(--nav-bg-color);
   --root-font-color: var(--nav-font-color);
@@ -31,12 +31,12 @@ button {
   background-color: transparent;
   border: none;
   transition: all 0.3s;
-  color: #ddd;
   font-weight: 600;
   padding: 5px 10px;
   font-size: 16px;
-  color: #e0e0e0;
+  color: var(--nav-font-color);
 }
+
 button:hover {
   cursor: pointer;
   font-size: 16px;
@@ -86,10 +86,10 @@ body.Arabic .posts {
   min-width: 240px;
   height: 90px;
   max-height: 90px;
-  background-color: black;
+  background-color: var(--root-bg-color);
 }
 .post:hover {
-  background-color: #111;
+  background-color: var(--root-bg-color);
   cursor: pointer;
 }
 .post .post-year {
