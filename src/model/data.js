@@ -845,8 +845,14 @@ export const myData = {
               <img src="https://i.imgur.com/dMLOdZN.jpeg" class="small-img">
                 
               <div>
-                <p>
+                <h3>
                   المواضيع اللي تعملت عنها الأسبوع هاد
+                </h3>
+              </div>
+
+              <div>
+                <p>
+                  الكورس الحالي هو متقدم اتش تي ام ال وسي اس اس
                 </p>
               </div>
               
