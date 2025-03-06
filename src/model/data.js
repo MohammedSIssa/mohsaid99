@@ -1108,7 +1108,7 @@ export const myData = {
               
               <div>
                 <h2>
-                  before
+                  👇🏻 قبل
                 </h2>
               </div>
               
@@ -1116,7 +1116,7 @@ export const myData = {
                 
               <div>
                 <h2>
-                  after
+                  👇🏻 بعد
                 </h2>
               </div>
               
