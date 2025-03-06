@@ -191,6 +191,19 @@ p.post-quote {
   quotes: "“" "”";
   
 }
+
+img {
+  max-height: 90dvh;
+  width: auto;
+  object-fit: contain;
+}
+
+img.long-image{
+  max-height: unset !important;
+  height: unset !important;
+  width: unset !important;
+}
+
 p.count {
   font-weight: 240;
   font-size: 12px !important;
