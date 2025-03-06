@@ -93,4 +93,7 @@
   #root .content .text-box img.small-img {
     width: min(80%, 650px);
   }
+  #root .content .text-box img.extra-small-img {
+    width: min(60%, 450px);
+  }
 }
