@@ -444,14 +444,14 @@ export const myData = {
                 اتسليت بالشغل على بطاريات ليثيوم كانو عندي من كم سنة وجبتهم معي من غزة
               </p>
             </div>
-            <img src="https://i.imgur.com/BH9t49n.jpeg">
+            <img src="https://i.imgur.com/BH9t49n.jpeg" class="long-image">
             
             <div>
               <p>
                 وعملت مشروع حساب، بس لسا مش عارف كيف اطبقه باشي مفيد، لسا لقدام في براسي فكرة بحاول اطبقها منه
               </p>
             </div>
-            <img src="https://i.imgur.com/s88Lbhy.jpeg">
+            <img src="https://i.imgur.com/s88Lbhy.jpeg" class="long-image">
           </div>
         </div>
       `
