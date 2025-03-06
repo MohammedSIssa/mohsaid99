@@ -201,7 +201,8 @@ img {
 img.long-image{
   max-height: unset !important;
   height: unset !important;
-  width: unset !important;
+  width: 100%;
+  max-width: 1000px;
 }
 
 p.count {

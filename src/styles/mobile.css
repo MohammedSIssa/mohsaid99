@@ -13,7 +13,7 @@
   }
   nav {
     position: fixed;
-    bottom: 0;
+    bottom: -1px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,6 +78,10 @@
 
   #root .content .text-box img{
     width: 100%; 
+  }
+
+  #root .content .text-box img.long-image {
+    width: 100% !important;
   }
   main {
     width: 100%;
