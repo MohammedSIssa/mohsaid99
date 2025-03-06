@@ -63,7 +63,7 @@
     font-size: 18px;
     font-weight: bold;
   }
-  #root .content .text-box p {
+  #root .content .text-box p, h1,h2,h3,h4,h5,h6 {
     padding: 10px 20px;
     margin: 10px 0;
     font-size: 18px;
