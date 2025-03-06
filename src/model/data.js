@@ -1057,7 +1057,7 @@ export const myData = {
             <div class="quote-box">
               <p class="post-quote">
                 <q>
-                  كل خطوة صغيرة بتقربك من هدفك، حتى لو حسيت إنها مش واضحة، المهم تضل ماشي
+                    كل خطوة صغيرة بتقربك من هدفك، حتى لو حسيت إنها مش واضحة، المهم تضل ماشي
                 </q>
               </p>
             </div>
@@ -1076,18 +1076,51 @@ export const myData = {
               
               <div>
                 <p>
-                ✨ غيرت كل الكلام وضفت عليه شوية ✨ إيموجيات ✍️
+                  ✨ غيرت كل الكلام وضفت عليه شوية ✨ إيموجيات ✍️
                 </p>
               </div>
-
+              
               <div>
                 <h3>
                   😎 صار في روح وحياة بالموقع بدل الجو الرسمي
                 </h3>
               </div>
-
               
               <img src="https://i.imgur.com/JLupY5L.png" class="extra-small-img">
+                
+              <div>
+                <h2>
+                  تحديث على الصور
+                </h2>
+              </div>
+              
+              <div>
+                <p>
+                  خليت طول الصورة دايما اصغر من حجم الشاشة
+                </p>
+              </div>
+              
+              <div>
+                <p>
+                  يعني هيك صارت الصورة كلها ظاهرة عندي مرة وحدة
+                </p>
+              </div>
+              
+              <div>
+                <h2>
+                  before
+                </h2>
+              </div>
+              
+              <img src="https://i.imgur.com/VLnejBf.jpeg" class="">
+                
+              <div>
+                <h2>
+                  after
+                </h2>
+              </div>
+              
+              <img src="https://i.imgur.com/iZWj8OM.jpeg" class="">
                 
           </div>
         </div>
