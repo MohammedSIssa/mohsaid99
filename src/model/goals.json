@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "duration": "Goals for 2025",
+    "summary": "Become a Full Stack Web Developer",
+    "year": "2025",
+    "type": "goals",
+    "goals": [
+      {
+        "goal": "Become a Full Stack Web Developer",
+        "max": 600,
+        "current": 300
+      },
+      {
+        "goal": "Finish Project Euler Level 1",
+        "max": 50,
+        "current": 40
+      },
+      {
+        "goal": "Duolingo 400 Days Streak",
+        "max": 400,
+        "current": 195
+      },
+      {
+        "goal": "Read at least 10 Books",
+        "max": 10,
+        "current": 3
+      }
+    ]
+  }
+]
