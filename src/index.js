@@ -3,24 +3,26 @@ import "./styles/large.css";
 import "./styles/mobile.css";
 import "./styles/scrollbar.css";
 
-import { load } from "./controller/loader";
-import { myData } from "./model/data";
-import { drawGoalsBar } from "./controller/loader";
+const weeks = require("./model/weeks.json")
+const goals = require("./model/goals.json")
 
-const weeks = document.querySelector("button.load-weeks");
-const blogs = document.querySelector("button.load-blogs");
-const goals = document.querySelector("button.load-goals");
+const weeksBtn = document.querySelector("#weeksBtn")
+const goalsBtn = document.querySelector("#goalsBtn")
 
-weeks.addEventListener("click", () => {
-  load(myData.weeks);
-});
-blogs.addEventListener("click", () => {
-  load(myData.blogs);
-});
-goals.addEventListener("click", () => {
-  load(myData.goals);
-  drawGoalsBar(document.querySelectorAll(".progress-bar"));
-});
+import { addWeek2Root } from "./controller/handleWeeks";
+import { addStory2Root } from "./controller/handleStories";
+import { addGoals2Root } from "./controller/handleGoals";
 
-// load weeks at the start of the app
-load(myData.weeks);
+weeksBtn.addEventListener('click', () => {
+  addStory2Root(weeks, document.getElementById("posts"))
+  addWeek2Root(weeks[weeks.length - 1]["events"], document.getElementById("root"))
+})
+
+goalsBtn.addEventListener('click', () => {
+  addStory2Root(goals, document.getElementById("posts"))
+  addGoals2Root(goals[goals.length - 1]["goals"], document.getElementById("root"))
+})
+
+// On Launch
+addStory2Root(weeks, document.getElementById("posts"))
+addWeek2Root(weeks[weeks.length - 1]["events"], document.getElementById("root"))

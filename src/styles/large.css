@@ -57,43 +57,21 @@
     align-items: center;
     justify-content: center;
   }
-  .text-box {
-    width: 100%;
-  }
-  .quote-box {
-    width: 80%;
-  }
-  p.post-quote, p.post-quote q {
-    width: 100%;
-  }
-  #root .content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #root .content .text-box {
-    padding: 10px 40px;
+  #root {
     font-size: 18px;
   }
-  #root .content .text-box div {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: right;
-  }
-  #root .content .text-box p {
+  #root p {
     max-width: 800px;
   }
-  #root .content .text-box img{
+  #root img{
+    margin: 20px 0;
     width: 100%;
     max-width: 1000px;
   }
-  #root .content .text-box img.small-img {
+  #root img.small-image {
     width: min(80%, 650px);
   }
-  #root .content .text-box img.extra-small-img {
+  #root img.extra-small-image {
     width: min(60%, 450px);
   }
 }

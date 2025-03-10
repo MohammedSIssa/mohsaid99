@@ -38,37 +38,22 @@
     width: 25px;
     height: 25px;
   }
-  body.Arabic nav {
+  nav {
     flex-direction: row-reverse;
     text-align: right;
   }
   body.Arabic nav ul {
     flex-direction: row-reverse;
   }
-  .posts {
+  #posts {
     margin-top: 80px;
   }
-  .posts .post {
+  #posts .post {
     text-align: right;
   }
   #root {
     width: 100dvw;
     margin-bottom: 100px;
-  }
-  #root .content {
-    width: 100%;
-  }
-  #root .content .text-box .quote-box p.post-quote{ 
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  #root .content .text-box p{
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: 400;
-    text-wrap: pretty;
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -76,11 +61,7 @@
     text-wrap: pretty;
   }
 
-  #root .content .text-box img{
-    width: 100%; 
-  }
-
-  #root .content .text-box img.long-image {
+  #root img.long-image {
     width: 100% !important;
   }
   main {
