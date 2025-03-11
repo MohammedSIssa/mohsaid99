@@ -53,7 +53,11 @@
   }
   #root {
     width: 100dvw;
-    margin-bottom: 100px;
+    padding: 20px 0 !important;
+  }
+
+  #root section :is(:not(img)) {
+    padding: 0 10px;
   }
 
   h1,h2,h3,h4,h5,h6 {

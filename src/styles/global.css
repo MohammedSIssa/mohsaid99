@@ -17,6 +17,7 @@
 }
 body {
   background-color: var(--root-bg-color);
+  overflow-x: hidden;
 }
 body * {
   font-family: var(--arabic-font), sans-serif;
@@ -25,7 +26,6 @@ body * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px dashed red; */
 }
 button {
   background-color: transparent;
@@ -138,10 +138,7 @@ nav ul {
 
 #root {
   padding: 60px 10px;
-  margin-bottom: 100px;
   font-size: 18px;
-}
-#root {
   text-align: center;
 }
 
