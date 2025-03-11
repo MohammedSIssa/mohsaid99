@@ -221,3 +221,6 @@ p.count {
   top: 23px;
   font-weight: 450;
 }
+.goal p {
+  margin: 0 !important;
+}
