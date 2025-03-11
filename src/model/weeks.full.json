@@ -1175,6 +1175,24 @@
             "className": "small-image"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "تحديث على الألوان، تغيير ستايلات الموقع",
+            "tag": "h2"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/ajj81FN.jpeg",
+            "className": "image"
+          },
+          {
+            "src": "https://i.imgur.com/U3NBAN8.jpeg",
+            "className": "small-image"
+          }
+        ]
       }
     ]
   }
