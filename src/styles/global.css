@@ -71,7 +71,7 @@ nav ul {
   gap: 20px;
   background-color: var(--nav-btn-hover-color);
   overflow-x: auto;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--story-border-color);
   width: 100%;
   text-align: right;
 }

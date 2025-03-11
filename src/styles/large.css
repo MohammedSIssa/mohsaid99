@@ -23,7 +23,7 @@
     min-width: 200px;
     max-width: 200px;
     text-align: right;
-    border-left: 1px solid #555;
+    border-left: 1px solid var(--story-border-color);
     min-height: 100dvh;
     position: fixed;
     right: 0;
