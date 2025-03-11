@@ -83,7 +83,7 @@ nav ul {
   /* border-width: 3px; */
   /* border-style: solid; */
   border: 1px solid var(--story-border-color);
-  border-radius: 12px;
+  border-radius: 8px;
   transition: all 0.3s;
   position: relative;
   padding: 10px 20px;
@@ -111,18 +111,19 @@ nav ul {
 }
 .post .post-count {
   position: absolute;
-  bottom: 7px;
-  left: 7px;
-  border-bottom-right-radius: 8px;
+  top: -15px;
+  left: 15px;
+  transform: skewX(-5deg);
+  /* border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-right-radius: 5px; */
   background-color: var(--story-count-bg-color);
   color: var(--font-color);
   font-family: var(--post-count-font) !important;
-  font-weight: 500;
+  font-weight: bolder;
   font-style: italic;
-  padding: 3px 5px;
+  padding: 2px 5px;
   font-size: 16px;
 }
 .post .post-duration {
