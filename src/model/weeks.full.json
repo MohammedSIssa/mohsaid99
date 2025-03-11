@@ -1193,6 +1193,20 @@
             "className": "small-image"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "This Week",
+            "tag": "h2"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/hmOei6a.jpeg",
+            "className": "image"
+          }
+        ]
       }
     ]
   }
