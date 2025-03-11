@@ -1204,7 +1204,7 @@
         "images": [
           {
             "src": "https://i.imgur.com/hmOei6a.jpeg",
-            "className": "image"
+            "className": "small-image"
           }
         ]
       }
