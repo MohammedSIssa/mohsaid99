@@ -4,11 +4,14 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
-  --nav-bg-color: #080808;
-  --nav-font-color: #CCCCCC;
-  --nav-btn-hover-color: var(--nav-bg-color);
-  --root-bg-color: var(--nav-bg-color);
-  --root-font-color: var(--nav-font-color);
+  --background-color: #0e1217;
+  --story-background-color: #1c1f26;
+  --font-color: #e3e3e3;
+  --story-border-color: #424857;
+
+  --nav-btn-hover-color: var(--background-color);
+  --root-bg-color: var(--background-color);
+  --root-font-color: var(--font-color);
   --logo-en-font: "Dancing Script", sans-serif, system-ui;
   --arabic-font: "IBM Plex Sans Arabic", sans-serif, system-ui;
   --english-font: Roboto, sans-serif, system-ui;
@@ -34,7 +37,7 @@ button {
   font-weight: 600;
   padding: 5px 10px;
   font-size: 16px;
-  color: var(--nav-font-color);
+  color: var(--font-color);
 }
 
 button:hover {
@@ -44,16 +47,16 @@ button:hover {
   color: #fff;
 }
 nav {
-  background-color: var(--nav-bg-color);
+  background-color: var(--background-color);
   padding: 10px 30px;
-  color: var(--nav-font-color);
+  color: var(--font-color);
 }
 nav .logo {
   font-size: 24px;
   font-weight: bold;
 }
 .logo {
-  color: var(--nav-font-color);
+  color: var(font-color);
   font-family: var(--logo-en-font) !important;
   font-weight: bolder;
   font-size: 30px;
@@ -74,10 +77,12 @@ nav ul {
 }
 .post {
   color: white;
-  border-image: linear-gradient(45deg, #f6bd00 0%, #e82243 60%, #c200b5 100%) 1;
+  /* border-image: linear-gradient(45deg, #f6bd00 0%, #e82243 60%, #c200b5 100%) 1; */
+  /* border-radius: 12px; */
+  /* border-width: 3px; */
+  /* border-style: solid; */
+  border: 1px solid var(--story-border-color);
   border-radius: 12px;
-  border-width: 3px;
-  border-style: solid;
   transition: all 0.3s;
   position: relative;
   padding: 10px 20px;
@@ -85,7 +90,7 @@ nav ul {
   min-width: 240px;
   height: 90px;
   max-height: 90px;
-  background-color: var(--root-bg-color);
+  background-color: var(--story-background-color);
 }
 .post:hover {
   background-color: var(--root-bg-color);
@@ -117,7 +122,7 @@ nav ul {
 }
 .post .post-duration {
   font-weight: bold;
-  color: var(--nav-font-color);
+  color: var(--font-color);
   font-size: 18px;
 }
 .post .post-summary {
@@ -146,9 +151,6 @@ nav ul {
   font-weight: 450;
   margin-top: 10px;
   margin-bottom: 30px;
-}
-#root h1, h2, h3, h4, h5, h6 {
-  color: #e4e4e4;
 }
 #root img {
   max-width: 100%;
@@ -183,7 +185,7 @@ p.count {
   padding: 20px 0;
   color: white;
   width: min(80%, 600px);
-  background-color: var(--nav-bg-color);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
 }
