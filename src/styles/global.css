@@ -8,6 +8,7 @@
   --story-background-color: #1c1f26;
   --font-color: #e3e3e3;
   --story-border-color: #424857;
+  --story-count-bg-color: #676c7a;
 
   --nav-btn-hover-color: var(--background-color);
   --root-bg-color: var(--background-color);
@@ -110,14 +111,18 @@ nav ul {
 }
 .post .post-count {
   position: absolute;
-  top: -10px;
-  left: -15px;
-  transform: skewX(-2deg);
-  background-color: #0068b5;
+  bottom: 7px;
+  left: 7px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: var(--story-count-bg-color);
+  color: var(--font-color);
   font-family: var(--post-count-font) !important;
-  font-weight: bolder;
+  font-weight: 500;
   font-style: italic;
-  padding: 5px;
+  padding: 3px 5px;
   font-size: 16px;
 }
 .post .post-duration {
@@ -134,6 +139,7 @@ nav ul {
   flex-direction: column;
   align-items: center;
   color: var(--root-font-color);
+  margin-bottom: 100px;
 }
 
 #root section {
@@ -212,6 +218,7 @@ p.count {
 .progress-bar {
   height: 100%;
   background: linear-gradient(200deg, #f6bd00 0%, #e82243 60%, #c200b5 100%);
+  /* background: linear-gradient(200deg, var(--story-count-bg-color) 0%, var(--story-background-color) 100%); */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45) inset;
 }
