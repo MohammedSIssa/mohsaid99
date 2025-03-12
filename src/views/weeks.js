@@ -3,7 +3,7 @@ export function generateWeekHTML(eventsArray, DOMElement) {
   let template = "";
   eventsArray.forEach((eventItem) => {
     if (eventItem.event) {
-      template += '<section>'
+      template += "<section>";
       eventItem.event.forEach((content) => {
         template += `
           <${content["tag"]}>
@@ -19,7 +19,7 @@ export function generateWeekHTML(eventsArray, DOMElement) {
         `;
       });
     }
-    template += '</section>'
+    template += "</section>";
   });
   DOMElement.innerHTML = template;
 }

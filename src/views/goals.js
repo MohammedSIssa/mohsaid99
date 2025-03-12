@@ -1,6 +1,6 @@
 export function generateGoalsHTML(array, DOMElement) {
-  DOMElement.innerHTML = ""
-  let template = "<div class='goals'>"
+  DOMElement.innerHTML = "";
+  let template = "<div class='goals'>";
   array.forEach((item) => {
     template += `
     <div class="goal">
@@ -10,9 +10,9 @@ export function generateGoalsHTML(array, DOMElement) {
         <div class="progress-bar" goal="${item["max"]}" value="${item["current"]}"></div>
       </div>
     </div>
-    `
-  })
-  DOMElement.innerHTML = template + "</div>"
+    `;
+  });
+  DOMElement.innerHTML = template + "</div>";
   drawGoalsBar(document.querySelectorAll(".progress-bar"));
 }
 

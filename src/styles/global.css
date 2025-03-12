@@ -181,7 +181,7 @@ nav ul {
   margin-top: 10px;
 }
 
-img.long-image{
+img.long-image {
   max-height: unset !important;
   height: unset !important;
   width: 100%;
