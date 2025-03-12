@@ -1044,15 +1044,15 @@
   {
     "id": 10,
     "duration": "من 5 مارس إلى 11 مارس",
-    "summary": " إعادة برمجة الموقع إضافة ✨ إيموجيات ✨ 👀",
+    "summary": "⭐ تغييرات كبيرة على الموقع",
     "type": "weeks",
     "year": 2025,
     "events": [
       {
         "event": [
           {
-            "text": " 🙂🔥 تحديث جديد على الموقع",
-            "tag": "h3"
+            "text": " 🙂🔥 تحديث جديد",
+            "tag": "h2"
           },
           {
             "text": "غيرت كل الكلام وضفت عليه شوية   ✍️",
@@ -1064,13 +1064,7 @@
           },
           {
             "text": "😎 صار في روح وحياة بالموقع بدل الجو الرسمي",
-            "tag": "h3"
-          }
-        ],
-        "images": [
-          {
-            "src": "https://i.imgur.com/JLupY5L.png",
-            "className": "extra-small-image"
+            "tag": "h4"
           }
         ]
       },
@@ -1191,19 +1185,9 @@
           {
             "src": "https://i.imgur.com/U3NBAN8.jpeg",
             "className": "small-image"
-          }
-        ]
-      },
-      {
-        "event": [
+          },
           {
-            "text": "This Week",
-            "tag": "h2"
-          }
-        ],
-        "images": [
-          {
-            "src": "https://i.imgur.com/hmOei6a.jpeg",
+            "src": "https://i.imgur.com/d1z5WUt.jpeg",
             "className": "small-image"
           }
         ]
