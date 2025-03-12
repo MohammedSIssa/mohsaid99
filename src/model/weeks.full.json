@@ -1193,5 +1193,32 @@
         ]
       }
     ]
+  },
+  {
+    "id": 11,
+    "duration": "من 12 مارس إلى 18 مارس",
+    "summary": "الأسبوع الحالي",
+    "year": 2025,
+    "type": "weeks",
+    "events": [
+      {
+        "event": [
+          {
+            "text": "تعديلات بسيطة على الموقع",
+            "tag": "h2"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/Twdx7oB.jpeg",
+            "className": "image"
+          },
+          {
+            "src": "https://i.imgur.com/3MH6zcZ.jpeg",
+            "className": "small-image"
+          }
+        ]
+      }
+    ]
   }
 ]
