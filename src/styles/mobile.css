@@ -56,11 +56,12 @@
   #root {
     width: 100dvw;
     padding: 20px 0 !important;
+    padding-top: 50px !important;
   }
 
   #root section {
     width: 100%;
-    padding: 0 !important;
+    padding: 20px 0 !important;
   }
 
   #root section :is(:not(img)) {
