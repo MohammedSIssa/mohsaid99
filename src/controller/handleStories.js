@@ -17,7 +17,6 @@ function handleStoryClicks() {
       switch(story.dataset.type) {
         case "weeks":
           addWeek2Root(weeks[story.dataset.id - 1]["events"], document.getElementById("root"))
-          console.log('Loading week '+story.dataset.id)
           break;
         case "goals":
           addGoals2Root(goals[story.dataset.id - 1]["goals"], document.getElementById("root"))
