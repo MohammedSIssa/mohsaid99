@@ -1,28 +1,28 @@
 [
   {
     "id": 1,
-    "duration": "Goals for 2025",
-    "summary": "Become a Full Stack Web Developer",
+    "duration": "أهدافي لعالم 2025",
+    "summary": "مبرمج مواقع فل ستاك",
     "year": "2025",
     "type": "goals",
     "goals": [
       {
-        "goal": "Become a Full Stack Web Developer",
+        "goal": "أصير مبرمج مواقع فل ستاك",
         "max": 600,
         "current": 300
       },
       {
-        "goal": "Finish Project Euler Level 1",
+        "goal": "أنهي المرحلة الأولى من برجكت أولر",
         "max": 50,
         "current": 25
       },
       {
-        "goal": "Duolingo 400 Days Streak",
+        "goal": "أوصل ل 400 يوم متواصل على تعلم العبري",
         "max": 400,
         "current": 195
       },
       {
-        "goal": "Read at least 10 Books",
+        "goal": "أقرأ على الأقل 10 كتب",
         "max": 10,
         "current": 3
       }
