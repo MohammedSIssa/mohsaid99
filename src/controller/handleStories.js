@@ -1,7 +1,6 @@
 import { generateStoryHTML } from "../views/stories.js";
 import { addGoals2Root } from "./handleGoals.js";
 import { addWeek2Root } from "./handleWeeks.js";
-
 const weeks = require("../model/weeks.json");
 const goals = require("../model/goals.json");
 

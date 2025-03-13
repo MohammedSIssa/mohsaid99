@@ -15,7 +15,7 @@ export function generateWeekHTML(eventsArray, DOMElement) {
     if (eventItem.images) {
       eventItem.images.forEach((image) => {
         template += `
-          <img src="${image["src"]}" class="${image["className"]}">
+          <img data-src="${image["src"]}" class="${image["className"]} lazy">
         `;
       });
     }
