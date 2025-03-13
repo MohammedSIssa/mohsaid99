@@ -9,7 +9,6 @@
   --font-color: #e3e3e3;
   --story-border-color: #424857;
   --story-count-bg-color: #676c7a;
-
   --nav-btn-hover-color: var(--background-color);
   --root-bg-color: var(--background-color);
   --root-font-color: var(--font-color);
@@ -77,11 +76,7 @@ nav ul {
   text-align: right;
 }
 .post {
-  color: white;
-  /* border-image: linear-gradient(45deg, #f6bd00 0%, #e82243 60%, #c200b5 100%) 1; */
-  /* border-radius: 12px; */
-  /* border-width: 3px; */
-  /* border-style: solid; */
+  color: var(--font-color);
   border: 1px solid var(--story-border-color);
   border-radius: 8px;
   transition: all 0.3s;
@@ -114,7 +109,6 @@ nav ul {
   bottom: 5px;
   left: 5px;
   transform: skewX(-5deg);
-  /* background-color: var(--story-count-bg-color); */
   background-color: transparent;
   color: var(--font-color);
   font-family: var(--post-count-font) !important;
@@ -139,6 +133,7 @@ nav ul {
   color: var(--root-font-color);
   margin-bottom: 50px;
   padding-top: 50px;
+  position: relative;
 }
 
 #root section {
@@ -150,14 +145,14 @@ nav ul {
   padding: 60px 30px;
   font-size: 18px;
   text-align: center;
-  border-bottom: 1px solid var(--story-border-color);
+  border-top: 1px solid var(--story-border-color);
 }
 
-#root section:last-child {
-  border-bottom: none;
+#root section:first-child {
+  border-top: none;
   padding: 0 !important;
-  padding-top: 20px !important;
-  padding-bottom: 0 !important;
+  padding-bottom: 20px !important;
+  padding-top: 0 !important;
 }
 
 #root section * {
@@ -192,12 +187,12 @@ p.count {
   font-weight: 240;
   font-size: 12px !important;
   font-style: italic;
-  color: #e3e3e3;
+  color: var(--font-color);
   text-align: center;
 }
 .goals {
   padding: 20px 0;
-  color: white;
+  color: var(--font-color);
   width: min(80%, 600px);
   background-color: var(--background-color);
   display: flex;
@@ -209,32 +204,43 @@ p.count {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 .loading {
-  width: 90%;
+  width: 100%;
   position: relative;
-  height: 20px;
-  background-color: #f2f2f2;
+  height: 24px;
+  background-color: var(--story-count-bg-color);
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-radius: 8px;
-  margin: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45) inset;
+  border-radius: 11px;
+  margin: 3px 0;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.65) inset;
 }
 .progress-bar {
   height: 100%;
-  background: linear-gradient(200deg, #f6bd00 0%, #e82243 60%, #c200b5 100%);
-  /* background: linear-gradient(200deg, var(--story-count-bg-color) 0%, var(--story-background-color) 100%); */
+  background-color: var(--font-color);
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45) inset;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.45) inset;
 }
 .progress-value {
   position: absolute;
-  top: 23px;
+  top: 25px;
   font-weight: 450;
 }
 .goal p {
   margin: 0 !important;
+  width: 100%;
+  text-align: center;
+}
+
+a#back-to-top {
+  text-decoration: none;
+  color: var(--font-color);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: underline;
 }

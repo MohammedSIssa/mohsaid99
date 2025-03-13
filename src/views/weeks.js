@@ -21,5 +21,6 @@ export function generateWeekHTML(eventsArray, DOMElement) {
     }
     template += "</section>";
   });
+  template += '<a id="back-to-top" href="#posts">الرجوع لأعلى</a>';
   DOMElement.innerHTML = template;
 }
