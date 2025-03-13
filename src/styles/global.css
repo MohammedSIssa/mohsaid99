@@ -252,3 +252,12 @@ a#back-to-top {
   right: 20px;
   text-decoration: underline;
 }
+
+img.lazy {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+img.loaded {
+  opacity: 1;
+}
