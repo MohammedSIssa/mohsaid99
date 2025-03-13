@@ -1,6 +1,6 @@
 ::-webkit-scrollbar {
-  width: 6px; 
-  height: 6px; 
+  width: 10px; 
+  height: 10px; 
 }
 ::-webkit-scrollbar-track {
   background: var(--background-color);
@@ -10,7 +10,7 @@
   border-radius: 12px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--font-color); 
+  background: var(--story-count-bg-color); 
 }
 ::-webkit-scrollbar-corner {
   background: #f1f1f1;

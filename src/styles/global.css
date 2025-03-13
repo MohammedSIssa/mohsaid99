@@ -204,7 +204,7 @@ p.count {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 20px 0;
+  margin: 27px 0;
 }
 .loading {
   width: 100%;
@@ -224,16 +224,24 @@ p.count {
   background-color: var(--font-color);
   border-radius: 8px;
   box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.45) inset;
+  filter: drop-shadow(0 0 10px var(--story-count-bg-color));
 }
 .progress-value {
   position: absolute;
   top: 25px;
   font-weight: 450;
 }
-.goal p {
+.goal > p {
   margin: 0 !important;
   width: 100%;
   text-align: center;
+  filter: drop-shadow(0 0 5px var(--story-count-bg-color));
+}
+
+.goal .progress-value {
+  font-family: var(--post-count-font) !important;
+  font-style: italic !important;
+  font-weight: bold;
 }
 
 a#back-to-top {
