@@ -3,6 +3,8 @@ import "./styles/large.css";
 import "./styles/mobile.css";
 import "./styles/scrollbar.css";
 
+import { lazyLoad } from "./controller/lazyLoader";
+
 const weeks = require("./model/weeks.json")
 const goals = require("./model/goals.json")
 
@@ -26,3 +28,4 @@ goalsBtn.addEventListener('click', () => {
 // On Launch
 addStory2Root(weeks, document.getElementById("posts"))
 addWeek2Root(weeks[weeks.length - 1]["events"], document.getElementById("root"))
+lazyLoad()
