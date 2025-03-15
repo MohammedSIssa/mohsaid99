@@ -5,11 +5,18 @@ export function generateWeekHTML(eventsArray, DOMElement) {
     if (eventItem.event) {
       template += "<section>";
       eventItem.event.forEach((content) => {
-        template += `
+        if(content["isVideo"]) {
+          template += `
+            ${content["html"]}
+          `
+        }
+        else {
+          template += `
           <${content["tag"]}>
             ${content["text"]}
           </${content["tag"]}>
         `;
+        }
       });
     }
     if (eventItem.images) {
