@@ -1278,7 +1278,7 @@
           },
           {
             "isVideo": "true",
-            "html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-d3HiNIH1gU?autoplay=1&controls=0&loop=1&playlist=-d3HiNIH1gU&mute=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>"
+            "html": "<iframe src=\"https://www.youtube.com/embed/-d3HiNIH1gU?autoplay=1&controls=0&loop=1&playlist=-d3HiNIH1gU&mute=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>"
           }
         ]
       }
