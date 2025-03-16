@@ -61,6 +61,7 @@
 
   #root section {
     width: 100%;
+    max-width: 100%;
     padding: 20px 0 !important;
   }
 
@@ -70,7 +71,6 @@
 
   h1,h2,h3,h4,h5,h6 {
     padding: 10px;
-    text-wrap: pretty;
   }
 
   #root img.long-image {
@@ -78,5 +78,27 @@
   }
   main {
     width: 100%;
+  }
+  h1 {
+    font-size: 1.4em !important;
+  }
+  h2 {
+      font-size: 1.2em !important;
+  }
+  h3 {
+      font-size: 1em !important;
+  }
+  h4 {
+      font-size: 0.8em !important;
+  }
+  h5 {
+    font-size: 0.6em !important;
+  }
+  h6 {
+    font-size: 0.4em !important;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.75;
   }
 }
