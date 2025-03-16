@@ -1025,7 +1025,7 @@
           },
           {
             "text": "😎 صار في روح وحياة بالموقع بدل الجو الرسمي",
-            "tag": "h4"
+            "tag": "p"
           }
         ]
       },
@@ -1209,7 +1209,7 @@
         "event": [
           {
             "text": "طبقت حاجة اسمها",
-            "tag": "h3"
+            "tag": "h1"
           },
           {
             "text": "✨ Lazy Loading ✨",
@@ -1234,7 +1234,7 @@
       {
         "event": [
           {
-            "text": "Another Design.. 🙂",
+            "text": "سويت تصميم، بييجي يوم بسويه 🙂",
             "tag": "h3"
           }
         ],
@@ -1247,13 +1247,21 @@
       {
         "event": [
           {
-            "text": "Finished Advanced HTML & CSS Course!",
-            "tag": "h2"
+            "text": "إنجاز جديد 💫",
+            "tag": "h1"
+          },
+          {
+            "text": "خلصت الكورس التالت في دورة الفل ستاك",
+            "tag": "h3"
           }
         ],
         "images": [
           {
-            "src": "https://i.imgur.com/qrIMALO.jpeg",
+            "src": "https://i.imgur.com/WSNANmX.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/WkiEpbG.jpeg",
             "className": "small-image"
           }
         ]
@@ -1261,8 +1269,16 @@
       {
         "event": [
           {
+            "text": "المشروع الأخير",
+            "tag": "h1"
+          },
+          {
+            "text": "كان مطلوب اصمم موقع بورتفوليو، يشتغل على كل اﻷجهزة ويكون مافي مشاكل بالعرض سواء كان على جوال او على لابتوب",
+            "tag": "p"
+          },
+          {
             "isVideo": "true",
-            "html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-d3HiNIH1gU?autoplay=1&controls=0&loop=1&playlist=-d3HiNIH1gU&mute=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen style=\"width:100%\"></iframe>"
+            "html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/-d3HiNIH1gU?autoplay=1&controls=0&loop=1&playlist=-d3HiNIH1gU&mute=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>"
           }
         ]
       }
