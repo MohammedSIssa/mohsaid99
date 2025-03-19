@@ -1415,7 +1415,7 @@
             "tag": "h2"
           },
           {
-            "text": "لبست اواعي دكاترة عشان الغبرة",
+            "text": "لبست اواعي زي هدول من العيادة عشان الغبرة",
             "tag": "p"
           }
         ],
@@ -1506,11 +1506,15 @@
       {
       	"event": [
           {
-            "text": "اسبوع كان فيه نت ضعيف وشغل",
+            "text": "اسبوع فاصل نت أغلبه",
             "tag": "h3"
           }
         ],
         "images": [
+          {
+            "src": "https://i.imgur.com/IiQfxn8.jpeg",
+            "className": "small-image"
+          },
           {
             "src": "https://i.imgur.com/jT1aqwW.jpeg",
             "className": "small-image"
