@@ -5,7 +5,7 @@ import "./styles/scrollbar.css";
 
 import { lazyLoad } from "./controller/lazyLoader";
 
-const weeks = require("./model/weeks.json")
+const weeks = require("./model/weeks.full.json")
 const goals = require("./model/goals.json")
 
 const weeksBtn = document.querySelector("#weeksBtn")
