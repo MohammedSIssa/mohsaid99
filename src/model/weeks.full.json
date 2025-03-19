@@ -1281,6 +1281,241 @@
             "html": "<iframe src=\"https://www.youtube.com/embed/-d3HiNIH1gU?autoplay=1&controls=0&loop=1&playlist=-d3HiNIH1gU&mute=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "17/3/2025 - 6:50 AM",
+            "tag": "h1"
+          },
+          {
+            "text": "مشوار غزة الثالث",
+            "tag": "h1"
+          },
+          {
+            "text": "الهدف من الطلعة؟",
+            "tag": "h3"
+          },
+          {
+            "text": "نجيب غراض من بيتنا في غزة",
+            "tag": "p"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "بداية التوثيق",
+            "tag": "h2"
+          },
+          {
+            "text": "6:49 AM",
+            "tag": "h4"
+          },
+          {
+            "text": "بإتجاه شارع الرشيد",
+            "tag": "p"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/KSzlTAY.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/zV43hRF.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/tCzGVr1.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/zeWYIi7.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/SxhRzx3.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/IRwunkL.jpeg",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "ركبنا تكتك لحد تلة النويري",
+            "tag": "h3"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/TnPMZ5C.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "وصلنا تلة النويري ومن هناك ركبنا لحد دوار النابلس بغزة ومن هناك مشي للبيت",
+            "tag": "h2"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/9iMKfvx.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/YlOzHNv.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/AeXkIp9.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/zmlJEko.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/gn84Psg.jpeg",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "وصلنا البيت",
+            "tag": "h1"
+          },
+          {
+            "text": "8:45 AM",
+            "tag": "h3"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/9sILJHr.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/sDuPRr1.jpeg",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "بنبلش شغل ولملمة الغراض اللازمة",
+            "tag": "h2"
+          },
+          {
+            "text": "لبست اواعي دكاترة عشان الغبرة",
+            "tag": "p"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/uQKgmwY.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/wHo6jC3.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "لقينا صورة لدار الشوكة 🥲 خزان احزان",
+            "tag": "h2"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/Koz8ckV.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "خلصنا نقل على الكارة على أذان الظهر",
+            "tag": "h2"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/PcICLSx.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "بعد هيك تحركت انا وابوي على شقة اختي ايمان",
+            "tag": "h2"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/KyqNKU5.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/Tw1mlqn.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/7toUl50.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/vKBjLcm.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "روحت على الدير على الساعة 2 العصر",
+            "tag": "h2"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "بسبب مشاكل النت، نزلت المشوار بالاسبوع اللي وراه",
+            "tag": "h2"
+          },
+          {
+            "text": "تخفيف حجم الصور هيك",
+            "tag": "p"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/4EaFbxB.jpeg",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+      	"event": [
+          {
+            "text": "اسبوع كان فيه نت ضعيف وشغل",
+            "tag": "h3"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/jT1aqwW.jpeg",
+            "className": "small-image"
+          }
+        ]
       }
     ]
   }
