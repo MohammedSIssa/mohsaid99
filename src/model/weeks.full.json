@@ -1544,6 +1544,16 @@
             "text": "عشان هيك قعدت ارتب بالغرفة والغراض الجديدة اللي جبتها معي من غزة",
             "tag": "p"
           }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/RAxAFW3.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/I5sIkmC.jpeg",
+            "className": "small-image"
+          }
         ]
       }
     ]
