@@ -161,7 +161,7 @@ nav ul {
 }
 
 #root p {
-  /* font-weight: 450; */
+  font-weight: 450;
   margin-top: 10px;
   margin-bottom: 30px;
   color: var(--paragraphs-font-color);
