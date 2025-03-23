@@ -149,6 +149,12 @@ nav ul {
   border-top: 1px solid var(--story-border-color);
 }
 
+#root section * {
+  margin: 5px 0px !important;
+  width: 100%;
+  text-wrap: pretty;
+}
+
 #root section:first-child {
   border-top: none;
   padding: 0 !important;
@@ -193,7 +199,7 @@ p.count {
   text-align: center;
 }
 .goals {
-  padding: 20px 0;
+  /* padding: 20px 0; */
   color: var(--font-color);
   width: min(80%, 600px);
   background-color: var(--background-color);
@@ -206,7 +212,7 @@ p.count {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 27px 0;
+  margin: 25px 0;
 }
 .loading {
   width: 100%;
