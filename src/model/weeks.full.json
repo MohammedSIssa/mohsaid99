@@ -1359,7 +1359,7 @@
       {
         "event": [
           {
-            "text": "وصلنا تلة النويري ومن هناك ركبنا لحد دوار النابلس بغزة",
+            "text": "وصلنا تلة النويري ومن هناك ركبنا لحد دوار النابلسي بغزة",
             "tag": "h2"
           },
           {
@@ -1496,7 +1496,7 @@
             "tag": "h2"
           },
           {
-            "text": "تخفيف حجم الصور هيك",
+            "text": "بعد هيك سويت تحسين على حجم الصور ونزلتهم",
             "tag": "p"
           }
         ],
@@ -1604,6 +1604,28 @@
         "images": [
           {
             "src": "https://i.imgur.com/6mEvjOT.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "أول خطوات بالرياكت",
+            "tag": "h1"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/mhZM3tM.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/q1pl0Ct.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/wfPAIDA.jpeg",
+            "className": "small-image"
           }
         ]
       }
