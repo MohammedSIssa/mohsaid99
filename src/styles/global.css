@@ -31,6 +31,13 @@ body * {
   padding: 0;
   box-sizing: border-box;
 }
+
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 button {
   background-color: transparent;
   border: none;
