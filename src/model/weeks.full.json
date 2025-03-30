@@ -1640,11 +1640,23 @@
     "type": "weeks",
     "events": [
       {
-        "event": [],
+        "event": [
+          {
+            "text": "سويت أول مشروع كامل بالرياكت",
+            "tag": "h1"
+          },
+          {
+            "text": "CV Application",
+            "tag": "h2"
+          }
+        ],
         "images": [
           {
-            "src": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3B0NGkydDYwbjh4aHFtejZzM2t5ajB4ZWd4enJtejN3NGM5ajZoaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JIX9t2j0ZTN9S/giphy.gif",
+            "src": "https://i.imgur.com/s4nyv7H.jpeg",
             "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/Qzcivzh.jpeg"
           }
         ]
       }
