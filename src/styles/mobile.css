@@ -1,4 +1,4 @@
-@media (width < 760px) {
+@media (max-width: 760px) {
   .logo {
     position: absolute;
     top: 0;
