@@ -1755,6 +1755,35 @@
             "tag": "p"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "برمجة المشروع التاني من الكورس",
+            "tag": "h1"
+          },
+          {
+            "text": "Memory Cards",
+            "tag": "h3"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/uHRNwfA.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/Np5cBaD.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/yj4jEcN.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/AlbULB3.png",
+            "className": "small-image"
+          }
+        ]
       }
     ]
   }
