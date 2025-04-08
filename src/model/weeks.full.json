@@ -1799,6 +1799,15 @@
           "Props",
           "Clothes in Hebrew"
         ]
+      },
+      {
+        "event": [],
+        "images": [
+          {
+            "src": "https://i.imgur.com/cEdqDjy.jpeg",
+            "className": "small-image"
+          }
+        ]
       }
     ]
   }
