@@ -2,7 +2,7 @@ export function generateWeekHTML(eventsArray, DOMElement) {
   DOMElement.innerHTML = "";
   let template = "";
   eventsArray.forEach((eventItem) => {
-    if (eventItem.event) {
+    if (eventItem?.event) {
       template += "<section>";
       eventItem.event.forEach((content) => {
         if(content["isVideo"]) {
@@ -19,7 +19,7 @@ export function generateWeekHTML(eventsArray, DOMElement) {
         }
       });
     }
-    if (eventItem.images) {
+    if (eventItem?.images) {
       eventItem.images.forEach((image) => {
         template += `
           <img data-src="${image["src"]}" class="${image["className"] ? image["className"] : "image"} lazy">
