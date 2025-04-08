@@ -1788,6 +1788,24 @@
       {
         "event": [
           {
+            "text": "صور من الحياة 📷",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/HQFX6Ys.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/IvlJeZC.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/0kOugos.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
             "text": ":This Week I learned about",
             "tag": "h1"
           }
