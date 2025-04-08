@@ -26,6 +26,15 @@ export function generateWeekHTML(eventsArray, DOMElement) {
         `;
       });
     }
+    if(eventItem?.list) {
+      template += '<ul>'
+      eventItem.list.forEach((listItem) => {
+        template += `
+          <li>${listItem}</li>
+        `
+      })
+      template += '</ul>'
+    }
     template += "</section>";
   });
   template += '<a id="back-to-top" href="#top">الرجوع لأعلى</a>';
