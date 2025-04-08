@@ -1784,6 +1784,21 @@
             "className": "small-image"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": ":This Week I learned about",
+            "tag": "h1"
+          }
+        ], "list": [
+          "JSX",
+          "useEffect",
+          "React Classes",
+          "Managing State",
+          "Props",
+          "Clothes in Hebrew"
+        ]
       }
     ]
   }
