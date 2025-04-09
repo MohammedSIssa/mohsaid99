@@ -1,13 +1,12 @@
 ::-webkit-scrollbar {
-  width: 4px; 
-  height: 4px; 
+  width: 10px; 
+  height: 10px; 
 }
 ::-webkit-scrollbar-track {
   background: var(--background-color);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--story-border-color);
-  border-radius: 12px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--story-count-bg-color); 

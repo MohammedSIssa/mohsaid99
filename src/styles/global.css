@@ -290,6 +290,12 @@ iframe {
   aspect-ratio: 16 / 9;
 }
 
+iframe.shorts {
+  aspect-ratio: 9 / 16 !important;
+  height: calc(100dvh - 200px);
+  width: auto !important;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
   text-wrap: pretty;
   max-width: 800px;
