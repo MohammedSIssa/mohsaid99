@@ -1800,21 +1800,27 @@
           },
           {
             "src": "https://i.imgur.com/0kOugos.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/d6rTRn1.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/8OrSrZ6.jpeg"
           }
         ]
       },
       {
         "event": [
           {
-            "text": ":This Week I learned about",
+            "text": ":This week I learned about",
             "tag": "h1"
           }
         ], "list": [
           "JSX",
+          "States",
+          "Props",
           "useEffect",
           "React Classes",
-          "Managing State",
-          "Props",
           "Clothes in Hebrew"
         ]
       },
