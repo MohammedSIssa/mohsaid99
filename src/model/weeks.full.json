@@ -212,7 +212,7 @@
   {
     "id": 4,
     "duration": "من 22 يناير إلى 28 يناير",
-    "summary": "تحديث جديد على الموقع – إضافة أهداف سنوية",
+    "summary": "تحديث جديد على الموقع – إضافة أهداف سنوية، مشوار غزة اﻷول",
     "year": "2025",
     "type": "weeks",
     "events": [
@@ -321,6 +321,18 @@
         "images": [
           {
             "src": "https://i.imgur.com/nLSJJ1e.png"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "مشوار غزة الأول",
+            "tag": "h1"
+          },
+          {
+            "isVideo": "true",
+            "html": "<iframe class=\"shorts\" src=\"https://www.youtube.com/embed/bL3z0ifa80Y?autoplay=1&controls=0&loop=1&playlist=bL3z0ifa80Y&mute=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>"
           }
         ]
       }
@@ -432,7 +444,7 @@
   {
     "id": 7,
     "duration": "من 12 فبراير إلى 18 فبراير",
-    "summary": "مشوار غزة",
+    "summary": "مشوار غزة الثاني",
     "year": "2025",
     "type": "weeks",
     "events": [
@@ -1158,7 +1170,7 @@
   {
     "id": 11,
     "duration": "من 12 مارس إلى 18 مارس",
-    "summary": "صرت عم، بداية الرياكت ❤️",
+    "summary": "صرت عم، بداية الرياكت، مشوار عزة الثالث",
     "year": 2025,
     "type": "weeks",
     "events": [
