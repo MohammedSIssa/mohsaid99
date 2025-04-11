@@ -1846,5 +1846,91 @@
         ]
       }
     ]
+  },
+  {
+    "id": 15,
+    "duration": "من 9 أبريل إلى 15 أبريل ",
+    "summary": "🔴",
+    "year": 2025,
+    "type": "weeks",
+    "events": [
+      {
+        "event": [
+          {
+            "text": "Introduction to React Testing",
+            "tag": "h1"
+          },
+          {
+            "text": "Vitest, React Testing Library (RTL)",
+            "tag": "p"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/foXHyqC.jpeg",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "Simulating User Events - React Testing",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/amNEMd9.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/C3OAmq8.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/4lBBUsH.png",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "صور من الحياة 📷",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/zyAERvZ.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/uKeNppH.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/cUQjCun.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/GD1re2X.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/QSNikaC.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": ":This week I learned about",
+            "tag": "h1"
+          }
+        ], "list": [
+          "React Testing Library",
+          "Vitest",
+          "Jest DOM",
+          "screen, render",
+          "user-event",
+          "Prototypal Inheritence"
+        ]
+      }
+    ]
   }
 ]
