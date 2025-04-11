@@ -76,6 +76,11 @@
   #root img.long-image {
     width: 100% !important;
   }
+
+  #root section img {
+    width: 100% !important;
+    object-fit: cover;
+  }
   main {
     width: 100%;
   }
