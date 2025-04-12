@@ -1912,15 +1912,27 @@
           }
         ], "images": [
           {
-            "src": "https://i.imgur.com/ZO6DNMy.jpeg",
+            "src": "https://i.imgur.com/eJqqQUr.jpeg",
             "className": "extra-small-image"
           },
           {
-            "src": "https://i.imgur.com/D5SRiPA.jpeg",
+            "src": "https://i.imgur.com/uSHly7p.jpeg",
             "className": "extra-small-image"
           },
           {
-            "src": "https://i.imgur.com/qles7CK.jpeg",
+            "src": "https://i.imgur.com/npyWyBJ.jpeg",
+            "className": "extra-small-image"
+          },
+          {
+            "src": "https://i.imgur.com/4aXjLBw.jpeg",
+            "className": "extra-small-image"
+          },
+          {
+            "src": "https://i.imgur.com/lA1Gsye.jpeg",
+            "className": "extra-small-image"
+          },
+          {
+            "src": "https://i.imgur.com/cCQxjzQ.jpeg",
             "className": "extra-small-image"
           }
         ]
