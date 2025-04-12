@@ -1907,6 +1907,27 @@
       {
         "event": [
           {
+            "text": "React Router",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/ZO6DNMy.jpeg",
+            "className": "extra-small-image"
+          },
+          {
+            "src": "https://i.imgur.com/D5SRiPA.jpeg",
+            "className": "extra-small-image"
+          },
+          {
+            "src": "https://i.imgur.com/qles7CK.jpeg",
+            "className": "extra-small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
             "text": "صور من الحياة 📷",
             "tag": "h1"
           }
@@ -1944,7 +1965,8 @@
           "PropTypes",
           "defaultProps",
           "History API",
-          "Single-page Applications (SPA)"
+          "Single-page Applications (SPA)",
+          "React Router"
         ]
       }
     ]
