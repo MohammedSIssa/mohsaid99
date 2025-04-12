@@ -1940,7 +1940,11 @@
           "Jest DOM",
           "screen, render",
           "user-event",
-          "Prototypal Inheritence"
+          "Prototypal Inheritence",
+          "PropTypes",
+          "defaultProps",
+          "History API",
+          "Single-page Applications (SPA)"
         ]
       }
     ]
