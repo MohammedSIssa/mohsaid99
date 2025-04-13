@@ -21,7 +21,7 @@
 }
 body {
   background-color: var(--root-bg-color);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 body * {
   font-family: var(--arabic-font), sans-serif;
