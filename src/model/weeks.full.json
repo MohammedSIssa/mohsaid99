@@ -1980,6 +1980,15 @@
           "Single-page Applications (SPA)",
           "React Router"
         ]
+      },
+      {
+        "event": [],
+        "images": [
+          {
+            "src": "https://i.imgur.com/bOFhjfi.jpeg",
+            "className": "small-image"
+          }
+        ]
       }
     ]
   }
