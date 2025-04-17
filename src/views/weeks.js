@@ -29,9 +29,18 @@ export function generateWeekHTML(eventsArray, DOMElement) {
     if(eventItem?.list) {
       template += '<ul>'
       eventItem.list.forEach((listItem) => {
-        template += `
+        if(Array.isArray(listItem)) {
+          template += '<li><ul>'
+          listItem.forEach((item) => {
+            template += `<li>${item}</li>`
+          })
+          template += '</ul></li>'
+        }
+        else {
+          template += `
           <li>${listItem}</li>
         `
+        }
       })
       template += '</ul>'
     }

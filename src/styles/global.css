@@ -304,11 +304,20 @@ p, h1, h2, h3, h4, h5, h6 {
 
 section ul {
   max-width: 70%;
+  list-style-type: decimal;
 }
 
 
 section ul li {
   text-align: left;
+}
+
+ul > li > ul {
+  transform: translateX(25px);
+}
+
+ul li:has(ul) {
+  list-style-type: none;
 }
 
 li a {
