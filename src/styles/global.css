@@ -32,6 +32,10 @@ body * {
   box-sizing: border-box;
 }
 
+.loading-screen {
+  display: none;
+}
+
 #top {
   position: absolute;
   top: 0;
