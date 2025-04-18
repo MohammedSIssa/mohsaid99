@@ -2063,12 +2063,21 @@
         ],
         "images": [],
         "list": [
-          "Fetching Data in React (<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-styling-react-applications'>OdinProject</a>) (<a target='_blank' href='https://blog.logrocket.com/modern-api-data-fetching-methods-react/'>logrocket</a>) (<a href='https://www.developerway.com/posts/how-to-fetch-data-in-react' target='_blank'>developerway</a>)",
-          "CSS in JS (<a href='https://styled-components.com/' target='_blank'>site</a>)",
-          "Tailwind CSS (<a target='_blank' href='https://tailwindcss.com/'>site</a>)",
-          "Material UI (<a href='https://www.mui.com' target='_blank'>site</a>)",
-          "Chakra UI (<a target='_blank' href='https://chakra-ui.com/'>site</a>)",
-          "Radix UI (<a target='_blank' href='https://www.radix-ui.com/'>site</a>)"
+          "Fetching Data in React:",
+          [
+            "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-styling-react-applications'>OdinProject</a>",
+            "<a target='_blank' href='https://blog.logrocket.com/modern-api-data-fetching-methods-react/'>logrocket</a>",
+            "<a href='https://www.developerway.com/posts/how-to-fetch-data-in-react' target='_blank'>developerway</a>"
+          ],
+          "<a href='https://styled-components.com/' target='_blank'>CSS in JS</a>",
+          "<a target='_blank' href='https://tailwindcss.com/'>Tailwind CSS</a>",
+          "<a href='https://www.mui.com' target='_blank'>Material UI</a>",
+          "<a target='_blank' href='https://chakra-ui.com/'>Chakra UI</a>",
+          "<a target='_blank' href='https://www.radix-ui.com/'>Radix UI</a>",
+          "Articles I read:",
+          [
+            "<a href='https://rbika.com/blog/understanding-cors'>Understanding CORS</a>"
+          ]
         ]
       }
     ]
