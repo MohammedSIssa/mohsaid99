@@ -46,6 +46,6 @@ export function generateWeekHTML(eventsArray, DOMElement) {
     }
     template += "</section>";
   });
-  template += '<a id="back-to-top" href="#top">الرجوع لأعلى</a>';
+  template += '<a id="back-to-top" href="#top"><button>🔝</button></a>';
   DOMElement.innerHTML = template
 }
