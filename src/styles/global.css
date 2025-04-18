@@ -32,8 +32,8 @@ body * {
   box-sizing: border-box;
 }
 
-.loading-screen {
-  display: none;
+.loading-screen{
+  display: none !important;
 }
 
 #top {
