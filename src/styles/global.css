@@ -28,7 +28,7 @@ body * {
 }
 * {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -70,7 +70,6 @@ button.btn img {
 }
 
 nav .logo {
-  font-size: 24px;
   font-weight: bold;
 }
 .logo {
@@ -216,7 +215,6 @@ p.count {
   text-align: center;
 }
 .goals {
-  /* padding: 20px 0; */
   color: var(--font-color);
   width: min(80%, 600px);
   background-color: var(--background-color);

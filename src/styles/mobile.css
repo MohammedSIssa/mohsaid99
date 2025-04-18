@@ -3,55 +3,50 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-bottom: 1px solid var(--story-border-color);
     width: 100%;
     padding: 10px 20px;
     text-align: center;
     color: var(--font-color);
+    background: linear-gradient(to bottom, var(--background-color), rgba(0,0,0,0));
   }
   .hidden-m {
     display: none;
   }
   nav {
     position: fixed;
-    bottom: 7px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -1px;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: min(250px, 67%);
+    width: 100%;
     min-height: 50px;
     height: 50px;
     max-height: 50px;
-    border-radius: 25px;
     z-index: 999;
-    background-color: var(--story-background-color);
-  }
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
+    border-top: 1px solid var(--story-border-color);
+    padding: 0 !important;
   }
   nav .nav-items {
-    width: 100%;
-    justify-content: space-around;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
   }
-  nav .nav-items img {
+  nav .nav-items ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 25%;
+  }
+  .nav-items ul li button img {
     width: 25px;
     height: 25px;
   }
-  nav {
-    flex-direction: row-reverse;
-    text-align: right;
-  }
-  body.Arabic nav ul {
-    flex-direction: row-reverse;
-  }
   #posts {
-    margin-top: 80px;
+    margin-top: 60px;
   }
   #posts .post {
     text-align: right;
