@@ -2077,7 +2077,12 @@
           "Articles I read:",
           [
             "<a target='_blank' href='https://rbika.com/blog/understanding-cors'>Understanding CORS</a>",
-            "<a target='_blank' href='https://www.developerway.com/posts/react-elements-children-parents'>The mystery of React Element, children, parents and re-renders</a>"
+            "<a target='_blank' href='https://www.developerway.com/posts/react-elements-children-parents'>The mystery of React Element, children, parents and re-renders</a>",
+            "<a target='_blank' href='https://www.developerway.com/posts/how-to-fetch-data-in-react#part7'>How to solve requests waterfall</a>"
+          ],
+          "CSS Modules:",
+          [
+            "<a target='_blank' href='https://lightningcss.dev/css-modules.html'>lightningcss ⚡</a>"
           ]
         ]
       }
