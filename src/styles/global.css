@@ -28,7 +28,7 @@ body * {
 }
 * {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -160,7 +160,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 30px;
+  /* padding: 60px 30px; */
   font-size: 18px;
   text-align: center;
   border-top: 1px solid var(--story-border-color);
@@ -270,11 +270,13 @@ p.count {
 
 a#back-to-top {
   text-decoration: none;
-  color: var(--font-color);
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  text-decoration: underline;
+  bottom: 5px;
+  right: 10px;
+}
+
+#back-to-top button {
+  font-size: 50px;
 }
 
 img.lazy {
@@ -308,7 +310,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 section ul {
   max-width: 70%;
-  list-style-type: decimal;
 }
 
 
@@ -317,7 +318,7 @@ section ul li {
 }
 
 ul > li > ul {
-  transform: translateX(25px);
+  transform: translate(30px, -20px);
 }
 
 ul li:has(ul) {
@@ -327,4 +328,8 @@ ul li:has(ul) {
 li a {
   color: violet;
   text-decoration: none;
+}
+
+section:last-child {
+  padding-bottom: 200px !important;
 }
