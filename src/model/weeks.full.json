@@ -2074,6 +2074,7 @@
           "<a href='https://www.mui.com' target='_blank'>Material UI</a>",
           "<a target='_blank' href='https://chakra-ui.com/'>Chakra UI</a>",
           "<a target='_blank' href='https://www.radix-ui.com/'>Radix UI</a>",
+          "<a target='_blank' href='https://lucide.dev/guide/packages/lucide-react'>lucide-react</a>",
           "Articles I read:",
           [
             "<a target='_blank' href='https://rbika.com/blog/understanding-cors'>Understanding CORS</a>",
@@ -2084,6 +2085,10 @@
           "CSS Modules:",
           [
             "<a target='_blank' href='https://lightningcss.dev/css-modules.html'>lightningcss ⚡</a>"
+          ],
+          "Courses downloaded:",
+          [
+            "<a target='_blank' href='https://www.joyofreact.com/'>The Joy of React</a>"
           ]
         ]
       }
