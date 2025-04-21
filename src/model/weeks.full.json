@@ -2030,6 +2030,10 @@
           {
             "text": "Shopping Cart",
             "tag": "h2"
+          },
+          {
+            "text": "<a href='https://mohammedsissa.github.io/shopping-cart/' target='blank'>Live Preview</a>",
+            "tag": "p"
           }
         ], "images": [
           {
