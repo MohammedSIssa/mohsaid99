@@ -323,7 +323,7 @@ ul li:has(ul) {
   list-style-type: none;
 }
 
-li a {
+a {
   color: violet;
   text-decoration: none;
 }
