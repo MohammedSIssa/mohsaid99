@@ -2020,23 +2020,27 @@
       {
         "event": [
           {
-            "text": "انجاز جديد",
+            "text": "انجاز جديد 🎉",
             "tag": "h1"
           },
           {
-            "text": "خلصت اخر مشروع بالرياكت",
+            "text": "خلصت اخر مشروع بالرياكت ⚡",
             "tag": "h4"
           },
           {
-            "text": "Shopping Cart",
-            "tag": "h2"
+            "text": "🛒 Shopping Cart",
+            "tag": "h1"
           },
           {
-            "text": "<a href='https://mohammedsissa.github.io/shopping-cart/' target='blank'>Live Preview</a>",
+            "text": "<a href='https://mohammedsissa.github.io/shopping-cart/' target='blank'>👀 Live Preview</a>",
             "tag": "p"
           },
           {
-            "text": "<a href='https://github.com/MohammedSIssa/shopping-card-react-code' target='_blank'>Source Code</a>"
+            "text": "<a href='https://github.com/MohammedSIssa/shopping-card-react-code' target='_blank'>Source Code 🔎</a>"
+          },
+          {
+            "text": "Tech Stack: HTML, CSS, React, NodeJS",
+            "tag": "h2"
           }
         ], "images": [
           {
