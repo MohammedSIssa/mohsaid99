@@ -2,8 +2,8 @@ export function generateWeekHTML(eventsArray, DOMElement) {
   DOMElement.innerHTML = "";
   let template = "";
   eventsArray.forEach((eventItem) => {
+    template += "<section>";
     if (eventItem?.event) {
-      template += "<section>";
       eventItem.event.forEach((content) => {
         if(content["isVideo"]) {
           template += `
