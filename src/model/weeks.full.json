@@ -2173,14 +2173,39 @@
       {
         "event": [
           {
-          "text": "استخدامهم مع بعض ؟",
-          "tag": "h1"
-        },
-        {
-          "text": "لو عندك برنامج كبير، بتستخدم ال useReducer عشان اجمع منطق تحديث البيانات، وبغلفه جوات useContext عشان اوزع ال state وال dispatch على باقي المكونات",
-          "tag": "p"
-        }
-      ]
+            "text": "استخدامهم مع بعض ؟",
+            "tag": "h1"
+          },
+          {
+            "text": "لو عندك برنامج كبير، بتستخدم ال useReducer عشان اجمع منطق تحديث البيانات، وبغلفه جوات useContext عشان اوزع ال state وال dispatch على باقي المكونات",
+            "tag": "p"
+          },
+          {
+            "text": "مشروع سريع",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/1cMUDPe.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/mkw2SSU.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/UUVLcp1.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/JgAvRGb.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/fOoKrp1.png",
+            "className": "small-image"
+          }
+        ]
       },
       {
         "event": [
@@ -2300,6 +2325,14 @@
             "<a target='_blank' href='https://react.dev/learn/extracting-state-logic-into-a-reducer'>React.dev</a>",
             "<a target='_blank' href='https://www.telerik.com/blogs/react-usereducer-hook'>The React useReducer Hook</a>"
           ]
+        ]
+      },
+      {
+        "images": [
+          {
+            "src": "https://i.imgur.com/clknE8q.png",
+            "className": "small-image"
+          }
         ]
       }
     ]
