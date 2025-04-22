@@ -86,8 +86,11 @@
   }
   #root img{
     margin: 20px 0;
-    width: 100%;
-    max-width: 1000px;
+    /* width: 100%; */
+    max-width: 90%;
+  }
+  img {
+    border-radius: 16px;
   }
   #root img.small-image {
     width: min(80%, 650px);
