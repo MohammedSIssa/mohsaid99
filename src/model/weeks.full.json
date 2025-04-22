@@ -2078,23 +2078,11 @@
             "tag": "h1"
           },
           {
-            "text": "بيخليني انقل بيانات بين الcomponents حتى لو كانو بعاد عن بعض",
-            "tag": "p"
+            "text": "بشرحه عالسريع 🌚",
+            "tag": "h4"
           },
           {
-            "text": "المثال الجاي معمول انه كل سيكشن جواته سيكشن هيكون الهيدر تاع السيكشن اللي جوا بمستوى اعلى من السيكشن الاب",
-            "tag": "p"
-          },
-          {
-            "text": "بمعنى انه كل سيكشن اب هيعطي مستواه للسيكشن الابن، والسيكشن الابن هيروح ماخد مستوى اعلى بدرجة",
-            "tag": "p"
-          },
-          {
-            "text": "يعنيييي انه كل ابن هيكون خطه اصغر من ابوه، كل اب جواه كونتكست وبيعطي قيمة اسممها مستوى وهاد بتحدد حجم الخط",
-            "tag": "p"
-          },
-          {
-            "text": "لسا الموضوع جديد علي ف مش عارف كيف اشرحه بطريقة بسيطة",
+            "text": "هلقيت عندي بمشروع الرياكت غالبا بيبقى في بيانات بدي اوصلها من (الجد) للحفيد، بس الطريق في النص بيبقى عندي (أب) و (ابن) وكلهم لازم يمررو المعلومات حتى توصل للحفيد، هاد بنسميه بالرياكت (prop drilling ) يعني بمرر البيانات من اب لابن لابن لابن الخ، هان بييجي الuseContext زي خط التلفون مباشرة من الجد للحفيد بدون م تمر كل العيلة",
             "tag": "p"
           }
         ],
@@ -2135,6 +2123,64 @@
             "className": "small-image"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "useReducer",
+            "tag": "h1"
+          },
+          {
+            "text": "لو عندك state معقد شوي، مثلا تطبيق ToDo أو Shopping Cart وصار عندك كتير اكشنز زي (إضافة، حدف، تعديل، الخ) لو هستخدم useState لحالها هدوخ، وهان بييجي الuseReducer وبتشتغل زي عقل صغير بيستقبل أوامر وبيقرر شو يعمل",
+            "tag": "p"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "مكوناتها",
+            "tag": "h1"
+          },
+          {
+            "text": "reducer function",
+            "tag": "h1"
+          },
+          {
+            "text": "بتستقبل state الحالي و action وبترجع state جديدة حسب ال type تاع ال action",
+            "tag": "p"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/njULWrC.jpeg",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "useReducer",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/LElVtx8.jpeg",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+          "text": "استخدامهم مع بعض ؟",
+          "tag": "h1"
+        },
+        {
+          "text": "لو عندك برنامج كبير، بتستخدم ال useReducer عشان اجمع منطق تحديث البيانات، وبغلفه جوات useContext عشان اوزع ال state وال dispatch على باقي المكونات",
+          "tag": "p"
+        }
+      ]
       },
       {
         "event": [
@@ -2247,6 +2293,12 @@
             "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-managing-state-with-the-context-api#implementing-context-api'>The Odin Project</a>",
             "<a target='_blank' href='https://react.dev/reference/react/useContext'>useContext | React.dev</a>",
             "<a target='_blank' href='https://react.dev/learn/passing-data-deeply-with-context'>Examples | React.dev</a>"
+          ],
+          "useReducer",
+          [
+            "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-reducing-state'>Odin Project</a>",
+            "<a target='_blank' href='https://react.dev/learn/extracting-state-logic-into-a-reducer'>React.dev</a>",
+            "<a target='_blank' href='https://www.telerik.com/blogs/react-usereducer-hook'>The React useReducer Hook</a>"
           ]
         ]
       }
