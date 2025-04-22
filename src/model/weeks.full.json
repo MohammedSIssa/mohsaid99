@@ -2039,7 +2039,7 @@
             "text": "<a href='https://github.com/MohammedSIssa/shopping-card-react-code' target='_blank'>Source Code 🔎</a>"
           },
           {
-            "text": "Tech Stack: HTML, CSS, React, NodeJS",
+            "text": "Tech Stack: HTML, CSS, React, Vite, NodeJS",
             "tag": "h2"
           }
         ], "images": [
@@ -2135,6 +2135,7 @@
             "<a target='_blank' href='https://www.developerway.com/posts/react-elements-children-parents'>The mystery of React Element, children, parents and re-renders</a>",
             "<a target='_blank' href='https://www.developerway.com/posts/how-to-fetch-data-in-react#part7'>How to solve requests waterfall</a>"
            ,"<a target='_blank' href='https://www.makeuseof.com/react-components-css-modules-style/'>How to Style React Components Using CSS Modules</a>"
+           ,"<a target='_blank' href='https://www.robinwieruch.de/react-component-composition/'>React Component Composition</a>" 
           ],
           "CSS Modules:",
           [
@@ -2146,7 +2147,8 @@
           ],
           "Context API", 
           [
-            "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-managing-state-with-the-context-api#implementing-context-api'>The Odin Project</a>"
+            "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-managing-state-with-the-context-api#implementing-context-api'>The Odin Project</a>",
+            "<a target='_blank' href='https://react.dev/reference/react/useContext'>React.dev</a>"
           ]
         ]
       }
