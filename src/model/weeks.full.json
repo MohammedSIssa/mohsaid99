@@ -2287,9 +2287,18 @@
         "list": [
           "Fetching Data in React:",
           [
-            "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-styling-react-applications'>OdinProject</a>",
-            "<a target='_blank' href='https://blog.logrocket.com/modern-api-data-fetching-methods-react/'>logrocket</a>",
-            "<a href='https://www.developerway.com/posts/how-to-fetch-data-in-react' target='_blank'>developerway</a>"
+            {
+              "link": "https://www.theodinproject.com/lessons/node-path-react-new-styling-react-applications",
+              "title": "The Odin Project"
+            },
+            {
+              "link": "https://blog.logrocket.com/modern-api-data-fetching-methods-react/",
+              "title": "developerway"
+            },
+            {
+              "link": "https://www.developerway.com/posts/how-to-fetch-data-in-react",
+              "title": "How to Fetch Data in React"
+            }
           ],
           "<a href='https://styled-components.com/' target='_blank'>CSS in JS</a>",
           "<a target='_blank' href='https://tailwindcss.com/'>Tailwind CSS</a>",
@@ -2299,31 +2308,70 @@
           "<a target='_blank' href='https://lucide.dev/guide/packages/lucide-react'>lucide-react</a>",
           "Articles I read:",
           [
-            "<a target='_blank' href='https://rbika.com/blog/understanding-cors'>Understanding CORS</a>",
-            "<a target='_blank' href='https://www.developerway.com/posts/react-elements-children-parents'>The mystery of React Element, children, parents and re-renders</a>",
-            "<a target='_blank' href='https://www.developerway.com/posts/how-to-fetch-data-in-react#part7'>How to solve requests waterfall</a>"
-           ,"<a target='_blank' href='https://www.makeuseof.com/react-components-css-modules-style/'>How to Style React Components Using CSS Modules</a>"
-           ,"<a target='_blank' href='https://www.robinwieruch.de/react-component-composition/'>React Component Composition</a>" 
+            {
+              "link": "https://rbika.com/blog/understanding-cors",
+              "title": "Understanding CORS"
+            },
+            {
+              "link": "https://www.developerway.com/posts/react-elements-children-parents",
+              "title": "The mystery of React Element, children, parents and re-renders"
+            },
+            {
+              "link": "https://www.developerway.com/posts/how-to-fetch-data-in-react#part7",
+              "title": "How to solve requests waterfall"
+            },
+            {
+              "link": "https://www.makeuseof.com/react-components-css-modules-style/",
+              "title": "How to Style React Components Using CSS Modules"
+            },
+            {
+              "link": "https://www.robinwieruch.de/react-component-composition/",
+              "title": "React Component Composition"
+            }
           ],
           "CSS Modules:",
           [
-            "<a target='_blank' href='https://lightningcss.dev/css-modules.html'>lightningcss ⚡</a>"
+            {
+              "title": "lightningcss ⚡",
+              "link": "https://lightningcss.dev/css-modules.html"
+            }
           ],
           "Courses downloaded:",
           [
-            "<a target='_blank' href='https://www.joyofreact.com/'>The Joy of React</a>"
+            {
+              "title": "The Joy of React",
+              "link": "https://www.joyofreact.com/"
+            }
           ],
           "Context API", 
           [
-            "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-managing-state-with-the-context-api#implementing-context-api'>The Odin Project</a>",
-            "<a target='_blank' href='https://react.dev/reference/react/useContext'>useContext | React.dev</a>",
-            "<a target='_blank' href='https://react.dev/learn/passing-data-deeply-with-context'>Examples | React.dev</a>"
+            {
+              "title": "The Odin Project",
+              "link": "https://www.theodinproject.com/lessons/node-path-react-new-managing-state-with-the-context-api#implementing-context-api"
+            },
+            {
+              "title": "useContext | React.dev",
+              "link": "https://react.dev/reference/react/useContext"
+            },
+            {
+              "title": "Examples | React.dev",
+              "link": "https://react.dev/learn/passing-data-deeply-with-context"
+            }
           ],
           "useReducer",
           [
-            "<a target='_blank' href='https://www.theodinproject.com/lessons/node-path-react-new-reducing-state'>Odin Project</a>",
-            "<a target='_blank' href='https://react.dev/learn/extracting-state-logic-into-a-reducer'>React.dev</a>",
-            "<a target='_blank' href='https://www.telerik.com/blogs/react-usereducer-hook'>The React useReducer Hook</a>"
+            {
+              "title": "The Odin Project",
+              "link": "https://www.theodinproject.com/lessons/node-path-react-new-reducing-state"
+            },
+            {
+              "title": "React.dev",
+              "link": "https://react.dev/learn/extracting-state-logic-into-a-reducer"
+            },
+            {
+              "title": "The React useReducer Hook",
+              "link": "https://www.telerik.com/blogs/react-usereducer-hook"
+            }
           ]
         ]
       },
@@ -2333,6 +2381,67 @@
             "src": "https://i.imgur.com/clknE8q.png",
             "className": "small-image"
           }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "duration": "من 23 أبريل إلى 29 أبريل",
+    "summary": "🔴",
+    "year": 2025,
+    "type": "weeks",
+    "events": [
+      {
+        "event": [
+          {
+            "text": "أنهيت كورس الرياكت 🎇",
+            "tag": "h1"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/4FBo6q4.jpg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "صور من الحياة",
+            "tag": "h1"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/kU6D7Qc.jpeg"        
+          },
+          {
+            "src": "https://i.imgur.com/nKifJzz.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/ZvZn4j1.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/pDaC5DV.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": ":This week I learned about",
+            "tag": "h1"
+          }
+        ],
+        "list": [
+          "Memoization",
+          [
+            {
+              "link": "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization",
+              "title": "The Odin Project"
+            }
+          ]
         ]
       }
     ]
