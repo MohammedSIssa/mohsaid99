@@ -2392,58 +2392,6 @@
     "year": 2025,
     "type": "weeks",
     "events": [
-      {
-        "event": [
-          {
-            "text": "أنهيت كورس الرياكت 🎇",
-            "tag": "h1"
-          }
-        ],
-        "images": [
-          {
-            "src": "https://i.imgur.com/4FBo6q4.jpg"
-          }
-        ]
-      },
-      {
-        "event": [
-          {
-            "text": "صور من الحياة",
-            "tag": "h1"
-          }
-        ],
-        "images": [
-          {
-            "src": "https://i.imgur.com/kU6D7Qc.jpeg"        
-          },
-          {
-            "src": "https://i.imgur.com/nKifJzz.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/ZvZn4j1.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/pDaC5DV.jpeg"
-          }
-        ]
-      },
-      {
-        "event": [
-          {
-            "text": ":This week I learned about",
-            "tag": "h1"
-          }
-        ],
-        "list": [
-          "Memoization",
-          [
-            {
-              "link": "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization",
-              "title": "The Odin Project"
-            }
-          ]
-        ]
-      }
-    ]
+      ]
   }
 ]
