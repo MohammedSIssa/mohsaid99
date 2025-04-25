@@ -2384,5 +2384,121 @@
         ]
       }
     ]
+  },
+  {
+    "id": 17,
+    "duration": "من 23 أبريل إلى 29 أبريل",
+    "summary": "🔴",
+    "year": 2025,
+    "type": "weeks",
+    "events": [
+      {
+        "event": [
+          {
+            "text": "أنهيت كورس الرياكت 🎇",
+            "tag": "h1"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/4FBo6q4.jpg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "عملت clone لموقع React.dev",
+            "tag": "h1"
+          },
+          {
+            "text": "مجرد ممارسة للي تعملته لسا مش كل اشي شغال",
+            "tag": "p"
+          },
+          {
+            "text": "طبقت الTheme وشغال مية المية",
+            "tag": "p"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/dCqqqVi.png"
+          },
+          {
+            "src": "https://i.imgur.com/ZlHsRCF.png"
+          },
+          {
+            "src": "https://i.imgur.com/EJV9w6R.png"
+          },
+          {
+            "src": "https://i.imgur.com/fXuLe3C.png"
+          },
+          {
+            "src": "https://i.imgur.com/wVLjuC9.png"
+          },
+          {
+            "src": "https://i.imgur.com/evi6qcu.png"
+          },
+          {
+            "src": "https://i.imgur.com/b06zckB.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/cauXJrO.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/20kagPN.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/AglqwGi.png",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/0Q14Jdb.png",
+            "className": "small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "صور من الحياة",
+            "tag": "h1"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/kU6D7Qc.jpeg"        
+          },
+          {
+            "src": "https://i.imgur.com/nKifJzz.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/ZvZn4j1.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/pDaC5DV.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": ":This week I learned about",
+            "tag": "h1"
+          }
+        ],
+        "list": [
+          "Memoization",
+          [
+            {
+              "link": "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization",
+              "title": "The Odin Project"
+            }
+          ]
+        ]
+      }
+    ]
   }
 ]
