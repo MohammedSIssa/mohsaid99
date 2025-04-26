@@ -2402,6 +2402,10 @@
         "images": [
           {
             "src": "https://i.imgur.com/4FBo6q4.jpg"
+          },
+          {
+            "src": "https://i.imgur.com/gi27liP.png",
+            "className": "small-image"
           }
         ]
       },
@@ -2493,7 +2497,18 @@
           "Memoization",
           [
             {
-              "link": "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization",
+              "link": "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization#the-usememo-hook",
+              "title": "The Odin Project"
+            }
+          ],
+          "useRef",
+          [
+            {
+              "link": "https://react.dev/learn/referencing-values-with-refs",
+              "title": "react.dev"
+            },
+            {
+              "link": "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization#the-useref-hook",
               "title": "The Odin Project"
             }
           ]
