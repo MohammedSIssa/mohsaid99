@@ -2511,6 +2511,13 @@
               "link": "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization#the-useref-hook",
               "title": "The Odin Project"
             }
+          ],
+          "Articles I read:",
+          [
+            {
+              "link": "https://react.dev/learn/manipulating-the-dom-with-refs",
+              "title": "Manipulating the DOM with Refs"
+            }
           ]
         ]
       }
