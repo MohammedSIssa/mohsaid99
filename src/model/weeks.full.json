@@ -2388,7 +2388,7 @@
   {
     "id": 17,
     "duration": "من 23 أبريل إلى 29 أبريل",
-    "summary": "🔴",
+    "summary": "انهيت كورس الرياكت، بشوف شغل على اب وورك، مشاريع رياكت",
     "year": 2025,
     "type": "weeks",
     "events": [
@@ -2467,6 +2467,52 @@
       {
         "event": [
           {
+            "text": "عملت حساب على upwork",
+            "tag": "h1"
+          },
+          {
+            "text": "صار لازم اجهز البورتفوليو هلقيت، هعمل 25 صفحة لاند بيج بالرياكت وبعد هيك هعمل واجهات تسجيل دخول وصفحات مواقع كاملة، اشوف المطلوب بالسوق واعمله",
+            "tag": "p"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "1/25 Landing Page in React",
+            "tag": "h1"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/l9SIBO0.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/XG0XVH7.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/Amxscla.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/O8NbEd6.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/jllFDlj.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/3LdGAR1.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/dHFDqRs.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/q3Wued5.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
             "text": "صور من الحياة",
             "tag": "h1"
           }
@@ -2519,6 +2565,14 @@
               "title": "Manipulating the DOM with Refs"
             }
           ]
+        ]
+      },
+      {
+        "images": [
+          {
+            "src": "https://i.imgur.com/NwiWlf5.png",
+            "className": "small-image"
+          }
         ]
       }
     ]
