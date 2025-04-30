@@ -203,7 +203,7 @@ nav ul {
 img.long-image {
   max-height: unset !important;
   height: unset !important;
-  width: 100%;
+  width: 60% !important;
   max-width: 1000px;
 }
 
