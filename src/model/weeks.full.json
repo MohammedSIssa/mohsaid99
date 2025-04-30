@@ -2576,5 +2576,27 @@
         ]
       }
     ]
+  },
+  {
+    "id": 18,
+    "duration": "من 30 أبريل إلى 6 مايو",
+    "summary": "",
+    "year": 2025,
+    "type": "weeks",
+    "events": [
+      {
+        "event": [
+          {
+            "text": "Landing Page in React 2/25",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/bBkK4lm.jpeg",
+            "className": "long-image"
+          }
+        ]
+      }
+    ]
   }
 ]
