@@ -2580,7 +2580,7 @@
   {
     "id": 18,
     "duration": "من 30 أبريل إلى 6 مايو",
-    "summary": "",
+    "summary": "🔴",
     "year": 2025,
     "type": "weeks",
     "events": [
@@ -2593,6 +2593,23 @@
         ], "images": [
           {
             "src": "https://i.imgur.com/bBkK4lm.jpeg",
+            "className": "long-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "Landing Page in React 3/25",
+            "tag": "h1"
+          },
+          {
+            "text": "هاد اللاند بيج مميز بالنسبالي لانه انا اللي صممته، عشان هيك منظره مش حلو 🌚",
+            "tag": "p"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/PGg6qbr.jpeg",
             "className": "long-image"
           }
         ]
