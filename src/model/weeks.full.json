@@ -2479,7 +2479,7 @@
       {
         "event": [
           {
-            "text": "1/25 Landing Page in React",
+            "text": "Landing Page 1",
             "tag": "h1"
           }
         ],
@@ -2587,7 +2587,7 @@
       {
         "event": [
           {
-            "text": "Landing Page in React 2/25",
+            "text": "Landing Page 2",
             "tag": "h1"
           }
         ], "images": [
@@ -2600,7 +2600,7 @@
       {
         "event": [
           {
-            "text": "Landing Page in React 3/25",
+            "text": "Landing Page 3",
             "tag": "h1"
           },
           {
@@ -2610,6 +2610,19 @@
         ], "images": [
           {
             "src": "https://i.imgur.com/PGg6qbr.jpeg",
+            "className": "long-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "Landing Page 4",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/Yc4aBza.jpeg",
             "className": "long-image"
           }
         ]
