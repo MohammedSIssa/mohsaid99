@@ -2626,6 +2626,29 @@
             "className": "long-image"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "بتعلم في Tailwind CSS ",
+            "tag": "h1"
+          },
+          {
+            "text": "ليش TailwindCSS?",
+            "tag": "h4"
+          },
+          {
+            "text": "لأنها بتساعدني أجهز تصميم الموقع بشكل أسرع، وتدعم كل أحجام الشاشات من الموبايل والآيباد، للابتوب وحتى الشاشات الكبيرة.",
+            "tag": "p"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/EL1SMbQ.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/Qq5K9sp.jpeg"
+          }
+        ]
       }
     ]
   }
