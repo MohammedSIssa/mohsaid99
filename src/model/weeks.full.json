@@ -2649,6 +2649,35 @@
             "src": "https://i.imgur.com/Qq5K9sp.jpeg"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "Landing Page 5",
+            "tag": "h1"
+          },
+          {
+            "text": "React + Tailwind + Vite",
+            "tag": "p"
+          },
+          {
+            "text": "<a href='https://mohammedsissa.github.io/landing-page-5/' target='blank'>👀 Live Preview</a>",
+            "tag": "p"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/UPjr0DH.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/SnRplqY.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/bNSyoX7.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/m6ctVKO.jpeg"
+          }
+        ]
       }
     ]
   }
