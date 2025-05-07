@@ -2678,6 +2678,31 @@
             "src": "https://i.imgur.com/m6ctVKO.jpeg"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "بديت الشغل على موقع لابوي",
+            "tag": "h1"
+          },
+          {
+            "text": "هيكون موقع لتعلم الفيزيا تعت المناهج لكل الصفوف",
+            "tag": "p"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://i.imgur.com/f543xUZ.png"
+          }
+        ]
+      },
+      {
+        "images": [
+          {
+            "src": "https://i.imgur.com/ySrDUxL.png",
+            "className": "small-image"
+          }
+        ]
       }
     ]
   }
