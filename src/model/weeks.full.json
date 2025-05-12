@@ -2716,8 +2716,16 @@
       {
         "event": [
           {
-            "text": "Entering the MERN Stack",
+            "text": "كورس الأسبوع",
             "tag": "h1"
+          },
+          {
+            "text": "MERN Course",
+            "tag": "h3"
+          },
+          {
+            "text": "Backend: Express, MongoDB, Postman",
+            "tag": "p"
           }
         ], "images": [
           {
@@ -2725,32 +2733,65 @@
             "className": "small-image"
           },
           {
-            "src": "https://i.imgur.com/FMGkiCW.jpeg",
+            "src": "https://i.imgur.com/i0FvL8G.jpeg",
+            "className": "extra-small-image"
+          },
+          {
+            "src": "https://i.imgur.com/THT3dKV.jpeg",
+            "className": "extra-small-image"
+          },
+          {
+            "src": "https://i.imgur.com/4NiXjA5.jpeg",
             "className": "small-image"
           },
           {
-            "src": "https://i.imgur.com/A5vue3g.jpeg",
+            "src": "https://i.imgur.com/WoDlda2.jpeg",
             "className": "small-image"
           },
           {
-            "src": "https://i.imgur.com/75lf47L.jpeg",
+            "src": "https://i.imgur.com/falFdTf.jpeg",
             "className": "small-image"
           },
           {
-            "src": "https://i.imgur.com/GK3na2K.jpeg",
+            "src": "https://i.imgur.com/wMxM9Uz.jpeg",
             "className": "small-image"
           },
           {
-            "src": "https://i.imgur.com/m84Rf7S.jpeg",
+            "src": "https://i.imgur.com/yUCPsMm.jpeg",
             "className": "small-image"
           },
           {
-            "src": "https://i.imgur.com/vsO6nRP.jpeg",
+            "src": "https://i.imgur.com/1MXvExC.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/U4CTAFS.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/UnJfQcW.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/proFQF0.png",
+            "className": "extra-small-image"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "Frontend",
+            "tag": "h1"
+          },
+          {
+            "text": "React (Vite) + TailwindCSS",
+            "tag": "h3"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/5YlBZyd.jpeg",
             "className": "small-image"
           },
           {
-            "src": "https://i.imgur.com/pUATWOQ.jpeg",
-            "className": "small-image"
+            "src": "https://i.imgur.com/DOdWiZk.jpeg"
           }
         ]
       }
