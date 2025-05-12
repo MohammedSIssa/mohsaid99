@@ -2782,7 +2782,7 @@
             "tag": "h1"
           },
           {
-            "text": "React (Vite) + TailwindCSS",
+            "text": "React (Vite) + TailwindCSS + Toastify",
             "tag": "h3"
           }
         ], "images": [
@@ -2792,6 +2792,18 @@
           },
           {
             "src": "https://i.imgur.com/DOdWiZk.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/I13neV5.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/5EBWoWO.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/2bOWjQn.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/sVavHhL.jpeg"
           }
         ]
       }
