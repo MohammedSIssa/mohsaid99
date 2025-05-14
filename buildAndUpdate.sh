@@ -1,4 +1,3 @@
-git add src/model/weeks.json
 git add src/model/goals.json
 git add src/model/weeks.full.json
 
