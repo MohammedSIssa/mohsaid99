@@ -2819,5 +2819,33 @@
         ]
       }
     ]
+  },
+  {
+    "id": 20,
+    "year": 2025,
+    "type": "weeks",
+    "summary": "🔴",
+    "duration": "من 14 مايو إلى 20 مايو",
+    "events": [
+      {
+        "event": [
+          {
+            "text": "Started Learning SQL and Databases",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/wdBdyYG.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/i9FQa2v.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/vqYztgn.jpeg"
+          }
+        ]
+      }
+    ]
   }
 ]
