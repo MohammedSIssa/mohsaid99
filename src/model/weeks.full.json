@@ -2852,6 +2852,10 @@
           },
           {
             "src": "https://i.imgur.com/VHIqqVj.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/ne40DOu.jpeg",
+            "className": "small-image"
           }
         ]
       }
