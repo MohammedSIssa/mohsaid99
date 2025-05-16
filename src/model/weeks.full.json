@@ -2834,27 +2834,15 @@
             "tag": "h1"
           }
         ], "images": [
-          {
-            "src": "https://i.imgur.com/wdBdyYG.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/i9FQa2v.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/vqYztgn.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/R2xfOHU.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/mkZhjNy.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/VHIqqVj.jpeg"
-          },
-          {
-            "src": "https://i.imgur.com/ne40DOu.jpeg"
-          }
+          [
+           "https://i.imgur.com/wdBdyYG.jpeg",
+            "https://i.imgur.com/i9FQa2v.jpeg",
+            "https://i.imgur.com/vqYztgn.jpeg",
+            "https://i.imgur.com/R2xfOHU.jpeg",
+            "https://i.imgur.com/mkZhjNy.jpeg",
+            "https://i.imgur.com/VHIqqVj.jpeg",
+            "https://i.imgur.com/ne40DOu.jpeg"
+          ]
         ]
       },
       {
