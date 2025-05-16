@@ -2835,8 +2835,7 @@
           }
         ], "images": [
           {
-            "src": "https://i.imgur.com/wdBdyYG.jpeg",
-            "className": "small-image"
+            "src": "https://i.imgur.com/wdBdyYG.jpeg"
           },
           {
             "src": "https://i.imgur.com/i9FQa2v.jpeg"
@@ -2854,8 +2853,23 @@
             "src": "https://i.imgur.com/VHIqqVj.jpeg"
           },
           {
-            "src": "https://i.imgur.com/ne40DOu.jpeg",
-            "className": "small-image"
+            "src": "https://i.imgur.com/ne40DOu.jpeg"
+          }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": "خلصت كورس قواعد البيانات",
+            "tag": "h1"
+          },
+          {
+            "text": "كان كورس سريع بس لسا هتعمق اكتر فيهم",
+            "tag": "p"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/M6VOTX5.jpeg"
           }
         ]
       }
