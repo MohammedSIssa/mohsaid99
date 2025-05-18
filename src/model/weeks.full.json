@@ -2881,6 +2881,31 @@
             "className": "extra-small-image"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "صور من الحياة",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/YKzZzux.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/Zsbw3HT.jpeg",
+            "className":"small-image"
+          },
+          {
+            "src": "https://i.imgur.com/NDuilUY.jpeg",
+            "className":"small-image"
+          },
+          {
+            "src": "https://i.imgur.com/X5W6Clu.jpeg",
+            "className":"small-image"
+          }
+        ]
       }
     ]
   }
