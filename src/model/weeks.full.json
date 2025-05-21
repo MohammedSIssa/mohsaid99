@@ -2824,7 +2824,7 @@
     "id": 20,
     "year": 2025,
     "type": "weeks",
-    "summary": "🔴",
+    "summary": "SQL",
     "duration": "من 14 مايو إلى 20 مايو",
     "events": [
       {
@@ -2908,6 +2908,35 @@
           {
             "src": "https://i.imgur.com/euBXvXG.jpeg",
             "className": "small-image"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "year": 2025,
+    "type": "weeks",
+    "summary": "🔴",
+    "duration": "من 21 مايو إلى 27 مايو",
+    "events": [
+      {
+        "event": [
+          {
+            "text": "أهداف الأسبوع",
+            "tag": "h1"
+          },
+          {
+            "text": "أتعمق في SQL ⭐",
+            "tag": "p"
+          },
+          {
+            "text": "أبدا في دورة NodeJS ⭐",
+            "tag": "p"
+          },
+          {
+            "text": "أعمل مشاريع في رياكت ⭐",
+            "tag": "p"
           }
         ]
       }
