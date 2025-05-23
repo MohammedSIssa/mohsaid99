@@ -2939,6 +2939,26 @@
             "tag": "p"
           }
         ]
+      },
+      {
+        "event": [
+          {
+            "text": "كورس الأسبوع",
+            "tag": "h1"
+          }
+        ], "images": [
+          {
+            "src": "https://i.imgur.com/YM8MIor.jpeg"
+          },
+          {
+            "src": "https://i.imgur.com/BaBrVz0.jpeg",
+            "className": "small-image"
+          },
+          {
+            "src": "https://i.imgur.com/UxJ1IjE.jpeg",
+            "className": "small-image"
+          }
+        ]
       }
     ]
   }
