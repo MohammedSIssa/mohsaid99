@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "duration": "من 1 يناير إلى 7 يناير",
+    "duration": "من 1 يناير لـ 7 يناير",
     "summary": "حل أسئلة برمجة",
     "year": "2025",
     "type": "weeks",
@@ -46,7 +46,7 @@
   },
   {
     "id": 2,
-    "duration": "من 8 يناير إلى 14 يناير",
+    "duration": "من 8 يناير لـ 14 يناير",
     "summary": "برمجة هاد الموقع",
     "year": "2025",
     "type": "weeks",
@@ -131,7 +131,7 @@
   },
   {
     "id": 3,
-    "duration": "من 15 يناير إلى 21 يناير",
+    "duration": "من 15 يناير لـ 21 يناير",
     "summary": "todolist برنامج",
     "year": "2025",
     "type": "weeks",
@@ -211,7 +211,7 @@
   },
   {
     "id": 4,
-    "duration": "من 22 يناير إلى 28 يناير",
+    "duration": "من 22 يناير لـ 28 يناير",
     "summary": "تحديث جديد على الموقع – إضافة أهداف سنوية، مشوار غزة اﻷول",
     "year": "2025",
     "type": "weeks",
@@ -340,7 +340,7 @@
   },
   {
     "id": 5,
-    "duration": "من 29 يناير إلى 4 فبراير",
+    "duration": "من 29 يناير لـ 4 فبراير",
     "summary": "حل كمان اسئلة، مشاريع برمجة خفيفة",
     "type": "weeks",
     "year": "2025",
@@ -406,7 +406,7 @@
   },
   {
     "id": 6,
-    "duration": "من 5 فبراير إلى 11 فبراير",
+    "duration": "من 5 فبراير لـ 11 فبراير",
     "summary": "بطاريات، مشروع حساب سريع",
     "type": "weeks",
     "year": 2025,
@@ -443,7 +443,7 @@
   },
   {
     "id": 7,
-    "duration": "من 12 فبراير إلى 18 فبراير",
+    "duration": "من 12 فبراير لـ 18 فبراير",
     "summary": "مشوار غزة الثاني",
     "year": "2025",
     "type": "weeks",
@@ -718,7 +718,7 @@
   },
   {
     "id": 8,
-    "duration": "من 19 فبراير إلى 25 فبراير",
+    "duration": "من 19 فبراير لـ 25 فبراير",
     "summary": "خلصت كورس جافاسكريبت",
     "type": "weeks",
     "year": "2025",
@@ -889,7 +889,7 @@
   },
   {
     "id": 9,
-    "duration": "من 26 فبراير إلى 4 مارس",
+    "duration": "من 26 فبراير لـ 4 مارس",
     "summary": "تحديثات على الموقع - اضافة الرسمة",
     "year": 2025,
     "type": "weeks",
@@ -1016,7 +1016,7 @@
   },
   {
     "id": 10,
-    "duration": "من 5 مارس إلى 11 مارس",
+    "duration": "من 5 مارس لـ 11 مارس",
     "summary": "⭐ تغييرات كبيرة على الموقع",
     "type": "weeks",
     "year": 2025,
@@ -1169,7 +1169,7 @@
   },
   {
     "id": 11,
-    "duration": "من 12 مارس إلى 18 مارس",
+    "duration": "من 12 مارس لـ 18 مارس",
     "summary": "صرت عم، بداية الرياكت، مشوار عزة الثالث",
     "year": 2025,
     "type": "weeks",
@@ -1541,7 +1541,7 @@
   },
   {
     "id": 12,
-    "duration": "من 19 مارس إل 25 مارس",
+    "duration": "من 19 مارس لـ 25 مارس",
     "summary": "رجعت الحرب",
     "year": 2025,
     "type": "weeks",
@@ -1646,7 +1646,7 @@
   },
   {
     "id": 13,
-    "duration": "من 26 مارس إلى 1 أبريل",
+    "duration": "من 26 مارس لـ 1 أبريل",
     "summary": "CV Application: 1st React Project",
     "year": 2025,
     "type": "weeks",
@@ -1700,7 +1700,7 @@
   }, 
   {
     "id": 14,
-    "duration": "من 2 أبريل إلى 8 أبريل",
+    "duration": "من 2 أبريل لـ 8 أبريل",
     "summary": "مشروع رياكت تاني، ناموسية البعوض",
     "year": 2025,
     "type": "weeks",
@@ -1849,7 +1849,7 @@
   },
   {
     "id": 15,
-    "duration": "من 9 أبريل إلى 15 أبريل ",
+    "duration": "من 9 أبريل لـ 15 أبريل ",
     "summary": "Advanced React",
     "year": 2025,
     "type": "weeks",
@@ -1994,7 +1994,7 @@
   },
   {
     "id": 16,
-    "duration": "من 16 أبريل إلى 22 أبريل",
+    "duration": "من 16 أبريل لـ 22 أبريل",
     "summary": "مشروع رياكت التالت",
     "year": 2025,
     "type": "weeks",
@@ -2387,7 +2387,7 @@
   },
   {
     "id": 17,
-    "duration": "من 23 أبريل إلى 29 أبريل",
+    "duration": "من 23 أبريل لـ 29 أبريل",
     "summary": "انهيت كورس الرياكت، بشوف شغل على اب وورك، مشاريع رياكت",
     "year": 2025,
     "type": "weeks",
@@ -2579,7 +2579,7 @@
   },
   {
     "id": 18,
-    "duration": "من 30 أبريل إلى 6 مايو",
+    "duration": "من 30 أبريل لـ 6 مايو",
     "summary": "مشاريع رياكت",
     "year": 2025,
     "type": "weeks",
@@ -2711,7 +2711,7 @@
     "year": 2025,
     "type": "weeks",
     "summary": "First MERN Stack Course",
-    "duration": "من 7 مايو إلى 13 مايو",
+    "duration": "من 7 مايو لـ 13 مايو",
     "events": [
       {
         "event": [
@@ -2825,7 +2825,7 @@
     "year": 2025,
     "type": "weeks",
     "summary": "SQL",
-    "duration": "من 14 مايو إلى 20 مايو",
+    "duration": "من 14 مايو لـ 20 مايو",
     "events": [
       {
         "event": [
@@ -2918,7 +2918,7 @@
     "year": 2025,
     "type": "weeks",
     "summary": "🔴",
-    "duration": "من 21 مايو إلى 27 مايو",
+    "duration": "من 21 مايو لـ 27 مايو",
     "events": [
       {
         "event": [
@@ -2958,6 +2958,36 @@
             "src": "https://i.imgur.com/UxJ1IjE.jpeg",
             "className": "small-image"
           }
+        ]
+      },
+      {
+        "event": [
+          {
+            "text": ":This week I learned about",
+            "tag": "h1"
+          }
+        ],
+        "images": [],
+        "list": [
+          "Node JS",
+          [
+            {
+              "link": "https://www.theodinproject.com/lessons/nodejs-introduction-what-is-nodejs",
+              "title": "Introduction to NodeJS"
+            },
+            {
+              "link": "https://nodejs.org/en/about/",
+              "title": "About Node.js"
+            }
+            
+          ],
+          "Articles I read:",
+          [
+            {
+              "link": "https://nodejs.org/en/learn/asynchronous-work/overview-of-blocking-vs-non-blocking",
+              "title": "Blocking vs. Non-Blocking Events"
+            }
+          ]
         ]
       }
     ]
