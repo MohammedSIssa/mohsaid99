@@ -6,4 +6,4 @@
 
 ### You can see the old Vanilla JavaScript Version from the link below
 
-[Old Website](https://mohammedsissa.github.io/old-mohsaid99);
+[Old Website](https://mohammedsissa.github.io/old-mohsaid99)
