@@ -23,7 +23,7 @@ function RedirectHandler() {
 
 export default function MohSaid99() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mohsaid99">
       <RedirectHandler />
       <Routes>
         <Route path="/" element={<Welcome />} />
