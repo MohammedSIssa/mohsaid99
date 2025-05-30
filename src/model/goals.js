@@ -8,19 +8,13 @@ export let goals = [
     },
     goals: [
       {
-        name: "أصير مبرمج مواقع فل ستاك",
-        target: 600,
-        current: 513,
+        name: "اخلص كورس الـFull-Stack Javascript",
       },
       {
         name: "أتمكن من الرياكت",
-        target: 100,
-        current: 75,
       },
       {
         name: "أتعلم كل يوم اشي جديد",
-        target: 90,
-        current: 60,
       },
     ],
   },
@@ -34,23 +28,20 @@ export let goals = [
     goals: [
       {
         name: "أخلص كورس الجافاسكريبت ✅",
-        target: 100,
-        current: 100,
+        isDone: true,
+        // isFailed: true
       },
       {
         name: "أحل أول 25 سؤال في Project Euler ✅",
-        target: 25,
-        current: 25,
+        isDone: true,
       },
       {
         name: "كل يوم درس عبري ✅",
-        target: 90,
-        current: 90,
+        isDone: true,
       },
       {
         name: "أتعلم اشي جديد كل يوم ✅",
-        target: 90,
-        current: 90,
+        isDone: true,
       },
     ],
   },
