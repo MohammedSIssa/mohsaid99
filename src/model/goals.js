@@ -33,22 +33,22 @@ export let goals = [
     },
     goals: [
       {
-        name: "أخلص كورس الجافاسكريبت",
+        name: "أخلص كورس الجافاسكريبت ✅",
         target: 100,
         current: 100,
       },
       {
-        name: "أحل أول 25 سؤال في Project Euler",
+        name: "أحل أول 25 سؤال في Project Euler ✅",
         target: 25,
         current: 25,
       },
       {
-        name: "كل يوم درس عبري",
+        name: "كل يوم درس عبري ✅",
         target: 90,
         current: 90,
       },
       {
-        name: "أتعلم اشي جديد كل يوم",
+        name: "أتعلم اشي جديد كل يوم ✅",
         target: 90,
         current: 90,
       },
