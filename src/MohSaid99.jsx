@@ -2,11 +2,29 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import HomePage from "./layouts/homepage";
 import Welcome from "./components/Welcome";
 
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./custom.css";
+
+function RedirectHandler() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const redirectPath = sessionStorage.redirect;
+    if (redirectPath) {
+      sessionStorage.removeItem("redirect");
+      navigate(redirectPath);
+    }
+  }, [navigate]);
+
+  return null;
+}
 
 export default function MohSaid99() {
   return (
     <BrowserRouter basename="/mohsaid99">
+      <RedirectHandler />
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route index element={<Welcome />}></Route>
