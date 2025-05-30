@@ -7,15 +7,15 @@ import { useNavigate } from "react-router-dom";
 
 import "./custom.css";
 
+
 function RedirectHandler() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const redirectPath = sessionStorage.redirect;
-    if (redirectPath) {
-      console.log(redirectPath);
+    const redirect = sessionStorage.redirect;
+    if (redirect) {
       sessionStorage.removeItem("redirect");
-      navigate(redirectPath, { replace: true });
+      navigate(redirect, { replace: true });
     }
   }, [navigate]);
 
