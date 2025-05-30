@@ -1,0 +1,14 @@
+/* transitions.css */
+.fade-wrapper {
+  transition: transform 1s ease, opacity 0.5s ease;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(100dvh);
+}

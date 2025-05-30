@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap");
+/* The page content font family */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Week counter font family */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+/* Logo font family */
+
+:root {
+  --bg-color: #0e1217;
+  --story-bg-color: #1c1f26;
+  --gold-story-border-color: #fcd000;
+  --font-color: #dadada;
+  --story-border-color: #424857;
+  --story-count-color: #676c7a;
+  --logo-font: "Dancing Script", system-ui;
+  --font: "Playpen Sans Arabic", system-ui;
+  --story-count-font: Montserrat, system-ui;
+}
+
+* {
+  direction: rtl;
+  /* Mainly arabic content */
+
+  text-wrap: pretty !important;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+@media (min-width: 760px) {
+  .nav-bar {
+    background-color: transparent !important;
+    background: linear-gradient(to bottom, var(--bg-color), rgba(0, 0, 0, 0));
+  }
+}
+
+.stories {
+  border-color: var(--story-border-color) !important;
+  overflow-x: scroll;
+}
+
+.logo {
+  font-family: var(--logo-font);
+}
+
+a {
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  filter: brightness(1.4);
+}
+
+.stories a.active {
+  filter: brightness(1.5);
+}
+
+.week-list {
+  direction: ltr;
+}
+
+.week-list a {
+  color: violet;
+}
+
+.story-count,
+.story-year {
+  font-family: var(--story-count-font);
+}
+
+.thumbnail {
+  background-size: cover;
+  background-position: center;
+}
+
+img:not(.long) {
+  max-height: calc(100dvh - 200px);
+}
+
+iframe {
+  pointer-events: none;
+  cursor: none;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+iframe.shorts {
+  aspect-ratio: 9 / 16 !important;
+  height: calc(100dvh - 200px);
+  width: auto !important;
+}
+
+/* Scrollbar styling start */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--story-border-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--story-count-color);
+}
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
+/* Scrollbar styling end */
