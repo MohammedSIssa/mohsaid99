@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <script type="text/javascript">
-      // لو دخل المستخدم على مسار مثل /weeks/22، خزن هذا المسار مؤقتًا
+      // خزّن المسار المطلوب
       sessionStorage.redirect = location.pathname + location.search;
-      // أعد التوجيه إلى الجذر
-      // location.replace("/mohsaid99/");
+
+      // ارجع للرابط الأساسي الكامل بدون تكرار الـ basename
+      var base = "/mohsaid99";
+      var origin = window.location.origin;
+      location.replace(origin + base + "/index.html");
     </script>
   </head>
   <body></body>
