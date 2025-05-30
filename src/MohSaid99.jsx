@@ -13,8 +13,9 @@ function RedirectHandler() {
   useEffect(() => {
     const redirectPath = sessionStorage.redirect;
     if (redirectPath) {
+      console.log(redirectPath);
       sessionStorage.removeItem("redirect");
-      navigate(redirectPath, {replace: true});
+      navigate(redirectPath, { replace: true });
     }
   }, [navigate]);
 
