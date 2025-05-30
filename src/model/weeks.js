@@ -145,6 +145,10 @@ export const weeks = [
         content: "شاي بالحليب ♨️",
       },
       {
+        tag: "p",
+        content: "عشان مافي سكر، بكثر كمية الحليب وبيطلع فيه طعم حلو"
+      },
+      {
         tag: "img",
         content: "https://i.imgur.com/PhiKdr3.jpeg",
         thumbnail: "https://i.imgur.com/BsGoGKR.jpeg",
