@@ -14,7 +14,7 @@ function RedirectHandler() {
     const redirectPath = sessionStorage.redirect;
     if (redirectPath) {
       sessionStorage.removeItem("redirect");
-      navigate(redirectPath);
+      navigate(redirectPath, {replace: true});
     }
   }, [navigate]);
 
@@ -23,7 +23,7 @@ function RedirectHandler() {
 
 export default function MohSaid99() {
   return (
-    <BrowserRouter basename="/mohsaid99">
+    <BrowserRouter>
       <RedirectHandler />
       <Routes>
         <Route path="/" element={<Welcome />} />
