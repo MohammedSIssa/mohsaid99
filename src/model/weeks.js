@@ -761,7 +761,6 @@ export const weeks = [
       {
         tag: "img",
         content: "https://i.imgur.com/ZlHsRCF.png",
-        isLightImage: true,
       },
       {
         tag: "img",
@@ -770,7 +769,6 @@ export const weeks = [
       {
         tag: "img",
         content: "https://i.imgur.com/fXuLe3C.png",
-        isLightImage: true,
       },
       {
         tag: "img",
@@ -779,7 +777,6 @@ export const weeks = [
       {
         tag: "img",
         content: "https://i.imgur.com/evi6qcu.png",
-        isLightImage: true,
       },
       {
         tag: "img",
