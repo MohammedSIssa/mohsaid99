@@ -5,7 +5,9 @@ export default function Story({ data, id, type, isSpecial }) {
   const defaultClassName = `w-[250px] min-w-[250px] h-full border-2 rounded-xl p-3 px-4 relative ${
     goldStory ? "shadow-yellow-900 shadow-xl" : ""
   }`;
-  const activeClassName = `brightness-140 translate-y-[-10px] ${goldStory ? "": "border-dashed"}`;
+  const activeClassName = `active brightness-140 ${
+    goldStory ? "" : "border-dashed shadow-slate-800 shadow-xl"
+  }`;
   return (
     <NavLink
       to={`/${type}/${id}`}
@@ -28,7 +30,7 @@ export default function Story({ data, id, type, isSpecial }) {
       <p className="italic absolute bottom-1 left-3 story-count font-bold">
         #{id}
       </p>
-      <p className="italic absolute top-[-20px] left-3 story-year bg-rose-700 text-zinc-100 font-bold p-[1px] px-[10px] rounded-sm">
+      <p className="italic absolute top-[-21px] left-3 story-year bg-rose-700 skew-x-[-2deg] text-zinc-50 font-bold p-[1px] px-[10px] rounded-sm">
         {data.year}
       </p>
     </NavLink>

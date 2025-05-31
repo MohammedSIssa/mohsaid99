@@ -69,6 +69,19 @@ a:hover {
   color: violet;
 }
 
+.stories a.active {
+  animation: floating 1.55s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .story-count,
 .story-year {
   font-family: var(--story-count-font);
