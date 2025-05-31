@@ -77,6 +77,38 @@ export const weeks = [
       },
       {
         tag: "h1",
+        content: "التكملة بكورس Node.js"
+      },
+      {
+        tag: "p",
+        content: "تعملت كيف أساوي debug لتطبيقات نود، بمعنى انه افحص البرنامج من المشاكل من داخل vscode"
+      },
+      {
+        tag: "p",
+        content: "طريقة جديدة، لكنها احسن من اني اضل اخمن من وين المشكلة واضيف مليون console.log عندي"
+      },
+      {
+        tag: "h1",
+        content: "الروابط 👇🏻"
+      },
+      {
+        tag: "ul",
+        content: [
+          {
+            title: "Debugging Node | The Odin Project",
+            link: "https://www.theodinproject.com/lessons/nodejs-debugging-node"
+          },
+          {
+            title: "Getting started with Node.js debugging in VS Code",
+            link: "Getting started with Node.js debugging in VS Code"
+          }
+        ]
+      },
+      {
+        tag: "hr"
+      },
+      {
+        tag: "h1",
         content: "أحداث من الواقع"
       },
       {
@@ -133,12 +165,17 @@ export const weeks = [
       },
       {
         tag: "p",
-        content: "حبية عمو أم عيون حلوة 🥹",
+        content: "حبية عمو أم عيون حلوة 🥹 زينة شهرين ❤️",
       },
       {
         tag: "img",
         content: "https://i.imgur.com/1sqXFFI.jpeg",
         thumbnail: "https://i.imgur.com/QKIeRXN.jpeg",
+      },
+      {
+        tag: "img",
+        content: "https://i.imgur.com/qCPRnnO.jpeg",
+        thumbnail: "https://i.imgur.com/J9rBGBK.jpeg"
       },
       {
         tag: "p",
@@ -167,6 +204,11 @@ export const weeks = [
         tag: "img",
         content: "https://i.imgur.com/49zjlPb.jpeg",
         thumbnail: "https://i.imgur.com/J9D8Xhb.jpeg",
+      },
+      {
+        tag: "img",
+        content: "https://i.imgur.com/unPeLCZ.jpeg",
+        thumbnail: "https://i.imgur.com/YdLhlnh.jpeg"
       },
     ],
   },
