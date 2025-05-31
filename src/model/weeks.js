@@ -77,78 +77,105 @@ export const weeks = [
       },
       {
         tag: "h1",
-        content: "التكملة بكورس Node.js"
+        content: "التكملة بكورس Node.js",
       },
       {
         tag: "p",
-        content: "تعملت كيف أساوي debug لتطبيقات نود، بمعنى انه افحص البرنامج من المشاكل من داخل vscode"
+        content:
+          "تعملت كيف أساوي debug لتطبيقات نود، بمعنى انه افحص البرنامج من المشاكل من داخل vscode",
       },
       {
         tag: "p",
-        content: "طريقة جديدة، لكنها احسن من اني اضل اخمن من وين المشكلة واضيف مليون console.log عندي"
+        content:
+          "طريقة جديدة، لكنها احسن من اني اضل اخمن من وين المشكلة واضيف مليون console.log عندي",
       },
       {
         tag: "h1",
-        content: "الروابط 👇🏻"
+        content: "الروابط 👇🏻",
       },
       {
         tag: "ul",
         content: [
           {
             title: "Debugging Node | The Odin Project",
-            link: "https://www.theodinproject.com/lessons/nodejs-debugging-node"
+            link: "https://www.theodinproject.com/lessons/nodejs-debugging-node",
           },
           {
             title: "Getting started with Node.js debugging in VS Code",
-            link: "Getting started with Node.js debugging in VS Code"
-          }
-        ]
+            link: "Getting started with Node.js debugging in VS Code",
+          },
+        ],
       },
       {
-        tag: "hr"
+        content: "اخدت كورس W3Schools الخاص بجزئية Node.js",
+        tag: "h1",
+      },
+      {
+        tag: "ul",
+        content: [
+          {
+            title: "W3Schools | Node.js",
+            link: "https://www.w3schools.com/nodejs/default.asp",
+          },
+        ],
+      },
+      {
+        tag: "img",
+        content: "https://i.imgur.com/PjZjs6F.jpeg",
+        isLightImage: true,
+      },
+      {
+        tag: "img",
+        content: "https://i.imgur.com/O7ReTeT.jpeg",
+        isLightImage: true,
+      },
+      {
+        tag: "hr",
       },
       {
         tag: "h1",
-        content: "أحداث من الواقع"
+        content: "أحداث من الواقع",
       },
       {
         tag: "p",
-        content: "المساعدات بدأت تفوت لكن كلها بتنسرق، حتى السواقين بيقفو وبيسمحو للسرقات تصير!"
+        content:
+          "المساعدات بدأت تفوت لكن كلها بتنسرق، حتى السواقين بيقفو وبيسمحو للسرقات تصير!",
       },
       {
         tag: "p",
-        content: "خلص الطحين من البيت"
+        content: "خلص الطحين من البيت",
       },
       {
         tag: "p",
-        content: "كيلو الطحين ب100 شيكل"
+        content: "كيلو الطحين ب100 شيكل",
       },
       {
         tag: "p",
-        content: "كيس الطحين ب2000 شيكل!"
+        content: "كيس الطحين ب2000 شيكل!",
       },
       {
         tag: "p",
-        content: "كيلو السكر ب200 شيكل"
+        content: "كيلو السكر ب200 شيكل",
       },
       {
         tag: "p",
-        content: "فش خضار، فش فاكهة، فش خبز، فش فلوس، بناكل بالمعلقة صرنا، الأكل عبارة عن رز وعدس"
+        content:
+          "فش خضار، فش فاكهة، فش خبز، فش فلوس، بناكل بالمعلقة صرنا، الأكل عبارة عن رز وعدس",
       },
       {
         tag: "p",
-        content: "الحمدلله على كل حال"
+        content: "الحمدلله على كل حال",
       },
       {
         tag: "p",
-        content: "اخلاءات على الساعة 12 بنص الليل!"
+        content: "اخلاءات على الساعة 12 بنص الليل!",
       },
       {
         tag: "p",
-        content: "أعطيت الحصة الرابعة لتلميذي في HTML"
+        content: "أعطيت الحصة الرابعة لتلميذي في HTML",
       },
       {
-        tag: "hr"
+        tag: "hr",
       },
       {
         tag: "h1",
@@ -165,7 +192,7 @@ export const weeks = [
       },
       {
         tag: "p",
-        content: "حبية عمو أم عيون حلوة 🥹 زينة صارت 10 أسابيع ❤️",
+        content: "حبيبة عمو أم عيون حلوة 🥹 زينة صارت 10 أسابيع ❤️",
       },
       {
         tag: "img",
@@ -175,7 +202,7 @@ export const weeks = [
       {
         tag: "img",
         content: "https://i.imgur.com/qCPRnnO.jpeg",
-        thumbnail: "https://i.imgur.com/J9rBGBK.jpeg"
+        thumbnail: "https://i.imgur.com/J9rBGBK.jpeg",
       },
       {
         tag: "p",
@@ -183,7 +210,7 @@ export const weeks = [
       },
       {
         tag: "p",
-        content: "عشان مافي سكر، بكثر كمية الحليب وبيطلع فيه طعم حلو"
+        content: "عشان مافي سكر، بكثر كمية الحليب وبيطلع فيه طعم حلو",
       },
       {
         tag: "img",
@@ -208,7 +235,7 @@ export const weeks = [
       {
         tag: "img",
         content: "https://i.imgur.com/unPeLCZ.jpeg",
-        thumbnail: "https://i.imgur.com/YdLhlnh.jpeg"
+        thumbnail: "https://i.imgur.com/YdLhlnh.jpeg",
       },
     ],
   },
