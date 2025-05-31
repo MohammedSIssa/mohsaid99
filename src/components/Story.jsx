@@ -5,7 +5,7 @@ export default function Story({ data, id, type, isSpecial }) {
   const defaultClassName = `w-[250px] min-w-[250px] h-full border-2 rounded-xl p-3 px-4 relative ${
     goldStory ? "shadow-yellow-900 shadow-xl" : ""
   }`;
-  const activeClassName = `brightness-140 ${goldStory ? "": "border-dashed"} border-2`;
+  const activeClassName = `brightness-140 translate-y-[-10px] ${goldStory ? "": "border-dashed"}`;
   return (
     <NavLink
       to={`/${type}/${id}`}
