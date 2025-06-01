@@ -5,56 +5,56 @@ import YouTubePlayer from "./YouTubePlayer";
 const WeekSection = ({ event }) => {
   return (
     <>
-      {event.tag === "h1" && (
+      {event.t === "h1" && (
         <h1 className="font-bold px-5 text-center text-2xl md:text-3xl lg:text-4xl">
-          {event.content}
+          {event.c}
         </h1>
       )}
-      {event.tag === "h2" && (
+      {event.t === "h2" && (
         <h2 className="font-bold px-5 text-center text-xl md:text-2xl lg:text-3xl">
-          {event.content}
+          {event.c}
         </h2>
       )}
 
-      {event.tag === "h3" && (
+      {event.t === "h3" && (
         <h3 className="font-bold px-5 text-center text-lg md:text-xl lg:text-2xl">
-          {event.content}
+          {event.c}
         </h3>
       )}
-      {event.tag === "h4" && (
+      {event.t === "h4" && (
         <h4 className="text-md px-5 text-center md:text-lg lg:text-xl">
-          {event.content}
+          {event.c}
         </h4>
       )}
-      {event.tag === "h5" && (
+      {event.t === "h5" && (
         <h5 className="text-sm px-5 text-center md:text-md lg:text-lg">
-          {event.content}
+          {event.c}
         </h5>
       )}
 
-      {event.tag === "h6" && (
+      {event.t === "h6" && (
         <h6 className="text-xs px-5 text-center md:text-sm lg:text-md">
-          {event.content}
+          {event.c}
         </h6>
       )}
 
-      {event.tag === "p" && (
+      {event.t === "p" && (
         <p className="text-lg px-5 max-w-[700px] text-center md:text-xl">
-          {event.content}
+          {event.c}
         </p>
       )}
-      {event.tag === "img" && <LazyImageBlock event={event} />}
+      {event.t === "img" && <LazyImageBlock event={event} />}
 
-      {event.tag === "ul" && <WeekList list={event.content} />}
+      {event.t === "ul" && <WeekList list={event.c} />}
 
-      {event.tag === "iframe" && (
+      {event.t === "iframe" && (
         <YouTubePlayer type={event.type} videoId={event.videoId} />
       )}
 
-      {event.tag === "hr" && (
+      {event.t === "hr" && (
         <hr
-          className="border-1 w-full mb-15"
-          style={{ borderColor: "var(--story-border-color)" }}
+          className="border-0 border-b-3 border-dashed w-full mb-15"
+          style={{ borderColor: "var(--story-bg-color)" }}
         />
       )}
     </>

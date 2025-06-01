@@ -9,12 +9,12 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "أهداف الأسبوع",
+        t: "h1",
+        c: "أهداف الأسبوع",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "إعادة برمجة الموقع بإستخدام رياكت ✅",
             link: "#",
@@ -26,46 +26,46 @@ export const weeks = [
         ],
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "أكبر تغيير في تاريخ الموقع 😄🔥",
+        t: "h1",
+        c: "أكبر تغيير في تاريخ الموقع 😄🔥",
       },
       {
-        tag: "h3",
-        content:
+        t: "h3",
+        c:
           "بعد يومين من الشغل المتواصل، تم تحويل الموقع من Vanilla Javascript إلى عالم React الفخم",
       },
       {
-        tag: "p",
-        content: "الموقع صار الآن شغال باستخدام رياكت ومكاتب رياكت الرهيبة",
+        t: "p",
+        c: "الموقع صار الآن شغال باستخدام رياكت ومكاتب رياكت الرهيبة",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "وبإستخدام TailwindCSS بطلت محتاج أسوي ملف CSS منفصل لكل ستايل حجم شاشة مختلف",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "وبإستغلال JSX بطلت محتاج أخزن البيانات بطريقة معقدة وعرضها بطريقة أعقد، صار كل اشي أسرع وأسهل",
       },
       {
-        tag: "p",
-        content: "ومع استخدام الـReact Router صار كل محتوى برابط خاص",
+        t: "p",
+        c: "ومع استخدام الـReact Router صار كل محتوى برابط خاص",
       },
       {
-        tag: "p",
-        content: "وضفت أنميشن للتنقل بين الأسبابيع، وضفت صفحة واجهة",
+        t: "p",
+        c: "وضفت أنميشن للتنقل بين الأسبابيع، وضفت صفحة واجهة",
       },
       {
-        tag: "p",
-        content: "مع السلامة لـVanilla Javascript 🫡",
+        t: "p",
+        c: "مع السلامة لـVanilla Javascript 🫡",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "الموقع القديم (مابيتحدث)",
             link: "https://mohammedsissa.github.io/old-mohsaid99/",
@@ -73,29 +73,29 @@ export const weeks = [
         ],
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "التكملة بكورس Node.js",
+        t: "h1",
+        c: "التكملة بكورس Node.js",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "تعملت كيف أساوي debug لتطبيقات نود، بمعنى انه افحص البرنامج من المشاكل من داخل vscode",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "طريقة جديدة، لكنها احسن من اني اضل اخمن من وين المشكلة واضيف مليون console.log عندي",
       },
       {
-        tag: "h1",
-        content: "الروابط 👇🏻",
+        t: "h1",
+        c: "الروابط 👇🏻",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "Debugging Node | The Odin Project",
             link: "https://www.theodinproject.com/lessons/nodejs-debugging-node",
@@ -107,12 +107,12 @@ export const weeks = [
         ],
       },
       {
-        content: "اخدت كورس W3Schools الخاص بجزئية Node.js",
-        tag: "h1",
+        c: "اخدت كورس W3Schools الخاص بجزئية Node.js",
+        t: "h1",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "W3Schools | Node.js",
             link: "https://www.w3schools.com/nodejs/default.asp",
@@ -120,121 +120,121 @@ export const weeks = [
         ],
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/PjZjs6F.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/PjZjs6F.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/O7ReTeT.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/O7ReTeT.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "أحداث من الواقع",
+        t: "h1",
+        c: "أحداث من الواقع",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "المساعدات بدأت تفوت لكن كلها بتنسرق، حتى السواقين بيقفو وبيسمحو للسرقات تصير!",
       },
       {
-        tag: "p",
-        content: "خلص الطحين من البيت",
+        t: "p",
+        c: "خلص الطحين من البيت",
       },
       {
-        tag: "p",
-        content: "كيلو الطحين ب100 شيكل",
+        t: "p",
+        c: "كيلو الطحين ب100 شيكل",
       },
       {
-        tag: "p",
-        content: "كيس الطحين ب2000 شيكل!",
+        t: "p",
+        c: "كيس الطحين ب2000 شيكل!",
       },
       {
-        tag: "p",
-        content: "كيلو السكر ب200 شيكل",
+        t: "p",
+        c: "كيلو السكر ب200 شيكل",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "فش خضار، فش فاكهة، فش خبز، فش فلوس، بناكل بالمعلقة صرنا، الأكل عبارة عن رز وعدس",
       },
       {
-        tag: "p",
-        content: "الحمدلله على كل حال",
+        t: "p",
+        c: "الحمدلله على كل حال",
       },
       {
-        tag: "p",
-        content: "اخلاءات على الساعة 12 بنص الليل!",
+        t: "p",
+        c: "اخلاءات على الساعة 12 بنص الليل!",
       },
       {
-        tag: "p",
-        content: "أعطيت الحصة الرابعة لتلميذي في HTML",
+        t: "p",
+        c: "أعطيت الحصة الرابعة لتلميذي في HTML",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "صور من الحياة",
+        t: "h1",
+        c: "صور من الحياة",
       },
       {
-        tag: "p",
-        content: "آخر رغيف خبر هاكله هاد الأسبوع",
+        t: "p",
+        c: "آخر رغيف خبر هاكله هاد الأسبوع",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/5drzwt9.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/5drzwt9.jpeg",
         thumbnail: "https://i.imgur.com/wDY9Ae0.jpeg",
       },
       {
-        tag: "p",
-        content: "حبيبة عمو أم عيون حلوة 🥹 زينة صارت 10 أسابيع ❤️",
+        t: "p",
+        c: "حبيبة عمو أم عيون حلوة 🥹 زينة صارت 10 أسابيع ❤️",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/1sqXFFI.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/1sqXFFI.jpeg",
         thumbnail: "https://i.imgur.com/QKIeRXN.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/qCPRnnO.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/qCPRnnO.jpeg",
         thumbnail: "https://i.imgur.com/J9rBGBK.jpeg",
       },
       {
-        tag: "p",
-        content: "شاي بالحليب ♨️",
+        t: "h2",
+        c: "شاي بالحليب ♨️",
       },
       {
-        tag: "p",
-        content: "عشان مافي سكر، بكثر كمية الحليب وبيطلع فيه طعم حلو",
+        t: "p",
+        c: "عشان مافي سكر، بكثر كمية الحليب وبيطلع فيه طعم حلو",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/PhiKdr3.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/PhiKdr3.jpeg",
         thumbnail: "https://i.imgur.com/BsGoGKR.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ZWqkOZ6.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/ZWqkOZ6.jpeg",
         thumbnail: "https://i.imgur.com/eqozOuj.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/I3jVObJ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/I3jVObJ.jpeg",
         thumbnail: "https://i.imgur.com/fbwmrsf.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/49zjlPb.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/49zjlPb.jpeg",
         thumbnail: "https://i.imgur.com/J9D8Xhb.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/unPeLCZ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/unPeLCZ.jpeg",
         thumbnail: "https://i.imgur.com/YdLhlnh.jpeg",
       },
     ],
@@ -248,12 +248,12 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "أهداف الأسبوع",
+        t: "h1",
+        c: "أهداف الأسبوع",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "أتعمق في SQL",
             link: "#",
@@ -269,34 +269,34 @@ export const weeks = [
         ],
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "كورس الأسبوع",
+        t: "h1",
+        c: "كورس الأسبوع",
       },
       {
-        tag: "p",
-        content: "بعمل موقع 3D باستخدام الرياكت ومكاتبها الرهيبة",
+        t: "p",
+        c: "بعمل موقع 3D باستخدام الرياكت ومكاتبها الرهيبة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/YM8MIor.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/YM8MIor.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "التعمق في SQL",
+        t: "h1",
+        c: "التعمق في SQL",
       },
       {
-        tag: "p",
-        content: "لقيت موقع بيعلم على شكل حل قضايا شرطة وإجرام يعني",
+        t: "p",
+        c: "لقيت موقع بيعلم على شكل حل قضايا شرطة وإجرام يعني",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "SQLPD.com",
             link: "https://sqlpd.com/",
@@ -304,81 +304,81 @@ export const weeks = [
         ],
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/3nCREMk.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/3nCREMk.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/RgnYA1K.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/RgnYA1K.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ji7CALZ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/ji7CALZ.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/yUdoC26.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/yUdoC26.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "بداية كورس Node.js",
+        t: "h1",
+        c: "بداية كورس Node.js",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/JmoDPSm.png",
+        t: "img",
+        c: "https://i.imgur.com/JmoDPSm.png",
       },
       {
-        tag: "h1",
-        content: "صنعت أول سيرفر",
+        t: "h1",
+        c: "صنعت أول سيرفر",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/V42gspi.png",
+        t: "img",
+        c: "https://i.imgur.com/V42gspi.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "حضرت كورس ساعتين خفيف",
+        t: "h1",
+        c: "حضرت كورس ساعتين خفيف",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/uC3Tusy.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/uC3Tusy.jpeg",
       },
       {
-        tag: "h1",
-        content: "صنعت أول API",
+        t: "h1",
+        c: "صنعت أول API",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/HtTpth3.png",
+        t: "img",
+        c: "https://i.imgur.com/HtTpth3.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/nck8Hhb.png",
+        t: "img",
+        c: "https://i.imgur.com/nck8Hhb.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/bjwfIRk.png",
+        t: "img",
+        c: "https://i.imgur.com/bjwfIRk.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "الأشياء اللي تعلمتها خلال الأسبوع",
+        t: "h1",
+        c: "الأشياء اللي تعلمتها خلال الأسبوع",
       },
       {
-        tag: "p",
-        content: "- Node.js -",
+        t: "p",
+        c: "- Node.js -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "Introduction to Node.js",
             link: "https://www.theodinproject.com/lessons/nodejs-introduction-what-is-nodejs",
@@ -390,12 +390,12 @@ export const weeks = [
         ],
       },
       {
-        tag: "p",
-        content: "- Articles I read -",
+        t: "p",
+        c: "- Articles I read -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "Blocking vs. Non-Blocking Events",
             link: "https://nodejs.org/en/learn/asynchronous-work/overview-of-blocking-vs-non-blocking",
@@ -433,124 +433,124 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "بدأت بكورس قواعد البيانات",
+        t: "h1",
+        c: "بدأت بكورس قواعد البيانات",
       },
       {
-        tag: "p",
-        content: "بهالكورس رح أركز على PostgreSQL",
+        t: "p",
+        c: "بهالكورس رح أركز على PostgreSQL",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/wdBdyYG.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/wdBdyYG.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content:
+        t: "h1",
+        c:
           "الكورس كان خفيف من على الموقع الرسمي، كان أغلبه روابط وفيديوهات",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/i9FQa2v.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/i9FQa2v.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/vqYztgn.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/vqYztgn.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/R2xfOHU.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/R2xfOHU.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/mkZhjNy.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/mkZhjNy.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/VHIqqVj.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/VHIqqVj.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ne40DOu.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/ne40DOu.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "خلصت الكورس",
+        t: "h1",
+        c: "خلصت الكورس",
       },
       {
-        tag: "p",
-        content: "طبعا محتاج أتعمق أكتر لسا",
+        t: "p",
+        c: "طبعا محتاج أتعمق أكتر لسا",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/M6VOTX5.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/M6VOTX5.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "أحداث من الواقع",
+        t: "h1",
+        c: "أحداث من الواقع",
       },
       {
-        tag: "p",
-        content: "18/05/2025",
+        t: "p",
+        c: "18/05/2025",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/nOuvl9X.png",
+        t: "img",
+        c: "https://i.imgur.com/nOuvl9X.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/77baW67.png",
+        t: "img",
+        c: "https://i.imgur.com/77baW67.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "صور من الحياة",
+        t: "h1",
+        c: "صور من الحياة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/YKzZzux.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/YKzZzux.jpeg",
         isLightImage: true,
       },
       {
-        tag: "p",
-        content: "صرنا نوزع الخبز بالعد على بعض",
+        t: "p",
+        c: "صرنا نوزع الخبز بالعد على بعض",
       },
       {
-        tag: "p",
-        content: "بيطلعي 4 أرغف كل يومين",
+        t: "p",
+        c: "بيطلعي 4 أرغف كل يومين",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Zsbw3HT.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Zsbw3HT.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/NDuilUY.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/NDuilUY.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/X5W6Clu.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/X5W6Clu.jpeg",
       },
       {
-        tag: "p",
-        content: "زينة وهي مبسوطة 💞",
+        t: "p",
+        c: "زينة وهي مبسوطة 💞",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/euBXvXG.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/euBXvXG.jpeg",
       },
     ],
   },
@@ -563,134 +563,134 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "كورس الأسبوع",
+        t: "h1",
+        c: "كورس الأسبوع",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/OXQrKV0.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/OXQrKV0.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "جزئية الـBackend",
+        t: "h1",
+        c: "جزئية الـBackend",
       },
       {
-        tag: "p",
-        content: "Express + MongoDB + Postman",
+        t: "p",
+        c: "Express + MongoDB + Postman",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/yUCPsMm.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/yUCPsMm.jpeg",
       },
       {
-        tag: "h1",
-        content: "GET /api/products",
+        t: "h1",
+        c: "GET /api/products",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/1MXvExC.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/1MXvExC.jpeg",
       },
       {
-        tag: "h1",
-        content: "DELETE /api/products/:id",
+        t: "h1",
+        c: "DELETE /api/products/:id",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/U4CTAFS.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/U4CTAFS.jpeg",
       },
       {
-        tag: "h1",
-        content: "PUT /api/products/:id",
+        t: "h1",
+        c: "PUT /api/products/:id",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/UnJfQcW.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/UnJfQcW.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "هيكلية الملفات",
+        t: "h1",
+        c: "هيكلية الملفات",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/proFQF0.png",
+        t: "img",
+        c: "https://i.imgur.com/proFQF0.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "جزئية الـFrontend",
+        t: "h1",
+        c: "جزئية الـFrontend",
       },
       {
-        tag: "p",
-        content: "React + TailwindCSS + Toastify",
+        t: "p",
+        c: "React + TailwindCSS + Toastify",
       },
       {
-        tag: "h1",
-        content: "بنيت صفحة واجهة لإضافة المنتجات",
+        t: "h1",
+        c: "بنيت صفحة واجهة لإضافة المنتجات",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/5YlBZyd.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/5YlBZyd.jpeg",
         isLightImage: true,
       },
       {
-        tag: "p",
-        content: "تم إضافة المنتج",
+        t: "p",
+        c: "تم إضافة المنتج",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/DOdWiZk.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/DOdWiZk.jpeg",
       },
       {
-        tag: "h1",
-        content: "تنزيل وتزبيط مكتبة react-toastify",
+        t: "h1",
+        c: "تنزيل وتزبيط مكتبة react-toastify",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/I13neV5.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/I13neV5.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/5EBWoWO.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/5EBWoWO.jpeg",
       },
       {
-        tag: "h1",
-        content: "تم تزبيط الاشعارات",
+        t: "h1",
+        c: "تم تزبيط الاشعارات",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/kFSMvxB.png",
+        t: "img",
+        c: "https://i.imgur.com/kFSMvxB.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/5r5nk2R.png",
+        t: "img",
+        c: "https://i.imgur.com/5r5nk2R.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/He55Dvt.png",
+        t: "img",
+        c: "https://i.imgur.com/He55Dvt.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "المشروع جهز",
+        t: "h1",
+        c: "المشروع جهز",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/jrFD1lx.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/jrFD1lx.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/mYK30CL.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/mYK30CL.jpeg",
       },
     ],
   },
@@ -703,48 +703,48 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "Landing Page 2",
+        t: "h1",
+        c: "Landing Page 2",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/bBkK4lm.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/bBkK4lm.jpeg",
         size: "long",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "Landing Page 3",
+        t: "h1",
+        c: "Landing Page 3",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Yc4aBza.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Yc4aBza.jpeg",
         size: "long",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "بتعلم في TailwindCSS",
+        t: "h1",
+        c: "بتعلم في TailwindCSS",
       },
       {
-        tag: "p",
-        content: "ياهلا بالسرعة في التصميم، مع دعم كل أحجام الأجهزة",
+        t: "p",
+        c: "ياهلا بالسرعة في التصميم، مع دعم كل أحجام الأجهزة",
       },
       {
-        tag: "h1",
-        content: "Landing Page 4",
+        t: "h1",
+        c: "Landing Page 4",
       },
       {
-        tag: "p",
-        content: "صنعت بمساعدة TailwindCSS",
+        t: "p",
+        c: "صنعت بمساعدة TailwindCSS",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "عرض الموقع 👀",
             link: "https://mohammedsissa.github.io/landing-page-5/",
@@ -752,42 +752,42 @@ export const weeks = [
         ],
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/UPjr0DH.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/UPjr0DH.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/SnRplqY.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/SnRplqY.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/bNSyoX7.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/bNSyoX7.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/m6ctVKO.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/m6ctVKO.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "بديت بالشغل في موقع لأبوي",
+        t: "h1",
+        c: "بديت بالشغل في موقع لأبوي",
       },
       {
-        tag: "p",
-        content: "هيكون موقع لتعليم الفيزياء لكل المراحل",
+        t: "p",
+        c: "هيكون موقع لتعليم الفيزياء لكل المراحل",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/f543xUZ.png",
+        t: "img",
+        c: "https://i.imgur.com/f543xUZ.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ySrDUxL.png",
+        t: "img",
+        c: "https://i.imgur.com/ySrDUxL.png",
       },
     ],
   },
@@ -801,162 +801,162 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "أنهيت كورس الرياكت 🎇",
+        t: "h1",
+        c: "أنهيت كورس الرياكت 🎇",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/4FBo6q4.jpg",
+        t: "img",
+        c: "https://i.imgur.com/4FBo6q4.jpg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/gi27liP.png",
+        t: "img",
+        c: "https://i.imgur.com/gi27liP.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "مشروع: نسخة من موقع react.dev",
+        t: "h1",
+        c: "مشروع: نسخة من موقع react.dev",
       },
       {
-        tag: "p",
-        content: "ممارسة للي تعلمته، مش كلشي شغال طبعا",
+        t: "p",
+        c: "ممارسة للي تعلمته، مش كلشي شغال طبعا",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/dCqqqVi.png",
+        t: "img",
+        c: "https://i.imgur.com/dCqqqVi.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ZlHsRCF.png",
+        t: "img",
+        c: "https://i.imgur.com/ZlHsRCF.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/EJV9w6R.png",
+        t: "img",
+        c: "https://i.imgur.com/EJV9w6R.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/fXuLe3C.png",
+        t: "img",
+        c: "https://i.imgur.com/fXuLe3C.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/wVLjuC9.png",
+        t: "img",
+        c: "https://i.imgur.com/wVLjuC9.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/evi6qcu.png",
+        t: "img",
+        c: "https://i.imgur.com/evi6qcu.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/b06zckB.png",
+        t: "img",
+        c: "https://i.imgur.com/b06zckB.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/cauXJrO.png",
+        t: "img",
+        c: "https://i.imgur.com/cauXJrO.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/0Q14Jdb.png",
+        t: "img",
+        c: "https://i.imgur.com/0Q14Jdb.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "عملت حساب upwork",
+        t: "h1",
+        c: "عملت حساب upwork",
       },
       {
-        tag: "p",
-        content: "هلقيت لازم أعمل portfolio يعجب الزبون حتى أشتغل",
+        t: "p",
+        c: "هلقيت لازم أعمل portfolio يعجب الزبون حتى أشتغل",
       },
       {
-        tag: "p",
-        content: "هبدأ في عمل landing pages لانه عليهم طلب",
+        t: "p",
+        c: "هبدأ في عمل landing pages لانه عليهم طلب",
       },
       {
-        tag: "p",
-        content: "تحويل تصميم صورة إلى كود رياكت",
+        t: "p",
+        c: "تحويل تصميم صورة إلى كود رياكت",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "Landing Page 1",
+        t: "h1",
+        c: "Landing Page 1",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/l9SIBO0.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/l9SIBO0.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/XG0XVH7.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/XG0XVH7.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Amxscla.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Amxscla.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/O8NbEd6.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/O8NbEd6.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/jllFDlj.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/jllFDlj.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/3LdGAR1.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/3LdGAR1.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/dHFDqRs.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/dHFDqRs.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/q3Wued5.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/q3Wued5.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "صور من الحياة",
+        t: "h1",
+        c: "صور من الحياة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/kU6D7Qc.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/kU6D7Qc.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/nKifJzz.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/nKifJzz.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/pDaC5DV.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/pDaC5DV.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "الأشياء اللي تعلمتها خلال الأسبوع",
+        t: "h1",
+        c: "الأشياء اللي تعلمتها خلال الأسبوع",
       },
       {
-        tag: "p",
-        content: "- Memoization -",
+        t: "p",
+        c: "- Memoization -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "The Odin Project Lesson",
             link: "https://www.theodinproject.com/lessons/node-path-react-new-refs-and-memoization#the-usememo-hook",
@@ -964,12 +964,12 @@ export const weeks = [
         ],
       },
       {
-        tag: "p",
-        content: "- useRef -",
+        t: "p",
+        c: "- useRef -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "react.dev",
             link: "https://react.dev/learn/referencing-values-with-refs",
@@ -981,12 +981,12 @@ export const weeks = [
         ],
       },
       {
-        tag: "p",
-        content: "- Articles I read -",
+        t: "p",
+        c: "- Articles I read -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "Manipulating the DOM with Refs",
             link: "https://react.dev/learn/manipulating-the-dom-with-refs",
@@ -994,11 +994,11 @@ export const weeks = [
         ],
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/NwiWlf5.png",
+        t: "img",
+        c: "https://i.imgur.com/NwiWlf5.png",
       },
     ],
   },
@@ -1011,31 +1011,31 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "Fetching Data in React",
+        t: "h1",
+        c: "Fetching Data in React",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/hGxKEJb.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/hGxKEJb.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Squy6Lc.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Squy6Lc.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "إنجاز جديد: خلصت أخر مشروع بكورس الرياكت 🎉⚡",
+        t: "h1",
+        c: "إنجاز جديد: خلصت أخر مشروع بكورس الرياكت 🎉⚡",
       },
       {
-        tag: "h3",
-        content: "Shopping Cart | سلة تسوق 🛒",
+        t: "h3",
+        c: "Shopping Cart | سلة تسوق 🛒",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "عرض الموقع 👀",
             link: "https://mohammedsissa.github.io/shopping-cart/",
@@ -1047,202 +1047,202 @@ export const weeks = [
         ],
       },
       {
-        tag: "h3",
-        content: "Tech Stack: React + CSS",
+        t: "h3",
+        c: "Tech Stack: React + CSS",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/7dFn8R9.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/7dFn8R9.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/oFbq0hZ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/oFbq0hZ.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/hFMMjXI.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/hFMMjXI.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ubsal6j.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/ubsal6j.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/pso7wxS.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/pso7wxS.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/STDqaUD.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/STDqaUD.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "تعملت كيف أستخدم useContext في رياكت",
+        t: "h1",
+        c: "تعملت كيف أستخدم useContext في رياكت",
       },
       {
-        tag: "h3",
-        content: "بشرحه عالسريع",
+        t: "h3",
+        c: "بشرحه عالسريع",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "هلقيت عندي بمشروع الرياكت غالبا بيبقى في بيانات بدي اوصلها من (الجد) للحفيد، بس الطريق في النص بيبقى عندي (أب) و (ابن) وكلهم لازم يمررو المعلومات حتى توصل للحفيد، هاد بنسميه بالرياكت (prop drilling ) يعني بمرر البيانات من اب لابن لابن لابن الخ، هان بييجي الuseContext زي خط التلفون مباشرة من الجد للحفيد بدون م تمر كل العيلة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/fHYjAKh.png",
+        t: "img",
+        c: "https://i.imgur.com/fHYjAKh.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/w1S7Z3f.png",
+        t: "img",
+        c: "https://i.imgur.com/w1S7Z3f.png",
       },
       {
-        tag: "h1",
-        content: "وكمان تعلمت useReducer",
+        t: "h1",
+        c: "وكمان تعلمت useReducer",
       },
       {
-        tag: "h3",
-        content: "برضو بشرحه",
+        t: "h3",
+        c: "برضو بشرحه",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "لو عندك state معقد شوي، مثلا تطبيق ToDo أو Shopping Cart وصار عندك كتير اكشنز زي (إضافة، حدف، تعديل، الخ) لو هستخدم useState لحالها هدوخ، وهان بييجي الuseReducer وبتشتغل زي عقل صغير بيستقبل أوامر وبيقرر شو يعمل",
       },
       {
-        tag: "h3",
-        content: "الها مكونين اتنين، الأول function reducer",
+        t: "h3",
+        c: "الها مكونين اتنين، الأول function reducer",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/njULWrC.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/njULWrC.jpeg",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "بتستقبل state الحالي و action وبترجع state جديدة حسب ال type تاع ال action",
       },
       {
-        tag: "h3",
-        content: "المكون الثاني: useReducer",
+        t: "h3",
+        c: "المكون الثاني: useReducer",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/LElVtx8.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/LElVtx8.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "استخدام useContext & useReducer مع بعض",
+        t: "h1",
+        c: "استخدام useContext & useReducer مع بعض",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "لو عندك برنامج كبير، بتستخدم ال useReducer عشان اجمع منطق تحديث البيانات، وبغلفه جوات useContext عشان اوزع ال state وال dispatch على باقي المكونات",
       },
       {
-        tag: "h3",
-        content: "مشروع عالسريع",
+        t: "h3",
+        c: "مشروع عالسريع",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/1cMUDPe.png",
+        t: "img",
+        c: "https://i.imgur.com/1cMUDPe.png",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/mkw2SSU.png",
+        t: "img",
+        c: "https://i.imgur.com/mkw2SSU.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/UUVLcp1.png",
+        t: "img",
+        c: "https://i.imgur.com/UUVLcp1.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/JgAvRGb.png",
+        t: "img",
+        c: "https://i.imgur.com/JgAvRGb.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/fOoKrp1.png",
+        t: "img",
+        c: "https://i.imgur.com/fOoKrp1.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "صور من الحياة",
+        t: "h1",
+        c: "صور من الحياة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/TpMfDmJ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/TpMfDmJ.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/HXTJjhy.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/HXTJjhy.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Xgqg8im.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Xgqg8im.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/SkAdsGj.jpg",
+        t: "img",
+        c: "https://i.imgur.com/SkAdsGj.jpg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/2vQAVoA.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/2vQAVoA.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/IuBhYf0.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/IuBhYf0.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/q8YcoX0.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/q8YcoX0.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "أسعار السوق 🛒🔥",
+        t: "h1",
+        c: "أسعار السوق 🛒🔥",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "راس البصل ب 7 شيكل (2 دولار) وفش فواكه بالسوق، فش غير بسكوت الشاي والحبة ب5 شيكل، كيلو البندورة 20 شيكل، فش غير فلفل اخضر وخيار بالسوق",
       },
       {
-        tag: "h3",
-        content: "الوضع مع قمر بستي",
+        t: "h3",
+        c: "الوضع مع قمر بستي",
       },
       {
-        tag: "p",
-        content: "وصلت اخر 6 علب لحمة، وضايل جبنة متلتات، بديت اقلق 😄",
+        t: "p",
+        c: "وصلت اخر 6 علب لحمة، وضايل جبنة متلتات، بديت اقلق 😄",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "الأشياء اللي تعلمت عنها الأسبوع هاد",
+        t: "h1",
+        c: "الأشياء اللي تعلمت عنها الأسبوع هاد",
       },
       {
-        tag: "p",
-        content: " - Fetching Data in React - ",
+        t: "p",
+        c: " - Fetching Data in React - ",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "The Odin Project Lesson",
             link: "https://www.theodinproject.com/lessons/node-path-react-new-styling-react-applications",
@@ -1258,12 +1258,12 @@ export const weeks = [
         ],
       },
       {
-        tag: "p",
-        content: "مكتبات تصميم جاهزة للرياكت",
+        t: "p",
+        c: "مكتبات تصميم جاهزة للرياكت",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "CSS in JS",
             link: "https://styled-components.com/",
@@ -1291,12 +1291,12 @@ export const weeks = [
         ],
       },
       {
-        tag: "p",
-        content: "- Articles I read -",
+        t: "p",
+        c: "- Articles I read -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "Understanding CORS",
             link: "https://rbika.com/blog/understanding-cors",
@@ -1321,12 +1321,12 @@ export const weeks = [
         ],
       },
       {
-        tag: "p",
-        content: "- Context API -",
+        t: "p",
+        c: "- Context API -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "The Odin Project Lesson",
             link: "https://www.theodinproject.com/lessons/node-path-react-new-managing-state-with-the-context-api#implementing-context-api",
@@ -1342,12 +1342,12 @@ export const weeks = [
         ],
       },
       {
-        tag: "p",
-        content: "- useReducer -",
+        t: "p",
+        c: "- useReducer -",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "The Odin Project Lesson",
             link: "https://www.theodinproject.com/lessons/node-path-react-new-reducing-state",
@@ -1363,11 +1363,11 @@ export const weeks = [
         ],
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/clknE8q.png",
+        t: "img",
+        c: "https://i.imgur.com/clknE8q.png",
       },
     ],
   },
@@ -1380,109 +1380,109 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "مقدمة في اختبار الرياكت",
+        t: "h1",
+        c: "مقدمة في اختبار الرياكت",
       },
       {
-        tag: "p",
-        content: "Vitest, React Testing Library (RTL)",
+        t: "p",
+        c: "Vitest, React Testing Library (RTL)",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/foXHyqC.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/foXHyqC.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/amNEMd9.png",
+        t: "img",
+        c: "https://i.imgur.com/amNEMd9.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/C3OAmq8.png",
+        t: "img",
+        c: "https://i.imgur.com/C3OAmq8.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/4lBBUsH.png",
+        t: "img",
+        c: "https://i.imgur.com/4lBBUsH.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/hBo3aDr.png",
+        t: "img",
+        c: "https://i.imgur.com/hBo3aDr.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/VZzCwE6.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/VZzCwE6.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/3DXiXO2.png",
+        t: "img",
+        c: "https://i.imgur.com/3DXiXO2.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "React Router",
+        t: "h1",
+        c: "React Router",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/eJqqQUr.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/eJqqQUr.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/uSHly7p.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/uSHly7p.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/npyWyBJ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/npyWyBJ.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/4aXjLBw.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/4aXjLBw.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/lA1Gsye.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/lA1Gsye.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/cCQxjzQ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/cCQxjzQ.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "صور من الحياة  📷",
+        t: "h1",
+        c: "صور من الحياة  📷",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/zyAERvZ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/zyAERvZ.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/uKeNppH.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/uKeNppH.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/cUQjCun.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/cUQjCun.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/GD1re2X.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/GD1re2X.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/QSNikaC.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/QSNikaC.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "في هاد الأسبوع تعلمت عن",
+        t: "h1",
+        c: "في هاد الأسبوع تعلمت عن",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "React Testing Library",
             link: "#",
@@ -1526,11 +1526,11 @@ export const weeks = [
         ],
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/bOFhjfi.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/bOFhjfi.jpeg",
       },
     ],
   },
@@ -1543,104 +1543,104 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "مشروع رياكت الثاني: Memory Cards",
+        t: "h1",
+        c: "مشروع رياكت الثاني: Memory Cards",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/uHRNwfA.png",
+        t: "img",
+        c: "https://i.imgur.com/uHRNwfA.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Np5cBaD.png",
+        t: "img",
+        c: "https://i.imgur.com/Np5cBaD.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/yj4jEcN.png",
+        t: "img",
+        c: "https://i.imgur.com/yj4jEcN.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/AlbULB3.png",
+        t: "img",
+        c: "https://i.imgur.com/AlbULB3.png",
       },
       {
-        tag: "p",
-        content: "بديت أتطور بالرياكت 🤓",
+        t: "p",
+        c: "بديت أتطور بالرياكت 🤓",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "سويت ناموسية بعوض 🦟🚫",
+        t: "h1",
+        c: "سويت ناموسية بعوض 🦟🚫",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/GiEQv2H.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/GiEQv2H.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "ستريك Duolingo وصل 221 يوم  😤",
+        t: "h1",
+        c: "ستريك Duolingo وصل 221 يوم  😤",
       },
       {
-        tag: "img",
+        t: "img",
         size: "extra-small",
-        content: "https://i.imgur.com/IS13XVv.png",
+        c: "https://i.imgur.com/IS13XVv.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "أحداث من الواقع",
+        t: "h1",
+        c: "أحداث من الواقع",
       },
       {
-        tag: "h3",
-        content: "إحتلال رفح",
+        t: "h3",
+        c: "إحتلال رفح",
       },
       {
-        tag: "p",
-        content: "اليوم منطقة فيلادلفيا ب انعملت، في موراج، كل رفح راحت",
+        t: "p",
+        c: "اليوم منطقة فيلادلفيا ب انعملت، في موراج، كل رفح راحت",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "صور من الحياة 📷",
+        t: "h1",
+        c: "صور من الحياة 📷",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/HQFX6Ys.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/HQFX6Ys.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/IvlJeZC.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/IvlJeZC.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/0kOugos.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/0kOugos.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/d6rTRn1.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/d6rTRn1.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/8OrSrZ6.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/8OrSrZ6.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "الحجات اللي تعملتها الأسبوع هاد",
+        t: "h1",
+        c: "الحجات اللي تعملتها الأسبوع هاد",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "JSX",
             link: "#",
@@ -1668,11 +1668,11 @@ export const weeks = [
         ],
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/cEdqDjy.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/cEdqDjy.jpeg",
       },
     ],
   },
@@ -1685,27 +1685,27 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "المشروع الأول بالرياكت: CV Application",
+        t: "h1",
+        c: "المشروع الأول بالرياكت: CV Application",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/s4nyv7H.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/s4nyv7H.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Qzcivzh.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Qzcivzh.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "شغل بالبيت",
+        t: "h1",
+        c: "شغل بالبيت",
       },
       {
-        tag: "p",
-        content: "عملت شبكة الليدات، صار بكل غرفة ليد مع مفتاحه",
+        t: "p",
+        c: "عملت شبكة الليدات، صار بكل غرفة ليد مع مفتاحه",
       },
     ],
   },
@@ -1718,85 +1718,85 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "تغيير في السيت أب",
+        t: "h1",
+        c: "تغيير في السيت أب",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "عدت ترتيب غرفتي خصوصا مع الأغراض الجديدة اللي جبتهم معي من غزة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/RAxAFW3.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/RAxAFW3.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/I5sIkmC.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/I5sIkmC.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "رجعت الحرب",
+        t: "h1",
+        c: "رجعت الحرب",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "للأسف الهدنة ماكانت غير بريك من المجازر، الظروف صعبة، الحمدلله على كل شيء",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "جوالي خرب تاني",
+        t: "h1",
+        c: "جوالي خرب تاني",
       },
       {
-        tag: "p",
-        content: "مع الكهرب طبعا، كل اشي تقريبا قاعد بيخرب مع الواحد، حتى مخه",
+        t: "p",
+        c: "مع الكهرب طبعا، كل اشي تقريبا قاعد بيخرب مع الواحد، حتى مخه",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/BSySora.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/BSySora.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "تغيير بشكل الموقع على الشاشات الكبيرة",
+        t: "h1",
+        c: "تغيير بشكل الموقع على الشاشات الكبيرة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/6mEvjOT.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/6mEvjOT.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "أول خطوات بالرياكت",
+        t: "h1",
+        c: "أول خطوات بالرياكت",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/mhZM3tM.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/mhZM3tM.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/FJgQD9S.png",
+        t: "img",
+        c: "https://i.imgur.com/FJgQD9S.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ykIOwL6.png",
+        t: "img",
+        c: "https://i.imgur.com/ykIOwL6.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/STn9bib.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/STn9bib.jpeg",
       },
     ],
   },
@@ -1810,305 +1810,305 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "تعديلات بسيطة على الموقع",
+        t: "h1",
+        c: "تعديلات بسيطة على الموقع",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Twdx7oB.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Twdx7oB.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/3MH6zcZ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/3MH6zcZ.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/drQY1pY.png",
+        t: "img",
+        c: "https://i.imgur.com/drQY1pY.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "بتاريخ 12 مارس الساعة 4 ونص الفجر",
+        t: "h1",
+        c: "بتاريخ 12 مارس الساعة 4 ونص الفجر",
       },
       {
-        tag: "p",
-        content: "صرت عمو 🤗 مرحبا زينة 💞",
+        t: "p",
+        c: "صرت عمو 🤗 مرحبا زينة 💞",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/veWwRQj.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/veWwRQj.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "تحديث جديد: Lazy Loading 🦥",
+        t: "h1",
+        c: "تحديث جديد: Lazy Loading 🦥",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "يعني ببساطة إنك ما بتجيب كل البيانات أو الصور مرة وحدة لما تفتح الموقع، لا.. بتخلي الحاجات تنزل بس لما تحتاجها، يعني لما توصللها وأنت بتتصفح",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "بدل ما أحمل كل الداتا دفعة وحدة، خليت البيانات تنزل بس لما أوصللها بالموقع، وهيك صار الموقع اسرع واخف 💯",
       },
       {
-        tag: "p",
-        content: "صورة الكود عشان ما أنساه 🤓",
+        t: "p",
+        c: "صورة الكود عشان ما أنساه 🤓",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/QASpXyV.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/QASpXyV.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "عملت تصميم لبور بانك لابتوب، بيجي يوم أسويه 🙂",
+        t: "h1",
+        c: "عملت تصميم لبور بانك لابتوب، بيجي يوم أسويه 🙂",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/YDEichW.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/YDEichW.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "إنجاز جديد: خلصت الكورس الثالث في دورة Full-Stack 💫",
+        t: "h1",
+        c: "إنجاز جديد: خلصت الكورس الثالث في دورة Full-Stack 💫",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/WSNANmX.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/WSNANmX.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/WkiEpbG.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/WkiEpbG.jpeg",
       },
       {
-        tag: "h1",
-        content: "المشروع الأخير: صفحة بورتفوليو تستجيب لكل أحجام الشاشات",
+        t: "h1",
+        c: "المشروع الأخير: صفحة بورتفوليو تستجيب لكل أحجام الشاشات",
       },
       {
-        tag: "iframe",
+        t: "iframe",
         videoId: "-d3HiNIH1gU",
         type: "desktop",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "17/3/2025 الساعة 6 صباحا",
+        t: "h1",
+        c: "17/3/2025 الساعة 6 صباحا",
       },
       {
-        tag: "h3",
-        content: "مشوار غزة الثالث",
+        t: "h3",
+        c: "مشوار غزة الثالث",
       },
       {
-        tag: "p",
-        content: "الهدف من الطلعة: نجيب أغراض من البيت في غزة",
+        t: "p",
+        c: "الهدف من الطلعة: نجيب أغراض من البيت في غزة",
       },
       {
-        tag: "p",
-        content: "*كل أغراضنا في غزة، احنا نزحنا بدون اشي*",
+        t: "p",
+        c: "*كل أغراضنا في غزة، احنا نزحنا بدون اشي*",
       },
       {
-        tag: "h3",
-        content: "بديت أوثق من الساعة 6:49 واحنا ماشيين باتجاه شارع الرشيد",
+        t: "h3",
+        c: "بديت أوثق من الساعة 6:49 واحنا ماشيين باتجاه شارع الرشيد",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/KSzlTAY.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/KSzlTAY.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/zV43hRF.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/zV43hRF.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/tCzGVr1.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/tCzGVr1.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/zeWYIi7.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/zeWYIi7.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/SxhRzx3.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/SxhRzx3.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/IRwunkL.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/IRwunkL.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "ركبنا تكتك لعند تلة النويري",
+        t: "h1",
+        c: "ركبنا تكتك لعند تلة النويري",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/TnPMZ5C.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/TnPMZ5C.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content:
+        t: "h1",
+        c:
           "نزلنا عند تلة النويري، وركبنا تكتك تاني لعند دوار النابلسي بغزة",
       },
       {
-        tag: "p",
-        content: "مشينا من دوار النابلسي للبيت، بمفترق المغربي",
+        t: "p",
+        c: "مشينا من دوار النابلسي للبيت، بمفترق المغربي",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/9iMKfvx.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/9iMKfvx.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/YlOzHNv.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/YlOzHNv.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/AeXkIp9.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/AeXkIp9.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/zmlJEko.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/zmlJEko.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/gn84Psg.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/gn84Psg.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "وصلنا البيت الساعة 8:45AM",
+        t: "h1",
+        c: "وصلنا البيت الساعة 8:45AM",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/9sILJHr.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/9sILJHr.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/sDuPRr1.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/sDuPRr1.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "بنبلش شغل ولملمة الغراض اللازمة",
+        t: "h1",
+        c: "بنبلش شغل ولملمة الغراض اللازمة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/wHo6jC3.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/wHo6jC3.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/uQKgmwY.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/uQKgmwY.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "لقينا صورة لدارنا بالشوكة 🥲",
+        t: "h1",
+        c: "لقينا صورة لدارنا بالشوكة 🥲",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Koz8ckV.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Koz8ckV.jpeg",
         isLightImage: true,
       },
       {
-        tag: "h1",
-        content: "After AI",
+        t: "h1",
+        c: "After AI",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/SORSDnw.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/SORSDnw.jpeg",
         thumbnail: "https://i.imgur.com/RV2fiKl.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "خلصنا نقل على كارة بموعد أذان الظهر",
+        t: "h1",
+        c: "خلصنا نقل على كارة بموعد أذان الظهر",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/PcICLSx.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/PcICLSx.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: " تحركت انا وابوي على شقة اختي ايمان",
+        t: "h1",
+        c: " تحركت انا وابوي على شقة اختي ايمان",
       },
       {
-        tag: "img",
+        t: "img",
         isLightImage: true,
-        content: "https://i.imgur.com/KyqNKU5.jpeg",
+        c: "https://i.imgur.com/KyqNKU5.jpeg",
       },
       {
-        tag: "img",
+        t: "img",
         isLightImage: true,
-        content: "https://i.imgur.com/Tw1mlqn.jpeg",
+        c: "https://i.imgur.com/Tw1mlqn.jpeg",
       },
       {
-        tag: "img",
+        t: "img",
         isLightImage: true,
-        content: "https://i.imgur.com/7toUl50.jpeg",
+        c: "https://i.imgur.com/7toUl50.jpeg",
       },
       {
-        tag: "img",
+        t: "img",
         isLightImage: true,
-        content: "https://i.imgur.com/vKBjLcm.jpeg",
+        c: "https://i.imgur.com/vKBjLcm.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "اسبوع فاصل نت أغلبه",
+        t: "h1",
+        c: "اسبوع فاصل نت أغلبه",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/IiQfxn8.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/IiQfxn8.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/jT1aqwW.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/jT1aqwW.jpeg",
       },
     ],
   },
@@ -2122,103 +2122,103 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "تحديث جديد: مرحبا بالإيمجويات 🙂🔥",
+        t: "h1",
+        c: "تحديث جديد: مرحبا بالإيمجويات 🙂🔥",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "غيرت كل الكلام، قبل كان جاف شوي، ومع ✨ الإيموجيات ✨ صار في روح وحياة بالموقع بدل الجو الرسمي 😄",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "تحديث على الصور",
+        t: "h1",
+        c: "تحديث على الصور",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "خليت الصورة كلها تبقى ظاهرة، يعني دايما طول الصورة أصغر من طول الشاشة",
       },
       {
-        tag: "h1",
-        content: "قبل 👇🏻",
+        t: "h1",
+        c: "قبل 👇🏻",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/VLnejBf.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/VLnejBf.jpeg",
       },
       {
-        tag: "h1",
-        content: "بعد 👇🏻",
+        t: "h1",
+        c: "بعد 👇🏻",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/iZWj8OM.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/iZWj8OM.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "تحديث جديد: إعادة برمجة الموقع من الصفر ✨",
+        t: "h1",
+        c: "تحديث جديد: إعادة برمجة الموقع من الصفر ✨",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "غيرت طريقة تخزين البيانات، كنت محتاج أستغني عن استخدام سكريبتات خارجية، كنت محتاج طريقة أسهل لإضافة التحديثات كل مرة",
       },
       {
-        tag: "h1",
-        content: "الطريقة القديمة",
+        t: "h1",
+        c: "الطريقة القديمة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/U55XqtK.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/U55XqtK.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/C3xjf9n.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/C3xjf9n.jpeg",
       },
       {
-        tag: "h1",
-        content: "الطريقة الجديدة",
+        t: "h1",
+        c: "الطريقة الجديدة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/q9YTLk7.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/q9YTLk7.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/PTYE8bK.png",
+        t: "img",
+        c: "https://i.imgur.com/PTYE8bK.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/40ZRyfn.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/40ZRyfn.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "تحديث جديد: تغيير ستايل الموقع",
+        t: "h1",
+        c: "تحديث جديد: تغيير ستايل الموقع",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ajj81FN.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/ajj81FN.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/U3NBAN8.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/U3NBAN8.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/d1z5WUt.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/d1z5WUt.jpeg",
       },
     ],
   },
@@ -2231,125 +2231,125 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "برمجت رسمة بتوثق وقت التعلم لكل يوم في الأسبوع",
+        t: "h1",
+        c: "برمجت رسمة بتوثق وقت التعلم لكل يوم في الأسبوع",
       },
       {
-        tag: "p",
-        content: "هالرسمة بتخليني أسجل قديش تعلمت بكل يوم",
+        t: "p",
+        c: "هالرسمة بتخليني أسجل قديش تعلمت بكل يوم",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/jGAr4gf.png",
+        t: "img",
+        c: "https://i.imgur.com/jGAr4gf.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ipnctsO.png",
+        t: "img",
+        c: "https://i.imgur.com/ipnctsO.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "حليت سؤال 23 من Project Euler",
+        t: "h1",
+        c: "حليت سؤال 23 من Project Euler",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "السؤال كان عبارة عن ايجاد مجموع الأعداد التي تعتبر ليست جمع لعددين حاصل مجموع عواملهم اكبر منهم",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ZLxeGL0.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/ZLxeGL0.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/LgsSBoe.png",
+        t: "img",
+        c: "https://i.imgur.com/LgsSBoe.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "غيرت cdn الصور",
+        t: "h1",
+        c: "غيرت cdn الصور",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "كنت أرفع الصور على الانستا، بعد هيك أنسخ الرابط تاعهم وأضيفه هان",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "بس اكتشفت انه الإنستا بيغير روابط الصور كل شهر، صار مشاكل والصور بطلت تظهر",
       },
       {
-        tag: "p",
-        content: "يعني كل شهر بدي احدث روابط الصور كلها!",
+        t: "p",
+        c: "يعني كل شهر بدي احدث روابط الصور كلها!",
       },
       {
-        tag: "p",
-        content: "لقيت موقع اسمه imgur بيعطي روابط ثابتة",
+        t: "p",
+        c: "لقيت موقع اسمه imgur بيعطي روابط ثابتة",
       },
       {
-        tag: "h1",
-        content: "وكمان عملت تحسينات على الصور",
+        t: "h1",
+        c: "وكمان عملت تحسينات على الصور",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "غيرت صيغة الصور من png ل jpg، حجم الصور صار أقل بنسبة 90 بالمية",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "يعني التصفح هيكون أسرع خاصة على النت الضعيف، زي هالأيام النت وضعه صعب",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "حليت سؤال 25 - السؤال الأخير من Project Euler",
+        t: "h1",
+        c: "حليت سؤال 25 - السؤال الأخير من Project Euler",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/FhLBL3X.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/FhLBL3X.jpeg",
         isLightImage: true,
       },
       {
-        tag: "p",
-        content: "بده اياني أعرف أول رقم بسلسلة فيبوناتشي فيه 1000 رقم",
+        t: "p",
+        c: "بده اياني أعرف أول رقم بسلسلة فيبوناتشي فيه 1000 رقم",
       },
       {
-        tag: "p",
-        content: "يعني رقم عبارة عن 1 وجنبه 999 صفر!",
+        t: "p",
+        c: "يعني رقم عبارة عن 1 وجنبه 999 صفر!",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "هاد الكلام مستحيل ينحسب هيك بالكود، كان لازم ألاقي طريقة لحله",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "الفكرة للحل اني همشي بالسلسلة رقم رقم، هحول الرقم لنص عشان احسب طوله، لعند م أوصل لطول 1000 بوقف",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/dMLOdZN.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/dMLOdZN.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "المواضيع اللي تعملت عنها الأسبوع هاد",
+        t: "h1",
+        c: "المواضيع اللي تعملت عنها الأسبوع هاد",
       },
       {
-        tag: "ul",
-        content: [
+        t: "ul",
+        c: [
           {
             title: "Advanced HTML + CSS",
             link: "#",
@@ -2361,39 +2361,39 @@ export const weeks = [
         ],
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Sn3VjvR.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/Sn3VjvR.jpeg",
         isLightImage: true,
       },
       {
-        tag: "h1",
-        content: "موضوع الAccessibility أو سهولة الوصول",
+        t: "h1",
+        c: "موضوع الAccessibility أو سهولة الوصول",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "موضوع مهم لأنه بيعلمك كيف تخلي الموقع متجاوب مع كل المستخدمين",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "حتى اللي عندهم احتياجات خاصة، باستخدام تقنيات مثل التباين اللوني الواضح",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "الكلام سهل القراءة، الواضح، التنقل باستخدام الكيبورد، وكمان حجات تانية",
       },
       {
-        tag: "h1",
-        content: "بعد هيك هفوت على كورس الرياكت! 🔥",
+        t: "h1",
+        c: "بعد هيك هفوت على كورس الرياكت! 🔥",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/NrjHuUZ.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/NrjHuUZ.jpeg",
       },
     ],
   },
@@ -2407,98 +2407,98 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "إنجاز جديد 🎉",
+        t: "h1",
+        c: "إنجاز جديد 🎉",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "أخيرا وبعد سنة ونص، وأكتر من مرة أحاول أتعلم جافاسكريبت، خلصتها 🔥🙂",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/0mzRSaB.png",
+        t: "img",
+        c: "https://i.imgur.com/0mzRSaB.png",
         isLightImage: true,
       },
       {
-        tag: "h1",
-        content: "المشروع الأخير",
+        t: "h1",
+        c: "المشروع الأخير",
       },
       {
-        tag: "h2",
-        content: "⚔️ Battleships ⚔️",
+        t: "h2",
+        c: "⚔️ Battleships ⚔️",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/vfLWKqB.png",
+        t: "img",
+        c: "https://i.imgur.com/vfLWKqB.png",
         isLightImage: true,
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "شكل اللعبة هيك، الفكرة انه كل لاعب بيحط سفن بمكان مخفي عن اللاعب الثاني، وتصير تحزر وين اماكنهم عن طريق رمي قذائف بشكل عشوائي",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/YVVnmyI.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/YVVnmyI.jpeg",
         thumbnail: "https://i.imgur.com/JsMmOXc.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h2",
-        content: "حليت سؤال رقم 22 من Project Euler ✅",
+        t: "h2",
+        c: "حليت سؤال رقم 22 من Project Euler ✅",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/zgKEirM.png",
+        t: "img",
+        c: "https://i.imgur.com/zgKEirM.png",
         isLightImage: true,
       },
       {
-        tag: "h1",
-        content: "المطلوب؟",
+        t: "h1",
+        c: "المطلوب؟",
       },
       {
-        tag: "p",
-        content: "معطيني ملف نصي فيه أكتر من 5 آلاف إسم",
+        t: "p",
+        c: "معطيني ملف نصي فيه أكتر من 5 آلاف إسم",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "بالأول طالب إني أرتبهم أبجديا، بعدين بده اياني أحسب السكور لكل اسم",
       },
       {
-        tag: "p",
-        content: "سكور كل اسم هو مجموع القيمة العددية لكل حرف بالإسم",
+        t: "p",
+        c: "سكور كل اسم هو مجموع القيمة العددية لكل حرف بالإسم",
       },
       {
-        tag: "p",
-        content: "القيمة العددية لكل حرف هي ترتيبه بالأبجدي",
+        t: "p",
+        c: "القيمة العددية لكل حرف هي ترتيبه بالأبجدي",
       },
       {
-        tag: "p",
-        content: "A = 1, B = 2, .... Z = 26",
+        t: "p",
+        c: "A = 1, B = 2, .... Z = 26",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/1jK6AQZ.png",
+        t: "img",
+        c: "https://i.imgur.com/1jK6AQZ.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "برمجت رسم بتخليني أوثق قديش بتعلم بكل يوم بالأسبوع 📊",
+        t: "h1",
+        c: "برمجت رسم بتخليني أوثق قديش بتعلم بكل يوم بالأسبوع 📊",
       },
       {
-        tag: "p",
-        content: "إذا مشي الحال، المفروض أبدأ استخدمها بالأسبوع الجاي",
+        t: "p",
+        c: "إذا مشي الحال، المفروض أبدأ استخدمها بالأسبوع الجاي",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/fsjAtLQ.png",
+        t: "img",
+        c: "https://i.imgur.com/fsjAtLQ.png",
       },
     ],
   },
@@ -2511,224 +2511,224 @@ export const weeks = [
     },
     events: [
       {
-        content: "مشوار غزة الثاني",
-        tag: "h1",
+        c: "مشوار غزة الثاني",
+        t: "h1",
       },
       {
-        tag: "p",
-        content: "الهدف: زيارة إيمان أختي وتفقد وضع البيت",
+        t: "p",
+        c: "الهدف: زيارة إيمان أختي وتفقد وضع البيت",
       },
       {
-        tag: "p",
-        content: "بديت أوثق من الساعة 4 وعشر دقايق، شارع صلاح الدين، النصيرات",
+        t: "p",
+        c: "بديت أوثق من الساعة 4 وعشر دقايق، شارع صلاح الدين، النصيرات",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/X2ZjXUu.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/X2ZjXUu.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/m8VLAmF.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/m8VLAmF.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "مشينا لعند الوادي، وهناك كانت طوابير السيارة ممتدة لعند نتساريم",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/sTXQdYe.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/sTXQdYe.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "كملنا مشي على شارع صلاح الدين، وكان الوقت للوصول ساعتين حسب البرنامج",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/VC9kcA9.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/VC9kcA9.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "بالبداية كنا متوترين، هل هنمشي شارع صلاح الدين، ولا نروح مع طريق السيارات",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "قررنا بنضل على شارع صلاح الدين، كان فاضي الشارع وعندي عالبرنامج كان مخطط بالأحمر",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "بس سألنا الناس هناك وقالو الطريق سليمة، وقتها ضلينا ماشيين صلاح الدين",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/HYmkDSY.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/HYmkDSY.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/20LxI4E.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/20LxI4E.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/AD2KBFW.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/AD2KBFW.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/pDtNLP6.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/pDtNLP6.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/rdTULeW.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/rdTULeW.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/fixdzRv.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/fixdzRv.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/nPzLUFn.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/nPzLUFn.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ZZGxpk2.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/ZZGxpk2.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content: "طلعنا من المنطقة الخطرة، وصلنا الزيتون",
+        t: "p",
+        c: "طلعنا من المنطقة الخطرة، وصلنا الزيتون",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/wygTMFc.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/wygTMFc.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/yBPuQLr.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/yBPuQLr.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content: "أخدنا بريك على دوار شارع رقم 10 بالزيتون",
+        t: "p",
+        c: "أخدنا بريك على دوار شارع رقم 10 بالزيتون",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/tqpdTD7.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/tqpdTD7.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content: "بنمشي من الزيتون، للساحة، ومن هناك للجندي المجهول",
+        t: "p",
+        c: "بنمشي من الزيتون، للساحة، ومن هناك للجندي المجهول",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/pN7nxZA.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/pN7nxZA.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/gGq2s8b.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/gGq2s8b.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/3gnHvkO.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/3gnHvkO.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/84hpJ2F.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/84hpJ2F.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/4oY1dKl.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/4oY1dKl.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "كاظم، الساحة 🪐",
+        t: "h1",
+        c: "كاظم، الساحة 🪐",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/mVPbp5W.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/mVPbp5W.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "وصلنا الساعة 7، بعد صلاة العشاء، رتبنا شقة إيمان، حضرنا فيلم بالليل ونمنا",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "صحينا تاني يوم كملنا شغل بالشقة، خلصنا على صلاة العصر ورجعنا على دير البلح",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/YsaEeUF.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/YsaEeUF.jpeg",
         isLightImage: true,
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/dSly3x0.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/dSly3x0.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "لحقت حالي تعلمت اشي بالأسبوع",
+        t: "h1",
+        c: "لحقت حالي تعلمت اشي بالأسبوع",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/jQO0hM4.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/jQO0hM4.jpeg",
         isLightImage: true,
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h3",
-        content:
+        t: "h3",
+        c:
           "سويت سكريبت بيخلي تنزيل الأسابيع أسهل، هو بيكتب الكود لحاله، وأنا بس بدخل الكلام ورابط الصور ✨",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/AKUl3Rk.png",
+        t: "img",
+        c: "https://i.imgur.com/AKUl3Rk.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/S4ZbZT8.png",
+        t: "img",
+        c: "https://i.imgur.com/S4ZbZT8.png",
       },
     ],
   },
@@ -2741,26 +2741,26 @@ export const weeks = [
     },
     events: [
       {
-        content:
+        c:
           "كان النت فاصل بأغلب الوقت، سليت حالي بالشغل ببطاريات ليثيوم جبتهم من غزة لما رحت",
-        tag: "p",
+        t: "p",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/BH9t49n.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/BH9t49n.jpeg",
         thumbnail: "https://i.imgur.com/3BkQ8Yg.jpg",
         size: "long",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content: "وفي كمان عملت مشروع بإسم هيكسا، شرحه بالصورة اللي تحت",
+        t: "p",
+        c: "وفي كمان عملت مشروع بإسم هيكسا، شرحه بالصورة اللي تحت",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/brPZ4Iv.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/brPZ4Iv.jpeg",
         thumbnail: "https://i.imgur.com/aw0fDZ8.jpeg",
         size: "long",
       },
@@ -2775,57 +2775,57 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "مشروع جديد: Linked Lists",
+        t: "h1",
+        c: "مشروع جديد: Linked Lists",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "لينكد ليست؟ موضوع أخذته بالجامعة وفاهمه من زمان، عشان هيك خلصته بسرعة",
       },
       {
-        tag: "img",
+        t: "img",
         isLightImage: true,
-        content: "https://i.imgur.com/zdpT84t.png",
+        c: "https://i.imgur.com/zdpT84t.png",
       },
       {
-        tag: "img",
+        t: "img",
         isLightImage: true,
-        content: "https://i.imgur.com/XixYDKs.png",
+        c: "https://i.imgur.com/XixYDKs.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/Ef9w84c.png",
+        t: "img",
+        c: "https://i.imgur.com/Ef9w84c.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/ka2g2Vc.png",
+        t: "img",
+        c: "https://i.imgur.com/ka2g2Vc.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "خطوة جديدة: تعلمت كيف أسوي اختبارات تلقائية للكود 🛠",
+        t: "h1",
+        c: "خطوة جديدة: تعلمت كيف أسوي اختبارات تلقائية للكود 🛠",
       },
       {
-        tag: "p",
-        content: "الهدف؟ كل تعديل على الكود بيخليني متطمن انه مابيخرب اشي",
+        t: "p",
+        c: "الهدف؟ كل تعديل على الكود بيخليني متطمن انه مابيخرب اشي",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/W9siGTo.png",
+        t: "img",
+        c: "https://i.imgur.com/W9siGTo.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "🤓 Progress on Project Euler",
+        t: "h1",
+        c: "🤓 Progress on Project Euler",
       },
       {
-        tag: "p",
-        content: "حليت الأسئلة 17، 18، 19، 20",
+        t: "p",
+        c: "حليت الأسئلة 17، 18، 19، 20",
       },
     ],
   },
@@ -2838,90 +2838,90 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "تحديث جديد على الموقع 🆕",
+        t: "h1",
+        c: "تحديث جديد على الموقع 🆕",
       },
       {
-        tag: "h4",
-        content:
+        t: "h4",
+        c:
           " إضافة زر خاص بالأهداف لكل سنة، عشان أوثق الإنجازات وأظلني متابع التطور 🎯",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/tjP7X6Q.png",
+        t: "img",
+        c: "https://i.imgur.com/tjP7X6Q.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/LqwR8zt.png",
+        t: "img",
+        c: "https://i.imgur.com/LqwR8zt.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/RxEEsQp.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/RxEEsQp.jpeg",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/IkzqJcg.png",
+        t: "img",
+        c: "https://i.imgur.com/IkzqJcg.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/t4JAx08.png",
+        t: "img",
+        c: "https://i.imgur.com/t4JAx08.png",
       },
       {
-        tag: "h1",
-        content: "تحديثات على Github الموقع",
+        t: "h1",
+        c: "تحديثات على Github الموقع",
       },
       {
-        tag: "p",
-        content: "ربطت Github بالكود الخاص بتطوير الموقع",
+        t: "p",
+        c: "ربطت Github بالكود الخاص بتطوير الموقع",
       },
       {
-        tag: "p",
-        content: "يعني صار Github مربوط بكود البناء والتطوير",
+        t: "p",
+        c: "يعني صار Github مربوط بكود البناء والتطوير",
       },
       {
-        tag: "h1",
-        content: "عملت فرعين منفصلين",
+        t: "h1",
+        c: "عملت فرعين منفصلين",
       },
       {
-        tag: "p",
-        content: "فرع للموقع الجاهز بعد كل تحديث",
+        t: "p",
+        c: "فرع للموقع الجاهز بعد كل تحديث",
       },
       {
-        tag: "p",
-        content: "فرغ خاص لكود التطوير",
+        t: "p",
+        c: "فرغ خاص لكود التطوير",
       },
       {
-        tag: "h1",
-        content: "الطريقة القديمة: كل مرة كنت لازم أعدل التحديثات يدويا",
+        t: "h1",
+        c: "الطريقة القديمة: كل مرة كنت لازم أعدل التحديثات يدويا",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/qnIQgph.png",
+        t: "img",
+        c: "https://i.imgur.com/qnIQgph.png",
       },
       {
-        tag: "h1",
-        content:
+        t: "h1",
+        c:
           "الطريقة الجديدة: تحديثات أسرع وأسهل، مرة واحدة وكل شيء يصير تلقائي",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/bDGJPVb.png",
+        t: "img",
+        c: "https://i.imgur.com/bDGJPVb.png",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "النتيجة؟ الكود صار يسمح لي أعمل سكريبت يحدث الموقع لحاله بعد هيك 😎",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/nLSJJ1e.png",
+        t: "img",
+        c: "https://i.imgur.com/nLSJJ1e.png",
       },
       {
-        tag: "h1",
-        content: "مشوار غزة الأول",
+        t: "h1",
+        c: "مشوار غزة الأول",
       },
       {
-        tag: "iframe",
+        t: "iframe",
         type: "shorts",
         videoId: "bL3z0ifa80Y",
       },
@@ -2936,77 +2936,77 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "برمجت تطبيق To-Do List",
+        t: "h1",
+        c: "برمجت تطبيق To-Do List",
       },
       {
-        tag: "h3",
-        content: "التقنيات المستخدمة 📌",
+        t: "h3",
+        c: "التقنيات المستخدمة 📌",
       },
       {
-        tag: "h4",
-        content: "HTML, CSS, Javascript (ES Modules), Webpack",
-      },
-      {
-        isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/tJ62dMa.png",
+        t: "h4",
+        c: "HTML, CSS, Javascript (ES Modules), Webpack",
       },
       {
         isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/w4iAX8i.png",
+        t: "img",
+        c: "https://i.imgur.com/tJ62dMa.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/49FbM1g.png",
+        isLightImage: true,
+        t: "img",
+        c: "https://i.imgur.com/w4iAX8i.png",
       },
       {
-        tag: "hr",
+        t: "img",
+        c: "https://i.imgur.com/49FbM1g.png",
       },
       {
-        tag: "p",
-        content: " الشكل الحالي للمشروع: لسا بده شوية شغل وتحسينات ✍️",
+        t: "hr",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c: " الشكل الحالي للمشروع: لسا بده شوية شغل وتحسينات ✍️",
+      },
+      {
+        t: "p",
+        c:
           "التحديثات الجاية: إضافة البرمجة عشان يشتغل كل المطلوب من المشروع 🛠",
       },
       {
         isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/DpJH25o.png",
+        t: "img",
+        c: "https://i.imgur.com/DpJH25o.png",
       },
       {
         isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/QG2bSCf.png",
+        t: "img",
+        c: "https://i.imgur.com/QG2bSCf.png",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h3",
-        content: "بعد يومين شغل، التصميم والبرمجة صاروا جاهزين ⏳",
-      },
-      {
-        isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/kBNLBC3.png",
+        t: "h3",
+        c: "بعد يومين شغل، التصميم والبرمجة صاروا جاهزين ⏳",
       },
       {
         isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/lAti3Mb.png",
+        t: "img",
+        c: "https://i.imgur.com/kBNLBC3.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/GOzoRfv.png",
+        isLightImage: true,
+        t: "img",
+        c: "https://i.imgur.com/lAti3Mb.png",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/P14lZeI.png",
+        t: "img",
+        c: "https://i.imgur.com/GOzoRfv.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/P14lZeI.png",
       },
     ],
   },
@@ -3020,68 +3020,68 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "برمجة هاد الموقع 💻",
+        t: "h1",
+        c: "برمجة هاد الموقع 💻",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/a4QOAMo.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/a4QOAMo.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h2",
-        content: "التصميم الأول: كان بسيط",
+        t: "h2",
+        c: "التصميم الأول: كان بسيط",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/FKy14XK.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/FKy14XK.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h2",
-        content: "بعدين قررت أسرق شوية إلهام من الإنستا 🙂",
+        t: "h2",
+        c: "بعدين قررت أسرق شوية إلهام من الإنستا 🙂",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "ضفت اقتباس جديد كل أسبوع، وعملت تعديلات على التصميم بحيث يكون متجاوب أكتر",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "h1",
-        content: "الشكل على الجوال 📱",
+        t: "h1",
+        c: "الشكل على الجوال 📱",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/irrN5sh.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/irrN5sh.jpeg",
         size: "small",
       },
       {
-        tag: "h1",
-        content: "الشكل على الشاشات الأكبر",
+        t: "h1",
+        c: "الشكل على الشاشات الأكبر",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/mFnu2wz.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/mFnu2wz.jpeg",
         size: "normal",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content: "اليوم 14 يناير: كملت 142 يوم متواصل في تعلم اللغة العبرية 🔥",
+        t: "p",
+        c: "اليوم 14 يناير: كملت 142 يوم متواصل في تعلم اللغة العبرية 🔥",
       },
       {
         isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/nLRIDzc.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/nLRIDzc.jpeg",
         size: "small",
       },
     ],
@@ -3095,33 +3095,33 @@ export const weeks = [
     },
     events: [
       {
-        tag: "h1",
-        content: "بديت بحل أسئلة موقع بروجكت أولر",
+        t: "h1",
+        c: "بديت بحل أسئلة موقع بروجكت أولر",
       },
       {
         isLightImage: true,
-        tag: "img",
-        content: "https://i.imgur.com/PK0BXVx.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/PK0BXVx.jpeg",
       },
       {
-        tag: "p",
-        content: "حليت 16 سؤال من أصل 25 مقرر أحلهم خلال السنة",
+        t: "p",
+        c: "حليت 16 سؤال من أصل 25 مقرر أحلهم خلال السنة",
       },
       {
-        tag: "img",
-        content: "https://i.imgur.com/C3OM08R.jpeg",
+        t: "img",
+        c: "https://i.imgur.com/C3OM08R.jpeg",
       },
       {
-        tag: "hr",
+        t: "hr",
       },
       {
-        tag: "p",
-        content:
+        t: "p",
+        c:
           "هاد الأسئلة فكرتها تخليك تستخدم الرياضات مع البرمجة، الأهم انك تفكر بالحل الأسرع والأخف، بتخليك تحك راسك وتجيب حلول بدها تفكير طويل",
       },
       // {
-      //   tag: "ul",
-      //   content: [
+      //   t: "ul",
+      //   c: [
       //     {
       //       title: "Google",
       //       link: "https://www.google.com",
