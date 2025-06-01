@@ -3,7 +3,7 @@ const GoalSection = ({ goal }) => {
   const isFail = goal.isFailed != null && Boolean(goal?.isFailed);
   return (
     <div
-      className={`text-lg sm:text-xl md:text-2xl lg:text-3xl mb-3 md:mb-5 p-2 px-5 rounded-xl font-bold ${
+      className={`text-lg sm:text-xl text-center md:text-2xl lg:text-3xl mb-3 md:mb-5 p-2 px-5 rounded-xl font-bold ${
         isDone
           ? "bg-green-400 shadow-2xl shadow-green-800"
           : isFail
