@@ -6,7 +6,7 @@ export default function Story({ data, id, type, isSpecial }) {
     goldStory ? "shadow-yellow-900 shadow-xl" : ""
   }`;
   const activeClassName = `active brightness-140 ${
-    goldStory ? "" : "border-dashed shadow-slate-800 shadow-xl"
+    goldStory ? "" : "shadow-slate-800 shadow-xl"
   }`;
   return (
     <NavLink
