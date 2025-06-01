@@ -102,7 +102,7 @@ export const weeks = [
           },
           {
             title: "Getting started with Node.js debugging in VS Code",
-            link: "Getting started with Node.js debugging in VS Code",
+            link: "https://www.youtube.com/watch?v=2oFKNL7vYV8&ab_channel=VisualStudioCode",
           },
         ],
       },
