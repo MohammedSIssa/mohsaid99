@@ -20,7 +20,7 @@ export const weeks = [
             link: "#",
           },
           {
-            title: "تكملة على دورة Node.js",
+            title: "تكملة على دورة Node.js ✅",
             link: "#",
           },
         ],
