@@ -27,6 +27,52 @@ export const weeks = [
           },
         ],
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "جهزت احتياطاتي في حال صارت فصلة نت طويلة",
+      },
+      {
+        t: "p",
+        c: "جبت برنامج kiwix ونزلت موسوعة wikipedia عليه 🌚",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/Qk7NphV.png",
+        isTransparent: true,
+        isLightImage: true,
+      },
+      {
+        tag: "hr",
+      },
+      {
+        t: "h1",
+        c: "بديت بحل أسئلة Rosetta Code",
+      },
+      {
+        t: "p",
+        c: "مش عارف كم سؤال هحل، بس هحاول كل كام يوم أحل سؤال",
+      },
+      {
+        t: "ul",
+        c: [
+          {
+            title: "Rosetta Code",
+            link: "https://www.freecodecamp.org/learn/rosetta-code/",
+          },
+        ],
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/WRuXLtL.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/u2zJisp.png",
+        isTransparent: true,
+      },
     ],
   },
   {
