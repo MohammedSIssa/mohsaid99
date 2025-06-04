@@ -16,6 +16,7 @@ export let goals = [
           },
           {
             name: "أتمكن من الرياكت",
+            isDone: true,
           },
           {
             name: "أتعلم كل يوم اشي جديد",
