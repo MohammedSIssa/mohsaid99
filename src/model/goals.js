@@ -28,20 +28,20 @@ export let goals = [
         c: "أهداف الربع الأول",
         g: [
           {
-            name: "✅ أخلص كورس الـJavaScript",
+            name: "أخلص كورس الـJavaScript",
             isDone: true,
             // isFailed: true
           },
           {
-            name: "✅ أحل أول 25 سؤال في Project Euler",
+            name: "أحل أول 25 سؤال في Project Euler",
             isDone: true,
           },
           {
-            name: "✅ كل يوم درس عبري",
+            name: "كل يوم درس عبري",
             isDone: true,
           },
           {
-            name: "✅ أتعلم اشي جديد كل يوم",
+            name: "أتعلم اشي جديد كل يوم",
             isDone: true,
           },
         ],
