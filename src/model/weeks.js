@@ -3,7 +3,6 @@ export const weeks = [
     id: 23,
     meta: {
       duration: "من 4 ينويو لـ 10 يونيو",
-      summary: "🔴",
       year: 2025,
     },
     events: [
