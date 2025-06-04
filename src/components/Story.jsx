@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Story({ data, id, type, isSpecial }) {
   let goldStory = isSpecial != null && Boolean(isSpecial);
-  const defaultClassName = `w-[250px] min-w-[250px] h-full border-2 rounded-xl p-3 px-4 relative ${
+  const defaultClassName = `w-[250px] min-w-[250px] h-full border-2 rounded-xl p-3 px-4 relative snap-start ${
     goldStory ? "shadow-yellow-900 shadow-xl" : ""
   }`;
   const activeClassName = `active brightness-140 ${
