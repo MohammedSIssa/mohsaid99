@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
