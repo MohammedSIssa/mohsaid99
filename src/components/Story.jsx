@@ -26,7 +26,9 @@ export default function Story({ data, id, type, isSpecial }) {
       }}
     >
       <p className="font-bold text-xl mb-1">{data.duration}</p>
-      <p className="font-light text-sm">{data?.summary ? data.summary : "🔴"}</p>
+      <p className="font-light text-sm">
+        {data?.summary ? data.summary : "🔴"}
+      </p>
       <p className="italic absolute bottom-1 left-3 story-count font-bold">
         #{id}
       </p>
