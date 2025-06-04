@@ -40,7 +40,7 @@ export default function LazyImageBlock({ event }) {
       ref={containerRef}
       className={"thumbnail mb-10"}
       style={{
-        backgroundImage: isVisible ? `url(${imgThumbnail})` : "none",
+        backgroundImage: isVisible && !event?.isTransparent ? `url(${imgThumbnail})` : "none",
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "120px", // لمنع collapse
