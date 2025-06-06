@@ -73,6 +73,18 @@ export const weeks = [
         c: "https://i.imgur.com/u2zJisp.png",
         isTransparent: true,
       },
+      {
+        t: "hr"
+      },
+      {
+        t: 'h1',
+        c: "بدأت أتعلم Express.js"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/SzbIm0V.png",
+        size: "small"
+      }
     ],
   },
   {
