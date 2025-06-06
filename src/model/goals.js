@@ -19,9 +19,15 @@ export let goals = [
             isDone: true,
           },
           {
+            name: "أحل 10 أسئلة من Rosetta Code",
+          },
+          {
             name: "أتعلم كل يوم اشي جديد",
           },
         ],
+      },
+      {
+        t: "hr",
       },
       {
         t: "h1",
