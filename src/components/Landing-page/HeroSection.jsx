@@ -1,14 +1,18 @@
 import { NavLink } from "react-router-dom";
 
-import { dataCenter } from "../model/center";
+import { dataCenter } from "../../model/center";
 
-function Welcome() {
-  const whatIamLearningCurrently = "Node.js";
+function HeroSection(){
+  const whatIamLearningCurrently = "express.js";
   const { latestGoal, latestWeek } = dataCenter;
   return (
     <div
-      className="h-dvh w-vw flex flex-col items-center p-10 py-15 md:px-30 text-center"
-      style={{ backgroundColor: "var(--bg-color)", color: "var(--font-color)" }}
+      className="h-dvh w-vw flex flex-col items-center p-10 py-15 md:px-30 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black"
+      style={{
+        background:
+          "radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
+        color: "var(--font-color)",
+      }}
     >
       <h1 className="text-5xl md:text-6xl mb-15 font-bold">مرحبا 👋🏻</h1>
       <h1 className="text-lg md:text-2xl lg:text-2xl mb-5">
@@ -19,7 +23,7 @@ function Welcome() {
         الحياة
       </p>
       <p className="text-lg md:text-2xl mb-5">
-        أنا الآن أتعلم {whatIamLearningCurrently}، بتقدر تتابع تقدمي في صفحة
+        أنا الآن أتعلم {whatIamLearningCurrently}.. بتقدر تتابع تقدمي في صفحة
         الأهداف والأسابيع
       </p>
       <div className="flex gap-5 md:gap-10 py-10">
@@ -38,9 +42,11 @@ function Welcome() {
           الأهداف
         </NavLink>
       </div>
-      <p className="text-sm sm:text-lg md:text-xl lg:text-2xl">صنع بالحب بإستخدام React ❤️</p>
+      <p className="text-sm sm:text-lg md:text-xl lg:text-2xl">
+        صنع بالحب بإستخدام React ❤️
+      </p>
     </div>
   );
 }
 
-export default Welcome;
+export default HeroSection;
