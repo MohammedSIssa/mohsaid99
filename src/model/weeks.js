@@ -36,15 +36,15 @@ export const weeks = [
       },
       {
         t: "p",
-        c: "لقيت برنامج اسمه kiwix بيخزن ملفات بصيغة ZIM وهدول الملفات انا بقدر بعدين افتحهم بدون نت عادي"
+        c: "لقيت برنامج اسمه kiwix بيخزن ملفات بصيغة ZIM وهدول الملفات انا بقدر بعدين افتحهم بدون نت عادي",
       },
       {
         t: "p",
-        c: "يعني انا هلقيت نزلت ويكيبيديا، عشان اقدر اتعلم اشي بأي وقت بدي اياه"
+        c: "يعني انا هلقيت نزلت ويكيبيديا، عشان اقدر اتعلم اشي بأي وقت بدي اياه",
       },
       {
         t: "p",
-        c: "وكمان حجات تانية، صار المخزن حجمه 15 غيغا"
+        c: "وكمان حجات تانية، صار المخزن حجمه 15 غيغا",
       },
       {
         t: "img",
@@ -82,27 +82,38 @@ export const weeks = [
         isTransparent: true,
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
-        t: 'h1',
-        c: "بدأت أتعلم Express.js"
+        t: "h1",
+        c: "بدأت أتعلم Express.js",
       },
       {
         t: "img",
         c: "https://i.imgur.com/SzbIm0V.png",
-        size: "small"
+        size: "small",
       },
       {
         t: "img",
         c: "https://i.imgur.com/pF9ZATx.png",
-        size: "small"
+        size: "small",
+        isLightImage: true,
       },
       {
         t: "img",
         c: "https://i.imgur.com/bZX9dOb.png",
-        size: "small"
-      }
+        size: "small",
+        isLightImage: true,
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/08Oehyq.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/gX73zyX.jpeg",
+        thumbnail: "https://i.imgur.com/qK3axYX.jpeg",
+      },
     ],
   },
   {
@@ -325,11 +336,6 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/I3jVObJ.jpeg",
         thumbnail: "https://i.imgur.com/fbwmrsf.jpeg",
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/49zjlPb.jpeg",
-        thumbnail: "https://i.imgur.com/J9D8Xhb.jpeg",
       },
     ],
   },
