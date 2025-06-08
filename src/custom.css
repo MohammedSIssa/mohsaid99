@@ -9,6 +9,7 @@
 
 :root {
   --bg-color: #0e1217;
+  /* --bg-color: #19202a; */
   --story-bg-color: #1c1f26;
   --gold-story-border-color: #fcd000;
   --font-color: #dadada;
@@ -30,6 +31,7 @@
 
 body {
   background-color: var(--bg-color);
+  /* background: radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0)); */
   font-family: var(--font);
   overflow-x: hidden;
 }

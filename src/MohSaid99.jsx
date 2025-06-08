@@ -1,6 +1,6 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 import HomePage from "./layouts/homepage";
-import Welcome from "./components/Welcome";
+import Welcome from "./components/Landing-page/Welcome";
 
 import "./custom.css";
 
