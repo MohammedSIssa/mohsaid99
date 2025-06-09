@@ -11,7 +11,7 @@ export default function WeekList({ list }) {
                   : listItem.link
               }`}
               target="_blank"
-              className="text-lg px-5 max-w-[700px] text-center md:text-xl font-bold"
+              className="text-lg px-5 max-w-[700px] text-center md:text-xl font-bold text-balance"
             >
               {listItem.title}
             </a>
