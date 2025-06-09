@@ -129,6 +129,59 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/iaeqDmT.jpeg",
         thumbnail: "https://i.imgur.com/11a6oa9.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/UAT3YUJ.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/ZQFL9M6.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "الأشياء اللي تعلمتها هاد الأسبوع"
+      },
+      {
+        t: "h3",
+        c: "- Express.js -"
+      },
+      {
+        t: "ul",
+        c: [
+          {
+            title: "Introduction to Express.js",
+            link: "https://www.theodinproject.com/lessons/node-path-nodejs-introduction-to-express"
+          },
+          {
+            title: "Routes",
+            link: "https://www.theodinproject.com/lessons/nodejs-routes"
+          },
+          {
+            title: "Controllers",
+            link: "https://www.theodinproject.com/lessons/nodejs-controllers"
+          }
+        ]
+      },
+      {
+        t: "h1",
+        c: "مقالات قرأتها"
+      },
+      {
+        t: "ul",
+        c: [
+          {
+            title: "Express Middlewares Demystified",
+            link: "https://medium.com/@viral_shah/express-middlewares-demystified-f0c2c37ea6a1"
+          },
+          {
+            title: "Learn MVC Pattern with ExpressJS and NodeJS - Tutorial Beginner",
+            link: "https://www.youtube.com/watch?v=Cgvopu9zg8Y"
+          }
+        ]
       }
     ],
   },
