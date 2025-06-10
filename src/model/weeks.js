@@ -150,6 +150,23 @@ export const weeks = [
       },
       {
         t: "h1",
+        c: "العضلات اللي ركزت عليها هاد الأسبوع",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/AM4jl7q.jpeg",
+        isLightImage: true,
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/PWplyn8.jpeg",
+        isLightImage: true,
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
         c: "الأشياء اللي تعلمتها هاد الأسبوع",
       },
       {
