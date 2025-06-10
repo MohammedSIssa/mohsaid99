@@ -89,6 +89,24 @@ export const weeks = [
         isTransparent: true,
       },
       {
+        t: "h3",
+        c: "بعدين حليت سؤال الabc blocks وطلع معي 2 مش صح، مش عارف السبب"
+      },
+      {
+        t: "p",
+        c: "مش هغيره لأنه السؤال أصلا معقد"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/fgThXmT.png",
+        size: "small"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/1HGlPHs.png",
+        size: "small"
+      },
+      {
         t: "hr",
       },
       {
