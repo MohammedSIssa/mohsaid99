@@ -136,6 +136,10 @@ export const weeks = [
       },
       {
         t: "img",
+        c: "https://i.imgur.com/z0hHnC0.jpeg"
+      },
+      {
+        t: "img",
         c: "https://i.imgur.com/gX73zyX.jpeg",
         thumbnail: "https://i.imgur.com/qK3axYX.jpeg",
       },
