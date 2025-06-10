@@ -67,7 +67,7 @@ a:hover {
   direction: ltr;
 }
 
-.week-list a {
+.week-list a:is(:not(.week-goal)) {
   color: violet;
 }
 

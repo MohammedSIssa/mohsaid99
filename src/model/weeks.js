@@ -17,14 +17,20 @@ export const weeks = [
           {
             title: "أبدأ بدورة Express.js",
             link: "#",
+            isGoal: true,
+            isDone: true,
           },
           {
             title: "كل يوم 200 Push-up",
             link: "#",
+            isGoal: true,
+            isDone: true,
           },
           {
             title: "مشاريع مشاريع مشاريع",
             link: "#",
+            isGoal: true,
+            isDone: true,
           },
         ],
       },
@@ -116,74 +122,75 @@ export const weeks = [
         thumbnail: "https://i.imgur.com/qK3axYX.jpeg",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "صور من الحياة"
+        c: "صور من الحياة",
       },
       {
         t: "h3",
-        c: "زينة 💞"
+        c: "زينة 💞",
       },
       {
         t: "img",
         c: "https://i.imgur.com/iaeqDmT.jpeg",
-        thumbnail: "https://i.imgur.com/11a6oa9.jpeg"
+        thumbnail: "https://i.imgur.com/11a6oa9.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/UAT3YUJ.jpeg"
+        c: "https://i.imgur.com/UAT3YUJ.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/ZQFL9M6.jpeg"
+        c: "https://i.imgur.com/ZQFL9M6.jpeg",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "الأشياء اللي تعلمتها هاد الأسبوع"
+        c: "الأشياء اللي تعلمتها هاد الأسبوع",
       },
       {
         t: "h3",
-        c: "- Express.js -"
+        c: "- Express.js -",
       },
       {
         t: "ul",
         c: [
           {
             title: "Introduction to Express.js",
-            link: "https://www.theodinproject.com/lessons/node-path-nodejs-introduction-to-express"
+            link: "https://www.theodinproject.com/lessons/node-path-nodejs-introduction-to-express",
           },
           {
             title: "Routes",
-            link: "https://www.theodinproject.com/lessons/nodejs-routes"
+            link: "https://www.theodinproject.com/lessons/nodejs-routes",
           },
           {
             title: "Controllers",
-            link: "https://www.theodinproject.com/lessons/nodejs-controllers"
-          }
-        ]
+            link: "https://www.theodinproject.com/lessons/nodejs-controllers",
+          },
+        ],
       },
       {
         t: "h1",
-        c: "مقالات قرأتها"
+        c: "مقالات قرأتها",
       },
       {
         t: "ul",
         c: [
           {
             title: "Express Middlewares Demystified",
-            link: "https://medium.com/@viral_shah/express-middlewares-demystified-f0c2c37ea6a1"
+            link: "https://medium.com/@viral_shah/express-middlewares-demystified-f0c2c37ea6a1",
           },
           {
-            title: "Learn MVC Pattern with ExpressJS and NodeJS - Tutorial Beginner",
-            link: "https://www.youtube.com/watch?v=Cgvopu9zg8Y"
-          }
-        ]
-      }
+            title:
+              "Learn MVC Pattern with ExpressJS and NodeJS - Tutorial Beginner",
+            link: "https://www.youtube.com/watch?v=Cgvopu9zg8Y",
+          },
+        ],
+      },
     ],
   },
   {
