@@ -90,21 +90,21 @@ export const weeks = [
       },
       {
         t: "h3",
-        c: "بعدين حليت سؤال الabc blocks وطلع معي 2 مش صح، مش عارف السبب"
+        c: "بعدين حليت سؤال الabc blocks وطلع معي 2 مش صح، مش عارف السبب",
       },
       {
         t: "p",
-        c: "مش هغيره لأنه السؤال أصلا معقد"
+        c: "مش هغيره لأنه السؤال أصلا معقد",
       },
       {
         t: "img",
         c: "https://i.imgur.com/fgThXmT.png",
-        size: "small"
+        size: "small",
       },
       {
         t: "img",
         c: "https://i.imgur.com/1HGlPHs.png",
-        size: "small"
+        size: "small",
       },
       {
         t: "hr",
@@ -136,7 +136,7 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/z0hHnC0.jpeg"
+        c: "https://i.imgur.com/z0hHnC0.jpeg",
       },
       {
         t: "img",
@@ -209,6 +209,10 @@ export const weeks = [
           {
             title: "Controllers",
             link: "https://www.theodinproject.com/lessons/nodejs-controllers",
+          },
+          {
+            title: "Views",
+            link: "https://www.theodinproject.com/lessons/nodejs-views",
           },
         ],
       },
