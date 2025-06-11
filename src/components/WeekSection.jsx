@@ -1,6 +1,7 @@
 import WeekList from "./WeekList";
 import LazyImageBlock from "./LazyImageBlock";
 import YouTubePlayer from "./YouTubePlayer";
+import GoalSection from "./GoalSection";
 
 const WeekSection = ({ event }) => {
   return (
@@ -57,6 +58,7 @@ const WeekSection = ({ event }) => {
           style={{ borderColor: "var(--story-bg-color)" }}
         />
       )}
+      {event?.type === "goals" && <GoalSection goal={event.goal} />}
     </>
   );
 };
