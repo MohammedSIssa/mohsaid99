@@ -5,7 +5,28 @@ export const weeks = [
       duration: "من 11 يونيو لـ 17 يونيو",
       year: 2025,
     },
-    events: [],
+    events: [
+      {
+        type: "goals",
+        goal: {
+          t: "h1",
+          c: "Week Goals",
+          g: [
+            {
+              name: "Week Goal 1",
+            },
+            {
+              name: "Week Goal 2",
+              isDone: true,
+            },
+            {
+              name: "Week Goal 3",
+              isFail: true,
+            },
+          ],
+        },
+      },
+    ],
   },
   {
     id: 23,
