@@ -10,19 +10,17 @@ export const weeks = [
         type: "goals",
         goal: {
           t: "h1",
-          c: "Week Goals",
+          c: "أهداف الأسبوع",
           g: [
             {
-              name: "Week Goal 1",
+              name: "أخلص كورس الـExpress.js"
             },
             {
-              name: "Week Goal 2",
-              isDone: true,
+              name: "آخد كورسين من اليوتيوب"
             },
             {
-              name: "Week Goal 3",
-              isFail: true,
-            },
+              name: "تمارين رياضة كل يوم"
+            }
           ],
         },
       },
