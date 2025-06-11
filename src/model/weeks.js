@@ -24,6 +24,33 @@ export const weeks = [
           ],
         },
       },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "عملت أول مشروع بكورس express"
+      },
+      {
+        t: "h3",
+        c: "Mini Message Board"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/stZsBzG.png"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/AzUBLrY.png"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/PFCBgLu.png"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/U6TsdoD.png"
+      }
     ],
   },
   {
