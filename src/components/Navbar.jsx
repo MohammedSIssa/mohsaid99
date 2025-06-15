@@ -10,6 +10,7 @@ import { RiHome2Line } from "react-icons/ri";
 
 import { dataCenter } from "../model/center";
 import Logo from "./Logo";
+// import { latestSpecial } from "../model/special";
 
 const Navbar = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ const Navbar = () => {
         <NavLink to="/" className="md:hidden">
           <RiHome2Line size={24} />
         </NavLink>
+        {/* <NavLink to={`/special/${latestSpecial}`}>🦭</NavLink> */}
         <NavLink to={`/goals/${latestGoal}`}>
           {isGoalsActive ? <TbTargetArrow size={26} /> : <FiTarget size={24} />}
         </NavLink>

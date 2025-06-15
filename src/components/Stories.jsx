@@ -3,11 +3,16 @@ import { dataCenter } from "../model/center";
 import Story from "./Story";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
+import { useContext } from "react";
+import { SpecialContext } from "./SpecialContext";
+
 const Stories = ({ type }) => {
-  const { weeks, goals } = dataCenter;
+  const { weeks, goals, special } = dataCenter;
   const storiesRef = useRef();
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+
+  const { showSpecial } = useContext(SpecialContext);
 
   const handleScroll = () => {
     const el = storiesRef.current;
@@ -44,7 +49,14 @@ const Stories = ({ type }) => {
     });
   };
 
-  const dataList = type === "weeks" ? weeks : type === "goals" ? goals : [];
+  const dataList =
+    type === "weeks"
+      ? weeks
+      : type === "goals"
+      ? goals
+      : type === "special"
+      ? special
+      : [];
 
   return (
     <div className="relative w-full" dir="rtl">
@@ -74,7 +86,8 @@ const Stories = ({ type }) => {
         className="stories mt-8 md:mt-25 border-0 border-b-1 h-47 flex gap-8 items-center p-5 py-10 overflow-x-auto scroll-snap-x snap-mandatory scroll-smooth w-full"
         dir="rtl"
       >
-        {dataList.length > 0 ? (
+        {type !== "special" &&
+          dataList.length > 0 &&
           dataList.map((item, i) => (
             <Story
               key={i}
@@ -83,10 +96,21 @@ const Stories = ({ type }) => {
               id={item.id}
               isSpecial={item?.isSpecial}
             />
-          ))
-        ) : (
-          <h1 className="w-full text-center text-2xl">تأكد من عنوان الرابط!</h1>
-        )}
+          ))}
+
+        {type === "special" &&
+          showSpecial &&
+          dataList.length > 0 &&
+          dataList.map((item, i) => (
+            <Story
+              key={i}
+              type={type}
+              data={item.meta}
+              id={item.id}
+              isSpecial={item?.isSpecial}
+            />
+          ))}
+          {type === "special" && !showSpecial && <h1 className="text-6xl m-auto">🔒</h1>}
       </div>
     </div>
   );

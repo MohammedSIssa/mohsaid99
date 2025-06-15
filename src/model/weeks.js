@@ -13,43 +13,103 @@ export const weeks = [
           c: "أهداف الأسبوع",
           g: [
             {
-              name: "أخلص كورس الـExpress.js"
+              name: "أخلص كورس الـExpress.js",
             },
             {
-              name: "آخد كورسات برمجة"
+              name: "آخد كورسات برمجة",
             },
             {
-              name: "تمارين رياضة كل يوم"
-            }
+              name: "تمارين رياضة كل يوم",
+            },
           ],
         },
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "عملت أول مشروع بكورس express",
+      },
+      {
+        t: "h3",
+        c: "Mini Message Board",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/stZsBzG.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/AzUBLrY.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/PFCBgLu.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/U6TsdoD.png",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "فصل النت من يوم الخميس الصبح",
+      },
+      {
+        t: "p",
+        c: "مع فصلة النت قررنا بنغير في ديكور المكان، غيرنا مكان كل اشي",
+      },
+      {
+        t: "p",
+        c: "المطبخ وتقسيمة الغرف ومكان النوم",
+      },
+      {
+        t: "p",
+        c: "استغليت هاد الفرصة وهلقيت صارلي غرفة لحالي",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h3",
+        c: "عشان كنت مجمع محتوى لفصلة النت من الاسبوع اللي فات، مع برنامج kiwix فما انقطعت عن محتوى أقرأه"
+      },
+      {
+        t: "p",
+        c: "حليت سؤال برمجة من سكشن التجهيز لمقابلات الوظيفة Coding Interview Prep Questions"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/5o4R93c.png", // image 1 link
+        isLightImage: true,
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/KJbbL93.png", // image 2 link
+        isLightImage: true,
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/EPPEn21.png",
+        isLightImage: true,
       },
       {
         t: "hr"
       },
       {
         t: "h1",
-        c: "عملت أول مشروع بكورس express"
+        c: "رجع النت يوم السبت بعد صلاة العشا"
       },
       {
-        t: "h3",
-        c: "Mini Message Board"
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/stZsBzG.png"
+        t: "p",
+        c: "تل أبيب انحرقت بهالليلة"
       },
       {
         t: "img",
-        c: "https://i.imgur.com/AzUBLrY.png"
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/PFCBgLu.png"
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/U6TsdoD.png"
+        c: "https://i.imgur.com/idjVADo.jpeg"
       }
     ],
   },
