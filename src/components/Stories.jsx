@@ -110,7 +110,9 @@ const Stories = ({ type }) => {
               isSpecial={item?.isSpecial}
             />
           ))}
-          {type === "special" && !showSpecial && <h1 className="text-6xl m-auto">🔒</h1>}
+        {type === "special" && !showSpecial && (
+          <h1 className="text-6xl m-auto">🔒</h1>
+        )}
       </div>
     </div>
   );

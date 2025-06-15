@@ -19,7 +19,7 @@ import { useContext } from "react";
 import { SpecialContext } from "./SpecialContext";
 
 const Navbar = () => {
-  const { showSpecial } = useContext(SpecialContext)
+  const { showSpecial } = useContext(SpecialContext);
   const location = useLocation();
   const { latestGoal, latestWeek } = dataCenter;
   const isWeeksActive = location.pathname.startsWith("/weeks");
