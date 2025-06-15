@@ -7,8 +7,6 @@ import ErrorPage from "./ErrorPage";
 import PasswordLocked from "./PasswordLocked";
 
 import { dataCenter } from "../model/center";
-import { useState } from "react";
-import { SpecialContext } from "./SpecialContext";
 
 const MainContent = () => {
   const { weeks, latestWeek, goals, latestGoal, special, latestSpecial } =
@@ -17,8 +15,6 @@ const MainContent = () => {
   const reversedGoals = [...goals].reverse();
   const reversedSpecial = [...special].reverse();
   const { type, id } = useParams();
-
-  const [showSpecial, setShowSpecial] = useState(false);
 
   const data =
     type === "weeks"
@@ -37,22 +33,20 @@ const MainContent = () => {
     return <ErrorPage />;
   }
   return (
-    <SpecialContext.Provider value={{ showSpecial, setShowSpecial }}>
-      <div>
-        <Stories type={type} />
-        {type === "weeks" ? (
+    <div>
+      <Stories type={type} />
+      {type === "weeks" ? (
+        <Week data={data} />
+      ) : type === "goals" ? (
+        <Goal data={data} />
+      ) : type === "special" ? (
+        <PasswordLocked>
           <Week data={data} />
-        ) : type === "goals" ? (
-          <Goal data={data} />
-        ) : type === "special" ? (
-          <PasswordLocked>
-            <Week data={data} />
-          </PasswordLocked>
-        ) : (
-          <ErrorPage />
-        )}
-      </div>
-    </SpecialContext.Provider>
+        </PasswordLocked>
+      ) : (
+        <ErrorPage />
+      )}
+    </div>
   );
 };
 

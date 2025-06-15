@@ -10,9 +10,16 @@ import { RiHome2Line } from "react-icons/ri";
 
 import { dataCenter } from "../model/center";
 import Logo from "./Logo";
-// import { latestSpecial } from "../model/special";
+import { latestSpecial } from "../model/special";
+
+import { FaLock } from "react-icons/fa";
+import { FaLockOpen } from "react-icons/fa";
+
+import { useContext } from "react";
+import { SpecialContext } from "./SpecialContext";
 
 const Navbar = () => {
+  const { showSpecial } = useContext(SpecialContext)
   const location = useLocation();
   const { latestGoal, latestWeek } = dataCenter;
   const isWeeksActive = location.pathname.startsWith("/weeks");
@@ -36,7 +43,9 @@ const Navbar = () => {
         <NavLink to="/" className="md:hidden">
           <RiHome2Line size={24} />
         </NavLink>
-        {/* <NavLink to={`/special/${latestSpecial}`}>🦭</NavLink> */}
+        <NavLink to={`/special/${latestSpecial}`}>
+          {showSpecial ? <FaLockOpen /> : <FaLock />}
+        </NavLink>
         <NavLink to={`/goals/${latestGoal}`}>
           {isGoalsActive ? <TbTargetArrow size={26} /> : <FiTarget size={24} />}
         </NavLink>
