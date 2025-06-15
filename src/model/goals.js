@@ -19,7 +19,7 @@ export let goals = [
             isDone: true,
           },
           {
-            name: "أحل 10 أسئلة من Rosetta Code",
+            name: "أحل 10 أسئلة برمجة",
           },
           {
             name: "أتعلم كل يوم اشي جديد",
