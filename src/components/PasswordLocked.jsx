@@ -14,7 +14,7 @@ export default function PasswordLocked({ children }) {
           dir="ltr"
           className="w-80 border-2 rounded-lg border-zinc-800 mx-auto my-10 pt-10 pb-5"
         >
-          <h1 dir="ltr">Only for special people 🔓</h1>
+          <h1 dir="ltr">Only those who know the secret may proceed.</h1>
           <hr className="border-1 border-zinc-800 mt-2 mb-5 mx-auto w-50" />
           <div dir="ltr" className="flex items-center justify-center gap-2">
             <input
