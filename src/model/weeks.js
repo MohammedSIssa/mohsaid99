@@ -68,7 +68,7 @@ export const weeks = [
       },
       {
         t: "p",
-        c: "استغليت هاد الفرصة وهلقيت صارلي غرفة لحالي",
+        c: "استغليت الفرصة واخدت غرفة لحالي",
       },
       {
         t: "hr",
@@ -79,16 +79,16 @@ export const weeks = [
       },
       {
         t: "p",
-        c: "حليت سؤال برمجة من سكشن التجهيز لمقابلات الوظيفة Coding Interview Prep Questions"
+        c: "حليت سؤال من سكشن التجهيز لمقابلات الوظيفة Coding Interview Prep Questions"
       },
       {
         t: "img",
-        c: "https://i.imgur.com/5o4R93c.png", // image 1 link
+        c: "https://i.imgur.com/5o4R93c.png",
         isLightImage: true,
       },
       {
         t: "img",
-        c: "https://i.imgur.com/KJbbL93.png", // image 2 link
+        c: "https://i.imgur.com/KJbbL93.png",
         isLightImage: true,
       },
       {
@@ -105,7 +105,7 @@ export const weeks = [
       },
       {
         t: "p",
-        c: "تل أبيب انحرقت بهالليلة"
+        c: "تل أبيب انحرقت بهالليلة ❤️🔥"
       },
       {
         t: "img",
