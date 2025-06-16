@@ -110,7 +110,11 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/idjVADo.jpeg"
-      }
+      },
+    {
+      t: "img",
+      c: "https://i.imgur.com/cv6y2OO.jpeg"
+    }
     ],
   },
   {
