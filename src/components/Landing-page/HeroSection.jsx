@@ -9,8 +9,7 @@ function HeroSection(){
     <div
       className="h-dvh w-vw flex flex-col items-center p-10 py-15 md:px-30 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black"
       style={{
-        background:
-          "radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
+        backgroundColor: "var(--bg-color)",
         color: "var(--font-color)",
       }}
     >
