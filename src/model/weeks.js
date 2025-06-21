@@ -91,23 +91,29 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "",
+        c: "https://i.imgur.com/QtpkPpR.jpeg",
+        isLightImage: true,
       },
       {
-        t: "hr"
+        t: "img",
+        c: "https://i.imgur.com/W1bYJpW.jpeg",
+        isLightImage: true,
+      },
+      {
+        t: "hr",
       },
       {
         t: "h1",
-        c: "بدأت أقرأ كتاب Eloquent JavaScript"
+        c: "بدأت أقرأ كتاب Eloquent JavaScript",
       },
       {
         t: "p",
-        c: "اليوم السبت الساعة 6 ونص المسا، لسا النت مارجع، مقضيها بقرأ كتب"
+        c: "اليوم السبت الساعة 6 ونص المسا، لسا النت مارجع، مقضيها بقرأ كتب",
       },
       {
         t: "p",
-        c: "الكتاب هاد من أفضل كتب اللغة، قررت اني بقوي الاساسيات أكتر"
-      }
+        c: "الكتاب هاد من أفضل كتب اللغة، قررت اني بقوي الاساسيات أكتر",
+      },
     ],
   },
   {
@@ -279,11 +285,15 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "",
+        c: "https://i.imgur.com/CYUI2eX.jpeg",
       },
       {
         t: "img",
-        c: "",
+        c: "https://i.imgur.com/P7Bumkr.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/UX5I2Xe.jpeg",
       },
     ],
   },
