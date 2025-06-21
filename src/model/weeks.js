@@ -64,19 +64,23 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "",
+        c: "https://i.imgur.com/ujwks8h.jpeg",
+        isLightImage: true,
       },
       {
         t: "img",
-        c: "",
+        c: "https://i.imgur.com/aiGHUDD.jpeg",
+        isLightImage: true,
       },
       {
         t: "img",
-        c: "",
+        c: "https://i.imgur.com/N3nGbwr.jpeg",
+        isLightImage: true,
       },
       {
         t: "img",
-        c: "",
+        c: "https://i.imgur.com/lIUwFkH.jpeg",
+        isLightImage: true,
       },
       {
         t: "hr",
@@ -114,6 +118,21 @@ export const weeks = [
         t: "p",
         c: "الكتاب هاد من أفضل كتب اللغة، قررت اني بقوي الاساسيات أكتر",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "النت رجع السبت الساعة 7 ونص"
+      },
+      {
+        t: "p",
+        c: "بستغل جيته تاني وبشوف شو كان ناقصني لما فصل"
+      },
+      {
+        t: "p",
+        c: "وبرضو بصير انتاجي اكبر بأضعاف بوجود النت"
+      }
     ],
   },
   {
