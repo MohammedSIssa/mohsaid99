@@ -14,6 +14,7 @@ export const weeks = [
           g: [
             {
               name: "أستخدم SQL مع Express.js",
+              isDone: true,
             },
             {
               name: "تغيير بالروتين اليومي",
@@ -123,16 +124,102 @@ export const weeks = [
       },
       {
         t: "h1",
-        c: "النت رجع السبت الساعة 7 ونص"
+        c: "النت رجع السبت الساعة 7 ونص",
       },
       {
         t: "p",
-        c: "بستغل جيته تاني وبشوف شو كان ناقصني لما فصل"
+        c: "بستغل جيته تاني وبشوف شو كان ناقصني لما فصل",
       },
       {
         t: "p",
-        c: "وبرضو بصير انتاجي اكبر بأضعاف بوجود النت"
-      }
+        c: "وبرضو بصير انتاجي اكبر بأضعاف بوجود النت",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "بكمل بالكورس",
+      },
+      {
+        t: "p",
+        c: "مع رجعة النت بكمل في كورس express",
+      },
+      {
+        t: "p",
+        c: "ضايل آخر شغلة، استخدم قاعدة بيانات بالموقع",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "صنعت أول مشروع فل-ستاك 😄",
+      },
+      {
+        t: "p",
+        c: "التقنيات المستخدمة",
+      },
+      {
+        t: "p",
+        c: "Express.js + PostgreSQL + EJS + CSS + HTML",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/x7RXk7x.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/ZzynlHd.png",
+      },
+      {
+        t: "h1",
+        c: "READ",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/RaFUh2h.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/wOBY3vb.png",
+      },
+      {
+        t: "h1",
+        c: "CREATE",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/LeO9r3p.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/ct0iCQO.png",
+      },
+      {
+        t: "h1",
+        c: "UPDATE",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/z9XRS8u.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/YoaUNZE.png",
+      },
+      {
+        t: "h1",
+        c: "DELETE",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/yW3JCaD.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/owjsTQN.png",
+      },
     ],
   },
   {
@@ -151,15 +238,15 @@ export const weeks = [
           g: [
             {
               name: "أخلص كورس الـExpress.js",
-              isDone: true,
+              isFailed: true,
             },
             {
               name: "آخد كورسات برمجة",
-              isFailed: true,
+              isDone: true,
             },
             {
               name: "تمارين رياضة كل يوم",
-              isFailed: true,
+              isDone: true,
             },
           ],
         },
