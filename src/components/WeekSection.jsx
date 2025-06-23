@@ -58,6 +58,7 @@ const WeekSection = ({ event }) => {
           style={{ borderColor: "var(--story-bg-color)" }}
         />
       )}
+      {event.t === "a" && <a target="_blank" className="text-lg px-5 max-w-[500px] text-center text-violet-400 font-bold md:text-xl" href={event.l}>{event.c}</a>}
       {event?.type === "goals" && <GoalSection goal={event.goal} />}
     </>
   );
