@@ -221,16 +221,49 @@ export const weeks = [
         c: "https://i.imgur.com/owjsTQN.png",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "الحرب العالمية الثالثة بدأت؟"
+        c: "الحرب العالمية الثالثة بدأت؟",
       },
       {
         t: "p",
-        c: "امريكا ضربت 3 أهداف في إيران"
+        c: "امريكا ضربت 3 أهداف في إيران",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "خلصت آخر مشروع لـExpress.js 💯",
+      },
+      {
+        t: "a",
+        c: "Source Code",
+        l: "https://github.com/MohammedSIssa/node-sql-inventory-app",
+      },
+      {
+        t: "a",
+        c: "Live Preview",
+        l: "https://node-sql-inventory-app.onrender.com/",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/r83lrA6.png",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/WkQDckf.png",
+      },
+      {
+        t: "p",
+        c: "قاعدة البيانات رفعتها على neon"
+      },
+      {
+        t: "p",
+        c: "وكود السيرفر رفعته على github وخليت موقع render يشغله ويقومه"
+      }
     ],
   },
   {
