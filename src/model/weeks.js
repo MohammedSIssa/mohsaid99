@@ -4,7 +4,7 @@ export const weeks = [
     meta: {
       duration: "من 18 يونيو لـ 24 يونيو",
       year: 2025,
-      summary: "PostgreSQL + Express.js"
+      summary: "PostgreSQL + Express.js",
     },
     events: [
       {
@@ -283,6 +283,37 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/h0lZRxt.jpeg",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "بدأت بجزئية الـAuthentication بالمواقع",
+      },
+      {
+        t: "p",
+        c: "اليوم الثلاثاء آخر يوم بهالاسبوع، قلت بكمل بالكورس وكنت واصل لهالجزئية",
+      },
+      {
+        t: "p",
+        c: "الـAuthentication هي المسؤولية عن عمليات التحقق من المستخدمين على الموقع",
+      },
+      {
+        t: "p",
+        c: "وهي اللي بتتحكم بعمليات تسجيل الدخول والخروج عندي",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/W1W0sPJ.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/ygScwIu.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/Y1oBVXQ.jpeg",
       },
     ],
   },
