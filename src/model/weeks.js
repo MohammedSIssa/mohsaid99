@@ -4,6 +4,7 @@ export const weeks = [
     meta: {
       duration: "من 18 يونيو لـ 24 يونيو",
       year: 2025,
+      summary: "PostgreSQL + Express.js"
     },
     events: [
       {
@@ -67,23 +68,7 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/ujwks8h.jpeg",
-        isLightImage: true,
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/aiGHUDD.jpeg",
-        isLightImage: true,
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/N3nGbwr.jpeg",
-        isLightImage: true,
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/lIUwFkH.jpeg",
-        isLightImage: true,
+        c: "https://i.imgur.com/Ramj4xx.jpeg",
       },
       {
         t: "hr",
@@ -98,13 +83,11 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/QtpkPpR.jpeg",
-        isLightImage: true,
+        c: "https://i.imgur.com/z6EoXiS.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/W1bYJpW.jpeg",
-        isLightImage: true,
+        c: "https://i.imgur.com/pqKO8Bu.jpeg",
       },
       {
         t: "hr",
@@ -449,10 +432,6 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/idjVADo.jpeg",
-      },
-      {
-        t: "img",
         c: "https://i.imgur.com/cv6y2OO.jpeg",
       },
       {
@@ -605,15 +584,13 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/pF9ZATx.png",
+        c: "https://i.imgur.com/NxtUzbw.jpeg",
         size: "small",
-        isLightImage: true,
       },
       {
         t: "img",
-        c: "https://i.imgur.com/bZX9dOb.png",
+        c: "https://i.imgur.com/2HC8nMK.jpeg",
         size: "small",
-        isLightImage: true,
       },
       {
         t: "img",
@@ -621,7 +598,7 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/z0hHnC0.jpeg",
+        c: "https://i.imgur.com/nIBHQqU.jpeg",
       },
       {
         t: "img",
@@ -661,13 +638,11 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/AM4jl7q.jpeg",
-        isLightImage: true,
+        c: "https://i.imgur.com/8J5fORp.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/PWplyn8.jpeg",
-        isLightImage: true,
+        c: "https://i.imgur.com/2faKIcj.jpeg",
       },
       {
         t: "hr",
@@ -838,13 +813,11 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/PjZjs6F.jpeg",
-        isLightImage: true,
+        c: "https://i.imgur.com/YNhOMXs.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/O7ReTeT.jpeg",
-        isLightImage: true,
+        c: "https://i.imgur.com/yhV6ZS1.jpeg",
       },
       {
         t: "hr",
