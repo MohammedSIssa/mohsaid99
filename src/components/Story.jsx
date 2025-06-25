@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 
 export default function Story({ data, id, type, isSpecial }) {
   let goldStory = isSpecial != null && Boolean(isSpecial);
-  const defaultClassName = `w-[250px] min-w-[250px] h-full border-2 rounded-xl p-3 px-4 relative snap-start ${
-    goldStory ? "shadow-yellow-900 shadow-xl" : ""
+  const defaultClassName = `w-[240px] min-w-[240px] h-full border-1 rounded-lg p-3 px-4 relative snap-start ${
+    goldStory ? "" : ""
   }`;
   const activeClassName = `active brightness-140 ${
-    goldStory ? "" : "shadow-slate-800 shadow-xl"
+    goldStory ? "shadow-yellow-900 shadow-xl" : "shadow-slate-800 shadow-xl"
   }`;
   return (
     <NavLink
@@ -16,7 +16,7 @@ export default function Story({ data, id, type, isSpecial }) {
       }
       style={{
         backgroundColor: `${
-          goldStory ? "var(--bg-color)" : "var(--story-bg-color)"
+          goldStory ? "var(--gold-story-bg-color)" : "var(--story-bg-color)"
         }`,
         borderColor: `${
           goldStory
@@ -25,14 +25,14 @@ export default function Story({ data, id, type, isSpecial }) {
         }`,
       }}
     >
-      <p className="font-bold text-xl mb-1">{data.duration}</p>
-      <p className="font-light text-sm">
+      <p className="font-bold text-lg mb-1">{data.duration}</p>
+      <p className="text-xs mt-1">
         {data?.summary ? data.summary : "🔴"}
       </p>
       <p className="italic absolute bottom-1 left-3 story-count font-bold">
         #{id}
       </p>
-      <p className="italic absolute top-[-21px] left-3 story-year bg-rose-700 skew-x-[-2deg] text-zinc-50 font-bold p-[1px] px-[10px] rounded-sm">
+      <p className={`italic absolute top-[-21px] left-3 story-year skew-x-[-2deg] text-zinc-50 font-bold p-[1px] px-[10px] rounded-md ${goldStory ? "bg-yellow-900" : "bg-rose-700"}`}>
         {data.year}
       </p>
     </NavLink>
