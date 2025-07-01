@@ -133,6 +133,34 @@ export const weeks = [
         c: "هسوي انه يجيب ريل عشوائي بضغطة زر، بديل السحبة لفوق، صرت مجمع 200 ريل للآن، لسا اليوم بأوله"
       },
       {
+        t: "h1",
+        c: "شكل الموقع بعد 5 أيام شغل متواصل"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/yFhmEPj.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/qgY2lri.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/no7oOHu.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/DGRZiAl.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/fC5268G.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/HfGxuX1.jpeg"
+      },
+      {
         t: "hr"
       },
       {
