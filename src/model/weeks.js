@@ -3,6 +3,7 @@ export const weeks = [
     id: 26,
     meta: {
       duration: "من 25 يونيو لـ1 يوليو",
+      summary: "صنعت أول سيرفر كامل",
       year: 2025,
     },
     events: [
@@ -14,9 +15,11 @@ export const weeks = [
           g: [
             {
               name: "أخلص الشغل على سيرفري",
+              isDone: true,
             },
             {
               name: "تمارين رياضة كل يوم",
+              isDone: true,
             },
           ],
         },
