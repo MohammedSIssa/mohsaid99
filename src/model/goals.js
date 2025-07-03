@@ -13,7 +13,7 @@ export let goals = [
         g: [
           {
             name: "اخلص كورس الـFull-Stack",
-            isFail: true,
+            isFailed: true,
           },
           {
             name: "أتمكن من الرياكت",
@@ -21,7 +21,7 @@ export let goals = [
           },
           {
             name: "أحل 10 أسئلة برمجة",
-            isFail: true,
+            isFailed: true,
           },
           {
             name: "أتعلم كل يوم اشي جديد",
