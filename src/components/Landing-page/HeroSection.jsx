@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { dataCenter } from "../../model/center";
 
 function HeroSection(){
-  const whatIamLearningCurrently = "express.js";
+  const whatIamLearningCurrently = "Passport JS";
   const { latestGoal, latestWeek } = dataCenter;
   return (
     <div
