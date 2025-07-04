@@ -63,6 +63,14 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/7mosrM1.jpeg",
       },
+      {
+        t: "img",
+        c: "https://i.imgur.com/azZ4LAk.jpeg"
+      },
+      {
+        t: "p",
+        c: "ضايل أشتغل جزئية اليوتيوب والبودكاست، الملفات جاهزة بس ضايل التجهيز"
+      }
     ],
   },
   {
