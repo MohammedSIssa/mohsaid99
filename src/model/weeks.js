@@ -60,6 +60,41 @@ export const weeks = [
       },
       {
         t: "h1",
+        c: "آخر الاضافات لسيرفري",
+      },
+      {
+        t: "p",
+        c: "عملت أربع أنمطة للشاشة الرئيسية",
+      },
+      {
+        t: "p",
+        c: "من احد الاقتراحات 🌚💞",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/y22Qu38.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/2Q5278u.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/SG9x6CY.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/uMp9dKc.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/omVUR2p.jpeg",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
         c: "نرجع تاني لصور من الحياة",
       },
       {
