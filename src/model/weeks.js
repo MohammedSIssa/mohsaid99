@@ -16,6 +16,9 @@ export const weeks = [
               name: "أرجع أكمل دورة نود",
             },
             {
+              name: "الالتزام بالعادات الجديدة",
+            },
+            {
               name: "رياضة كل يوم",
             },
           ],
@@ -141,6 +144,18 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/DndH4yu.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/Gm8z57r.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/CRaE05q.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/VxF1UgZ.jpeg"
       },
     ],
   },
