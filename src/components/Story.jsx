@@ -5,7 +5,7 @@ export default function Story({ data, id, type, isSpecial }) {
   const defaultClassName = `w-[240px] min-w-[240px] h-full border-1 rounded-lg p-3 px-4 relative snap-start ${
     goldStory ? "" : ""
   }`;
-  const activeClassName = `active brightness-110 ${
+  const activeClassName = `active ${
     goldStory ? "shadow-yellow-900 shadow-xl" : "shadow-slate-800 shadow-xl"
   }`;
   return (

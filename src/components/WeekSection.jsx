@@ -40,7 +40,7 @@ const WeekSection = ({ event }) => {
       )}
 
       {event.t === "p" && (
-        <p className="text-lg px-5 max-w-[500px] text-center  md:text-xl">
+        <p className="text-lg px-5 md:max-w-[500px] lg:max-w-[750px] text-center  md:text-xl">
           {event.c}
         </p>
       )}

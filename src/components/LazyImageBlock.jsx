@@ -49,7 +49,7 @@ export default function LazyImageBlock({ event }) {
       {isVisible && (
         <img
           src={event.c}
-          className={`${imgSize} ${imageSizeClass} ${isLightImage && "brightness-75"}`}
+          className={`${imgSize} ${imageSizeClass} ${isLightImage && "brightness-90"}`}
           alt=""
         />
       )}
