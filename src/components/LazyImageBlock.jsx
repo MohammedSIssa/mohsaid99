@@ -30,10 +30,10 @@ export default function LazyImageBlock({ event }) {
 
   const imageSizeClass =
     imgSize === "small"
-      ? "md:max-w-[500px]"
+      ? "md:max-w-[650px]"
       : imgSize === "extra-small"
       ? "md:max-w-[350px]"
-      : imgSize === "long" ? "md:max-w-[700px]" : "";
+      : imgSize === "long" ? "md:max-w-[800px]" : "";
 
   return (
     <div

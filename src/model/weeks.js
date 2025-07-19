@@ -204,6 +204,22 @@ export const weeks = [
       {
         t: "p",
         c: "وبس هيك الحياة صارت"
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "براجع بالـReact"
+      },
+      {
+        t: "p",
+        c: "برمجت لعبة اكس اوه"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/5eBUlNi.png",
+        size: "small"
       }
     ],
   },
