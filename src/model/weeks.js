@@ -377,6 +377,21 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/KLX6mAg.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "أكلت لحمة"
+      },
+      {
+        t: "p",
+        c: "لحمة بلح البحر، أول مرة بحياتي اكله، كتير زاكي طلع، مصدر بروتين وحديد واوميغا 3 قوي جدا"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/GKXJXWW.jpeg"
       }
     ],
   },
