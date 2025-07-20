@@ -220,6 +220,97 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/5eBUlNi.png",
         size: "small"
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "اليوم التالي: الزراعة"
+      },
+      {
+        t: "p",
+        c: "طلعت مشوار جبت بذور سلق وجرجير، وكمان جبت سماد"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/yl3kwdV.jpeg"
+      },
+      {
+        t: "p",
+        c: "خلطت معلقة صغيرة على 20 لتر مية، عشان لسا بذور، لما تكبر النبتة ويصير عمرها حوالي اسبوعين بحط معلقة كبيرة على 20 لتر"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/btIzkME.jpeg"
+      },
+      {
+        t: "p",
+        c: "الجرجير"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/GVyycQx.jpeg"
+      },
+      {
+        t: "p",
+        c: "السلق"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/yW2IVRE.jpeg"
+      },
+      {
+        t: "p",
+        c: "جبت رمل من الأرض تحت"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/rAsdXoE.jpeg"
+      },
+      {
+        t: "p",
+        c: "بجهز بالمكان"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/Kz21U4L.jpeg"
+      },
+      {
+        t: "p",
+        c: "جهز"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/CHB3UhS.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/12IfvyK.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/MtBT1KE.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/RIIFZ6Z.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/2Jsapky.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/VWXXf3b.png"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/RIIFZ6Z.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/D1STWqv.jpeg"
       }
     ],
   },
