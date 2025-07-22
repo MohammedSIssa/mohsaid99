@@ -4,6 +4,7 @@ export const weeks = [
     meta: {
       duration: "من 16 يوليو لـ 22 يوليو",
       year: 2025,
+      summary: "بدأت زراعة | أصعب أيام الحرب"
     },
     events: [
       {
