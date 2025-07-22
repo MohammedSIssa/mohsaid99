@@ -489,6 +489,7 @@ export const weeks = [
   },
   {
     id: 28,
+    isSpecial: true,
     meta: {
       duration: "من 9 يوليو لـ 15 يوليو",
       year: 2025,
