@@ -273,6 +273,33 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/iq91TRD.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "من اختراعات الحرب"
+      },
+      {
+        t: "p",
+        c: "فلافل محمص"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/0Zsd9jB.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/rHKg3VL.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/81k7KAI.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/WL0zyHD.jpeg"
       }
     ],
   },
