@@ -262,6 +262,17 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/GfdX0di.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "شوي وبخلص كورس SQL"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/iq91TRD.jpeg"
       }
     ],
   },
