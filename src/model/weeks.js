@@ -335,6 +335,29 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/nUlsY9y.jpeg",
       },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "الزراعة - بعد أسبوع"
+      },
+      {
+        t: "p",
+        c: "عملت حماية جديدة من العصافير"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/OQYoTWL.jpeg"
+      },
+      {
+        t: "p",
+        c: "صور من قريب"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/MNPXwEW.jpeg"
+      }
     ],
   },
   {
