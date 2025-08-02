@@ -105,54 +105,136 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/OLBV6th.jpeg"
+        c: "https://i.imgur.com/OLBV6th.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/B64WzUr.jpeg"
+        c: "https://i.imgur.com/B64WzUr.jpeg",
       },
       {
         t: "p",
-        c: "كان في جرة غاز لسا فيها 👀"
+        c: "كان في جرة غاز لسا فيها 👀",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/a71WImd.jpeg"
+        c: "https://i.imgur.com/a71WImd.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/RaOgy8g.jpeg"
+        c: "https://i.imgur.com/RaOgy8g.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/edgQGSz.jpeg"
+        c: "https://i.imgur.com/edgQGSz.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/cXpJs5z.jpeg"
+        c: "https://i.imgur.com/cXpJs5z.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/1ji9zoH.jpeg"
+        c: "https://i.imgur.com/1ji9zoH.jpeg",
       },
       {
         t: "h1",
-        c: "صورت كبشة فيديوهات - بفكر أعمل مونتاج وانزله هان"
+        c: "صورت كبشة فيديوهات - بفكر أعمل مونتاج وانزله هان",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "نباتاتي بعد غياب 🌱✨",
+      },
+      {
+        t: "p",
+        c: "وصيت كل أهل الدار عليهم 🌚",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/9dxMEWB.jpeg",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "الرجعة لغزة",
+      },
+      {
+        t: "p",
+        c: "ارتحنا يوم الجمعة بالدير ورجعنا صباح تاني يوم",
+      },
+      {
+        t: "h2",
+        c: "يوم السبت",
+      },
+      {
+        t: "p",
+        c: "وصلنا على موعد الشغل بالزبط",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/2T74Nvq.jpeg",
+      },
+      {
+        t: "p",
+        c: "أفطرنا وقلنا يلا بسم الله بنشتغل",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/5yuxVn8.jpeg",
+      },
+      {
+        t: "p",
+        c: "بدأنا بالسطح نشتغل ترتيب عشان هنجيب من تحت اغراض كتير",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/BLl3qOn.jpeg",
+      },
+      {
+        t: "p",
+        c: "عرضنا فرش للبيع",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/GRW53Yl.jpeg",
+      },
+      {
+        t: "p",
+        c: "ولقينا جهاز UPS كيلو، هالجهاز النا طبعا",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/icRrJLY.jpeg",
+      },
+      {
+        t: "p",
+        c: "صورة واحنا مخلصين من يوم السبت",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/iYbourD.jpeg",
+      },
+      {
+        t: "h2",
+        c: "كم صورة من الشارع واحنا ماشيين",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/7S6o6tB.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/sIR9n6W.jpeg",
       },
       {
         t: "hr"
       },
       {
-        t: "h1",
-        c: "نباتاتي بعد غياب 🌱✨"
-      },
-      {
         t: "p",
-        c: "وصيت كل أهل الدار عليهم 🌚"
-      },
-      {
-        t: "img",
-        c: "https://i.imgur.com/9dxMEWB.jpeg"
+        c: "الآن هينا بنرتاح في بيت عمي أبو وسيم بنرجع بكرا نكمل شغل"
       }
     ],
   },
