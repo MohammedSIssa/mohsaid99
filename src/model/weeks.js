@@ -37,6 +37,29 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/ep2sQcF.jpeg",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "صور من الحياة",
+      },
+      {
+        t: "p",
+        c: "زوزو 💞",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/RGrCvCS.jpeg",
+      },
+      {
+        t: "p",
+        c: "عملت شاشة من شاشاتي الخضر على انها تخفف قوة الشمس عن نباتاتي",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/kKoJGve.jpeg",
+      },
     ],
   },
   {
