@@ -112,31 +112,62 @@ export const weeks = [
       },
       {
         t: "h1",
-        c: "My Reaction"
+        c: "My Reaction",
       },
       {
         t: "p",
-        c: "قاعد بجهز بالمقلوبة بطلت تفرق شو يصير لقدام بهالحرب"
+        c: "قاعد بجهز بالمقلوبة بطلت تفرق شو يصير لقدام بهالحرب",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/NdNV4xa.jpeg"
+        c: "https://i.imgur.com/NdNV4xa.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/8cww9yx.jpeg"
+        c: "https://i.imgur.com/8cww9yx.jpeg",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "حديقتي المتواضعة جدا 🌱🙂✨"
+        c: "حديقتي المتواضعة جدا 🌱🙂✨",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/BftV1Gs.jpeg"
-      }
+        c: "https://i.imgur.com/BftV1Gs.jpeg",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "عملنا كعك مصري",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/nRpsQ5Q.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/tzIuAoo.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/rSTe2mc.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/NBduOlc.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/xNBRzDE.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/NbuSBQ1.jpeg",
+      },
     ],
   },
   {
