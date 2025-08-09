@@ -214,12 +214,26 @@ export const weeks = [
         t: "hr",
       },
       {
-        t: "h2",
+        t: "h1",
         c: "وانا بضيف قاعد بالاحداث هاد 🙂"
+      },
+      {
+        t: "p",
+        c: "ولا شي بس حبيت انزل هان كيف بضيف الاشي اللي بنزله عالموقع"
       },
       {
         t: "img",
         c: "https://i.imgur.com/B3jYGND.png",
+        isTransparent: true,
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/DVxEbO7.png",
+        isTransparent: true,
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/I1OGnMO.png",
         isTransparent: true,
       }
     ],
