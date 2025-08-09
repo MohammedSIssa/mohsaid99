@@ -256,32 +256,52 @@ export const weeks = [
         c: "https://i.imgur.com/qhz8npf.jpeg",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "طبخنا بَشَمِل"
+        c: "طبخنا بَشَمِل",
       },
       {
         t: "p",
-        c: "من زمااااان"
+        c: "من زمااااان",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/YFbnxv2.jpeg"
+        c: "https://i.imgur.com/YFbnxv2.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/R3G5apV.jpeg"
+        c: "https://i.imgur.com/R3G5apV.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/1fnyrBc.jpeg"
+        c: "https://i.imgur.com/1fnyrBc.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/qQMQrxQ.jpeg"
-      }
+        c: "https://i.imgur.com/qQMQrxQ.jpeg",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "برجع أدرس تاني",
+      },
+      {
+        t: "p",
+        c: "حاليا بدرس XML لأنه مرة واحد حكى معي فيه وانا مافهمت عليه",
+      },
+      {
+        t: "p",
+        c: "فقاعد بدرس عالسريع اليوم بخلص منه يعني",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/HPLrLc2.png",
+        isTransparent: true,
+      },
     ],
   },
   {
