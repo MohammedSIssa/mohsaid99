@@ -445,6 +445,25 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/YGvwfyC.jpeg",
       },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "استكمال دورة Node.js"
+      },
+      {
+        t: "p",
+        c: "بعد بريك بسيط بعد م برمجت سيرفري، بقرر اني برجع أكمل دورة Node.js"
+      },
+      {
+        t: "p",
+        c: "حاليا واصل جزئية Prisma ORM"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/WGiSEpU.jpeg"
+      }
     ],
   },
   {
