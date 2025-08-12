@@ -482,6 +482,25 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/etnSNcg.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "ضفت سكشن المنشوارات ✏️"
+      },
+      {
+        t: "p",
+        c: "وضفت عليها أول منشور بعنوان روتين الفترة الحالية"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/JPLKrhk.jpeg"
+      },
+      {
+        t: "p",
+        c: "ولسا هضيف كمان لقدام"
       }
     ],
   },
