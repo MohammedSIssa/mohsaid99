@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { SpecialContext } from "./SpecialContext";
 
 const Stories = ({ type }) => {
-  const { weeks, goals, special } = dataCenter;
+  const { weeks, goals, special, posts } = dataCenter;
   const storiesRef = useRef();
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
@@ -56,6 +56,8 @@ const Stories = ({ type }) => {
       ? goals
       : type === "special"
       ? special
+      : type === "posts"
+      ? posts
       : [];
 
   return (

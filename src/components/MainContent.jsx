@@ -9,11 +9,20 @@ import PasswordLocked from "./PasswordLocked";
 import { dataCenter } from "../model/center";
 
 const MainContent = () => {
-  const { weeks, latestWeek, goals, latestGoal, special, latestSpecial } =
-    dataCenter;
+  const {
+    weeks,
+    latestWeek,
+    goals,
+    latestGoal,
+    special,
+    latestSpecial,
+    posts,
+    latestPost,
+  } = dataCenter;
   const reversedWeeks = [...weeks].reverse();
   const reversedGoals = [...goals].reverse();
   const reversedSpecial = [...special].reverse();
+  const reversedPosts = [...posts].reverse();
   const { type, id } = useParams();
 
   const data =
@@ -23,6 +32,8 @@ const MainContent = () => {
       ? reversedGoals[+id - 1]
       : type === "special"
       ? reversedSpecial[+id - 1]
+      : type === "posts"
+      ? reversedPosts[+id - 1]
       : null;
 
   if (type === "weeks" && +id > latestWeek) {
@@ -30,6 +41,8 @@ const MainContent = () => {
   } else if (type === "goals" && +id > latestGoal) {
     return <ErrorPage />;
   } else if (type === "special" && +id > latestSpecial) {
+    return <ErrorPage />;
+  } else if (type === "posts" && +id > latestPost) {
     return <ErrorPage />;
   }
   return (
@@ -43,6 +56,8 @@ const MainContent = () => {
         <PasswordLocked>
           <Week data={data} />
         </PasswordLocked>
+      ) : type === "posts" ? (
+        <Week data={data} />
       ) : (
         <ErrorPage />
       )}
