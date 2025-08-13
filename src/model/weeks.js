@@ -1,9 +1,43 @@
 export const weeks = [
   {
+    id: 33,
+    meta: {
+      duration: "من 13 لـ 19 أغسطس",
+      year: 2025
+    },
+    events: [
+      {
+        t: "h1",
+        c: "عملنا بيتزا 🙂🍕"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/i4GiSXx.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/yCCMoUy.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/Snk2HhW.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/si98HPa.jpeg"
+      },
+      {
+        t: "h2",
+        c: "الحمدلله يارب ديمها من نعمة"
+      }
+    ]
+  },
+  {
     id: 32,
     meta: {
       duration: "من 6 لـ 12 أغسطس",
       year: 2025,
+      summary: "خفت المجاعة، ضفت سكشن البلوج"
     },
     events: [
       {
