@@ -3,41 +3,45 @@ export const weeks = [
     id: 33,
     meta: {
       duration: "من 13 لـ 19 أغسطس",
-      year: 2025
+      year: 2025,
     },
     events: [
       {
         t: "h1",
-        c: "عملنا بيتزا 🙂🍕"
+        c: "عملنا بيتزا 🙂🍕",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/i4GiSXx.jpeg"
+        c: "https://i.imgur.com/i4GiSXx.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/yCCMoUy.jpeg"
+        c: "https://i.imgur.com/yCCMoUy.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/Snk2HhW.jpeg"
+        c: "https://i.imgur.com/Snk2HhW.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/si98HPa.jpeg"
+        c: "https://i.imgur.com/si98HPa.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/WbvYiz1.jpeg",
       },
       {
         t: "h2",
-        c: "الحمدلله يارب ديمها من نعمة"
-      }
-    ]
+        c: "الحمدلله يارب ديمها من نعمة",
+      },
+    ],
   },
   {
     id: 32,
     meta: {
       duration: "من 6 لـ 12 أغسطس",
       year: 2025,
-      summary: "خفت المجاعة، ضفت سكشن البلوج"
+      summary: "خفت المجاعة، ضفت سكشن البلوج",
     },
     events: [
       {
@@ -480,62 +484,62 @@ export const weeks = [
         c: "https://i.imgur.com/YGvwfyC.jpeg",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "استكمال دورة Node.js"
+        c: "استكمال دورة Node.js",
       },
       {
         t: "p",
-        c: "بعد بريك بسيط بعد م برمجت سيرفري، بقرر اني برجع أكمل دورة Node.js"
+        c: "بعد بريك بسيط بعد م برمجت سيرفري، بقرر اني برجع أكمل دورة Node.js",
       },
       {
         t: "p",
-        c: "حاليا واصل جزئية Prisma ORM"
+        c: "حاليا واصل جزئية Prisma ORM",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/WGiSEpU.jpeg"
+        c: "https://i.imgur.com/WGiSEpU.jpeg",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "سوينا بفاريااا"
+        c: "سوينا بفاريااا",
       },
       {
         t: "p",
-        c: "يااه من زمان عنها"
+        c: "يااه من زمان عنها",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/UgL63ci.jpeg"
+        c: "https://i.imgur.com/UgL63ci.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/etnSNcg.jpeg"
+        c: "https://i.imgur.com/etnSNcg.jpeg",
       },
       {
-        t: "hr"
+        t: "hr",
       },
       {
         t: "h1",
-        c: "ضفت سكشن المنشوارات ✏️"
+        c: "ضفت سكشن المنشوارات ✏️",
       },
       {
         t: "p",
-        c: "وضفت عليها أول منشور بعنوان روتين الفترة الحالية"
+        c: "وضفت عليها أول منشور بعنوان روتين الفترة الحالية",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/JPLKrhk.jpeg"
+        c: "https://i.imgur.com/JPLKrhk.jpeg",
       },
       {
         t: "p",
-        c: "ولسا هضيف كمان لقدام"
-      }
+        c: "ولسا هضيف كمان لقدام",
+      },
     ],
   },
   {
