@@ -60,6 +60,25 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/rEss5Ej.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "عايشين بأحر أيام من 1942!"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/dYQwhvL.jpeg"
+      },
+      {
+        t: "p",
+        c: "الواحد بيعرق لو تحرك خطوتين، حتى والواحد قاعد بيعرق، الله يعين اللي عايشين في خيم بس"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/dYQwhvL.jpeg"
       }
     ],
   },
