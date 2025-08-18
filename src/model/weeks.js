@@ -156,6 +156,33 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/n9oUo5e.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "اليوم التالي - شغل البيت"
+      },
+      {
+        t: "p",
+        c: "ديكور الدار الجديد - فرشنا السجاد، ركبت مكتبين بالغرفة عندي، وعملت كمان رفين جوا بالغرفة - هي صور للديكور الجديد"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/K4BUi8q.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/OvTAWag.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/dX9XMkL.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/O0HpqFe.jpeg"
       }
     ],
   },
