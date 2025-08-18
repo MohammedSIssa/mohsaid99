@@ -206,6 +206,26 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/pHacC0q.png"
+      },
+      {
+        t: "h1",
+        c: "كورس الـPrisma"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/qZLjdPg.jpeg"
+      },
+      {
+        t: "h1",
+        c: "وكمان كورس الـExpress"
+      },
+      {
+        t: "p",
+        c: "انا درست اكسبرس بس بدي اعيد عليها من أول عشان افهمها صح"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/X5vgxsb.jpeg"
       }
     ],
   },
