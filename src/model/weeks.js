@@ -104,6 +104,41 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/r6kE7Vq.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "قرار جديد"
+      },
+      {
+        t: "p",
+        c: "قررت بحط 70% من وقتي في تعلم واتقان رياكت، بالأساس هاد هو الشغل اللي بدي أشتغله بالمستقبل"
+      },
+      {
+        t: "h3",
+        c: "Front-end React Web Developer"
+      },
+      {
+        t: "p",
+        c: "بنفس الوقت بكمل بالـBack-end"
+      },
+      {
+        t: "p",
+        c: "عشان أوصل للوظيفة اللي هتكون أحسن شيء أشوفه"
+      },
+      {
+        t: "h3",
+        c: "Full-Stack NodeJS Web Developer"
+      },
+      {
+        t: "p",
+        c: "(PostgreSQL, Express, React, Node)"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/uiI0OaE.jpeg"
       }
     ],
   },
