@@ -288,6 +288,22 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/YLylP3U.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/SyWZa0x.png"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/yFFQqBA.png"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/UprSfTr.png"
+      },
+      {
+        t: "p",
+        c: "نسبة الفهم لسا مش كتير، بس هو مش صعب يعني بأقل من نص ساعة صار عندي برنامج شغال"
       }
     ],
   },
