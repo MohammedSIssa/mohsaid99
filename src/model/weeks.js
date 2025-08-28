@@ -165,6 +165,30 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/9odDGz7.jpeg",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "الـDocs اللي بقرأهم",
+      },
+      {
+        t: "ul",
+        c: [
+          {
+            title: "NodeJS",
+            link: "https://nodejs.org/docs/latest/api/",
+          },
+          {
+            title: "ExpressJS",
+            link: "https://expressjs.com/en/guide/routing.html",
+          },
+          {
+            title: "Prisma",
+            link: "https://www.prisma.io/docs/orm/overview/introduction",
+          },
+        ],
+      },
     ],
   },
   {
