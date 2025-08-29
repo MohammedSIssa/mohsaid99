@@ -227,6 +227,22 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/hQozehH.jpeg"
+      },
+      {
+        t: "h2",
+        c: "زوزو بدأت تمارين المشي 🌚"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/oIECN60.jpeg"
+      },
+      {
+        t: "h2",
+        c: "سوينا حلب"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/85yh0JJ.jpeg"
       }
     ],
   },
