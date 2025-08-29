@@ -189,6 +189,45 @@ export const weeks = [
           },
         ],
       },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "صور من الحياة"
+      },
+      {
+        t: "p",
+        c: "وأنا بآخد بمحاضرة الجمعة الصبح"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/PwhvHwo.jpeg"
+      },
+      {
+        t: "h2",
+        c: "مزرعتي ✨🌱"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/seRfm6f.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/U6oYeOi.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/gwrF7tL.jpeg"
+      },
+      {
+        t: "p",
+        c: "وهان الزريعة البيبي لسا بتطلع، عمرها يومين"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/hQozehH.jpeg"
+      }
     ],
   },
   {
