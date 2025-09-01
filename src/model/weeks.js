@@ -392,6 +392,25 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/8sqciPt.png"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "آخر كورس"
+      },
+      {
+        t: "h3",
+        c: "Getting Hired Course"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/Z225epH.png"
+      },
+      {
+        t: "p",
+        c: "بيعطيني نصائح وخطوات وحتى مشاريع لأشياء أساسية لازم أعملها عشان الشغل يكون شوي أسهل لأقدر أجيبه وأتوظف وأكمل رحلتي"
       }
     ],
   },
