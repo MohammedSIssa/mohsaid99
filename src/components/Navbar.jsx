@@ -47,9 +47,9 @@ const Navbar = () => {
         <NavLink to="/" className="md:hidden">
           <RiHome2Line size={24} />
         </NavLink>
-        {/* <NavLink to={`/special/${latestSpecial}`}>
+        <NavLink to={`/special/${latestSpecial}`}>
           {showSpecial ? <FaLockOpen /> : <FaLock />}
-        </NavLink> */}
+        </NavLink>
         <NavLink to={`/posts/${latestPost}`}>
           {isPostsActive ? <HiMiniPencilSquare size={20} /> : <HiMiniPencil />}
         </NavLink>
