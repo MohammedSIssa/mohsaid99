@@ -13,16 +13,16 @@ import { RiHome2Line } from "react-icons/ri";
 
 import { dataCenter } from "../model/center";
 import Logo from "./Logo";
-// import { latestSpecial } from "../model/special";
+import { latestSpecial } from "../model/special";
 
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
 
-// import { useContext } from "react";
+import { useContext } from "react";
 import { SpecialContext } from "./SpecialContext";
 
 const Navbar = () => {
-  // const { showSpecial } = useContext(SpecialContext);
+  const { showSpecial } = useContext(SpecialContext);
   const location = useLocation();
   const { latestGoal, latestWeek, latestPost } = dataCenter;
   const isWeeksActive = location.pathname.startsWith("/weeks");
