@@ -72,6 +72,32 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/MCj85Lo.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "اليوم التالي للبيع"
+      },
+      {
+        t: "p",
+        c: "الحمدلله يعني بعنا اشي بسيط، ممكن يكون أحسن برضو"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "بتعلم حجات جديدة"
+      },
+      {
+        t: "p",
+        c: "Docker Containers"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/OgaNnSK.jpeg"
       }
     ],
   },
