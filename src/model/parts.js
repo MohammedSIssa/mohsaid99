@@ -53,5 +53,11 @@ export let articles = {
 // Images
 export let image = {
   t: "img",
-  c: "image link here.."
-}
+  c: "image link here..",
+};
+
+export let singleLink = {
+  t: "a",
+  c: "Source Code",
+  l: "https://github.com/MohammedSIssa/node-sql-inventory-app",
+};
