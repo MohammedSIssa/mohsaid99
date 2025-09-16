@@ -203,6 +203,33 @@ export const weeks = [
       {
         t: "p",
         c: "مشوار بينطلع مرة كل سنة أو سنتين 🙂"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "زوزو الأسبوع هاد"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/t8Gmaj4.jpeg"
+      },
+      {
+        t: "p",
+        c: "Cinnabon"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/WNaIgVj.jpeg"
+      },
+      {
+        t: "p",
+        c: "بعد بيع جزء من الربح تاعي"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/CcfNSFP.jpeg"
       }
     ],
   },
