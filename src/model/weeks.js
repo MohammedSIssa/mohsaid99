@@ -1,6 +1,6 @@
 export const weeks = [
   {
-    t: 38,
+    id: 38,
     meta: {
       duration: "من 17 لـ 23 سبتمبر",
       year: 2025,
