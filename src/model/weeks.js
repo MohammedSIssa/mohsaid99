@@ -140,6 +140,10 @@ export const weeks = [
         c: "https://i.imgur.com/GAO6toG.jpeg",
       },
       {
+        t: "img",
+        c: "https://i.imgur.com/9g2yltl.jpeg",
+      },
+      {
         t: "hr",
       },
       {
@@ -343,6 +347,33 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/pc8WKCE.jpeg",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "اليوم التالي",
+      },
+      {
+        t: "p",
+        c: "اجا وقت أكل السلق",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/YxtaxEf.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/juMkEpa.jpeg",
+      },
+      {
+        t: "p",
+        c: "عملنا فيهم فطاير",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/9c2bjxD.jpeg",
       },
     ],
   },
