@@ -124,6 +124,10 @@ export const weeks = [
         c: "وكتير حجات تانية منهم انه next عبارة عن react أصلا، يعني كل اشي بقدر أعمله بالreact بسويها في next عادي",
       },
       {
+        t: "p",
+        c: "كيف أعمل SEO أو Search Engine Optimization",
+      },
+      {
         t: "img",
         c: "https://i.imgur.com/EcYwVEO.jpeg",
       },
