@@ -243,6 +243,53 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/MhyzxkD.jpeg",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "اليوم التالي - مشروعي الجديد",
+      },
+      {
+        t: "p",
+        c: "الطريقة الجديدة لاضافة الأحداث بالموقع",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/tIVafMo.png",
+      },
+      {
+        t: "p",
+        c: "صرت ضايف مدخل الـAPI الأول ",
+      },
+      {
+        t: "p",
+        c: "GET /api/weeks",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/3RK2B7S.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/3AsQuzo.jpeg",
+      },
+      {
+        t: "p",
+        c: "الآن قاعد أضيف مدخل الـAPI الثاني",
+      },
+      {
+        t: "p",
+        c: "GET /api/weeks/:weekID",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/uCuJBBJ.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/HCep1cw.jpeg",
+      },
     ],
   },
   {
