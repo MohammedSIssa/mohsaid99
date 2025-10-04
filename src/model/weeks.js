@@ -202,6 +202,33 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/mgNbwDb.jpeg",
       },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "شو صار معي بالمشروع"
+      },
+      {
+        t: "p",
+        c: "سويت ترتيب للكود، صار أسهل للفهم، هيك صرت مخلص جزئية الأسابيع بموضوع الـAPI ضايل أضيف كل البيانات"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/G775TQi.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/kiRHbbe.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/lViEkPI.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/nBPp39K.jpeg"
+      }
     ],
   },
   {
