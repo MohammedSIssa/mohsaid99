@@ -8,134 +8,140 @@
 /* Logo font family */
 
 :root {
-  --bg-color: #0e1217;
-  /* --bg-color: #19202a; */
-  --story-bg-color: #1c1f26;
-  --gold-story-border-color: #fcd000;
-  --gold-story-bg-color: #211b00;
-  --font-color: #dadada;
-  --story-border-color: #424857;
-  --story-count-color: #676c7a;
-  --finsied-goal-color: #004200;
-  --failed-goal-color: #660819;
-  --logo-font: "Dancing Script", system-ui;
-  --font: "Playpen Sans Arabic", system-ui;
-  --story-count-font: Montserrat, system-ui;
+    --bg-color: #0e1217;
+    /* --bg-color: #19202a; */
+    --story-bg-color: #1c1f26;
+    --gold-story-border-color: #fcd000;
+    --gold-story-bg-color: #211b00;
+    --font-color: #dadada;
+    --story-border-color: #424857;
+    --story-count-color: #676c7a;
+    --finsied-goal-color: #004200;
+    --failed-goal-color: #660819;
+    --logo-font: "Dancing Script", system-ui;
+    --font: "Playpen Sans Arabic", system-ui;
+    --story-count-font: Montserrat, system-ui;
 }
 
 * {
-  direction: rtl;
-  /* Mainly arabic content */
+    direction: rtl;
+    /* Mainly arabic content */
 
-  text-wrap: pretty !important;
+    text-wrap: pretty !important;
 }
 
 [dir="ltr"] {
-  direction: ltr !important;
+    direction: ltr !important;
 }
 
 body {
-  background-color: var(--bg-color);
-  /* background: radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0)); */
-  font-family: var(--font);
-  overflow-x: hidden;
+    background-color: var(--bg-color);
+    /* background: radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0)); */
+    font-family: var(--font);
+    overflow-x: hidden;
 }
 @media (min-width: 760px) {
-  .nav-bar {
-    background-color: transparent !important;
-    background: linear-gradient(to bottom, var(--bg-color), rgba(0, 0, 0, 0));
-  }
+    .nav-bar {
+        background-color: transparent !important;
+        background: linear-gradient(
+            to bottom,
+            var(--bg-color),
+            rgba(0, 0, 0, 0)
+        );
+    }
 }
 
 .stories {
-  border-color: var(--story-border-color) !important;
-  /* overflow-x: scroll; */
+    border-color: var(--story-border-color) !important;
+    /* overflow-x: scroll; */
 }
 
 .logo {
-  font-family: var(--logo-font);
+    font-family: var(--logo-font);
 }
 
 a {
-  transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 a:hover {
-  filter: brightness(1.2);
+    filter: brightness(1.2);
 }
 
 .stories a.active {
-  filter: brightness(1.25);
+    filter: brightness(1.25);
 }
 
 .week-list {
-  direction: ltr;
+    direction: ltr;
 }
 
 .week-list a:is(:not(.week-goal)) {
-  color: violet;
+    color: violet;
 }
 
 .stories a.active {
-  animation: floating 1.55s ease-in-out infinite;
+    animation: floating 1.55s ease-in-out infinite;
 }
 
 @keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .story-count,
 .story-year {
-  font-family: var(--story-count-font);
+    font-family: var(--story-count-font);
 }
 
 .thumbnail {
-  background-size: cover;
-  background-position: center;
+    background-size: cover;
+    background-position: center;
 }
 
-img:not(.long) {
-  max-height: calc(100dvh - 120px);
+@media (min-width: 980px) {
+    img:not(.long) {
+        max-height: calc(100dvh - 120px);
+    }
 }
 
 iframe {
-  pointer-events: none;
-  cursor: none;
-  width: 100%;
-  max-width: 720px;
-  height: auto;
-  aspect-ratio: 16 / 9;
+    pointer-events: none;
+    cursor: none;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 iframe.shorts {
-  aspect-ratio: 9 / 16 !important;
-  height: calc(100dvh - 200px);
-  width: auto !important;
-  border-radius: 12px;
+    aspect-ratio: 9 / 16 !important;
+    height: calc(100dvh - 200px);
+    width: auto !important;
+    border-radius: 12px;
 }
 
 /* Scrollbar styling start */
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--background-color);
+    background: var(--background-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--story-border-color);
+    background: var(--story-border-color);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--story-count-color);
+    background: var(--story-count-color);
 }
 ::-webkit-scrollbar-corner {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 /* Scrollbar styling end */

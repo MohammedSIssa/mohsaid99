@@ -167,6 +167,41 @@ export const weeks = [
         t: "p",
         c: "ضايل كتير لسا عشان أخلص، بس هيني شوي شوي قاعد بعمل بالموقع",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "وقت الحلاقة ✂️",
+      },
+      {
+        t: "p",
+        c: "اليوم قررت انه بناكل سلق بالبيت، كان ضايل شوية سلق بعد آخر مرة قصيته فيها، قلت خلص بقص اللي ضايل وبنعمل فيه فطاير تاني",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/JEay5a8.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/3iJeRE4.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/LAhemhL.jpeg",
+      },
+      {
+        t: "p",
+        c: "بعد القص، لسا في سلق عمره صغير هنعمل فيه أكلة كمان فترة",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/gqomSc0.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/mgNbwDb.jpeg",
+      },
     ],
   },
   {
