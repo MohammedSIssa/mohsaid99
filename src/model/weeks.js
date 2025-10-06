@@ -259,6 +259,29 @@ export const weeks = [
         t: "p",
         c: "هاخد بريك من النسخ واللصق، بكرا بكمله",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "صور من الحياة",
+      },
+      {
+        t: "p",
+        c: "أنا وزوزو",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/SCkZK65.jpeg",
+      },
+      {
+        t: "p",
+        c: "night reads",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/xEm0z4G.jpeg",
+      },
     ],
   },
   {
