@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import Stories from "./Stories";
 import Week from "./Week";
 import Goal from "./Goal";
@@ -25,16 +26,20 @@ const MainContent = () => {
   const reversedPosts = [...posts].reverse();
   const { type, id } = useParams();
 
+  useEffect(() => {
+    document.title = `${type} | ${id}`;
+  }, [id, type]);
+
   const data =
     type === "weeks"
       ? reversedWeeks[+id - 1]
       : type === "goals"
-      ? reversedGoals[+id - 1]
-      : type === "special"
-      ? reversedSpecial[+id - 1]
-      : type === "posts"
-      ? reversedPosts[+id - 1]
-      : null;
+        ? reversedGoals[+id - 1]
+        : type === "special"
+          ? reversedSpecial[+id - 1]
+          : type === "posts"
+            ? reversedPosts[+id - 1]
+            : null;
 
   if (type === "weeks" && +id > latestWeek) {
     return <ErrorPage />;
