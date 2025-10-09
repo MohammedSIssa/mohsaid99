@@ -1,7 +1,7 @@
 const logger = async (url) => {
   const clock = new Date().toLocaleTimeString();
   const date = new Date().toLocaleDateString();
-  const API = "http://localhost:3000/";
+  const API = "https://logger-6ujg.onrender.com/";
   const res = await fetch(API + "view", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
