@@ -5,6 +5,8 @@ import Week from "./Week";
 import Goal from "./Goal";
 import ErrorPage from "./ErrorPage";
 
+import logger from "./logger";
+
 import PasswordLocked from "./PasswordLocked";
 
 import { dataCenter } from "../model/center";
@@ -28,6 +30,12 @@ const MainContent = () => {
 
   useEffect(() => {
     document.title = `${type} | ${id}`;
+    async function log() {
+      console.log("Adding a new log");
+      await logger(document.title);
+    }
+
+    log();
   }, [id, type]);
 
   const data =
