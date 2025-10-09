@@ -5,7 +5,7 @@ const logger = async (url) => {
   const res = await fetch(API + "view", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ clock, date, url }),
+    body: JSON.stringify({ clock, date, url, os: navigator.platform }),
   });
 
   if (!res.ok) {
