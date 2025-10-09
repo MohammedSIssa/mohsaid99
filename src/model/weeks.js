@@ -93,6 +93,18 @@ export const weeks = [
         t: "p",
         c: "يارب",
       },
+      {
+        t: "h2",
+        c: "تحديث"
+      },
+      {
+        t: "p",
+        c: "الله أكبر، بدأت الهدنة"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/tcrw6kp.png"
+      }
     ],
   },
   {
