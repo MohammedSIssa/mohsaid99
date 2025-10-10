@@ -95,16 +95,51 @@ export const weeks = [
       },
       {
         t: "h2",
-        c: "تحديث"
+        c: "تحديث",
       },
       {
         t: "p",
-        c: "الله أكبر، بدأت الهدنة"
+        c: "الله أكبر، بدأت الهدنة",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/tcrw6kp.png"
-      }
+        c: "https://i.imgur.com/tcrw6kp.png",
+      },
+      {
+        t: "p",
+        c: "لسا اليهود محتلين 50% من مساحة القطاع، النازحين لسا مش قادرين يرجعو",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "صور من الحياة",
+      },
+      {
+        t: "p",
+        c: "غيرت ديكور الزريعة تاعي، قطفت كل السلق، زرعت فلفل مكانه",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/LYw2tks.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/wrr85p7.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/6livb11.jpeg",
+      },
+      {
+        t: "h3",
+        c: "زوزو",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/bP2hYcW.jpeg",
+      },
     ],
   },
   {
