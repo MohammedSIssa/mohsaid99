@@ -204,6 +204,14 @@ export const weeks = [
         t: "p",
         c: "اليوم مشمس، قررت اني هطلع أبيع مية ساقعة، بعت نقلة وخلصتها بساعتين، هيني روحت على البيت هرتاح وأبدأ الدراسة",
       },
+      {
+        t: "img",
+        c: "https://i.imgur.com/cHGtHXH.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/JtHKebI.jpeg",
+      },
     ],
   },
   {
