@@ -59,6 +59,105 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/hs97lpH.jpeg",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "خطوات المشروع"
+      },
+      {
+        t: "p",
+        c: "عشان منساش برضو لقدام كيف ببني هيك موقع 🙂"
+      },
+      {
+        t: "p",
+        c: "Step 1: Database Design",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/s8sqqCE.jpeg",
+      },
+      {
+        t: "p",
+        c: "Step 2: Installing Dependencies",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/naxMBsn.png",
+      },
+      {
+        t: "p",
+        c: "Step 3: Database Model",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/hCcrved.jpeg",
+      },
+      {
+        t: "p",
+        c: "Step 4: Project Skeleton",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/0tWO7QS.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/0jkRzdD.jpeg",
+      },
+      {
+        t: "p",
+        c: "Step 5: Login & Signup Routes (Frontend)",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/HW9zGaM.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/CyybrUL.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/JkJJe0m.jpeg",
+      },
+      {
+        t: "p",
+        c: "looks ugly, will restyle later",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/g0Yq9iK.jpeg",
+      },
+      {
+        t: "p",
+        c: "Step 6: Registering Users",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/E4MGiDk.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/i25fcFN.jpeg",
+      },
+      {
+        t: "p",
+        c: "وكدا صار عندنا أول مستخدم للموقع، بيقدر يعمل تسجيل دخول وأعطيته صلاحيات الأدمن"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/qmx6Pfc.jpeg",
+      },
+      {
+        t: "p",
+        c: "Step 7: Tomorrow"
+      },
+      {
+        t: "p",
+        c: "خلص النهار، بكرا بكمل الخطوات الجاية"
+      }
     ],
   },
   {
