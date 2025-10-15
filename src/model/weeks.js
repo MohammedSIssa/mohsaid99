@@ -51,6 +51,14 @@ export const weeks = [
         t: "p",
         c: "هبلش بهالمشروع مع كاسة هالليمون اللي جنبي دايما، الانفلونزا ذبحتني",
       },
+      {
+        t: "p",
+        c: "My Motive",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/hs97lpH.jpeg",
+      },
     ],
   },
   {
