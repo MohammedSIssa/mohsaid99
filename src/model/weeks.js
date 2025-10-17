@@ -181,6 +181,81 @@ export const weeks = [
         t: "img",
         c: "https://i.imgur.com/dVzPbs9.jpeg",
       },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "اليوم التالي: تكملة المشروع",
+      },
+      {
+        t: "p",
+        c: "Step 7: Authentication",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/HKfgybu.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/zT7Ycmz.jpeg",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/WUUI9Yc.jpeg",
+      },
+      {
+        t: "p",
+        c: "Step 8: Test Login",
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/968i5zw.png"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/ttnMris.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/Hb81emW.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/5nUQ9bp.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/uNlmjOH.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/LJRYGhC.jpeg"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/logsHIq.png"
+      },
+      {
+        t: "p",
+        c: "الخطوات الجاية؟"
+      },
+      {
+        t: "p",
+        c: "بدي أنفذ المطلوب من المشروع، طالب مني اني اخلي بس اللي مسجل الدخول يضيف رسالة، وهاد الرسالة بس الأعضاء هم القادرين انهم يشوفو مين اللي كتبها"
+      },
+      {
+        t: "p",
+        c: "يعني هلقيت بدي استغل الخواص اللي هم isAdmin & isMember عشان أعمل هاد الكلام"
+      },
+      {
+        t: "p",
+        c: "هيكون سهل بعد كل الشغل اللي عملته"
+      },
+      {
+        t: "p",
+        c: "الصورة الجاية هتكون للمشروع وهو جاهز"
+      }
     ],
   },
   {
