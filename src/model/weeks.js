@@ -210,51 +210,95 @@ export const weeks = [
       },
       {
         t: "img",
-        c: "https://i.imgur.com/968i5zw.png"
+        c: "https://i.imgur.com/968i5zw.png",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/ttnMris.jpeg"
+        c: "https://i.imgur.com/ttnMris.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/Hb81emW.jpeg"
+        c: "https://i.imgur.com/Hb81emW.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/5nUQ9bp.jpeg"
+        c: "https://i.imgur.com/5nUQ9bp.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/uNlmjOH.jpeg"
+        c: "https://i.imgur.com/uNlmjOH.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/LJRYGhC.jpeg"
+        c: "https://i.imgur.com/LJRYGhC.jpeg",
       },
       {
         t: "img",
-        c: "https://i.imgur.com/logsHIq.png"
+        c: "https://i.imgur.com/logsHIq.png",
       },
       {
         t: "p",
-        c: "الخطوات الجاية؟"
+        c: "الخطوات الجاية؟",
       },
       {
         t: "p",
-        c: "بدي أنفذ المطلوب من المشروع، طالب مني اني اخلي بس اللي مسجل الدخول يضيف رسالة، وهاد الرسالة بس الأعضاء هم القادرين انهم يشوفو مين اللي كتبها"
+        c: "بدي أنفذ المطلوب من المشروع، طالب مني اني اخلي بس اللي مسجل الدخول يضيف رسالة، وهاد الرسالة بس الأعضاء هم القادرين انهم يشوفو مين اللي كتبها",
       },
       {
         t: "p",
-        c: "يعني هلقيت بدي استغل الخواص اللي هم isAdmin & isMember عشان أعمل هاد الكلام"
+        c: "يعني هلقيت بدي استغل الخواص اللي هم isAdmin & isMember عشان أعمل هاد الكلام",
       },
       {
         t: "p",
-        c: "هيكون سهل بعد كل الشغل اللي عملته"
+        c: "هيكون سهل بعد كل الشغل اللي عملته",
       },
       {
         t: "p",
-        c: "الصورة الجاية هتكون للمشروع وهو جاهز"
+        c: "الصورة الجاية هتكون للمشروع وهو جاهز",
+      },
+      {
+        t: "hr",
+      },
+      {
+        t: "h1",
+        c: "بعد خمس ساعات",
+      },
+      {
+        t: "p",
+        c: "خلصت الشغل، عملت كل المطلوب، لازم تسجيل الدخول قبل م يشوف الرسائل، وعملت الأدمن يقدر يحدف أي رسالة، أو صاحب المنشور يقدر يحدف رسالته",
+      },
+      {
+        t: "p",
+        c: "الأدمن عليه صح أخضر، الأعضاء عليهم زر أزرق، غير هيك فش صح"
+      },
+      {
+        t: "h3",
+        c: "Admin POV"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/4sgwi5a.jpeg",
+      },
+      {
+        t: "h3",
+        c: "Member POV"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/4LkfEyd.jpeg",
+      },
+
+      {
+        t: "h3",
+        c: "Non-Member POV"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/N6jwMe6.jpeg",
+      },
+      {
+        t: "p",
+        c: "كتير مبسوط اني قدرت اخلصه، وحتى وانا فاهم شو ببرمج كمان، كنت خايف هقعد اكتر لحد م استوعب موضوع تسجيل المستخدمين بالموقع، الان صرت فاهم"
       }
     ],
   },
