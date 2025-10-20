@@ -7,6 +7,10 @@ export const weeks = [
     },
     events: [
       {
+        t: "q",
+        c: " كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ "
+      },
+      {
         type: "goals",
         goal: {
           t: "h1",
