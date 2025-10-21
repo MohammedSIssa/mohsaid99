@@ -385,6 +385,18 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/ZZf4sNj.jpeg"
+      },
+      {
+        t: "p",
+        c: "بعد ساعتين"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/fNZNl1b.jpeg"
+      },
+      {
+        t: "p",
+        c: "خطرت على بالي فكرة رهيبة استخدم هاد المكتبة عشان انفذها، هعمل التصميم وهبدا اشتغلها عن قريب"
       }
     ],
   },
