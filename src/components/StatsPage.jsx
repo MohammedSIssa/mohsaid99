@@ -16,44 +16,46 @@ const StatsPage = ({ data }) => {
   return (
     <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10">
       🛠️ هذه الصفحة قيد الانشاء 🛠️
-      <div className="h-[500px] chart p-10 rounded-2xl shadow-lg shadow-slate-800">
-        <Doughnut
-          data={{
-            labels: data.doughnut.actual.map((d) => d.label),
-            datasets: [
-              {
-                data: data.doughnut.actual.map((d) => d.value),
+      <div className="flex flex-wrap gap-5">
+        <div className="h-[500px] chart p-10 md:rounded-2xl md:shadow-lg md:shadow-slate-800">
+          <Doughnut
+            data={{
+              labels: data.doughnut.actual.map((d) => d.label),
+              datasets: [
+                {
+                  data: data.doughnut.actual.map((d) => d.value),
+                },
+              ],
+            }}
+            options={{
+              plugins: {
+                title: {
+                  text: "الروتين اليومي",
+                },
               },
-            ],
-          }}
-          options={{
-            plugins: {
-              title: {
-                text: "الروتين اليومي",
+            }}
+          />
+        </div>
+        <div className="h-[500px] chart p-10 md:rounded-2xl md:shadow-lg md:shadow-slate-800">
+          <Doughnut
+            data={{
+              // labels: ["دراسة", "نوم", "شغل", "أكل", "وقت ضايع"],
+              labels: data.doughnut.goal.map((d) => d.label),
+              datasets: [
+                {
+                  data: data.doughnut.goal.map((d) => d.value),
+                },
+              ],
+            }}
+            options={{
+              plugins: {
+                title: {
+                  text: "الهدف",
+                },
               },
-            },
-          }}
-        />
-      </div>
-      <div className="h-[500px] chart p-10 rounded-2xl shadow-lg shadow-slate-800">
-        <Doughnut
-          data={{
-            // labels: ["دراسة", "نوم", "شغل", "أكل", "وقت ضايع"],
-            labels: data.doughnut.goal.map((d) => d.label),
-            datasets: [
-              {
-                data: data.doughnut.goal.map((d) => d.value),
-              },
-            ],
-          }}
-          options={{
-            plugins: {
-              title: {
-                text: "الهدف",
-              },
-            },
-          }}
-        />
+            }}
+          />
+        </div>
       </div>
     </div>
   );
