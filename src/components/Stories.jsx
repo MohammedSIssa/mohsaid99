@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { SpecialContext } from "./SpecialContext";
 
 const Stories = ({ type }) => {
-  const { weeks, goals, special, posts } = dataCenter;
+  const { weeks, goals, special, posts, stats } = dataCenter;
   const storiesRef = useRef();
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
@@ -58,6 +58,8 @@ const Stories = ({ type }) => {
       ? special
       : type === "posts"
       ? posts
+      : type === "stats"
+      ? stats
       : [];
 
   return (
@@ -89,6 +91,19 @@ const Stories = ({ type }) => {
         dir="rtl"
       >
         {type !== "special" &&
+          type !== "stats" &&
+          dataList.length > 0 &&
+          dataList.map((item, i) => (
+            <Story
+              key={i}
+              type={type}
+              data={item.meta}
+              id={item.id}
+              isSpecial={item?.isSpecial}
+            />
+          ))}
+
+        {type === "stats" &&
           dataList.length > 0 &&
           dataList.map((item, i) => (
             <Story

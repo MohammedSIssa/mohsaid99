@@ -152,3 +152,8 @@ iframe.shorts {
 }
 
 /* Scrollbar styling end */
+
+.chart {
+  border: 1px solid var(--story-border-color);
+  background-color: var(--story-bg-color);
+}
