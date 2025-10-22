@@ -69,7 +69,7 @@ const WeekSection = ({ event }) => {
       )}
       {event?.type === "goals" && <GoalSection goal={event.goal} />}
 
-      {event.t === "q" && <q className="p-5 px-10 text-4xl lg:p-10 lg:px-20">{event.c}</q>}
+      {event.t === "q" && <q className="p-5 px-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:p-10 lg:px-20">{event.c}</q>}
     </>
   );
 };

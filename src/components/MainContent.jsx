@@ -4,6 +4,7 @@ import Stories from "./Stories";
 import Week from "./Week";
 import Goal from "./Goal";
 import ErrorPage from "./ErrorPage";
+import StatsPage from "./StatsPage";
 
 import logger from "./logger";
 
@@ -21,33 +22,40 @@ const MainContent = () => {
     latestSpecial,
     posts,
     latestPost,
+    stats,
+    latestStat,
   } = dataCenter;
   const reversedWeeks = [...weeks].reverse();
   const reversedGoals = [...goals].reverse();
   const reversedSpecial = [...special].reverse();
   const reversedPosts = [...posts].reverse();
+  const reversedStats = [...stats].reverse();
   const { type, id } = useParams();
 
   useEffect(() => {
     document.title = `${type} | ${id}`;
     async function log() {
-      console.log("Adding a new log");
       await logger(document.title);
     }
 
-    log();
+    console.log(import.meta.env.MODE);
+    if (import.meta.env.MODE !== "development") {
+      log();
+    }
   }, [id, type]);
 
   const data =
     type === "weeks"
       ? reversedWeeks[+id - 1]
       : type === "goals"
-        ? reversedGoals[+id - 1]
-        : type === "special"
-          ? reversedSpecial[+id - 1]
-          : type === "posts"
-            ? reversedPosts[+id - 1]
-            : null;
+      ? reversedGoals[+id - 1]
+      : type === "special"
+      ? reversedSpecial[+id - 1]
+      : type === "posts"
+      ? reversedPosts[+id - 1]
+      : type === "stats"
+      ? reversedStats[+id - 1]
+      : null;
 
   if (type === "weeks" && +id > latestWeek) {
     return <ErrorPage />;
@@ -56,6 +64,8 @@ const MainContent = () => {
   } else if (type === "special" && +id > latestSpecial) {
     return <ErrorPage />;
   } else if (type === "posts" && +id > latestPost) {
+    return <ErrorPage />;
+  } else if (type === "stats" && +id > latestStat) {
     return <ErrorPage />;
   }
   return (
@@ -71,6 +81,8 @@ const MainContent = () => {
         </PasswordLocked>
       ) : type === "posts" ? (
         <Week data={data} />
+      ) : type === "stats" ? (
+        <StatsPage data={data} />
       ) : (
         <ErrorPage />
       )}

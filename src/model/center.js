@@ -2,6 +2,7 @@ import { weeks, latestWeek } from "./weeks";
 import { goals, latestGoal } from "./goals";
 import { posts, latestPost } from "./posts";
 import { special, latestSpecial, currentPassword } from "./special";
+import { stats, latestStat } from './stats'
 
 export const dataCenter = {
   weeks,
@@ -13,4 +14,6 @@ export const dataCenter = {
   special,
   latestSpecial,
   currentPassword,
+  stats,
+  latestStat
 };

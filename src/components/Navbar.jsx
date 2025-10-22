@@ -9,6 +9,9 @@ import { TbTargetArrow } from "react-icons/tb"; // active ver
 import { HiMiniPencil } from "react-icons/hi2"; // inactive ver
 import { HiMiniPencilSquare } from "react-icons/hi2"; // active ver
 
+import { IoStatsChartOutline } from "react-icons/io5"; // inactive
+import { IoStatsChart } from "react-icons/io5"; // active
+
 import { RiHome2Line } from "react-icons/ri";
 
 import { dataCenter } from "../model/center";
@@ -24,10 +27,12 @@ import { SpecialContext } from "./SpecialContext";
 const Navbar = () => {
   const { showSpecial } = useContext(SpecialContext);
   const location = useLocation();
-  const { latestGoal, latestWeek, latestPost } = dataCenter;
+  const { latestGoal, latestWeek, latestPost, latestStat } = dataCenter;
   const isWeeksActive = location.pathname.startsWith("/weeks");
   const isGoalsActive = location.pathname.startsWith("/goals");
   const isPostsActive = location.pathname.startsWith("/posts");
+  const isStatsActive = location.pathname.startsWith("/stats");
+
   return (
     <div
       className="nav-bar bg-zinc-900 fixed bottom-0 z-50 md:top-0 flex h-12 w-full border-0 border-t-1 md:border-0 md:px-15 py-5 md:py-8 items-center justify-center md:justify-between"
@@ -55,6 +60,13 @@ const Navbar = () => {
         </NavLink>
         <NavLink to={`/goals/${latestGoal}`}>
           {isGoalsActive ? <TbTargetArrow size={26} /> : <FiTarget size={24} />}
+        </NavLink>
+        <NavLink to={`/stats/${latestStat}`}>
+          {isStatsActive ? (
+            <IoStatsChart size={26} />
+          ) : (
+            <IoStatsChartOutline size={26} />
+          )}
         </NavLink>
       </div>
       <Logo />
