@@ -20,7 +20,7 @@ export const stats = [
           value: 3,
         },
         {
-          label: "وقت فراع",
+          label: "وقت فراغ",
           value: 8,
         },
         {
@@ -42,8 +42,12 @@ export const stats = [
           value: 8,
         },
         {
-          label: "وقت فراع",
-          value: 3,
+          label: "قراءة",
+          value: 1,
+        },
+        {
+          label: "رياضة",
+          value: 2,
         },
         {
           label: "وقت شغل",
