@@ -57,8 +57,6 @@ const MainContent = () => {
       ? reversedStats[+id - 1]
       : null;
 
-  console.log({ type, id, data });
-
   if (type === "weeks" && +id > latestWeek) {
     return <ErrorPage />;
   } else if (type === "goals" && +id > latestGoal) {
