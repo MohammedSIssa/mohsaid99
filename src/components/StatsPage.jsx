@@ -1,5 +1,5 @@
 import { Chart as ChartJS, defaults } from "chart.js/auto";
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, Line } from "react-chartjs-2";
 
 defaults.maintainAspectRatio = false;
 defaults.responsive = true;
@@ -13,6 +13,7 @@ defaults.plugins.title.font.family = "Playpen Sans Arabic";
 defaults.plugins.title.color = "white";
 
 const StatsPage = ({ data }) => {
+  console.log(data.line);
   return (
     <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10">
       🛠️ هذه الصفحة قيد الانشاء 🛠️
@@ -56,6 +57,47 @@ const StatsPage = ({ data }) => {
           />
         </div>
       </div>
+      {data.line ? (
+        <div className="p-5 w-full h-[500px] chart rounded-2xl">
+          <Line
+            data={{
+              labels: data.line.data.map((d) => d.label),
+              datasets: [
+                {
+                  data: data.line.data.map((d) => d.goal),
+                  label: "الهدف",
+                },
+                {
+                  data: data.line.data.map((d) => d.actual),
+                  label: "الواقع",
+                },
+              ],
+            }}
+            options={{
+              scales: {
+                y: {
+                  beginAtZero: false,
+                  min: 10,
+                  max: 20,
+                },
+                x: {
+                  offset: true,
+                },
+              },
+              plugins: {
+                title: {
+                  text: "وقت التركيز",
+                },
+              },
+              elements: {
+                line: {
+                  tension: 0.3,
+                },
+              },
+            }}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
