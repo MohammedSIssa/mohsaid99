@@ -6,7 +6,7 @@ import Goal from "./Goal";
 import ErrorPage from "./ErrorPage";
 import StatsPage from "./StatsPage";
 
-import logger from "./logger";
+// import logger from "./logger";
 
 import PasswordLocked from "./PasswordLocked";
 
@@ -34,14 +34,14 @@ const MainContent = () => {
 
   useEffect(() => {
     document.title = `${type} | ${id}`;
-    async function log() {
-      await logger(document.title);
-    }
+    // async function log() {
+    //   await logger(document.title);
+    // }
 
-    console.log(import.meta.env.MODE);
-    if (import.meta.env.MODE !== "development") {
-      log();
-    }
+    // console.log(import.meta.env.MODE);
+    // if (import.meta.env.MODE !== "development") {
+    //   log();
+    // }
   }, [id, type]);
 
   const data =
