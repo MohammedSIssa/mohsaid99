@@ -5,14 +5,14 @@ import LoadingStories from "../components/Loaders/LoadingStories";
 
 import { API } from "../scripts/globals";
 
-import { logger } from "../scripts/logger";
+// import { logger } from "../scripts/logger";
 
 import { fetchWithCache } from "../scripts/cache";
 
 import Stories from "../components/Layout/Stories";
 
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+// import { useContext } from "react";
+// import { UserContext } from "../context/UserContext";
 
 const API_CALL = API + "/week";
 
@@ -21,16 +21,16 @@ const Weeks = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
 
   useEffect(() => {
     async function getData() {
       try {
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
-        if (import.meta.env.MODE !== "development") {
-          await logger(user?.username, "Weeks");
-        }
+        // if (import.meta.env.MODE !== "development") {
+        //   await logger(user?.username, "Weeks");
+        // }
       } catch (err) {
         setData(null);
         setError(err);
@@ -40,7 +40,7 @@ const Weeks = () => {
     }
 
     getData();
-  }, [user?.username]);
+  }, []);
 
   if (isLoading) return <LoadingStories />;
   if (error) return <ErrorLoadingStories />;

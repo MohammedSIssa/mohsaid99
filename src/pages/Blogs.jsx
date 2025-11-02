@@ -7,12 +7,12 @@ import { API } from "../scripts/globals";
 
 import { fetchWithCache } from "../scripts/cache";
 
-import { logger } from "../scripts/logger";
+// import { logger } from "../scripts/logger";
 
 import Stories from "../components/Layout/Stories";
 
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+// import { useContext } from "react";
+// import { UserContext } from "../context/UserContext";
 
 const API_CALL = API + "/blog";
 
@@ -21,16 +21,16 @@ const Blogs = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
 
   useEffect(() => {
     async function getData() {
       try {
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
-        if (import.meta.env.MODE !== "development") {
-          await logger(user?.username, "Blogs");
-        }
+        // if (import.meta.env.MODE !== "development") {
+        //   await logger(user?.username, "Blogs");
+        // }
       } catch (err) {
         setData(null);
         setError(err);
@@ -40,7 +40,7 @@ const Blogs = () => {
     }
 
     getData();
-  }, [user?.username]);
+  }, []);
 
   if (isLoading) return <LoadingStories />;
   if (error) return <ErrorLoadingStories />;

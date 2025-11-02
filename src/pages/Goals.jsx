@@ -5,10 +5,10 @@ import LoadingStories from "../components/Loaders/LoadingStories";
 
 import { fetchWithCache } from "../scripts/cache";
 
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+// import { useContext } from "react";
+// import { UserContext } from "../context/UserContext";
 
-import { logger } from "../scripts/logger";
+// import { logger } from "../scripts/logger";
 
 import Stories from "../components/Layout/Stories";
 
@@ -21,7 +21,7 @@ const Goals = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
 
   useEffect(() => {
     async function getData() {
@@ -29,9 +29,9 @@ const Goals = () => {
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
 
-        if (import.meta.env.MODE !== "development") {
-          await logger(user?.username, "Goals");
-        }
+        // if (import.meta.env.MODE !== "development") {
+        //   await logger(user?.username, "Goals");
+        // }
       } catch (err) {
         setData(null);
         setError(err);
@@ -41,7 +41,7 @@ const Goals = () => {
     }
 
     getData();
-  }, [user?.username]);
+  }, []);
 
   if (isLoading) return <LoadingStories />;
   if (error) return <ErrorLoadingStories />;
