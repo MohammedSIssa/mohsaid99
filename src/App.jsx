@@ -13,7 +13,7 @@ import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 
 import Special from "./pages/Special";
-import SpecialBox from './pages/SpecialBox';
+import SpecialBox from "./pages/SpecialBox";
 
 import Homepage from "./pages/Homepage";
 import NavBar from "./components/Layout/NavBar";
@@ -26,6 +26,8 @@ import AddPost from "./pages/Admin/AddPost";
 import AddStory from "./pages/Admin/AddStory";
 import UpdatePost from "./pages/Admin/UpdatePost";
 import UpdateStory from "./pages/Admin/UpdateStory";
+
+import Logs from "./pages/Admin/Logs";
 
 import { useState } from "react";
 import { UserContext } from "./context/UserContext";
@@ -54,7 +56,7 @@ function App() {
           </Route>
           <Route element={<RequireAuth role={2} />}>
             <Route path="specials" element={<Special />}>
-            	<Route path=":id" element={<SpecialBox />}></Route>
+              <Route path=":id" element={<SpecialBox />}></Route>
             </Route>
           </Route>
           <Route path="/stats" element={<Stats />}>
@@ -62,6 +64,7 @@ function App() {
           </Route>
           <Route element={<RequireAuth role={1} />}>
             <Route path="admin" element={<Admin />}>
+              <Route path="logs" element={<Logs />}></Route>
               <Route path="add/post" element={<AddPost />}></Route>
               <Route path="add/story" element={<AddStory />}></Route>
               <Route path="update/post/:id" element={<UpdatePost />}></Route>

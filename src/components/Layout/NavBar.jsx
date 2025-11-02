@@ -11,7 +11,8 @@ import { FaHome } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
-import { MdAdminPanelSettings } from "react-icons/md";
+import { LuLogs } from "react-icons/lu";
+
 
 
 const NavBar = () => {
@@ -35,7 +36,7 @@ const NavBar = () => {
       </NavLink>
       {user?.username === undefined && <NavLink to={"/login"}><FiLogIn size={28} /></NavLink>}
       {user?.role && <NavLink to={"/specials"}><FaLock size={25} /></NavLink>}
-      {/* {user?.role === 1 && <NavLink to={"/admin"}><MdAdminPanelSettings size={28} /></NavLink>} */}
+      {user?.role === 1 && <NavLink to={"/admin/logs"}><LuLogs size={28} /></NavLink>}
       {user?.username && (
         <button onClick={clearUser} className="hover:cursor-pointer">
           <MdLogout size={28} />
