@@ -1,14 +1,8 @@
-const YouTubePlayer = ({ type = "desktop", videoId }) => {
-  if (!videoId) return null;
-
-  // Map type to className for iframe
-  const className = type === "shorts" ? "shorts" : "desktop";
-
+export default function YouTubePlayer({ type, videoId }) {
   const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&loop=1&playlist=${videoId}&mute=1`;
-
   return (
     <iframe
-      className={className}
+      className={type + " rounded-2xl"}
       src={src}
       title="YouTube video player"
       frameBorder="0"
@@ -17,6 +11,4 @@ const YouTubePlayer = ({ type = "desktop", videoId }) => {
       allowFullScreen
     ></iframe>
   );
-};
-
-export default YouTubePlayer;
+}

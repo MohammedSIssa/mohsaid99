@@ -1,0 +1,22 @@
+import { API } from "./globals";
+
+const clock = new Date().toLocaleTimeString();
+const date = new Date().toLocaleDateString();
+const os = navigator.platform + "";
+
+export const logger = async (username, url) => {
+  const res = await fetch(`${API}/log`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      visitedAt: `${clock} - ${date}`,
+      os,
+      url,
+      username,
+    }),
+  });
+
+  if (res.ok) {
+    console.log("Logged data..");
+  }
+};

@@ -9,6 +9,7 @@
 
 /* Quotes font family */
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Rakkas&display=swap");
+
 :root {
   --bg-color: #0e1217;
   /* --bg-color: #19202a; */
@@ -26,6 +27,10 @@
   --quote-bg-color: #19202a;
   --quote-border: 10px double var(--story-count-color);
   --quote-font: Rakkas, system-ui;
+  --slider-bg-color: #161c24;
+  --slider-border-color: #313643;
+  --post-bg-color: #14191f;
+  --post-border-color: #2c3746;
 }
 
 * {
@@ -45,12 +50,29 @@ q {
   direction: ltr !important;
 }
 
+[dir="rtl"] {
+  direction: rtl !important;
+}
+
 body {
   background-color: var(--bg-color);
   /* background: radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0)); */
   font-family: var(--font);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  color: var(--font-color);
 }
+
+.navbar {
+  background-color: var(--story-bg-color);
+  z-index: 999;
+  color: var(--font-color);
+  border-color: var(--story-border-color);
+}
+
+pre {
+  font-family: var(--font);
+}
+
 @media (min-width: 760px) {
   .nav-bar {
     background-color: transparent !important;
@@ -60,7 +82,33 @@ body {
 
 .stories {
   border-color: var(--story-border-color) !important;
-  /* overflow-x: scroll; */
+  overflow-x: scroll !important;
+  max-width: 100vw !important;
+  flex-direction: row-reverse;
+}
+
+.stories-loader {
+  border-color: var(--story-border-color) !important;
+}
+
+.story {
+  background-color: var(--story-bg-color);
+  border-color: var(--story-border-color);
+}
+
+.story.active {
+  box-shadow: 0 15px 15px var(--story-bg-color);
+  filter: brightness(1.25);
+}
+
+.story.gold {
+  background-color: var(--gold-story-bg-color);
+  border-color: var(--gold-story-border-color);
+}
+
+.story.gold.active {
+  box-shadow: 0 15px 15px var(--gold-story-bg-color);
+  filter: brightness(1.25);
 }
 
 .logo {
@@ -88,7 +136,7 @@ a:hover {
 }
 
 .stories a.active {
-  animation: floating 1.55s ease-in-out infinite;
+  animation: floating 2.55s ease-in-out infinite;
 }
 
 @keyframes floating {
@@ -96,7 +144,21 @@ a:hover {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+  }
+}
+
+.spinner {
+  animation: spin infinite 3s ease-in-out;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.1);
   }
 }
 
@@ -116,11 +178,17 @@ a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  img {
+    width: 100% !important;
+  }
+}
+
 iframe {
   pointer-events: none;
   cursor: none;
-  width: 100%;
-  max-width: 720px;
+  width: 720px;
+  max-width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
 }
@@ -129,7 +197,6 @@ iframe.shorts {
   aspect-ratio: 9 / 16 !important;
   height: calc(100dvh - 200px);
   width: auto !important;
-  border-radius: 12px;
 }
 
 /* Scrollbar styling start */
@@ -144,6 +211,12 @@ iframe.shorts {
 ::-webkit-scrollbar-thumb {
   background: var(--story-border-color);
 }
+
+.slider::-webkit-scrollbar-thumb {
+  background: var(--slider-border-color);
+  border-radius: 14px;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--story-count-color);
 }
@@ -156,4 +229,14 @@ iframe.shorts {
 .chart {
   border: 1px solid var(--story-border-color);
   background-color: var(--story-bg-color);
+}
+
+.slider {
+  background-color: var(--slider-bg-color);
+  border: 1px solid var(--slider-border-color);
+}
+
+.post {
+  background-color: var(--post-bg-color);
+  border: 1px solid var(--post-border-color);
 }
