@@ -33,7 +33,7 @@ const Logs = () => {
       <div className="flex flex-col gap-5">
         {data.map((log, idx) => (
           <div className="flex gap-5" key={idx}>
-						<p>{log.user}</p>
+						<p>{log.username}</p>
 						<p>{log.details}</p>
 						<p>{log.visited}</p>
 					</div>
