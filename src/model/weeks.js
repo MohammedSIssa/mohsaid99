@@ -162,6 +162,21 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/PEn0RYy.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "اليوم التالي"
+      },
+      {
+        t: "p",
+        c: "شكل الموقع لما اكون الأدمن، ضفت زرار للحدف والتعديل على كل اشي"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/51WLLM6.jpeg"
       }
     ],
   },
