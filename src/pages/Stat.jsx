@@ -30,7 +30,7 @@ const Stat = () => {
     setData(stats.find((stat) => stat.count == id));
 
     async function log() {
-      if (import.meta.env.MODE !== "development") {
+      if (import.meta.env.MODE !== "development" && user?.username !== "mohsaid99") {
         await logger(user?.username, `Stats | ${id}`);
       }
     }

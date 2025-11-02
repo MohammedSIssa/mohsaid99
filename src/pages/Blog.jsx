@@ -31,7 +31,7 @@ const Blog = () => {
         const raw = await fetchWithCache(API_CALL);
 
         setData(raw);
-        if (import.meta.env.MODE !== "development") {
+        if (import.meta.env.MODE !== "development" && user?.username !== "mohsaid99") {
           await logger(user?.username, `Blogs | ${id}`);
         }
       } catch {
