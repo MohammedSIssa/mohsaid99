@@ -177,6 +177,17 @@ export const weeks = [
       {
         t: "img",
         c: "https://i.imgur.com/51WLLM6.jpeg"
+      },
+      {
+        t: "hr"
+      },
+      {
+        t: "h1",
+        c: "ضفت منشورات خاصة ومنشورات ذهبية، تنويع يعني 👍🏻🌚"
+      },
+      {
+        t: "img",
+        c: "https://i.imgur.com/kXZeObK.jpeg"
       }
     ],
   },
