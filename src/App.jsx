@@ -35,7 +35,9 @@ import { UserContext } from "./context/UserContext";
 import Login from "./pages/Login";
 
 import { loadUser } from "./scripts/localStorage";
+
 import RequireAuth from "./pages/RequireAuth";
+import RequireUnAuth from "./pages/RequireUnAuth";
 
 function App() {
   const [user, setUser] = useState(loadUser);
@@ -71,7 +73,9 @@ function App() {
               <Route path="update/story/:id" element={<UpdateStory />}></Route>
             </Route>
           </Route>
-          <Route path="/login" element={<Login />}></Route>
+          <Route element={<RequireUnAuth />}>
+            <Route path="login" element={<Login />}></Route>
+          </Route>
           <Route path="/*" element={<ErrorPage />}></Route>
         </Routes>
       </HashRouter>

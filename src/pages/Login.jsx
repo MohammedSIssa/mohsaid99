@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
-import { useNavigate } from "react-router-dom";
 import { saveUser } from "../scripts/localStorage";
 
 import { API } from "../scripts/globals";
@@ -11,55 +10,71 @@ import { API } from "../scripts/globals";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const [logginIn, setLogginIn] = useState(false);
 
-  const { user, setUser } = useContext(UserContext);
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
-  const navigate = useNavigate();
+  const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    if (user?.username) {
-      navigate("/");
-    }
-  });
+  const { setUser } = useContext(UserContext);
 
   async function login(e) {
     e.preventDefault();
-    try {
-      setLogginIn(true);
-      const response = await fetch(`${API}/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
-      });
+    if (username.trim() !== "" && password.trim() !== "") {
+      try {
+        setLogginIn(true);
+        setMessage("");
+        const response = await fetch(`${API}/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password }),
+        });
 
-      if (response.ok) {
-        const data = await response.json();
-        setUser(data);
-        saveUser(data);
-        navigate("/");
-      }
+        if (response.ok) {
+          const data = await response.json();
+          setUser(data);
+          saveUser(data);
+          setSuccess(true);
+          setFailure(false);
+          setMessage("تم تسجيل الدخول بنجاح");
+        }
 
-      if (!response.ok) {
-        alert("User not found.");
-        setUser("");
-        setPassword("");
+        if (!response.ok) {
+          setUser({});
+          setLogginIn(false);
+          setPassword("");
+          setSuccess(false);
+          setFailure(true);
+          setMessage("خطأ في البيانات");
+          setUsername("");
+        }
+      } catch {
+        throw new Error("Failed to login!");
       }
-    } catch {
-      throw new Error("Failed to login!");
+    } else {
+      setMessage("اكتب اسمك وكلمة السر");
+      setFailure(true);
+      setSuccess(false);
     }
   }
 
   return (
     <div className="flex flex-col items-center justify-center h-dvh">
       <form
-        className="login-form flex flex-col gap-5 max-w-[300px] bg-zinc-900 p-10 border border-zinc-600 rounded-lg"
+        className="login-form flex flex-col gap-5 max-w-[300px] p-10 border rounded-lg"
         onSubmit={login}
-        style={{
-          backgroundColor: "var(--story-bg-color)",
-          borderColor: "var(--story-border-color)",
-        }}
+        style={
+          success
+            ? {
+                borderColor: "lime",
+              }
+            : failure
+            ? {
+                borderColor: "red",
+              }
+            : {}
+        }
       >
         <label htmlFor="username" className="font-bold">
           اسم المستخدم:
@@ -113,6 +128,7 @@ export default function Login() {
           سجل الدخول
         </button>
         {logginIn && <p>جار تسجيل الدخول..</p>}
+        <p>{message}</p>
       </form>
     </div>
   );

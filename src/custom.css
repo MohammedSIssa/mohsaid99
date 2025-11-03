@@ -278,3 +278,28 @@ pre {
     max-width: 600px;
   }
 }
+
+.pulsing {
+  animation: pulsing infinite 1.75s linear;
+  background-color: var(--font-color);
+  border-radius: 50%;
+}
+
+@keyframes pulsing {
+  0%,
+  25% {
+    width: 100px;
+    height: 100px;
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+.login-form {
+  background-color: var(--story-bg-color);
+  border-color: var(--story-border-color);
+}

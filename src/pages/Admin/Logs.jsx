@@ -1,6 +1,8 @@
 import { API } from "../../scripts/globals";
 import { useState, useEffect } from "react";
 
+import LoadingLogs from "../../components/Loaders/LoadingLogs";
+
 import { fetchWithCache } from "../../scripts/cache";
 
 const Logs = () => {
@@ -25,9 +27,9 @@ const Logs = () => {
     getLogs();
   }, []);
 
-  if (loading) return <h1>Loading logs</h1>;
+  if (loading) return <LoadingLogs />;
   if (error) return <h1>Error getting logs</h1>;
-  if(data.length === 0) return <h1>Empty log</h1>
+  if (data.length === 0) return <h1>Empty log</h1>;
 
   if (data.length > 0) {
     return (
@@ -40,7 +42,9 @@ const Logs = () => {
         {data.map((log, idx) => (
           <tr key={idx}>
             <td>{log.username}</td>
-            <td dir="ltr"><small>{log.details}</small></td>
+            <td dir="ltr">
+              <small>{log.details}</small>
+            </td>
             <td>{log.visited}</td>
           </tr>
         ))}
