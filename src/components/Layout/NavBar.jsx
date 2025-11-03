@@ -35,7 +35,7 @@ const NavBar = () => {
         <HiMiniPencilSquare size={27} />
       </NavLink>
       {user?.username === undefined && <NavLink to={"/login"}><FiLogIn size={28} /></NavLink>}
-      {user?.role && <NavLink to={"/specials"}><FaLock size={25} /></NavLink>}
+      {user?.role && <NavLink to={"/special"}><FaLock size={25} /></NavLink>}
       {user?.role === 1 && <NavLink to={"/admin/logs"}><LuLogs size={28} /></NavLink>}
       {user?.username && (
         <button onClick={clearUser} className="hover:cursor-pointer">

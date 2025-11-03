@@ -30,15 +30,20 @@ const Logs = () => {
 
   if (data) {
     return (
-      <div className="flex flex-col gap-5">
+      <table dir="ltr">
+        <tr>
+          <th>Username</th>
+          <th>Details</th>
+          <th>URL</th>
+        </tr>
         {data.map((log, idx) => (
-          <div className="flex gap-5" key={idx}>
-						<p>{log.username}</p>
-						<p>{log.details}</p>
-						<p>{log.visited}</p>
-					</div>
+          <tr key={idx}>
+            <td>{log.username}</td>
+            <td dir="ltr"><small>{log.details}</small></td>
+            <td>{log.visited}</td>
+          </tr>
         ))}
-      </div>
+      </table>
     );
   }
 };

@@ -55,7 +55,7 @@ function App() {
             <Route path=":id" element={<Blog />} />
           </Route>
           <Route element={<RequireAuth role={2} />}>
-            <Route path="specials" element={<Special />}>
+            <Route path="special" element={<Special />}>
               <Route path=":id" element={<SpecialBox />}></Route>
             </Route>
           </Route>

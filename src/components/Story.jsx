@@ -33,7 +33,7 @@ export default function Story({ item, idx }) {
           goldStory ? "gold" : ""
         }`}
         key={idx}
-        to={`/${item.type}s/${item.count}`}
+        to={`/${item.type}${item.type !== "special" ? "s" : ""}/${item.count}`}
       >
         <h1 className="text-lg font-bold">{item.title}</h1>
         <p className="text-xs mt-1">{item?.summary ? item.summary : "🔴"}</p>
