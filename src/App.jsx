@@ -1,16 +1,7 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 
-import Goals from "./pages/Goals";
-import Goal from "./pages/Goal";
-
-import Weeks from "./pages/Weeks";
-import Week from "./pages/Week";
-
 import Stats from "./pages/Stats";
 import Stat from "./pages/Stat";
-
-import Blogs from "./pages/Blogs";
-import Blog from "./pages/Blog";
 
 import Special from "./pages/Special";
 import SpecialBox from "./pages/SpecialBox";

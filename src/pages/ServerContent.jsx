@@ -19,8 +19,8 @@ const StoryContent = () => {
 
   let API_CALL =
     import.meta.env.MODE !== "development"
-      ? API + "/" + type.slice(0, -1)
-      : DEV_API + "/" + type.slice(0, -1);
+      ? `${API}/${type.slice(0, -1)}`
+      : `${DEV_API}/${type.slice(0, -1)}`;
 
   useEffect(() => {
     async function getData() {

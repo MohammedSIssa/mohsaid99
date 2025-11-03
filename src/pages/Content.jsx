@@ -23,8 +23,8 @@ const Content = () => {
 
   let API_CALL =
     import.meta.env.MODE !== "development"
-      ? API + `/${type}/` + id
-      : DEV_API + `/${type}/` + id;
+      ? `${API}/${type}/${id}`
+      : `${DEV_API}/${type}/${id}`;
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
