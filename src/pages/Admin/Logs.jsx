@@ -27,8 +27,9 @@ const Logs = () => {
 
   if (loading) return <h1>Loading logs</h1>;
   if (error) return <h1>Error getting logs</h1>;
+  if(data.length === 0) return <h1>Empty log</h1>
 
-  if (data) {
+  if (data.length > 0) {
     return (
       <table dir="ltr">
         <tr>
