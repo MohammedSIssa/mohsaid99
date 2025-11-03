@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
+import { API, DEV_API } from "../scripts/globals";
+
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 
@@ -10,10 +12,15 @@ export default function Story({ item, idx }) {
   const goldStory = item.special;
   const { user } = useContext(UserContext);
 
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? API + "/delete/story/" + item.id
+      : DEV_API + "/delete/story/" + item.id;
+
   async function deleteStory() {
     const confirmDelete = window.confirm(`Delete story?`);
     if (confirmDelete) {
-      const res = await fetch(`http://localhost:3000/delete/story/${item.id}`, {
+      const res = await fetch(API_CALL, {
         method: "DELETE",
       });
 

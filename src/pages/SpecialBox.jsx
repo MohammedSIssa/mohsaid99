@@ -5,8 +5,6 @@ import LoadingEvents from "../components/Loaders/LoadingEvents";
 import ErrorLoadingEvents from "../components/Errors/ErrorLoadingStories";
 import ScrollToTopButton from "../components/Layout/ScrollToTop";
 
-import { useOutletContext } from "react-router-dom";
-
 import AddPost from "./Admin/AddPost";
 
 import { API, DEV_API } from "../scripts/globals";
@@ -17,13 +15,12 @@ import { UserContext } from "../context/UserContext";
 
 import Post from "../components/Post/Post";
 
-import { fetchWithCache, fetchWithLocalStorageCache } from "../scripts/cache";
+import { fetchWithCache } from "../scripts/cache";
 
 export default function SpecialBox() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { latestStory } = useOutletContext();
 
   const { user } = useContext(UserContext);
 
@@ -35,13 +32,9 @@ export default function SpecialBox() {
       : `${DEV_API}/special/${id}`;
   useEffect(() => {
     async function getSpecials() {
-      const isLatestStory = latestStory === +id;
       try {
         setLoading(true);
-        // const raw = await fetchWithCache(API_CALL);
-        const raw = isLatestStory
-          ? await fetchWithCache(API_CALL)
-          : await fetchWithLocalStorageCache(API_CALL);
+        const raw = await fetchWithCache(API_CALL);
         setData(raw);
 
         if (
@@ -59,7 +52,7 @@ export default function SpecialBox() {
     }
 
     getSpecials();
-  }, [id, user?.username, API_CALL, latestStory]);
+  }, [id, user?.username, API_CALL]);
 
   if (loading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;

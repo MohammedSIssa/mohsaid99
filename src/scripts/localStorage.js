@@ -12,6 +12,6 @@ export const saveData = (url, data) => {
   localStorage.setItem(url, JSON.stringify(data));
 };
 
-export const removeData = (url) => localStorage.removeItem(url);
+export const clearData = (url) => localStorage.removeItem(url);
 
 export const loadData = (url) => JSON.parse(localStorage.getItem(url)) || null;

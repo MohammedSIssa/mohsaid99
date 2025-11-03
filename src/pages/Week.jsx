@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 
 import { API, DEV_API } from "../scripts/globals";
 import { logger } from "../scripts/logger";
@@ -14,12 +14,12 @@ import ScrollToTopButton from "../components/Layout/ScrollToTop";
 import AddPost from "./Admin/AddPost";
 import Post from "../components/Post/Post";
 
-import { fetchWithCache, fetchWithLocalStorageCache } from "../scripts/cache";
+import { fetchWithCache } from "../scripts/cache";
 
 const Week = () => {
   const { user } = useContext(UserContext);
   const { id } = useParams();
-  const { latestStory } = useOutletContext();
+  // const { latestStory } = useOutletContext();
   let API_CALL =
     import.meta.env.MODE !== "development"
       ? API + "/week/" + id
@@ -31,12 +31,13 @@ const Week = () => {
 
   useEffect(() => {
     async function getData() {
-      const isLatestStory = latestStory === +id;
+      // const isLatestStory = latestStory === +id;
       try {
         setIsLoading(true);
-        const raw = isLatestStory
-          ? await fetchWithCache(API_CALL)
-          : await fetchWithLocalStorageCache(API_CALL);
+        // const raw = isLatestStory
+        //   ? await fetchWithCache(API_CALL)
+        //   : await fetchWithLocalStorageCache(API_CALL);
+        const raw = await fetchWithCache(API_CALL);
         setData(raw);
         if (
           import.meta.env.MODE !== "development" &&
@@ -52,7 +53,7 @@ const Week = () => {
       }
     }
     getData();
-  }, [id, API_CALL, user?.username, latestStory]);
+  }, [id, API_CALL, user?.username]);
 
   if (isLoading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;

@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 
 import { API, DEV_API } from "../../scripts/globals";
 
+import { clearData } from "../../scripts/localStorage";
+
 export default function UpdatePost() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -19,15 +21,16 @@ export default function UpdatePost() {
 
   const { id } = useParams();
 
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? `${API}/posts/${id}`
+      : `${DEV_API}/posts/${id}`;
+
   useEffect(() => {
     async function fetchPostData() {
       setFeedback("Fetching post from database..");
       setIsLoading(true);
-      const API_CALL =
-        import.meta.env.MODE !== "development"
-          ? `${API}/posts/${id}`
-          : `${DEV_API}/posts/${id}`;
-      // console.log(`${API}/posts/${id}`);
+
       const res = await fetch(API_CALL);
       const data = await res.json();
 
@@ -44,10 +47,11 @@ export default function UpdatePost() {
     }
 
     fetchPostData();
-  }, [id]);
+  }, [id, API_CALL]);
 
   async function updatePost(e) {
     e.preventDefault();
+    clearData(API_CALL);
     setFeedback("Updating post..");
     setIsLoading(true);
     console.log({

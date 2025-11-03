@@ -269,6 +269,12 @@ td {
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-  width: 500px;
-  max-width: 100%;
+  max-width: 80%;
+}
+
+@media (min-width: 1000px) {
+  pre {
+    width: fit-content;
+    max-width: 600px;
+  }
 }

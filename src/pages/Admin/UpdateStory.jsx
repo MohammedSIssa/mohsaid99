@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { API } from "../../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
 
 export default function UpdateStory() {
   const [title, setTitle] = useState("");
@@ -15,13 +15,18 @@ export default function UpdateStory() {
 
   const { id } = useParams();
 
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? `${API}/story/${id}`
+      : `${DEV_API}/story/${id}`;
+
   useEffect(() => {
     async function handleFetchingWeekData() {
       try {
-        console.log(`${API}/story/${id}`);
+        console.log(API_CALL);
         setFeedback("Fetching story data..");
         setLoading(true);
-        const res = await fetch(`${API}/story/${id}`);
+        const res = await fetch(API_CALL);
         if (res.ok) {
           const data = await res.json();
           setTitle(data.title);
@@ -41,7 +46,7 @@ export default function UpdateStory() {
     }
 
     handleFetchingWeekData();
-  }, [id]);
+  }, [id, API_CALL]);
 
   async function handleSubmit(e) {
     e.preventDefault();
