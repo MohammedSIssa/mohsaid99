@@ -39,6 +39,9 @@ import { loadUser } from "./scripts/localStorage";
 import RequireAuth from "./pages/RequireAuth";
 import RequireUnAuth from "./pages/RequireUnAuth";
 
+import ServerContent from "./pages/ServerContent";
+import Content from "./pages/Content";
+
 function App() {
   const [user, setUser] = useState(loadUser);
   return (
@@ -47,23 +50,17 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-          <Route path="/weeks" element={<Weeks />}>
-            <Route path=":id" element={<Week />}></Route>
+
+          <Route path="/stats" element={<Stats />}>
+            <Route path=":id" element={<Stat />} />
           </Route>
-          <Route path="/goals" element={<Goals />}>
-            <Route path=":id" element={<Goal />}></Route>
-          </Route>
-          <Route path="/blogs" element={<Blogs />}>
-            <Route path=":id" element={<Blog />} />
-          </Route>
+
           <Route element={<RequireAuth role={2} />}>
             <Route path="special" element={<Special />}>
               <Route path=":id" element={<SpecialBox />}></Route>
             </Route>
           </Route>
-          <Route path="/stats" element={<Stats />}>
-            <Route path=":id" element={<Stat />} />
-          </Route>
+
           <Route element={<RequireAuth role={1} />}>
             <Route path="admin" element={<Admin />}>
               <Route path="logs" element={<Logs />}></Route>
@@ -73,9 +70,16 @@ function App() {
               <Route path="update/story/:id" element={<UpdateStory />}></Route>
             </Route>
           </Route>
+
           <Route element={<RequireUnAuth />}>
             <Route path="login" element={<Login />}></Route>
           </Route>
+
+          {/* Newer type id routes */}
+          <Route path="/:type" element={<ServerContent />}>
+            <Route path=":id" element={<Content />}></Route>
+          </Route>
+
           <Route path="/*" element={<ErrorPage />}></Route>
         </Routes>
       </HashRouter>
