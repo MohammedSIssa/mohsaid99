@@ -4,11 +4,11 @@ const cache = new Map();
 
 export async function fetchWithCache(url) {
   if (cache.has(url)) {
-    console.log("Serving from cache:", url);
+    console.log("Serving from memory:", url);
     return cache.get(url);
   }
 
-  console.log("Fetching from server:", url);
+  console.log("Fetching from API:", url);
   const res = await fetch(url);
   const data = await res.json();
 
