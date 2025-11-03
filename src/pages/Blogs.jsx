@@ -48,7 +48,7 @@ const Blogs = () => {
     return (
       <div className="flex flex-col gap-5">
         <Stories data={data} />
-        <Outlet />
+        <Outlet context={{ latestStory: data.length }} />
       </div>
     );
 };
