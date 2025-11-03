@@ -6,7 +6,7 @@ import LoadingEvents from "../components/Loaders/LoadingEvents";
 import ErrorLoadingEvents from "../components/Errors/ErrorLoadingStories";
 import ScrollToTopButton from "../components/Layout/ScrollToTop";
 
-import { API } from "../scripts/globals";
+import { API, DEV_API } from "../scripts/globals";
 
 import AddPost from "./Admin/AddPost";
 import Post from "../components/Post/Post";
@@ -16,7 +16,10 @@ import { fetchWithCache } from "../scripts/cache";
 const Goal = () => {
   const { user } = useContext(UserContext);
   const { id } = useParams();
-  const API_CALL = API + "/goal/" + id;
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? API + "/goal/" + id
+      : DEV_API + "/goal/" + id;
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);

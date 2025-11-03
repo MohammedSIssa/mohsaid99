@@ -5,14 +5,7 @@ import Stories from "../components/Layout/Stories";
 import ErrorLoadingStories from "../components/Errors/ErrorLoadingStories";
 import LoadingStories from "../components/Loaders/LoadingStories";
 
-// import { useContext } from "react";
-// import { UserContext } from "../context/UserContext";
-
-import { API } from "../scripts/globals";
-
-// import { logger } from "../scripts/logger";
-
-const API_CALL = API + "/special";
+import { API, DEV_API } from "../scripts/globals";
 
 import { Outlet } from "react-router-dom";
 
@@ -20,16 +13,16 @@ const Special = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // const { user } = useContext(UserContext);
+  let API_CALL =
+    import.meta.env.MODE !== "development"
+      ? API + "/special"
+      : DEV_API + "/special";
 
   useEffect(() => {
     async function getSpecials() {
       try {
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
-        // if (import.meta.env.MODE !== "development") {
-        //   await logger(user?.username, "Special");
-        // }
       } catch (err) {
         setData(null);
         setError(err);
@@ -39,7 +32,7 @@ const Special = () => {
     }
 
     getSpecials();
-  }, []);
+  }, [API_CALL]);
 
   if (loading) return <LoadingStories />;
   if (error) return <ErrorLoadingStories />;

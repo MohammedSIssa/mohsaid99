@@ -7,3 +7,9 @@ export const clearUser = () => {
 };
 
 export const loadUser = () => JSON.parse(localStorage.getItem("user")) || {};
+
+export const saveData = (url, data) => {
+  localStorage.setItem(url, JSON.stringify(data));
+};
+
+export const loadData = (url) => JSON.parse(localStorage.getItem(url)) || null;

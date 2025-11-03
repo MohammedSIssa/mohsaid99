@@ -3,35 +3,24 @@ import { useState, useEffect } from "react";
 import ErrorLoadingStories from "../components/Errors/ErrorLoadingStories";
 import LoadingStories from "../components/Loaders/LoadingStories";
 
-import { fetchWithCache } from "../scripts/cache";
-
-// import { useContext } from "react";
-// import { UserContext } from "../context/UserContext";
-
-// import { logger } from "../scripts/logger";
-
 import Stories from "../components/Layout/Stories";
 
-import { API } from "../scripts/globals";
+import { fetchWithCache } from "../scripts/cache";
+import { API, DEV_API } from "../scripts/globals";
 
-const API_CALL = API + "/goal";
+const API_CALL =
+  import.meta.env.MODE !== "development" ? API + "/goal" : DEV_API + "/goal";
 
 const Goals = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // const { user } = useContext(UserContext);
-
   useEffect(() => {
     async function getData() {
       try {
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
-
-        // if (import.meta.env.MODE !== "development") {
-        //   await logger(user?.username, "Goals");
-        // }
       } catch (err) {
         setData(null);
         setError(err);

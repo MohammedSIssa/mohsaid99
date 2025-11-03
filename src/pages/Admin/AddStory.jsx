@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { API } from "../../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
 
 export default function AddStory() {
   const [period, setPeriod] = useState("");
@@ -10,13 +10,18 @@ export default function AddStory() {
   const [isSpecial, setIsSpecial] = useState(false);
   const [type, setType] = useState("week");
 
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? `${API}/${type}`
+      : `${DEV_API}/${type}`;
+
   const [feedback, setFeedback] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-    	setFeedback("Adding data..")
-      const res = await fetch(`${API}/${type}`, {
+      setFeedback("Adding data..");
+      const res = await fetch(API_CALL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -53,10 +58,12 @@ export default function AddStory() {
     >
       <p className="text-xl text-green-200 font-bold">فورم اضافة الستوري</p>
       <hr className="border-zinc-800" />
-      <label htmlFor="add_story_type" dir="ltr">Type:</label>
-      <select 
-      	className="bg-zinc-800 text-zinc-50 p-2 focus:border focus:outline-0 focus:border-zinc-600" 
-      	onChange={(e) => setType(e.target.value)}
+      <label htmlFor="add_story_type" dir="ltr">
+        Type:
+      </label>
+      <select
+        className="bg-zinc-800 text-zinc-50 p-2 focus:border focus:outline-0 focus:border-zinc-600"
+        onChange={(e) => setType(e.target.value)}
         id="add_story_type"
       >
         <option value={"week"}>Week</option>
@@ -66,7 +73,9 @@ export default function AddStory() {
         <option value={"special"}>Special</option>
       </select>
 
-      <label htmlFor="add_story_count" dir="ltr">Count:</label>
+      <label htmlFor="add_story_count" dir="ltr">
+        Count:
+      </label>
       <input
         name="week_count"
         id="add_story_count"
@@ -77,7 +86,9 @@ export default function AddStory() {
         dir="ltr"
         required
       />
-      <label htmlFor="add_story_period" dir="ltr">Title: </label>
+      <label htmlFor="add_story_period" dir="ltr">
+        Title:{" "}
+      </label>
       <input
         name="period"
         id="add_story_period"
@@ -87,7 +98,9 @@ export default function AddStory() {
         autoComplete="off"
         required
       />
-      <label htmlFor="add_story_year" dir="ltr">Year:</label>
+      <label htmlFor="add_story_year" dir="ltr">
+        Year:
+      </label>
       <input
         name="year"
         id="add_story_year"
@@ -98,7 +111,9 @@ export default function AddStory() {
         dir="ltr"
         required
       />
-      <label htmlFor="add_story_summary" dir="ltr">Summary:</label>
+      <label htmlFor="add_story_summary" dir="ltr">
+        Summary:
+      </label>
       <input
         name="summary"
         id="add_story_summary"
@@ -108,7 +123,9 @@ export default function AddStory() {
         autoComplete="off"
       />
       <div className="flex gap-4 items-center justify-center" dir="ltr">
-      	<label htmlFor="add_story_isSpecial" dir="ltr">Golden Story?</label>
+        <label htmlFor="add_story_isSpecial" dir="ltr">
+          Golden Story?
+        </label>
         <input
           type="checkbox"
           id="add_story_isSpecial"

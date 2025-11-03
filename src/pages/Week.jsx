@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
-import { API } from "../scripts/globals";
+// import { useOutletContext } from "react-router-dom";
+
+import { API, DEV_API } from "../scripts/globals";
 
 import LoadingEvents from "../components/Loaders/LoadingEvents";
 import ErrorLoadingEvents from "../components/Errors/ErrorLoadingStories";
@@ -19,7 +21,11 @@ import { fetchWithCache } from "../scripts/cache";
 const Week = () => {
   const { user } = useContext(UserContext);
   const { id } = useParams();
-  const API_CALL = API + "/week/" + id;
+  // const { latestStory } = useOutletContext();
+  let API_CALL =
+    import.meta.env.MODE !== "development"
+      ? API + "/week/" + id
+      : DEV_API + "/week/" + id;
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -31,8 +37,10 @@ const Week = () => {
         setIsLoading(true);
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
-
-        if (import.meta.env.MODE !== "development" && user?.username !== "mohsaid99") {
+        if (
+          import.meta.env.MODE !== "development" &&
+          user?.username !== "mohsaid99"
+        ) {
           await logger(user?.username, `Weeks | ${id}`);
         }
       } catch {

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Post from "../../components/Post/Post";
 
-import { API } from "../../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
 
 export default function AddPost({ id = null, fromType = null }) {
   const [title, setTitle] = useState("");
@@ -16,13 +16,18 @@ export default function AddPost({ id = null, fromType = null }) {
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState("");
 
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? `${API}/${type}/${storyid}`
+      : `${DEV_API}/${type}/${storyid}`;
+
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       setFeedback("Adding to database..");
       setLoading(true);
       if (title.trim() !== "" || body.trim() !== "" || images.trim() !== "") {
-        const res = await fetch(`${API}/${type}/${storyid}`, {
+        const res = await fetch(API_CALL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

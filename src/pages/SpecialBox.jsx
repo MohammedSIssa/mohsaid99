@@ -7,7 +7,7 @@ import ScrollToTopButton from "../components/Layout/ScrollToTop";
 
 import AddPost from "./Admin/AddPost";
 
-import { API } from "../scripts/globals";
+import { API, DEV_API } from "../scripts/globals";
 import { logger } from "../scripts/logger";
 
 import { useContext } from "react";
@@ -26,14 +26,21 @@ export default function SpecialBox() {
 
   const { id } = useParams();
 
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? `${API}/special/${id}`
+      : `${DEV_API}/special/${id}`;
   useEffect(() => {
     async function getSpecials() {
       try {
         setLoading(true);
-        const raw = await fetchWithCache(`${API}/special/${id}`);
+        const raw = await fetchWithCache(API_CALL);
         setData(raw);
 
-        if (import.meta.env.MODE !== "development" && user?.username !== "mohsaid99") {
+        if (
+          import.meta.env.MODE !== "development" &&
+          user?.username !== "mohsaid99"
+        ) {
           await logger(user?.username, `Special | ${id}`);
         }
       } catch (err) {
@@ -45,7 +52,7 @@ export default function SpecialBox() {
     }
 
     getSpecials();
-  }, [id, user?.username]);
+  }, [id, user?.username, API_CALL]);
 
   if (loading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;

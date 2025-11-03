@@ -8,7 +8,7 @@ import ScrollToTopButton from "../components/Layout/ScrollToTop";
 
 import { logger } from "../scripts/logger";
 
-import { API } from "../scripts/globals";
+import { API, DEV_API } from "../scripts/globals";
 
 import AddPost from "./Admin/AddPost";
 import Post from "../components/Post/Post";
@@ -18,7 +18,10 @@ import { fetchWithCache } from "../scripts/cache";
 const Blog = () => {
   const { user } = useContext(UserContext);
   const { id } = useParams();
-  const API_CALL = API + "/blog/" + id;
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? API + "/blog/" + id
+      : DEV_API + "/blog/" + id;
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +34,10 @@ const Blog = () => {
         const raw = await fetchWithCache(API_CALL);
 
         setData(raw);
-        if (import.meta.env.MODE !== "development" && user?.username !== "mohsaid99") {
+        if (
+          import.meta.env.MODE !== "development" &&
+          user?.username !== "mohsaid99"
+        ) {
           await logger(user?.username, `Blogs | ${id}`);
         }
       } catch {

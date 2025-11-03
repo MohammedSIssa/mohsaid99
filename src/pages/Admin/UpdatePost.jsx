@@ -3,7 +3,7 @@ import Post from "../../components/Post/Post";
 
 import { useParams } from "react-router-dom";
 
-import { API } from "../../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
 
 export default function UpdatePost() {
   const [title, setTitle] = useState("");
@@ -23,8 +23,12 @@ export default function UpdatePost() {
     async function fetchPostData() {
       setFeedback("Fetching post from database..");
       setIsLoading(true);
-      console.log(`${API}/posts/${id}`);
-      const res = await fetch(`${API}/posts/${id}`);
+      const API_CALL =
+        import.meta.env.MODE !== "development"
+          ? `${API}/posts/${id}`
+          : `${DEV_API}/posts/${id}`;
+      // console.log(`${API}/posts/${id}`);
+      const res = await fetch(API_CALL);
       const data = await res.json();
 
       setTitle(data.title);
@@ -53,7 +57,11 @@ export default function UpdatePost() {
       type,
       images: images.trim() !== "" ? images.split(" ") : [],
     });
-    const res = await fetch(`${API}/update/posts/${id}`, {
+    const API_CALL =
+      import.meta.env.MODE !== "development"
+        ? `${API}/update/posts/${id}`
+        : `${DEV_API}/update/posts/${id}`;
+    const res = await fetch(API_CALL, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

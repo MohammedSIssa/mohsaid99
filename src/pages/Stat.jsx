@@ -30,15 +30,16 @@ const Stat = () => {
     setData(stats.find((stat) => stat.count == id));
 
     async function log() {
-      if (import.meta.env.MODE !== "development" && user?.username !== "mohsaid99") {
+      if (
+        import.meta.env.MODE !== "development" &&
+        user?.username !== "mohsaid99"
+      ) {
         await logger(user?.username, `Stats | ${id}`);
       }
     }
 
     log();
   }, [id, user?.username]);
-
-  // return <pre dir="ltr">{JSON.stringify(data, null, 2)}</pre>;
 
   return (
     <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10">
