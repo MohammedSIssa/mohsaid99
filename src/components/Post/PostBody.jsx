@@ -6,13 +6,13 @@ export default function PostBody({ body, showAllText = false }) {
     <>
       {(showMore || showAllText) && (
         <div className={`flex flex-col gap-2 py-2`}>
-          <pre className="max-w-[300px] md:max-w-[700px]">{body}</pre>
+          <pre className="max-w-full md:max-w-[700px]">{body}</pre>
         </div>
       )}
       {showMore || (
         <div className="py-2">
           {!showAllText && (
-            <pre className="max-w-[300px] md:max-w-[700px]">
+            <pre className="max-w-full md:max-w-[700px]">
               {body.slice(0, 60)} ...{" "}
               <button
                 className="text-zinc-500 hover:text-zinc-300 hover:cursor-pointer"

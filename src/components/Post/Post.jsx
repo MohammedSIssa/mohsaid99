@@ -23,7 +23,7 @@ export default function Post({
       style={secret && !user?.role ? { display: "none" } : {}}
     >
       <div
-        className="post w-full md:w-[80%] lg:w-[80%] xl:w-fit xl:max-w-[1200px] flex-col p-5 md:rounded-2xl relative"
+        className="post w-full border border-l-0 border-r-0 md:border-l md:border-r md:w-[80%] lg:w-[80%] xl:w-fit xl:max-w-[1200px] flex-col p-5 md:rounded-2xl relative"
         style={
           special
             ? {
