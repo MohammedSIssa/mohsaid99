@@ -68,7 +68,7 @@ const Content = () => {
             secret={item.secret}
           />
         ))}
-        {user?.role === 1 && <AddPost id={id} type={type} />}
+        {user?.role === 1 && <AddPost id={id} fromType={type} />}
         <ScrollToTopButton />
       </>
     );

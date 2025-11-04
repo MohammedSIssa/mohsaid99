@@ -116,6 +116,17 @@ export default function AddPost({ id = null, fromType = null }) {
             />
           </>
         )}
+        {id !== null && (
+          <h1
+            style={{ color: "var(--font-color)" }}
+            className="text-2xl font-bold"
+            dir="ltr"
+          >
+            Add a post for {fromType} {id}
+          </h1>
+        )}
+        <hr style={{ borderColor: "var(--story-border-color)" }} />
+
         <label htmlFor="title" dir="ltr">
           Title:
         </label>

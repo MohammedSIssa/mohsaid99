@@ -5,8 +5,6 @@ import { useParams } from "react-router-dom";
 
 import { API, DEV_API } from "../../../scripts/globals";
 
-import { clearData } from "../../../scripts/localStorage";
-
 export default function UpdatePost() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -51,7 +49,6 @@ export default function UpdatePost() {
 
   async function updatePost(e) {
     e.preventDefault();
-    clearData(API_CALL);
     setFeedback("Updating post..");
     setIsLoading(true);
     console.log({
