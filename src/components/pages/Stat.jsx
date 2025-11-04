@@ -1,6 +1,8 @@
 import { stats } from "./stats-data";
 import { useParams } from "react-router-dom";
 
+import { useOutletContext } from 'react-router-dom'
+
 import { useState, useEffect } from "react";
 
 import { Chart as ChartJS, defaults } from "chart.js/auto";
@@ -21,13 +23,17 @@ defaults.plugins.title.font.size = 20;
 defaults.plugins.title.font.family = "Playpen Sans Arabic";
 defaults.plugins.title.color = "white";
 
-const Stat = () => {
+const Stat = ({ latest = false }) => {
   const [data, setData] = useState(null);
   const { id } = useParams();
   const { user } = useContext(UserContext);
 
+  const { latestStory } = useOutletContext();
+
   useEffect(() => {
-    setData(stats.find((stat) => stat.count == id));
+    // setData(stats.find((stat) => stat.count == id));
+    if(!latest) setData(stats.find((stat) => stat.count == id));
+    if(latest) setData(stats.find((stat) => stat.count == latestStory))
 
     async function log() {
       if (

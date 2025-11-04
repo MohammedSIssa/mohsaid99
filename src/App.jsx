@@ -40,35 +40,38 @@ function App() {
       <HashRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Homepage />}></Route>
+          <Route path="/" element={<Homepage />} />
 
           <Route path="/stats" element={<Stats />}>
+          	<Route path="latest" element={<Stat latest={true} />} />
             <Route path=":id" element={<Stat />} />
           </Route>
 
           <Route element={<RequireAuth role={2} />}>
             <Route path="special" element={<Special />}>
-              <Route path=":id" element={<SpecialBox />}></Route>
+            	<Route path="latest" element={<SpecialBox latest={true} />} />
+              <Route path=":id" element={<SpecialBox />} />
             </Route>
           </Route>
 
           <Route element={<RequireAuth role={1} />}>
             <Route path="admin" element={<Admin />}>
-              <Route path="logs" element={<Logs />}></Route>
-              <Route path="add/post" element={<AddPost />}></Route>
-              <Route path="add/story" element={<AddStory />}></Route>
-              <Route path="update/post/:id" element={<UpdatePost />}></Route>
-              <Route path="update/story/:id" element={<UpdateStory />}></Route>
+              <Route path="logs" element={<Logs />} />
+              <Route path="add/post" element={<AddPost />} />
+              <Route path="add/story" element={<AddStory />} />
+              <Route path="update/post/:id" element={<UpdatePost />} />
+              <Route path="update/story/:id" element={<UpdateStory />} />
             </Route>
           </Route>
 
           <Route element={<RequireUnAuth />}>
-            <Route path="login" element={<Login />}></Route>
+            <Route path="login" element={<Login />} />
           </Route>
 
           {/* Newer type id routes */}
           <Route path="/:type" element={<ServerContent />}>
-            <Route path=":id" element={<Content />}></Route>
+          	<Route path="latest" element={<Content latest={true} />} />
+            <Route path=":id" element={<Content />} />
           </Route>
 
           <Route path="/*" element={<ErrorPage />}></Route>

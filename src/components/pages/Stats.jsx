@@ -6,7 +6,7 @@ const Stats = () => {
   return (
     <div className="flex flex-col gap-5">
       <Stories data={[...stats].reverse()} />
-      <Outlet />
+      <Outlet context={{ latestStory: stats.length }} />
     </div>
   );
 };

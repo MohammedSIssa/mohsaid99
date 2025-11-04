@@ -51,7 +51,7 @@ const StoryContent = () => {
     return (
       <div className="flex flex-col gap-5">
         <Stories data={data} />
-        <Outlet context={{ type: type.slice(0, -1) }} />
+        <Outlet context={{ type: type.slice(0, -1), latestStory: data.length }} />
       </div>
     );
 };

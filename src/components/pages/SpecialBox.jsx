@@ -6,6 +6,8 @@ import ErrorLoadingEvents from "../../components/Errors/ErrorLoadingStories";
 import ScrollToTopButton from "../../components/ScrollToTop";
 import AddPost from "./Admin/AddPost";
 
+import { useOutletContext } from 'react-router-dom'
+
 import { API, DEV_API } from "../../scripts/globals";
 import { logger } from "../../scripts/logger";
 
@@ -15,19 +17,47 @@ import { fetchWithCache } from "../../scripts/cache";
 
 import { useAuth } from "../hooks/useAuth";
 
-export default function SpecialBox() {
+export default function SpecialBox({ latest = false }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const { user } = useAuth();
-
   const { id } = useParams();
+  
+  const { latestStory } = useOutletContext();
 
   const API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/special/${id}`
       : `${DEV_API}/special/${id}`;
+      
+  useEffect(() => {
+    async function getLatest() {
+      try {
+        setLoading(true);
+        const raw = await fetchWithCache(`${API}/special/${latestStory}`);
+        setData(raw);
+
+        if (
+          import.meta.env.MODE !== "development" &&
+          user?.username !== "mohsaid99"
+        ) {
+          await logger(user?.username, `Special | ${latestStory}`);
+        }
+      } catch (err) {
+        setData(null);
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+		
+		if(latest) {
+			getLatest();
+		}
+  }, [id, user?.username, latestStory]);
+  
   useEffect(() => {
     async function getSpecials() {
       try {
@@ -48,8 +78,10 @@ export default function SpecialBox() {
         setLoading(false);
       }
     }
-
-    getSpecials();
+		
+		if(!latest) {
+			getSpecials();
+		}
   }, [id, user?.username, API_CALL]);
 
   if (loading) return <LoadingEvents />;

@@ -17,19 +17,43 @@ import { fetchWithCache } from "../../scripts/cache";
 
 import { useAuth } from "../hooks/useAuth";
 
-const Content = () => {
+const Content = ({ latest = false }) => {
   const { user } = useAuth();
   const { id } = useParams();
-  const { type } = useOutletContext();
-
+  const { type, latestStory } = useOutletContext();
+  
   let API_CALL =
     import.meta.env.MODE !== "development"
-      ? `${API}/${type}/${id}`
+     	? `${API}/${type}/${id}`
       : `${DEV_API}/${type}/${id}`;
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  
+  useEffect(() => {
+    async function getLatestData() {
+      setIsLoading(true);
+      try {
+        const raw = await fetchWithCache(`${API}/${type}/${latestStory}`);
+        setData(raw);
+        if (
+          import.meta.env.MODE !== "development" &&
+          user?.username !== "mohsaid99"
+        ) {
+          await logger(user?.username, `${type} | ${latestStory}`);
+        }
+      } catch {
+        setData(null);
+        setError("Error Getting data");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    if(latest) {
+    	getLatestData();
+    }
+  }, [id, user?.username, type, latestStory]);
 
   useEffect(() => {
     async function getData() {
@@ -50,7 +74,9 @@ const Content = () => {
         setIsLoading(false);
       }
     }
-    getData();
+    if(!latest) {
+    	getData();
+    }
   }, [id, API_CALL, user?.username, type]);
 
   if (isLoading) return <LoadingEvents />;
