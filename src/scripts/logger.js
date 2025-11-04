@@ -4,7 +4,7 @@ export const logger = async (username, url) => {
   const clock = new Date().toLocaleTimeString();
   const date = new Date().toLocaleDateString();
   const os = navigator.platform + "";
-  const res = await fetch(`${API}/log`, {
+  await fetch(`${API}/log`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -14,8 +14,4 @@ export const logger = async (username, url) => {
       username,
     }),
   });
-
-  if (res.ok) {
-    console.log("Logged data..");
-  }
 };
