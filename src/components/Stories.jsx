@@ -1,8 +1,8 @@
-import Story from "../Story";
+import Story from "./Story";
 
 import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
-import AddStoryBox from "../pages/Admin/AddStoryBox";
+import { UserContext } from "../context/UserContext";
+import AddStoryBox from "./pages/Admin/AddStoryBox";
 
 const Stories = ({ data }) => {
   const { user } = useContext(UserContext);

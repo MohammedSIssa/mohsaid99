@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
-import { clearUser } from "../../scripts/localStorage";
+import { UserContext } from "../context/UserContext";
+import { clearUser } from "../scripts/localStorage";
 
 import { BsCalendar2MinusFill } from "react-icons/bs";
 import { TbTargetArrow } from "react-icons/tb";
@@ -12,8 +12,6 @@ import { FaLock } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 import { LuLogs } from "react-icons/lu";
-
-
 
 const NavBar = () => {
   const { user } = useContext(UserContext);

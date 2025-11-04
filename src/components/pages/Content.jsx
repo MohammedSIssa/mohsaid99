@@ -9,7 +9,7 @@ import { logger } from "../../scripts/logger";
 
 import LoadingEvents from "../Loaders/LoadingEvents";
 import ErrorLoadingEvents from "../Errors/ErrorLoadingStories";
-import ScrollToTopButton from "../Layout/ScrollToTop";
+import ScrollToTopButton from "../ScrollToTop";
 
 import AddPost from "./Admin/AddPost";
 import Post from "../Post/Post";

@@ -6,7 +6,7 @@ import LoadingStories from "../Loaders/LoadingStories";
 import { API, DEV_API } from "../../scripts/globals";
 
 import { fetchWithCache } from "../../scripts/cache";
-import Stories from "../Layout/Stories";
+import Stories from "../Stories";
 
 import { useParams } from "react-router-dom";
 

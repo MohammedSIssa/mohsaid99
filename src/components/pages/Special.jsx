@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchWithCache } from "../../scripts/cache";
-import Stories from "../../components/Layout/Stories";
+import Stories from "../../components/Stories";
 
 import ErrorLoadingStories from "../../components/Errors/ErrorLoadingStories";
 import LoadingStories from "../../components/Loaders/LoadingStories";

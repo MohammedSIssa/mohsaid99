@@ -7,7 +7,7 @@ import Special from "./components/pages/Special";
 import SpecialBox from "./components/pages/SpecialBox";
 
 import Homepage from "./components/pages/Homepage";
-import NavBar from "./components/Layout/NavBar";
+import NavBar from "./components/NavBar";
 import ErrorPage from "./components/Errors/ErrorPage";
 
 import { Admin } from "./components/pages/Admin/Admin";

@@ -1,5 +1,5 @@
 import { stats } from "./stats-data";
-import Stories from "../../components/Layout/Stories";
+import Stories from "../../components/Stories";
 import { Outlet } from "react-router-dom";
 
 const Stats = () => {

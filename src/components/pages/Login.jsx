@@ -68,68 +68,106 @@ export default function Login() {
         style={
           success
             ? {
-                borderColor: "lime",
+                backgroundColor: "var(--success-login-bg-color)",
+                borderColor: "var(--success-login-border-color)",
               }
             : failure
             ? {
-                borderColor: "red",
+                backgroundColor: "var(--failure-login-bg-color)",
+                borderColor: "var(--failure-login-border-color)",
               }
             : {}
         }
       >
-        <label htmlFor="username" className="font-bold">
-          اسم المستخدم:
-        </label>
-        <input
-          type="text"
-          dir="ltr"
-          name="username"
-          id="username"
-          className="text-zinc-50 p-2 px-5 rounded-lg disabled:opacity-30 focus:border focus:outline-0"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          autoComplete="off"
-          required
-          style={{
-            backgroundColor: "var(--bg-color)",
-            borderColor: "var(--story-border-color)",
-          }}
-          disabled={logginIn || user?.username}
-        />
+        {!success && (
+          <>
+            <label htmlFor="username" className="font-bold">
+              اسم المستخدم:
+            </label>
+            <input
+              type="text"
+              dir="ltr"
+              name="username"
+              id="username"
+              className="text-zinc-50 p-2 px-5 rounded-lg disabled:opacity-30 focus:border focus:outline-0"
+              value={username}
+              onChange={(e) => {
+                setUsername(e.target.value);
+                setFailure(false);
+                setMessage("");
+              }}
+              autoComplete="off"
+              required
+              style={
+                failure
+                  ? {
+                      backgroundColor: "var(--failure-login-border-color)",
+                      borderColor: "var(--failure-login-bg-color)",
+                    }
+                  : {
+                      backgroundColor: "var(--bg-color)",
+                      borderColor: "var(--story-border-color)",
+                    }
+              }
+              disabled={logginIn || user?.username}
+            />
 
-        <label htmlFor="password" className="font-bold">
-          كلمة السر:
-        </label>
-        <input
-          type="password"
-          dir="ltr"
-          name="password"
-          autoComplete="off"
-          id="password"
-          className="text-zinc-50 p-2 px-5 rounded-lg disabled:opacity-30 focus:border focus:outline-0"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          style={{
-            backgroundColor: "var(--bg-color)",
-            borderColor: "var(--story-border-color)",
-          }}
-          disabled={logginIn || user?.username}
-        />
+            <label htmlFor="password" className="font-bold">
+              كلمة السر:
+            </label>
+            <input
+              type="password"
+              dir="ltr"
+              name="password"
+              autoComplete="off"
+              id="password"
+              className="text-zinc-50 p-2 px-5 rounded-lg disabled:opacity-30 focus:border focus:outline-0"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setFailure(false);
+                setMessage("");
+              }}
+              required
+              style={
+                failure
+                  ? {
+                      backgroundColor: "var(--failure-login-border-color)",
+                      borderColor: "var(--failure-login-bg-color)",
+                    }
+                  : {
+                      backgroundColor: "var(--bg-color)",
+                      borderColor: "var(--story-border-color)",
+                    }
+              }
+              disabled={logginIn || user?.username}
+            />
 
-        <button
-          onClick={login}
-          disabled={logginIn}
-          style={{
-            backgroundColor: "var(--bg-color)",
-            borderColor: "var(--story-border-color)",
-          }}
-          className="p-2 px-5 rounded-lg border hover:brightness-125 hover:cursor-pointer transition-all duration-100 disabled:opacity-25 disabled:cursor-progress"
-        >
-          سجل الدخول
-        </button>
-        {logginIn && <p>جار تسجيل الدخول..</p>}
-        <p>{message}</p>
+            <button
+              onClick={login}
+              disabled={logginIn}
+              style={
+                failure
+                  ? {
+                      borderColor: "var(--failure-login-border-color)",
+                      backgroundColor: "var(--failure-login-bg-color)",
+                    }
+                  : {
+                      backgroundColor: "var(--bg-color)",
+                      borderColor: "var(--story-border-color)",
+                    }
+              }
+              className="p-2 px-5 rounded-lg border hover:brightness-125 hover:cursor-pointer transition-all duration-100 disabled:opacity-25 disabled:cursor-progress"
+            >
+              سجل الدخول
+            </button>
+          </>
+        )}
+        {logginIn && !success && <p>جار تسجيل الدخول..</p>}
+        {success && (
+          <p className="font-bold text-green-300 text-2xl px-5">{message}</p>
+        )}
+        {failure && <p className="text-red-300">{message}</p>}
       </form>
     </div>
   );

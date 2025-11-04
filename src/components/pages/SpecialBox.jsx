@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import LoadingEvents from "../../components/Loaders/LoadingEvents";
 import ErrorLoadingEvents from "../../components/Errors/ErrorLoadingStories";
-import ScrollToTopButton from "../../components/Layout/ScrollToTop";
+import ScrollToTopButton from "../../components/ScrollToTop";
 import AddPost from "./Admin/AddPost";
 
 import { API, DEV_API } from "../../scripts/globals";

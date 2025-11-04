@@ -31,6 +31,12 @@
   --slider-border-color: #313643;
   --post-bg-color: #14191f;
   --post-border-color: #2c3746;
+
+  --success-login-border-color: #2f8f2f;
+  --success-login-bg-color: #081c08;
+
+  --failure-login-border-color: #9a2f2f;
+  --failure-login-bg-color: #3d0e0e;
 }
 
 * {
