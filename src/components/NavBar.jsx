@@ -20,16 +20,16 @@ const NavBar = () => {
       <NavLink to={"/"}>
         <FaHome size={30} />
       </NavLink>
-      <NavLink to={"/weeks/latest"}>
+      <NavLink to={"/weeks"}>
         <BsCalendar2MinusFill size={24} />
       </NavLink>
-      <NavLink to={"/goals/latest"}>
+      <NavLink to={"/goals"}>
         <TbTargetArrow size={28} />
       </NavLink>
-      <NavLink to={"/stats/latest"}>
+      <NavLink to={"/stats"}>
         <IoStatsChart size={25} />
       </NavLink>
-      <NavLink to={"/blogs/latest"}>
+      <NavLink to={"/blogs"}>
         <HiMiniPencilSquare size={27} />
       </NavLink>
       {user?.username === undefined && (
@@ -38,7 +38,7 @@ const NavBar = () => {
         </NavLink>
       )}
       {user?.role && (
-        <NavLink to={"/special/latest"}>
+        <NavLink to={"/special"}>
           <FaLock size={25} />
         </NavLink>
       )}
