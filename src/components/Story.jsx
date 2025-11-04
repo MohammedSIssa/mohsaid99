@@ -1,16 +1,15 @@
 import { NavLink } from "react-router-dom";
 
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
-
 import { API, DEV_API } from "../scripts/globals";
 
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 
+import { useAuth } from "./hooks/useAuth";
+
 export default function Story({ item, idx }) {
   const goldStory = item.special;
-  const { user } = useContext(UserContext);
+  const { user } = useAuth();
 
   const API_CALL =
     import.meta.env.MODE !== "development"

@@ -9,19 +9,18 @@ import AddPost from "./Admin/AddPost";
 import { API, DEV_API } from "../../scripts/globals";
 import { logger } from "../../scripts/logger";
 
-import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
-
 import Post from "../../components/Post/Post";
 
 import { fetchWithCache } from "../../scripts/cache";
+
+import { useAuth } from "../hooks/useAuth";
 
 export default function SpecialBox() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { user } = useContext(UserContext);
+  const { user } = useAuth();
 
   const { id } = useParams();
 

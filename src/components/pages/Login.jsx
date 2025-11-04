@@ -1,14 +1,13 @@
 import { useState } from "react";
 
-import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
-
 import { saveUser } from "../../scripts/localStorage";
 
 import { API } from "../../scripts/globals";
 
+import { useAuth } from "../hooks/useAuth";
+
 export default function Login() {
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [logginIn, setLogginIn] = useState(false);

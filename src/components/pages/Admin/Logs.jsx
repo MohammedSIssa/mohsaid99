@@ -1,4 +1,4 @@
-import { API } from "../../../scripts/globals";
+import { API, DEV_API } from "../../../scripts/globals";
 import { useState, useEffect } from "react";
 
 import LoadingLogs from "../../../components/Loaders/LoadingLogs";
@@ -10,11 +10,14 @@ const Logs = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const API_CALL =
+    import.meta.env.MODE !== "development" ? API + "/logs" : DEV_API + "/logs";
+
   useEffect(() => {
     async function getLogs() {
       try {
         setLoading(true);
-        const res = await fetchWithCache(API + "/logs");
+        const res = await fetchWithCache(API_CALL);
         setData(res);
       } catch (err) {
         console.error(err);
@@ -25,7 +28,7 @@ const Logs = () => {
     }
 
     getLogs();
-  }, []);
+  }, [API_CALL]);
 
   if (loading) return <LoadingLogs />;
   if (error) return <h1>Error getting logs</h1>;

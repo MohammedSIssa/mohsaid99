@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
-import { UserContext } from "../../context/UserContext";
+import { useState, useEffect } from "react";
 
 import { useOutletContext } from "react-router-dom";
 
@@ -16,8 +15,10 @@ import Post from "../Post/Post";
 
 import { fetchWithCache } from "../../scripts/cache";
 
+import { useAuth } from "../hooks/useAuth";
+
 const Content = () => {
-  const { user } = useContext(UserContext);
+  const { user } = useAuth();
   const { id } = useParams();
   const { type } = useOutletContext();
 

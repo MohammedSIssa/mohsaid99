@@ -2,8 +2,7 @@ import ImagesSlider from "../ImagesSlider";
 import PostTitle from "./PostTitlle";
 import PostBody from "./PostBody";
 
-import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
+import { useAuth } from "../hooks/useAuth";
 
 import AdminControls from "./AdminControls";
 
@@ -16,7 +15,7 @@ export default function Post({
   secret,
   fromAdmin = false,
 }) {
-  const { user } = useContext(UserContext);
+  const { user } = useAuth();
   return (
     <div
       className="flex items-center justify-center md:p-10 py-15"
