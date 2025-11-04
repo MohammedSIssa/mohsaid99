@@ -27,8 +27,8 @@ import Login from "./components/pages/Login";
 
 import { loadUser } from "./scripts/localStorage";
 
-import RequireAuth from "./components/pages/RequireAuth";
-import RequireUnAuth from "./components/pages/RequireUnAuth";
+import RequireAuth from "./components/Auth/RequireAuth";
+import RequireUnAuth from "./components/Auth/RequireUnAuth";
 
 import ServerContent from "./components/pages/ServerContent";
 import Content from "./components/pages/Content";
