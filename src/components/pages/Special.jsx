@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { fetchWithCache } from "../scripts/cache";
-import Stories from "../components/Layout/Stories";
+import { fetchWithCache } from "../../scripts/cache";
+import Stories from "../../components/Layout/Stories";
 
-import ErrorLoadingStories from "../components/Errors/ErrorLoadingStories";
-import LoadingStories from "../components/Loaders/LoadingStories";
+import ErrorLoadingStories from "../../components/Errors/ErrorLoadingStories";
+import LoadingStories from "../../components/Loaders/LoadingStories";
 
-import { API, DEV_API } from "../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
 
 import { Outlet } from "react-router-dom";
 

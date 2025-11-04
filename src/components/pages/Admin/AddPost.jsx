@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Post from "../../components/Post/Post";
+import Post from "../../Post/Post";
 
-import { API, DEV_API } from "../../scripts/globals";
+import { API, DEV_API } from "../../../scripts/globals";
 
 export default function AddPost({ id = null, fromType = null }) {
   const [title, setTitle] = useState("");

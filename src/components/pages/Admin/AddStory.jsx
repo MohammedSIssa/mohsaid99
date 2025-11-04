@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { API, DEV_API } from "../../scripts/globals";
+import { API, DEV_API } from "../../../scripts/globals";
 
 export default function AddStory() {
   const [period, setPeriod] = useState("");

@@ -1,4 +1,4 @@
-import AdminNavBar from "./AdminNavBar";
+// import AdminNavBar from "./AdminNavBar";
 
 import "./admin.css";
 import { Outlet } from "react-router-dom";

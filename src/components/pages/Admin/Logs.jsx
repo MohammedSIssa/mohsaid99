@@ -1,9 +1,9 @@
-import { API } from "../../scripts/globals";
+import { API } from "../../../scripts/globals";
 import { useState, useEffect } from "react";
 
-import LoadingLogs from "../../components/Loaders/LoadingLogs";
+import LoadingLogs from "../../../components/Loaders/LoadingLogs";
 
-import { fetchWithCache } from "../../scripts/cache";
+import { fetchWithCache } from "../../../scripts/cache";
 
 const Logs = () => {
   const [data, setData] = useState(null);

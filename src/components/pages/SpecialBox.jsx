@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import LoadingEvents from "../components/Loaders/LoadingEvents";
-import ErrorLoadingEvents from "../components/Errors/ErrorLoadingStories";
-import ScrollToTopButton from "../components/Layout/ScrollToTop";
-
+import LoadingEvents from "../../components/Loaders/LoadingEvents";
+import ErrorLoadingEvents from "../../components/Errors/ErrorLoadingStories";
+import ScrollToTopButton from "../../components/Layout/ScrollToTop";
 import AddPost from "./Admin/AddPost";
 
-import { API, DEV_API } from "../scripts/globals";
-import { logger } from "../scripts/logger";
+import { API, DEV_API } from "../../scripts/globals";
+import { logger } from "../../scripts/logger";
 
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 
-import Post from "../components/Post/Post";
+import Post from "../../components/Post/Post";
 
-import { fetchWithCache } from "../scripts/cache";
+import { fetchWithCache } from "../../scripts/cache";
 
 export default function SpecialBox() {
   const [data, setData] = useState(null);

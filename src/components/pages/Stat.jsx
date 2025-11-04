@@ -7,8 +7,8 @@ import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Doughnut, Line } from "react-chartjs-2";
 
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
-import { logger } from "../scripts/logger";
+import { UserContext } from "../../context/UserContext";
+import { logger } from "../../scripts/logger";
 
 defaults.maintainAspectRatio = false;
 defaults.responsive = true;

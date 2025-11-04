@@ -1,13 +1,14 @@
 import { useState } from "react";
 
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 
-import { saveUser } from "../scripts/localStorage";
+import { saveUser } from "../../scripts/localStorage";
 
-import { API } from "../scripts/globals";
+import { API } from "../../scripts/globals";
 
 export default function Login() {
+  const { user, setUser } = useContext(UserContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [logginIn, setLogginIn] = useState(false);
@@ -15,9 +16,9 @@ export default function Login() {
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
 
-  const [message, setMessage] = useState("");
-
-  const { setUser } = useContext(UserContext);
+  const [message, setMessage] = useState(
+    user?.username ? "انت مسجل الدخول" : ""
+  );
 
   async function login(e) {
     e.preventDefault();
@@ -62,7 +63,7 @@ export default function Login() {
   return (
     <div className="flex flex-col items-center justify-center h-dvh">
       <form
-        className="login-form flex flex-col gap-5 max-w-[300px] p-10 border rounded-lg"
+        className="login-form flex flex-col gap-5 max-w-[300px] p-10 border rounded-lg transition-all duration-200"
         onSubmit={login}
         style={
           success
@@ -93,7 +94,7 @@ export default function Login() {
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
           }}
-          disabled={logginIn}
+          disabled={logginIn || user?.username}
         />
 
         <label htmlFor="password" className="font-bold">
@@ -113,7 +114,7 @@ export default function Login() {
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
           }}
-          disabled={logginIn}
+          disabled={logginIn || user?.username}
         />
 
         <button
@@ -123,7 +124,7 @@ export default function Login() {
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
           }}
-          className="p-2 px-5 rounded-lg border hover:brightness-125 hover:cursor-pointer transition-all duration-100 disabled:opacity-25 disabled:cursor-not-allowed"
+          className="p-2 px-5 rounded-lg border hover:brightness-125 hover:cursor-pointer transition-all duration-100 disabled:opacity-25 disabled:cursor-progress"
         >
           سجل الدخول
         </button>

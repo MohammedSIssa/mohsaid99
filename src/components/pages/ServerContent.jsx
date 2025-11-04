@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
-import ErrorLoadingStories from "../components/Errors/ErrorLoadingStories";
-import LoadingStories from "../components/Loaders/LoadingStories";
+import ErrorLoadingStories from "../Errors/ErrorLoadingStories";
+import LoadingStories from "../Loaders/LoadingStories";
 
-import { API, DEV_API } from "../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
 
-import { fetchWithCache } from "../scripts/cache";
-import Stories from "../components/Layout/Stories";
+import { fetchWithCache } from "../../scripts/cache";
+import Stories from "../Layout/Stories";
 
 import { useParams } from "react-router-dom";
 
@@ -41,6 +41,12 @@ const StoryContent = () => {
 
   if (isLoading) return <LoadingStories />;
   if (error) return <ErrorLoadingStories />;
+  if(data.length === 0) 
+  	return (
+  		<div className="flex h-dvh p-10 items-center justify-center">
+  			<h1 className="font-bold text-3xl" dir="ltr">Server Error :/</h1>
+  		</div>
+  	)
   if (data)
     return (
       <div className="flex flex-col gap-5">

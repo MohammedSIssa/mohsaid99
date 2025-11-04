@@ -1,37 +1,37 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 
-import Stats from "./pages/Stats";
-import Stat from "./pages/Stat";
+import Stats from "./components/pages/Stats";
+import Stat from "./components/pages/Stat";
 
-import Special from "./pages/Special";
-import SpecialBox from "./pages/SpecialBox";
+import Special from "./components/pages/Special";
+import SpecialBox from "./components/pages/SpecialBox";
 
-import Homepage from "./pages/Homepage";
+import Homepage from "./components/pages/Homepage";
 import NavBar from "./components/Layout/NavBar";
 import ErrorPage from "./components/Errors/ErrorPage";
 
-import { Admin } from "./pages/Admin/Admin";
+import { Admin } from "./components/pages/Admin/Admin";
 
 import "./custom.css";
-import AddPost from "./pages/Admin/AddPost";
-import AddStory from "./pages/Admin/AddStory";
-import UpdatePost from "./pages/Admin/UpdatePost";
-import UpdateStory from "./pages/Admin/UpdateStory";
+import AddPost from "./components/pages/Admin/AddPost";
+import AddStory from "./components/pages/Admin/AddStory";
+import UpdatePost from "./components/pages/Admin/UpdatePost";
+import UpdateStory from "./components/pages/Admin/UpdateStory";
 
-import Logs from "./pages/Admin/Logs";
+import Logs from "./components/pages/Admin/Logs";
 
 import { useState } from "react";
 import { UserContext } from "./context/UserContext";
 
-import Login from "./pages/Login";
+import Login from "./components/pages/Login";
 
 import { loadUser } from "./scripts/localStorage";
 
-import RequireAuth from "./pages/RequireAuth";
-import RequireUnAuth from "./pages/RequireUnAuth";
+import RequireAuth from "./components/pages/RequireAuth";
+import RequireUnAuth from "./components/pages/RequireUnAuth";
 
-import ServerContent from "./pages/ServerContent";
-import Content from "./pages/Content";
+import ServerContent from "./components/pages/ServerContent";
+import Content from "./components/pages/Content";
 
 function App() {
   const [user, setUser] = useState(loadUser);

@@ -10,8 +10,8 @@ export async function fetchWithCache(url) {
 
   console.log("Fetching from API:", url);
   const res = await fetch(url);
+  if(!res.ok) return [] 
   const data = await res.json();
-
   cache.set(url, data);
   return data;
 }

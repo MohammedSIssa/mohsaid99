@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import Post from "../../components/Post/Post";
+import Post from "../../../components/Post/Post";
 
 import { useParams } from "react-router-dom";
 
-import { API, DEV_API } from "../../scripts/globals";
+import { API, DEV_API } from "../../../scripts/globals";
 
-import { clearData } from "../../scripts/localStorage";
+import { clearData } from "../../../scripts/localStorage";
 
 export default function UpdatePost() {
   const [title, setTitle] = useState("");

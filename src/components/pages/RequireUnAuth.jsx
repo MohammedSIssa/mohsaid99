@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 import { Outlet, useNavigate } from "react-router-dom";
 
 export default function RequireUnAuth({ role }) {
@@ -8,7 +8,9 @@ export default function RequireUnAuth({ role }) {
 
   useEffect(() => {
     if (user?.username || user?.role) {
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 1500);
     }
   }, [user, role, navigate]);
 

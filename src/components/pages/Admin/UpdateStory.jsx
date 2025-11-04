@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { API, DEV_API } from "../../scripts/globals";
+import { API, DEV_API } from "../../../scripts/globals";
 
 export default function UpdateStory() {
   const [title, setTitle] = useState("");

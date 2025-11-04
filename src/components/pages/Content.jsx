@@ -1,20 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 
 import { useOutletContext } from "react-router-dom";
 
-import { API, DEV_API } from "../scripts/globals";
-import { logger } from "../scripts/logger";
+import { API, DEV_API } from "../../scripts/globals";
+import { logger } from "../../scripts/logger";
 
-import LoadingEvents from "../components/Loaders/LoadingEvents";
-import ErrorLoadingEvents from "../components/Errors/ErrorLoadingStories";
-import ScrollToTopButton from "../components/Layout/ScrollToTop";
+import LoadingEvents from "../Loaders/LoadingEvents";
+import ErrorLoadingEvents from "../Errors/ErrorLoadingStories";
+import ScrollToTopButton from "../Layout/ScrollToTop";
 
 import AddPost from "./Admin/AddPost";
-import Post from "../components/Post/Post";
+import Post from "../Post/Post";
 
-import { fetchWithCache } from "../scripts/cache";
+import { fetchWithCache } from "../../scripts/cache";
 
 const Content = () => {
   const { user } = useContext(UserContext);
@@ -33,11 +33,7 @@ const Content = () => {
   useEffect(() => {
     async function getData() {
       setIsLoading(true);
-      // const isLatestStory = latestStory === +id;
       try {
-        // const raw = isLatestStory
-        //   ? await fetchWithCache(API_CALL)
-        //   : await fetchWithLocalStorageCache(API_CALL);
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
         if (

@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 import { Outlet, useNavigate } from "react-router-dom";
 
 export default function RequireAuth({ role }) {
