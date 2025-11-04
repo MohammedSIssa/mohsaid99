@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { API, DEV_API } from "../../../scripts/globals";
+import { API, DEV_API, API_KEY } from "../../../scripts/globals";
 
 export default function AddStory() {
   const [period, setPeriod] = useState("");
@@ -21,7 +21,7 @@ export default function AddStory() {
     e.preventDefault();
     try {
       setFeedback("Adding data..");
-      const res = await fetch(API_CALL, {
+      const res = await fetch(API_CALL + API_KEY, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

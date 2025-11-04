@@ -3,7 +3,7 @@ import Post from "../../../components/Post/Post";
 
 import { useParams } from "react-router-dom";
 
-import { API, DEV_API } from "../../../scripts/globals";
+import { API, DEV_API, API_KEY } from "../../../scripts/globals";
 
 export default function UpdatePost() {
   const [title, setTitle] = useState("");
@@ -29,7 +29,7 @@ export default function UpdatePost() {
       setFeedback("Fetching post from database..");
       setIsLoading(true);
 
-      const res = await fetch(API_CALL);
+      const res = await fetch(API_CALL + API_KEY);
       const data = await res.json();
 
       setTitle(data.title);
@@ -62,7 +62,7 @@ export default function UpdatePost() {
       import.meta.env.MODE !== "development"
         ? `${API}/update/posts/${id}`
         : `${DEV_API}/update/posts/${id}`;
-    const res = await fetch(API_CALL, {
+    const res = await fetch(API_CALL+ API_KEY, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -3,7 +3,7 @@ import { MdEdit } from "react-icons/md";
 
 import { NavLink } from "react-router-dom";
 
-import { API, DEV_API } from "../../scripts/globals";
+import { API, DEV_API, API_KEY } from "../../scripts/globals";
 
 export default function AdminControls({ postId }) {
   const API_CALL =
@@ -16,7 +16,7 @@ export default function AdminControls({ postId }) {
     );
     console.log(confirmDelete);
     if (confirmDelete) {
-      const res = await fetch(API_CALL, {
+      const res = await fetch(API_CALL + API_KEY, {
         method: "delete",
       });
       if (res.ok) {

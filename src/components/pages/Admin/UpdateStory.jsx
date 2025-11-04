@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { API, DEV_API } from "../../../scripts/globals";
+import { API, DEV_API, API_KEY } from "../../../scripts/globals";
 
 export default function UpdateStory() {
   const [title, setTitle] = useState("");
@@ -21,12 +21,12 @@ export default function UpdateStory() {
       : `${DEV_API}/story/${id}`;
 
   useEffect(() => {
-    async function handleFetchingWeekData() {
+    async function fetchStoryData() {
       try {
-        console.log(API_CALL);
+        console.log(API_CALL + API_KEY);
         setFeedback("Fetching story data..");
         setLoading(true);
-        const res = await fetch(API_CALL);
+        const res = await fetch(API_CALL + API_KEY);
         if (res.ok) {
           const data = await res.json();
           setTitle(data.title);
@@ -45,14 +45,14 @@ export default function UpdateStory() {
       }
     }
 
-    handleFetchingWeekData();
+    fetchStoryData();
   }, [id, API_CALL]);
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       setFeedback("");
-      const res = await fetch(`${API}/update/story/${id}`, {
+      const res = await fetch(`${API}/update/story/${id}${API_KEY}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, summary, year, special, type, count }),
@@ -148,7 +148,7 @@ export default function UpdateStory() {
           onChange={(e) => setSpecial(e.target.checked)}
         />
         <label htmlFor="up_story_isSpecial" dir="ltr">
-          Golden Week?
+          Golden Story?
         </label>
       </div>
       <button
