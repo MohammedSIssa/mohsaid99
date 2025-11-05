@@ -42,8 +42,8 @@ export default function Post({
         }
       >
         {user?.role === 1 && !fromAdmin && <AdminControls postId={postId} />}
-        {title.trim() !== "" && <PostTitle text={title} />}
         {postId > 436 && <PostTime postedAt={postedAt} />}
+        {title.trim() !== "" && <PostTitle text={title} />}
         {body.trim() !== "" && (
           <PostBody body={body} showAllText={images.length === 0} />
         )}
