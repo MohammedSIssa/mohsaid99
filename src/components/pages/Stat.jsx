@@ -1,7 +1,7 @@
 import { stats } from "./stats-data";
 import { useParams } from "react-router-dom";
 
-import { useOutletContext } from 'react-router-dom'
+import { useOutletContext } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -11,6 +11,8 @@ import { Doughnut, Line } from "react-chartjs-2";
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import { logger } from "../../scripts/logger";
+
+import { useNavigate } from "react-router-dom";
 
 defaults.maintainAspectRatio = false;
 defaults.responsive = true;
@@ -30,10 +32,12 @@ const Stat = ({ latest = false }) => {
 
   const { latestStory } = useOutletContext();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     // setData(stats.find((stat) => stat.count == id));
-    if(!latest) setData(stats.find((stat) => stat.count == id));
-    if(latest) setData(stats.find((stat) => stat.count == latestStory))
+    if (!latest) setData(stats.find((stat) => stat.count == id));
+    if (latest) navigate(`/stats/${latestStory}`);
 
     async function log() {
       if (
@@ -45,7 +49,7 @@ const Stat = ({ latest = false }) => {
     }
 
     log();
-  }, [id, user?.username, latest, latestStory]);
+  }, [id, user?.username, latest, latestStory, navigate]);
 
   return (
     <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10">

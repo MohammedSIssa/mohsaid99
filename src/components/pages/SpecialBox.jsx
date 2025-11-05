@@ -17,6 +17,8 @@ import { fetchWithCache } from "../../scripts/cache";
 
 import { useAuth } from "../hooks/useAuth";
 
+import { useNavigate } from "react-router-dom";
+
 export default function SpecialBox({ latest = false }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -25,6 +27,8 @@ export default function SpecialBox({ latest = false }) {
   const { user } = useAuth();
   const { id } = useParams();
 
+  const navigate = useNavigate();
+
   const { latestStory } = useOutletContext();
 
   const API_CALL =
@@ -32,31 +36,11 @@ export default function SpecialBox({ latest = false }) {
       ? `${API}/special/${id}`
       : `${DEV_API}/special/${id}`;
 
-  useEffect(() => {
-    async function getLatest() {
-      try {
-        setLoading(true);
-        const raw = await fetchWithCache(`${API}/special/${latestStory}`);
-        setData(raw);
-
-        if (
-          import.meta.env.MODE !== "development" &&
-          user?.username !== "mohsaid99"
-        ) {
-          await logger(user?.username, `Special | ${latestStory}`);
-        }
-      } catch (err) {
-        setData(null);
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
+    useEffect(() => {
     if (latest) {
-      getLatest();
+      navigate(`/special/${latestStory}`);
     }
-  }, [id, user?.username, latestStory, latest]);
+  }, [latest, latestStory, navigate]);
 
   useEffect(() => {
     async function getSpecials() {

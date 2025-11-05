@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 import { useOutletContext } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+
 import { API, DEV_API } from "../../scripts/globals";
 import { logger } from "../../scripts/logger";
 
@@ -22,6 +24,8 @@ const Content = ({ latest = false }) => {
   const { id } = useParams();
   const { type, latestStory } = useOutletContext();
 
+  const navigate = useNavigate();
+
   let API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/${type}/${id}`
@@ -32,28 +36,10 @@ const Content = ({ latest = false }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function getLatestData() {
-      setIsLoading(true);
-      try {
-        const raw = await fetchWithCache(`${API}/${type}/${latestStory}`);
-        setData(raw);
-        if (
-          import.meta.env.MODE !== "development" &&
-          user?.username !== "mohsaid99"
-        ) {
-          await logger(user?.username, `${type} | ${latestStory}`);
-        }
-      } catch {
-        setData(null);
-        setError("Error Getting data");
-      } finally {
-        setIsLoading(false);
-      }
-    }
     if (latest) {
-      getLatestData();
+      navigate(`/${type}s/${latestStory}`);
     }
-  }, [id, user?.username, type, latestStory, latest]);
+  }, [latest, latestStory, navigate, type]);
 
   useEffect(() => {
     async function getData() {
@@ -84,6 +70,7 @@ const Content = ({ latest = false }) => {
   if (data)
     return (
       <>
+        {latestStory}
         {data.map((item, idx) => (
           <Post
             key={idx}
