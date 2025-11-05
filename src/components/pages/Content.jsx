@@ -21,16 +21,16 @@ const Content = ({ latest = false }) => {
   const { user } = useAuth();
   const { id } = useParams();
   const { type, latestStory } = useOutletContext();
-  
+
   let API_CALL =
     import.meta.env.MODE !== "development"
-     	? `${API}/${type}/${id}`
+      ? `${API}/${type}/${id}`
       : `${DEV_API}/${type}/${id}`;
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   useEffect(() => {
     async function getLatestData() {
       setIsLoading(true);
@@ -50,10 +50,10 @@ const Content = ({ latest = false }) => {
         setIsLoading(false);
       }
     }
-    if(latest) {
-    	getLatestData();
+    if (latest) {
+      getLatestData();
     }
-  }, [id, user?.username, type, latestStory]);
+  }, [id, user?.username, type, latestStory, latest]);
 
   useEffect(() => {
     async function getData() {
@@ -74,10 +74,10 @@ const Content = ({ latest = false }) => {
         setIsLoading(false);
       }
     }
-    if(!latest) {
-    	getData();
+    if (!latest) {
+      getData();
     }
-  }, [id, API_CALL, user?.username, type]);
+  }, [id, API_CALL, user?.username, type, latest]);
 
   if (isLoading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;
@@ -95,7 +95,9 @@ const Content = ({ latest = false }) => {
             secret={item.secret}
           />
         ))}
-        {user?.role === 1 && <AddPost id={id} fromType={type} />}
+        {user?.role === 1 && (
+          <AddPost id={latest ? latestStory : id} fromType={type} />
+        )}
         <ScrollToTopButton />
       </>
     );

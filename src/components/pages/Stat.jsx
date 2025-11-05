@@ -45,7 +45,7 @@ const Stat = ({ latest = false }) => {
     }
 
     log();
-  }, [id, user?.username]);
+  }, [id, user?.username, latest, latestStory]);
 
   return (
     <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10">

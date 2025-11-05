@@ -6,7 +6,7 @@ import ErrorLoadingEvents from "../../components/Errors/ErrorLoadingStories";
 import ScrollToTopButton from "../../components/ScrollToTop";
 import AddPost from "./Admin/AddPost";
 
-import { useOutletContext } from 'react-router-dom'
+import { useOutletContext } from "react-router-dom";
 
 import { API, DEV_API } from "../../scripts/globals";
 import { logger } from "../../scripts/logger";
@@ -24,14 +24,14 @@ export default function SpecialBox({ latest = false }) {
 
   const { user } = useAuth();
   const { id } = useParams();
-  
+
   const { latestStory } = useOutletContext();
 
   const API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/special/${id}`
       : `${DEV_API}/special/${id}`;
-      
+
   useEffect(() => {
     async function getLatest() {
       try {
@@ -52,12 +52,12 @@ export default function SpecialBox({ latest = false }) {
         setLoading(false);
       }
     }
-		
-		if(latest) {
-			getLatest();
-		}
-  }, [id, user?.username, latestStory]);
-  
+
+    if (latest) {
+      getLatest();
+    }
+  }, [id, user?.username, latestStory, latest]);
+
   useEffect(() => {
     async function getSpecials() {
       try {
@@ -78,11 +78,11 @@ export default function SpecialBox({ latest = false }) {
         setLoading(false);
       }
     }
-		
-		if(!latest) {
-			getSpecials();
-		}
-  }, [id, user?.username, API_CALL]);
+
+    if (!latest) {
+      getSpecials();
+    }
+  }, [id, user?.username, API_CALL, latest]);
 
   if (loading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;
@@ -98,7 +98,9 @@ export default function SpecialBox({ latest = false }) {
             postId={item.id}
           />
         ))}
-        {user?.role === 1 && <AddPost id={id} fromType={"special"} />}
+        {user?.role === 1 && (
+          <AddPost id={latest ? latestStory : id} fromType={"special"} />
+        )}
         <ScrollToTopButton />
       </>
     );
