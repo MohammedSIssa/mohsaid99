@@ -80,6 +80,7 @@ const Content = ({ latest = false }) => {
             postId={item.id}
             special={item.special}
             secret={item.secret}
+            postedAt={item.iat}
           />
         ))}
         {user?.role === 1 && (

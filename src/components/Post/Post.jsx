@@ -4,6 +4,8 @@ import PostBody from "./PostBody";
 
 import { useAuth } from "../hooks/useAuth";
 
+import PostTime from "./PostTime";
+
 import AdminControls from "./AdminControls";
 
 export default function Post({
@@ -13,6 +15,7 @@ export default function Post({
   images,
   special,
   secret,
+  postedAt,
   fromAdmin = false,
 }) {
   const { user } = useAuth();
@@ -40,6 +43,7 @@ export default function Post({
       >
         {user?.role === 1 && !fromAdmin && <AdminControls postId={postId} />}
         {title.trim() !== "" && <PostTitle text={title} />}
+        {postId > 436 && <PostTime postedAt={postedAt} />}
         {body.trim() !== "" && (
           <PostBody body={body} showAllText={images.length === 0} />
         )}

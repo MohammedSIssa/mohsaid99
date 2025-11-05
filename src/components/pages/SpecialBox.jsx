@@ -80,6 +80,7 @@ export default function SpecialBox({ latest = false }) {
             body={item.body}
             images={item.images}
             postId={item.id}
+            postedAt={item.iat}
           />
         ))}
         {user?.role === 1 && (
