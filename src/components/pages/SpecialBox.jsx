@@ -6,7 +6,7 @@ import ErrorLoadingEvents from "../../components/Errors/ErrorLoadingStories";
 import ScrollToTopButton from "../../components/ScrollToTop";
 import AddPost from "./Admin/AddPost";
 
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 
 import { API, DEV_API } from "../../scripts/globals";
 import { logger } from "../../scripts/logger";
@@ -29,18 +29,12 @@ export default function SpecialBox({ latest = false }) {
 
   const navigate = useNavigate();
 
-  const { latestStory } = useOutletContext();
+  // const { latestStory } = useOutletContext();
 
   const API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/special/${id}`
       : `${DEV_API}/special/${id}`;
-
-    useEffect(() => {
-    if (latest) {
-      navigate(`/special/${latestStory}`);
-    }
-  }, [latest, latestStory, navigate]);
 
   useEffect(() => {
     async function getSpecials() {
@@ -68,6 +62,12 @@ export default function SpecialBox({ latest = false }) {
     }
   }, [id, user?.username, API_CALL, latest]);
 
+  useEffect(() => {
+    if (latest && data) {
+      navigate(`/special/${data.length}`);
+    }
+  }, [latest, navigate, data]);
+
   if (loading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;
   if (data)
@@ -84,7 +84,7 @@ export default function SpecialBox({ latest = false }) {
           />
         ))}
         {user?.role === 1 && (
-          <AddPost id={latest ? latestStory : id} fromType={"special"} />
+          <AddPost id={latest ? data.length : id} fromType={"special"} />
         )}
         <ScrollToTopButton />
       </>

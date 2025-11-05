@@ -36,12 +36,6 @@ const Content = ({ latest = false }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (latest) {
-      navigate(`/${type}s/${latestStory}`);
-    }
-  }, [latest, latestStory, navigate, type]);
-
-  useEffect(() => {
     async function getData() {
       setIsLoading(true);
       try {
@@ -65,12 +59,15 @@ const Content = ({ latest = false }) => {
     }
   }, [id, API_CALL, user?.username, type, latest]);
 
+  useEffect(() => {
+    if (latest) navigate(`/${type}s/${latestStory}`);
+  });
+
   if (isLoading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;
   if (data)
     return (
       <>
-        {latestStory}
         {data.map((item, idx) => (
           <Post
             key={idx}
@@ -84,7 +81,7 @@ const Content = ({ latest = false }) => {
           />
         ))}
         {user?.role === 1 && (
-          <AddPost id={latest ? latestStory : id} fromType={type} />
+          <AddPost id={latest ? data.length : id} fromType={type} />
         )}
         <ScrollToTopButton />
       </>
