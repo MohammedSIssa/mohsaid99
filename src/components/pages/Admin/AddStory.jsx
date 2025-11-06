@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-import { API, DEV_API, API_KEY } from "../../../scripts/globals";
+import { API, DEV_API } from "../../../scripts/globals";
+
+import { useAuth } from "../../hooks/useAuth";
 
 export default function AddStory() {
   const [period, setPeriod] = useState("");
@@ -9,6 +11,8 @@ export default function AddStory() {
   const [weekCount, setWeekCount] = useState("");
   const [isSpecial, setIsSpecial] = useState(false);
   const [type, setType] = useState("week");
+
+  const { user } = useAuth();
 
   const API_CALL =
     import.meta.env.MODE !== "development"
@@ -21,9 +25,12 @@ export default function AddStory() {
     e.preventDefault();
     try {
       setFeedback("Adding data..");
-      const res = await fetch(API_CALL + API_KEY, {
+      const res = await fetch(API_CALL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.apikey}`,
+        },
         body: JSON.stringify({
           title: period,
           year,

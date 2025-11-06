@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 
 import LoadingLogs from "../../../components/Loaders/LoadingLogs";
 
-import { fetchWithCache } from "../../../scripts/cache";
+// import { fetchWithCache } from "../../../scripts/cache";
+
+import { useAuth } from "../../hooks/useAuth";
 
 const Logs = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const { user } = useAuth();
 
   const API_CALL =
     import.meta.env.MODE !== "development" ? `${API}/logs` : `${DEV_API}/logs`;
@@ -17,8 +21,12 @@ const Logs = () => {
     async function getLogs() {
       try {
         setLoading(true);
-        const res = await fetchWithCache(API_CALL);
-        setData(res);
+        const res = await fetch(API_CALL, {
+          method: "GET",
+          headers: { Authorization: `Bearer ${user.apikey}` },
+        });
+        const raw = await res.json();
+        setData(raw);
       } catch (err) {
         console.error(err);
         setError(err);
@@ -28,7 +36,7 @@ const Logs = () => {
     }
 
     getLogs();
-  }, [API_CALL]);
+  }, [API_CALL, user.apikey]);
 
   if (loading) return <LoadingLogs />;
   if (error) return <h1>Error getting logs</h1>;
@@ -37,20 +45,24 @@ const Logs = () => {
   if (data.length > 0) {
     return (
       <table dir="ltr" className="mb-5">
-        <tr>
-          <th>Username</th>
-          <th>Details</th>
-          <th>URL</th>
-        </tr>
-        {data.map((log, idx) => (
-          <tr key={idx}>
-            <td>{log.username}</td>
-            <td dir="ltr">
-              <small>{log.details}</small>
-            </td>
-            <td>{log.visited}</td>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Details</th>
+            <th>URL</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {data.map((log, idx) => (
+            <tr key={idx}>
+              <td>{log.username}</td>
+              <td dir="ltr">
+                <small>{log.details}</small>
+              </td>
+              <td>{log.visited}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     );
   }

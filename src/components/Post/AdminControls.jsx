@@ -3,9 +3,12 @@ import { MdEdit } from "react-icons/md";
 
 import { NavLink } from "react-router-dom";
 
-import { API, DEV_API, API_KEY } from "../../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
+
+import { useAuth } from "../hooks/useAuth";
 
 export default function AdminControls({ postId }) {
+  const { user } = useAuth();
   const API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/posts/delete/${postId}`
@@ -16,8 +19,11 @@ export default function AdminControls({ postId }) {
     );
     console.log(confirmDelete);
     if (confirmDelete) {
-      const res = await fetch(API_CALL + API_KEY, {
+      const res = await fetch(API_CALL, {
         method: "delete",
+        headers: {
+          Authorization: `Bearer ${user.apikey}`,
+        },
       });
       if (res.ok) {
         location.reload();

@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { API, DEV_API, API_KEY } from "../../../scripts/globals";
+import { API, DEV_API } from "../../../scripts/globals";
+
+import { useAuth } from "../../hooks/useAuth";
 
 export default function UpdateStory() {
   const [title, setTitle] = useState("");
@@ -13,6 +15,8 @@ export default function UpdateStory() {
   const [loading, setLoading] = useState(true);
   const [feedback, setFeedback] = useState("");
 
+  const { user } = useAuth();
+
   const { id } = useParams();
 
   const API_CALL =
@@ -23,10 +27,13 @@ export default function UpdateStory() {
   useEffect(() => {
     async function fetchStoryData() {
       try {
-        console.log(API_CALL + API_KEY);
         setFeedback("Fetching story data..");
         setLoading(true);
-        const res = await fetch(API_CALL + API_KEY);
+        const res = await fetch(API_CALL, {
+          headers: {
+            Authorization: `Bearer ${user.apikey}`,
+          },
+        });
         if (res.ok) {
           const data = await res.json();
           setTitle(data.title);
@@ -46,15 +53,18 @@ export default function UpdateStory() {
     }
 
     fetchStoryData();
-  }, [id, API_CALL]);
+  }, [id, API_CALL, user.apikey]);
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       setFeedback("");
-      const res = await fetch(`${API}/update/story/${id}${API_KEY}`, {
+      const res = await fetch(`${API}/update/story/${id}`, {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.apikey}`,
+        },
         body: JSON.stringify({ title, summary, year, special, type, count }),
       });
       if (!res.ok) {
