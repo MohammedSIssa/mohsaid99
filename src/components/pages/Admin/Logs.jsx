@@ -36,7 +36,7 @@ const Logs = () => {
 
   if (data.length > 0) {
     return (
-      <table dir="ltr">
+      <table dir="ltr" className="mb-5">
         <tr>
           <th>Username</th>
           <th>Details</th>
