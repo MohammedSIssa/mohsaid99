@@ -31,7 +31,7 @@ const Content = ({ latest = false }) => {
       ? `${API}/${type}/${id}`
       : `${DEV_API}/${type}/${id}`;
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -41,6 +41,7 @@ const Content = ({ latest = false }) => {
       try {
         const raw = await fetchWithCache(API_CALL);
         setData(raw);
+        if (latest) navigate(`/${type}s/${latestStory}`);
         if (
           import.meta.env.MODE !== "development" &&
           user?.username !== "mohsaid99"
@@ -54,14 +55,8 @@ const Content = ({ latest = false }) => {
         setIsLoading(false);
       }
     }
-    if (!latest) {
-      getData();
-    }
-  }, [id, API_CALL, user?.username, type, latest]);
-
-  useEffect(() => {
-    if (latest) navigate(`/${type}s/${latestStory}`);
-  });
+    getData();
+  }, [id, API_CALL, user?.username, type, latest, navigate, latestStory]);
 
   if (isLoading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;

@@ -16,7 +16,7 @@ import { useAuth } from "./hooks/useAuth";
 const NavBar = () => {
   const { user } = useAuth();
   return (
-    <div className="navbar flex items-center gap-5 fixed bottom-0 w-full justify-center md:top-0 md:right-0 md:translate-x-0 h-fit md:w-fit md:m-4 border-0 border-t md:border p-4 md:rounded-xl">
+    <div className="navbar flex items-center gap-5 fixed bottom-0 w-full justify-center md:top-0 md:right-0 md:translate-x-0 h-fit md:w-fit md:m-4 border-0 border-t md:border p-4 md:rounded-xl md:shadow-xl md:shadow-zinc-900 z-50">
       <NavLink to={"/"}>
         <FaHome size={30} />
       </NavLink>
