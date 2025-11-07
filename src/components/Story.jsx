@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-import { API, DEV_API, API_KEY } from "../scripts/globals";
+import { API, DEV_API } from "../scripts/globals";
 
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
@@ -19,8 +19,9 @@ export default function Story({ item, idx }) {
   async function deleteStory() {
     const confirmDelete = window.confirm(`Delete story?`);
     if (confirmDelete) {
-      const res = await fetch(API_CALL + API_KEY, {
+      const res = await fetch(API_CALL, {
         method: "DELETE",
+        headers: { Authorization: `Bearer: ${user.apikey}` },
       });
 
       if (res.ok) {

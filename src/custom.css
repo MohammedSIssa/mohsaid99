@@ -162,7 +162,7 @@ a:hover {
 }
 
 .spinner {
-  animation: spin infinite 3s ease-in-out;
+  animation: spin infinite 1.5s linear;
 }
 
 @keyframes spin {
@@ -170,8 +170,8 @@ a:hover {
   100% {
     transform: rotate(0deg) scale(1);
   }
-  50% {
-    transform: rotate(360deg) scale(1.1);
+  100% {
+    transform: rotate(360deg) scale(1);
   }
 }
 

@@ -6,7 +6,7 @@ export default function ImagesSlider({ images, showImageSrcUnder = false }) {
   return (
     <div
       ref={sliderRef}
-      className="slider w-full flex space-x-5 h-fit overflow-x-auto p-5 overflow-y-hidden rounded-xl"
+      className="slider w-full flex justify-centerspace-x-5 h-fit overflow-x-auto p-5 overflow-y-hidden rounded-xl"
     >
       {images.map((image, idx) => (
         <LazyLoadedSliderImage

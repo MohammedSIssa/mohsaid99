@@ -24,6 +24,10 @@ export default function UpdateStory() {
       ? `${API}/story/${id}`
       : `${DEV_API}/story/${id}`;
 
+  const PUT_API_CALL =
+    import.meta.env.MODE !== "development"
+      ? `${API}/update/story/${id}`
+      : `${DEV_API}/update/story/${id}`;
   useEffect(() => {
     async function fetchStoryData() {
       try {
@@ -59,7 +63,7 @@ export default function UpdateStory() {
     e.preventDefault();
     try {
       setFeedback("");
-      const res = await fetch(`${API}/update/story/${id}`, {
+      const res = await fetch(PUT_API_CALL, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
