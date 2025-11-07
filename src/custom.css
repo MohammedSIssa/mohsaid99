@@ -37,6 +37,10 @@
 
   --failure-login-border-color: #9a2f2f;
   --failure-login-bg-color: #3d0e0e;
+
+  --secret-post-bg-color: #2e050c;
+  --secret-post-font-color: #f7deb6;
+  
 }
 
 * {

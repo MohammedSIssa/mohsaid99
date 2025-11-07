@@ -34,9 +34,9 @@ export default function Post({
               }
             : secret && user?.role
             ? {
-                backgroundColor: "#2e050c",
-                color: "#f7deb6",
-                borderColor: "#f7deb6",
+                backgroundColor: "var(--secret-post-bg-color)",
+                color: "var(--secret-post-font-color)",
+                borderColor: "var(--secret-post-border-color)",
               }
             : {}
         }
