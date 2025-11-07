@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { saveUser } from "../../scripts/localStorage";
 
-import { API } from "../../scripts/globals";
+import { API, DEV_API } from "../../scripts/globals";
 
 import { useAuth } from "../hooks/useAuth";
 
@@ -11,6 +11,11 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [logginIn, setLogginIn] = useState(false);
+
+  const API_CALL =
+    import.meta.env.MODE !== "development"
+      ? `${API}/login`
+      : `${DEV_API}/login`;
 
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
@@ -25,7 +30,7 @@ export default function Login() {
       try {
         setLogginIn(true);
         setMessage("");
-        const response = await fetch(`${API}/login`, {
+        const response = await fetch(API_CALL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username, password }),
