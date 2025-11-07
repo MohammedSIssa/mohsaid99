@@ -44,15 +44,15 @@ const Logs = () => {
 
   if (data.length > 0) {
     return (
-      <table dir="ltr" className="mb-5">
-        <thead>
+      <table className="pb-5" dir="ltr">
+        <thead dir="ltr">
           <tr>
             <th>Username</th>
             <th>Details</th>
             <th>URL</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody dir="ltr">
           {data.map((log, idx) => (
             <tr key={idx}>
               <td>{log.username}</td>

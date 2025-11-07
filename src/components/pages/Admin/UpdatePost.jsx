@@ -186,6 +186,7 @@ export default function UpdatePost() {
         </label>
         <textarea
           dir="ltr"
+          name="images"
           type="text"
           value={images}
           onChange={(e) => setImages(e.target.value)}
@@ -203,7 +204,7 @@ export default function UpdatePost() {
           </label>
           <input
             type="checkbox"
-            id="add_post_special"
+            id="add_story_isSpecial"
             name="special"
             checked={special ?? false}
             value={special ?? false}
@@ -211,12 +212,12 @@ export default function UpdatePost() {
           />
         </div>
         <div className="flex gap-4 items-center justify-center" dir="ltr">
-          <label htmlFor="add_story_isSpecial" dir="ltr">
+          <label htmlFor="add_story_isSecret" dir="ltr">
             Secret Post?
           </label>
           <input
             type="checkbox"
-            id="add_post_secret"
+            id="add_story_isSecret"
             name="special"
             checked={secret ?? false}
             value={secret ?? false}

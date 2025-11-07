@@ -102,6 +102,8 @@ export default function UpdateStory() {
           value={type}
           onChange={(e) => setType(e.target.value)}
           className="bg-zinc-800 text-zinc-50 p-2 focus:border focus:outline-0 focus:border-zinc-600"
+          id="up_story_type"
+          name="up_story_type"
         >
           <option value="week">Week</option>
           <option value="goal">Goal</option>

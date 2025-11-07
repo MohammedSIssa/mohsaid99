@@ -187,7 +187,7 @@ export default function AddPost({ id = null, fromType = null }) {
           </label>
           <input
             type="checkbox"
-            id="add_post_special"
+            id="add_story_isSpecial"
             name="special"
             checked={special}
             value={special}
@@ -195,12 +195,12 @@ export default function AddPost({ id = null, fromType = null }) {
           />
         </div>
         <div className="flex gap-4 items-center justify-center" dir="ltr">
-          <label htmlFor="add_story_isSpecial" dir="ltr">
+          <label htmlFor="add_story_isSecret" dir="ltr">
             Secret Post?
           </label>
           <input
             type="checkbox"
-            id="add_post_secret"
+            id="add_story_isSecret"
             name="special"
             checked={secret}
             value={secret}
