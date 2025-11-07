@@ -39,7 +39,7 @@ const Special = () => {
 
   return (
     <div className="flex flex-col gap-5">
-      <Stories data={data} />
+      <Stories data={data} type={"special"} />
       <Outlet context={{ latestStory: data.length }} />
     </div>
   );

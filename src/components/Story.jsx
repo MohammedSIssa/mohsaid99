@@ -26,6 +26,7 @@ export default function Story({ item, idx }) {
 
       if (res.ok) {
         alert("Deleted story successfully");
+        location.reload();
       }
       if (!res.ok) {
         alert("Could not delete the story");

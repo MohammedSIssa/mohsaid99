@@ -4,14 +4,14 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import AddStoryBox from "./pages/Admin/AddStoryBox";
 
-const Stories = ({ data }) => {
+const Stories = ({ data, type }) => {
   const { user } = useContext(UserContext);
   return (
     <div
       className="stories mt-8 md:mt-18 border-0 border-b h-47 flex gap-8 items-center p-5 py-10 overflow-x-auto scroll-snap-x snap-mandatory scroll-smooth w-full"
       dir="rtl"
     >
-      {user?.role === 1 && <AddStoryBox />}
+      {user?.role === 1 && <AddStoryBox type={type} count={data.length + 1} />}
 
       {[...data].reverse().map((item, idx) => (
         <Story item={item} idx={idx} key={idx} />
