@@ -4,7 +4,7 @@ import { clearUser } from "../scripts/localStorage";
 import { BsCalendar2MinusFill } from "react-icons/bs";
 import { TbTargetArrow } from "react-icons/tb";
 import { HiMiniPencilSquare } from "react-icons/hi2";
-import { IoStatsChart } from "react-icons/io5";
+// import { IoStatsChart } from "react-icons/io5";
 import { FaHome } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
@@ -26,9 +26,9 @@ const NavBar = () => {
       <NavLink to={"/goals"}>
         <TbTargetArrow size={28} />
       </NavLink>
-      <NavLink to={"/stats"}>
+      {/* <NavLink to={"/stats"}>
         <IoStatsChart size={25} />
-      </NavLink>
+      </NavLink> */}
       <NavLink to={"/blogs"}>
         <HiMiniPencilSquare size={27} />
       </NavLink>
