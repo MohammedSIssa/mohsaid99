@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { API, DEV_API } from "../../../scripts/globals";
 
 import { useAuth } from "../../hooks/useAuth";
+
+import { useLocation } from "react-router-dom";
 
 export default function AddStory() {
   const [period, setPeriod] = useState("");
@@ -10,7 +12,14 @@ export default function AddStory() {
   const [summary, setSummary] = useState("");
   const [weekCount, setWeekCount] = useState("");
   const [isSpecial, setIsSpecial] = useState(false);
-  const [type, setType] = useState("week");
+  const [type, setType] = useState();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setType(location.state.type);
+    setWeekCount(location.state.count);
+  }, [location.state]);
 
   const { user } = useAuth();
 
@@ -72,6 +81,7 @@ export default function AddStory() {
         className="bg-zinc-800 text-zinc-50 p-2 focus:border focus:outline-0 focus:border-zinc-600"
         onChange={(e) => setType(e.target.value)}
         id="add_story_type"
+        value={type}
       >
         <option value={"week"}>Week</option>
         <option value={"goal"}>Goal</option>

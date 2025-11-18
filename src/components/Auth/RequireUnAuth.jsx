@@ -1,8 +1,12 @@
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import { Outlet, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function RequireUnAuth({ role }) {
+  const location = useLocation();
+  console.log(location.state.path);
+
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
