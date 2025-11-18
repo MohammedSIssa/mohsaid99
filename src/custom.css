@@ -4,60 +4,38 @@
 /* Week counter font family */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Logo font family */
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
-
-/* Quotes font family */
-@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Rakkas&display=swap");
-
 :root {
   --bg-color: #0e1217;
-  /* --bg-color: #19202a; */
+  --font-color: #dadada;
+  --font: "Playpen Sans Arabic", system-ui;
+
   --story-bg-color: #1c1f26;
   --gold-story-border-color: #fcd000;
   --gold-story-bg-color: #211b00;
-  --font-color: #dadada;
   --story-border-color: #424857;
   --story-count-color: #676c7a;
-  --finsied-goal-color: #004200;
-  --failed-goal-color: #660819;
-  --logo-font: "Dancing Script", system-ui;
-  --font: "Playpen Sans Arabic", system-ui;
   --story-count-font: Montserrat, system-ui;
-  --quote-bg-color: #19202a;
-  --quote-border: 10px double var(--story-count-color);
-  --quote-font: Rakkas, system-ui;
+
   --slider-bg-color: #161c24;
   --slider-border-color: #313643;
 
-  --golden-post-images-slider-bg: #1c1800;
-  --golden-post-images-slider-border:#c5a503;
-
-  --post-bg-color: #14191f;
-  --post-border-color: #2c3746;
-
   --success-login-border-color: #2f8f2f;
   --success-login-bg-color: #081c08;
-
   --failure-login-border-color: #9a2f2f;
   --failure-login-bg-color: #3d0e0e;
 
+  --post-bg-color: #14191f;
+  --post-border-color: #2c3746;
   --secret-post-bg-color: #2e050c;
   --secret-post-font-color: #f7deb6;
   --secret-post-border-color: #f7deb6;
+  --golden-post-images-slider-bg: #1c1800;
+  --golden-post-images-slider-border: #c5a503;
 }
 
 * {
   direction: rtl;
-  /* Mainly arabic content */
-
   text-wrap: pretty !important;
-}
-
-q {
-  background-color: var(--quote-bg-color);
-  border: var(--quote-border);
-  font-family: var(--quote-font);
 }
 
 [dir="ltr"] {
@@ -70,9 +48,7 @@ q {
 
 body {
   background-color: var(--bg-color);
-  /* background: radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0)); */
   font-family: var(--font);
-  /* overflow-x: hidden !important; */
   color: var(--font-color);
   max-width: 100vw;
 }
