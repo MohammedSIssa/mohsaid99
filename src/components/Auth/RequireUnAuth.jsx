@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 
 export default function RequireUnAuth({ role }) {
   const location = useLocation();
-  console.log(location.state.path);
 
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -13,10 +12,10 @@ export default function RequireUnAuth({ role }) {
   useEffect(() => {
     if (user?.username || user?.role) {
       setTimeout(() => {
-        navigate("/");
+        navigate(location?.state?.path ?? "/");
       }, 1500);
     }
-  }, [user, role, navigate]);
+  }, [user, role, navigate, location?.state?.path]);
 
   return <Outlet />;
 }

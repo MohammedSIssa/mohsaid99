@@ -254,6 +254,58 @@ iframe.shorts {
   border-color: var(--post-border-color);
 }
 
+.post:not(:has(img)) {
+  min-width: 500px;
+}
+
+.post.special {
+  border-width: 2px;
+}
+
+.post.special::before {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 50px;
+  height: 28px;
+  background-color: var(--gold-story-bg-color);
+  border-width: 2px;
+  border-color: var(--gold-story-border-color);
+  content: "✨";
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post.secret {
+  border-width: 2px;
+}
+
+.post.secret::before {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 50px;
+  height: 28px;
+  background-color: var(--secret-post-bg-color);
+  border-width: 2px;
+  border-color: var(--secret-post-border-color);
+  content: "🔒";
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width <= 768px) {
+  .post.secret,
+  .post.special {
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200, 200, 200);
