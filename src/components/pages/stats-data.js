@@ -41,8 +41,8 @@ export const stats = [
           value: "8",
         },
         {
-          label: "برمجة",
-          value: "6",
+          label: "شغل",
+          value: "5",
         },
         {
           label: "رياضة",
@@ -54,7 +54,7 @@ export const stats = [
         },
         {
           label: "مع العيلة",
-          value: "4",
+          value: "5",
         },
         {
           label: "فراغ",
@@ -66,22 +66,22 @@ export const stats = [
       data: [
         {
           label: "الأسبوع الأول",
-          goal: 15,
+          goal: 24,
           actual: 28,
         },
         {
           label: "الأسبوع الثاني",
-          goal: 17,
-          actual: null,
+          goal: 22,
+          actual: 18,
         },
         {
           label: "الأسبوع الثالث",
-          goal: 15,
+          goal: 25,
           actual: null,
         },
         {
           label: "الأسبوع الرابع",
-          goal: 18,
+          goal: 23,
           actual: null,
         },
       ],
