@@ -21,7 +21,7 @@ export default function Post({
   const { user } = useAuth();
   return (
     <div
-      className="flex items-center justify-center md:p-10 py-15"
+      className="flex items-center justify-center md:p-10 py-15 max-w-full"
       style={secret && !user?.role ? { display: "none" } : {}}
     >
       <div

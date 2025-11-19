@@ -15,7 +15,7 @@ export default function AddStoryBox({ type, count }) {
   }
 
   function handleSearch() {
-    navigate(`/${type}/${currentStory}`);
+    navigate(`/${type}${type !== 'special' ? "s" : ""}/${currentStory}`);
   }
 
   return (

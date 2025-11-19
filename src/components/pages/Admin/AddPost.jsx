@@ -70,7 +70,7 @@ export default function AddPost({ id = null, fromType = null }) {
     <div className="flex flex-col gap-10 items-center justify-center">
       <form
         method="POST"
-        className="flex flex-col gap-4 p-10 min-w-[300px] border rounded-xl max-w-[500px]"
+        className="flex flex-col gap-4 p-10 min-w-[300px] border border-l-0 border-r-0 md:border md:rounded-xl max-w-[500px]"
         style={{
           backgroundColor: "var(--story-bg-color)",
           borderColor: "var(--story-border-color)",

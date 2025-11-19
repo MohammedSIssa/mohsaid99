@@ -51,6 +51,7 @@ body {
   font-family: var(--font);
   color: var(--font-color);
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -282,6 +283,11 @@ iframe.shorts {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.post.secret .time-ago {
+  color: var(--secret-post-border-color);
+  opacity: 0.75;
 }
 
 @media (width <= 768px) {

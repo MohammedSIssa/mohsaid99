@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { clearUser } from "../scripts/localStorage";
 
 import { BsCalendar2MinusFill } from "react-icons/bs";
 import { TbTargetArrow } from "react-icons/tb";
@@ -11,8 +10,8 @@ import { FiLogIn } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 import { LuLogs } from "react-icons/lu";
 
+import { clearUser } from "../scripts/localStorage";
 import { useAuth } from "./hooks/useAuth";
-
 import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
