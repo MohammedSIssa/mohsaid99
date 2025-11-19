@@ -230,9 +230,17 @@ iframe.shorts {
   border: 1px solid var(--slider-border-color);
 }
 
+.post.special .slider,
+.post.secret .slider {
+  background-color: transparent;
+}
+
 .post.special .slider {
-  background-color: var(--golden-post-images-slider-bg);
   border: 2px solid var(--golden-post-images-slider-border);
+}
+
+.post.secret .slider {
+  border: 2px solid var(--secret-post-border-color);
 }
 
 .post {
