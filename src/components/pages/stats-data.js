@@ -77,7 +77,7 @@ export const stats = [
         {
           label: "الأسبوع الثالث",
           goal: 25,
-          actual: null,
+          actual: 32,
         },
         {
           label: "الأسبوع الرابع",

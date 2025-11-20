@@ -117,7 +117,7 @@ const Stat = ({ latest = false }) => {
                 y: {
                   beginAtZero: false,
                   min: 10,
-                  max: 30,
+                  max: 40,
                 },
                 x: {
                   offset: true,
