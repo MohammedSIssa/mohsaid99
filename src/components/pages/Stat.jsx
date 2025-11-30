@@ -52,8 +52,7 @@ const Stat = ({ latest = false }) => {
   }, [id, user?.username, latest, latestStory, navigate]);
 
   return (
-    <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10">
-      🛠️ هذه الصفحة قيد الانشاء 🛠️
+    <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10 pb-20">
       {data?.doughnut && (
         <div className="flex flex-wrap gap-5 items-center justify-center">
           <div className="h-[500px] chart p-10 rounded-2xl md:shadow-lg md:shadow-slate-800">
@@ -70,25 +69,6 @@ const Stat = ({ latest = false }) => {
                 plugins: {
                   title: {
                     text: "الروتين اليومي",
-                  },
-                },
-              }}
-            />
-          </div>
-          <div className="h-[500px] chart p-10 rounded-2xl md:shadow-lg md:shadow-slate-800">
-            <Doughnut
-              data={{
-                labels: data.doughnut.goal.map((d) => d.label),
-                datasets: [
-                  {
-                    data: data.doughnut.goal.map((d) => d.value),
-                  },
-                ],
-              }}
-              options={{
-                plugins: {
-                  title: {
-                    text: "الهدف",
                   },
                 },
               }}
@@ -119,9 +99,9 @@ const Stat = ({ latest = false }) => {
                   min: 10,
                   max: 40,
                 },
-                x: {
-                  offset: true,
-                },
+                // x: {
+                //   offset: true,
+                // },
               },
               plugins: {
                 title: {
