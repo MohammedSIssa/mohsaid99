@@ -66,20 +66,20 @@ export const stats = [
           value: 8,
         },
         {
-          label: "أكل",
-          value: 1,
+          label: "شغل",
+          value: 3,
         },
         {
-          label: "دراسة",
-          value: 3,
+          label: "مع الأهل",
+          value: 4,
+        },
+        {
+          label: "رياضة",
+          value: 0.5,
         },
         {
           label: "وقت فراغ",
-          value: 8,
-        },
-        {
-          label: "وقت شغل",
-          value: 3,
+          value: 8.5,
         },
       ],
     },

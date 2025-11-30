@@ -62,6 +62,13 @@ const Stat = ({ latest = false }) => {
                 datasets: [
                   {
                     data: data.doughnut.actual.map((d) => d.value),
+                    backgroundColor: [
+                      "#3b82f6",
+                      "#10b981",
+                      "#f59e0b",
+                      "#ef4444",
+                      "#8b5cf6",
+                    ],
                   },
                 ],
               }}
@@ -82,13 +89,39 @@ const Stat = ({ latest = false }) => {
             data={{
               labels: data.line.data.map((d) => d.label),
               datasets: [
-                {
-                  data: data.line.data.map((d) => d.goal),
-                  label: "الهدف",
-                },
+                // {
+                //   data: data.line.data.map((d) => d.goal),
+                //   label: "الهدف",
+
+                //   borderColor: "rgb(246 , 130, 59)", // line color
+                //   fill: true,
+                //   backgroundColor: function (context) {
+                //     const ctx = context.chart.ctx;
+                //     const gradient = ctx.createLinearGradient(0, 0, 0, 300); // vertical gradient
+                //     gradient.addColorStop(0, "rgba(246, 130, 59, 0.5)"); // top color
+                //     gradient.addColorStop(1, "rgba(246, 130, 59, 0)"); // bottom transparent
+                //     return gradient;
+                //   },
+                //   pointBackgroundColor: "rgb(246 , 130, 59)",
+                //   pointRadius: 4,
+                //   pointHoverRadius: 6,
+                // },
                 {
                   data: data.line.data.map((d) => d.actual),
-                  label: "الواقع",
+                  label: "الوقت - ساعات",
+
+                  borderColor: "rgb(59, 130, 246)", // line color
+                  fill: true,
+                  backgroundColor: function (context) {
+                    const ctx = context.chart.ctx;
+                    const gradient = ctx.createLinearGradient(0, 0, 0, 300); // vertical gradient
+                    gradient.addColorStop(0, "rgba(59, 130, 246, 0.5)"); // top color
+                    gradient.addColorStop(1, "rgba(59, 130, 246, 0)"); // bottom transparent
+                    return gradient;
+                  },
+                  pointBackgroundColor: "rgb(59, 130, 246)",
+                  pointRadius: 4,
+                  pointHoverRadius: 6,
                 },
               ],
             }}
