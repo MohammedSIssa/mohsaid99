@@ -52,16 +52,16 @@ const Stat = ({ latest = false }) => {
   }, [id, user?.username, latest, latestStory, navigate]);
 
   return (
-    <div className="p-10 flex flex-col items-center justify-center text-2xl font-bold gap-10 pb-20">
+    <div className="md:p-10 pt-10 flex flex-col items-center justify-center text-2xl font-bold gap-10 pb-30">
       {data?.doughnut && (
-        <div className="flex flex-wrap gap-5 items-center justify-center">
-          <div className="h-[500px] chart p-10 rounded-2xl md:shadow-lg md:shadow-slate-800">
+        <div className="w-full md:max-w-[600px] flex flex-wrap gap-5 items-center justify-center">
+          <div className="h-[600px] w-full chart p-10 border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl md:shadow-lg md:shadow-slate-800">
             <Doughnut
               data={{
-                labels: data.doughnut.actual.map((d) => d.label),
+                labels: data.doughnut.data.map((d) => d.label),
                 datasets: [
                   {
-                    data: data.doughnut.actual.map((d) => d.value),
+                    data: data.doughnut.data.map((d) => d.value),
                     backgroundColor: [
                       "#3b82f6",
                       "#10b981",
@@ -84,41 +84,25 @@ const Stat = ({ latest = false }) => {
         </div>
       )}
       {data?.line ? (
-        <div className="p-5 w-full h-[500px] chart rounded-2xl">
+        <div className="p-5 w-full h-[600px] chart border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl md:shadow-lg md:shadow-slate-800">
           <Line
             data={{
               labels: data.line.data.map((d) => d.label),
               datasets: [
-                // {
-                //   data: data.line.data.map((d) => d.goal),
-                //   label: "الهدف",
-
-                //   borderColor: "rgb(246 , 130, 59)", // line color
-                //   fill: true,
-                //   backgroundColor: function (context) {
-                //     const ctx = context.chart.ctx;
-                //     const gradient = ctx.createLinearGradient(0, 0, 0, 300); // vertical gradient
-                //     gradient.addColorStop(0, "rgba(246, 130, 59, 0.5)"); // top color
-                //     gradient.addColorStop(1, "rgba(246, 130, 59, 0)"); // bottom transparent
-                //     return gradient;
-                //   },
-                //   pointBackgroundColor: "rgb(246 , 130, 59)",
-                //   pointRadius: 4,
-                //   pointHoverRadius: 6,
-                // },
                 {
-                  data: data.line.data.map((d) => d.actual),
-                  label: "الوقت - ساعات",
+                  data: data.line.data.map((d) => d.value),
+                  label: "ساعات",
 
                   borderColor: "rgb(59, 130, 246)", // line color
                   fill: true,
-                  backgroundColor: function (context) {
-                    const ctx = context.chart.ctx;
-                    const gradient = ctx.createLinearGradient(0, 0, 0, 300); // vertical gradient
-                    gradient.addColorStop(0, "rgba(59, 130, 246, 0.5)"); // top color
-                    gradient.addColorStop(1, "rgba(59, 130, 246, 0)"); // bottom transparent
-                    return gradient;
-                  },
+                  backgroundColor: "rgba(59, 130, 246, 0.1)",
+                  // backgroundColor: function (context) {
+                  //   const ctx = context.chart.ctx;
+                  //   const gradient = ctx.createLinearGradient(0, 0, 0, 300); // vertical gradient
+                  //   gradient.addColorStop(0, "rgba(59, 130, 246, 0.5)"); // top color
+                  //   gradient.addColorStop(1, "rgba(59, 130, 246, 0)"); // bottom transparent
+                  //   return gradient;
+                  // },
                   pointBackgroundColor: "rgb(59, 130, 246)",
                   pointRadius: 4,
                   pointHoverRadius: 6,
@@ -129,7 +113,7 @@ const Stat = ({ latest = false }) => {
               scales: {
                 y: {
                   beginAtZero: false,
-                  min: 10,
+                  min: 0,
                   max: 40,
                 },
                 // x: {

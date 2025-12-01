@@ -1,11 +1,11 @@
 export const stats = [
   {
-    count: 2,
-    title: "نوفمبر",
+    count: 3,
+    title: "ديسمبر",
     year: 2025,
     type: "stat",
     doughnut: {
-      actual: [
+      data: [
         {
           label: "نوم",
           value: 8,
@@ -31,24 +31,80 @@ export const stats = [
     line: {
       data: [
         {
+          label: "",
+          value: 0,
+        },
+        {
           label: "الأسبوع الأول",
-          goal: 24,
-          actual: 28,
+          value: 5,
         },
         {
           label: "الأسبوع الثاني",
-          goal: 22,
-          actual: 18,
+          value: null,
         },
         {
           label: "الأسبوع الثالث",
-          goal: 25,
-          actual: 32,
+          value: null,
         },
         {
           label: "الأسبوع الرابع",
-          goal: 23,
-          actual: 38,
+          value: null,
+        },
+      ],
+    },
+    summary: "احصائيات شهر ديسمبر",
+  },
+  {
+    count: 2,
+    title: "نوفمبر",
+    year: 2025,
+    type: "stat",
+    summary: "احصائيات شهر نوفمبر",
+    doughnut: {
+      data: [
+        {
+          label: "نوم",
+          value: 8,
+        },
+        {
+          label: "شغل",
+          value: 8,
+        },
+        {
+          label: "مع الأهل",
+          value: 4,
+        },
+        {
+          label: "رياضة",
+          value: 1,
+        },
+        {
+          label: "وقت فراغ",
+          value: 3,
+        },
+      ],
+    },
+    line: {
+      data: [
+        {
+          label: "",
+          value: 0,
+        },
+        {
+          label: "الأسبوع الأول",
+          value: 28,
+        },
+        {
+          label: "الأسبوع الثاني",
+          value: 18,
+        },
+        {
+          label: "الأسبوع الثالث",
+          value: 32,
+        },
+        {
+          label: "الأسبوع الرابع",
+          value: 38,
         },
       ],
     },
@@ -58,9 +114,9 @@ export const stats = [
     title: "أكتوبر",
     year: 2025,
     type: "stat",
-    summary: "ديمو",
+    summary: "احصائيات شهر اكتوبر",
     doughnut: {
-      actual: [
+      data: [
         {
           label: "نوم",
           value: 8,
