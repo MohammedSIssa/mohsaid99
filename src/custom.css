@@ -33,6 +33,10 @@
   --golden-post-images-slider-border: #c5a503;
 }
 
+.currently-learning {
+  font-family: var(--story-count-font);
+}
+
 * {
   direction: rtl;
   text-wrap: pretty !important;

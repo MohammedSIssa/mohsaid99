@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import { BsCalendar2MinusFill } from "react-icons/bs";
 import { TbTargetArrow } from "react-icons/tb";
-import { HiMiniPencilSquare } from "react-icons/hi2";
+// import { HiMiniPencilSquare } from "react-icons/hi2";
 import { IoStatsChart } from "react-icons/io5";
 import { FaHome } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
@@ -31,9 +31,9 @@ const NavBar = () => {
       <NavLink to={"/stats"}>
         <IoStatsChart size={25} />
       </NavLink>
-      <NavLink to={"/blogs"}>
+      {/* <NavLink to={"/blogs"}>
         <HiMiniPencilSquare size={27} />
-      </NavLink>
+      </NavLink> */}
       {user?.username === undefined && (
         <NavLink to={"/login"} state={{ path: location.pathname }}>
           <FiLogIn size={28} />

@@ -36,7 +36,7 @@ export const stats = [
         },
         {
           label: "الأسبوع الأول",
-          value: 5,
+          value: 12,
         },
         {
           label: "الأسبوع الثاني",
@@ -72,11 +72,11 @@ export const stats = [
         },
         {
           label: "مع الأهل",
-          value: 4,
+          value: 4.75,
         },
         {
           label: "رياضة",
-          value: 1,
+          value: 0.25,
         },
         {
           label: "وقت فراغ",
@@ -131,11 +131,11 @@ export const stats = [
         },
         {
           label: "رياضة",
-          value: 0.5,
+          value: 0.25,
         },
         {
           label: "وقت فراغ",
-          value: 8.5,
+          value: 8.75,
         },
       ],
     },
