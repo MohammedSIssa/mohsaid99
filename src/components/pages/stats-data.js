@@ -36,7 +36,7 @@ export const stats = [
         },
         {
           label: "الأسبوع الأول",
-          value: 12,
+          value: 17,
         },
         {
           label: "الأسبوع الثاني",

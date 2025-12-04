@@ -93,16 +93,9 @@ const Stat = ({ latest = false }) => {
                   data: data.line.data.map((d) => d.value),
                   label: "ساعات",
 
-                  borderColor: "rgb(59, 130, 246)", // line color
+                  borderColor: "rgb(59, 130, 246)",
                   fill: true,
                   backgroundColor: "rgba(59, 130, 246, 0.1)",
-                  // backgroundColor: function (context) {
-                  //   const ctx = context.chart.ctx;
-                  //   const gradient = ctx.createLinearGradient(0, 0, 0, 300); // vertical gradient
-                  //   gradient.addColorStop(0, "rgba(59, 130, 246, 0.5)"); // top color
-                  //   gradient.addColorStop(1, "rgba(59, 130, 246, 0)"); // bottom transparent
-                  //   return gradient;
-                  // },
                   pointBackgroundColor: "rgb(59, 130, 246)",
                   pointRadius: 4,
                   pointHoverRadius: 6,

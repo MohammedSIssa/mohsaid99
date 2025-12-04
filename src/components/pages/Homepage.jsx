@@ -5,10 +5,15 @@ const Homepage = () => {
       <h1 className="text-2xl md:text-5xl font-bold mb-10">أهلا 👋🏻</h1>
       <p>أنا محمد وهذا مكاني الخاص لتوثيق رحلتي ✏️</p>
       <p>هنا بتلاقي يومياتي، شوية صور من الحياة، أهدافي لكل فترة</p>
-      <p className="mb-5"></p>
+      <p className="mb-5">-</p>
       <p>
-        أنا الآن أتعلم <span className="italic currently-learning">{currentlyLearning}،</span> بتقدر تتابع تقدمي من
-        صفحة اليوميات
+        أنا الآن أتعلم{" "}
+        <span className="italic currently-learning text-red-400 text-2xl">
+          {currentlyLearning}
+        </span>
+      </p> 
+      <p>
+        بتقدر تتابع تقدمي هنا من خلال صفحات الموقع
       </p>
     </div>
   );
