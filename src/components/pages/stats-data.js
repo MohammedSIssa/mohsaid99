@@ -4,6 +4,30 @@ export const stats = [
     title: "ديسمبر",
     year: 2025,
     type: "stat",
+    workout: {
+      data: [
+        {
+          label: "صدر",
+          value: 30,
+        },
+        {
+          label: "كتاف وايدين",
+          value: 25,
+        },
+        {
+          label: "معدة",
+          value: 15,
+        },
+        {
+          label: "ظهر",
+          value: 10,
+        },
+        {
+          label: "رجلين",
+          value: 5,
+        },
+      ],
+    },
     doughnut: {
       data: [
         {
@@ -36,7 +60,7 @@ export const stats = [
         },
         {
           label: "الأسبوع الأول",
-          value: 17,
+          value: 25,
         },
         {
           label: "الأسبوع الثاني",

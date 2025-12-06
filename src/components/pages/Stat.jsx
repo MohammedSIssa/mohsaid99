@@ -6,7 +6,7 @@ import { useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { Chart as ChartJS, defaults } from "chart.js/auto";
-import { Doughnut, Line } from "react-chartjs-2";
+import { Doughnut, Line, Pie } from "react-chartjs-2";
 
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
@@ -53,36 +53,68 @@ const Stat = ({ latest = false }) => {
 
   return (
     <div className="md:p-10 pt-10 flex flex-col items-center justify-center text-2xl font-bold gap-10 pb-30">
-      {data?.doughnut && (
-        <div className="w-full md:max-w-[600px] flex flex-wrap gap-5 items-center justify-center">
-          <div className="h-[600px] w-full chart p-10 border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
-            <Doughnut
-              data={{
-                labels: data.doughnut.data.map((d) => d.label),
-                datasets: [
-                  {
-                    data: data.doughnut.data.map((d) => d.value),
-                    backgroundColor: [
-                      "#3b82f6",
-                      "#10b981",
-                      "#f59e0b",
-                      "#ef4444",
-                      "#8b5cf6",
-                    ],
+      <div className="flex w-full items-center justify-center flex-col md:flex-row gap-10 px-5 [&_div]:md:min-w-[50%]">
+        {data?.doughnut && (
+          <div className="w-full md:max-w-[600px] flex flex-wrap gap-5 items-center justify-center">
+            <div className="h-[600px] w-full chart p-10 border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
+              <Doughnut
+                data={{
+                  labels: data.doughnut.data.map((d) => d.label),
+                  datasets: [
+                    {
+                      data: data.doughnut.data.map((d) => d.value),
+                      backgroundColor: [
+                        "#3b82f6",
+                        "#10b981",
+                        "#f59e0b",
+                        "#ef4444",
+                        "#8b5cf6",
+                      ],
+                    },
+                  ],
+                }}
+                options={{
+                  plugins: {
+                    title: {
+                      text: "الروتين اليومي",
+                    },
                   },
-                ],
-              }}
-              options={{
-                plugins: {
-                  title: {
-                    text: "الروتين اليومي",
-                  },
-                },
-              }}
-            />
+                }}
+              />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+        {data?.workout && (
+          <div className="w-full md:max-w-[600px] flex flex-wrap gap-5 items-center justify-center">
+            <div className="h-[600px] w-full chart p-10 border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
+              <Pie
+                data={{
+                  labels: data.workout.data.map((d) => d.label),
+                  datasets: [
+                    {
+                      data: data.workout.data.map((d) => d.value),
+                      backgroundColor: [
+                        "#3b82f6",
+                        "#10b981",
+                        "#f59e0b",
+                        "#ef4444",
+                        "#8b5cf6",
+                      ],
+                    },
+                  ],
+                }}
+                options={{
+                  plugins: {
+                    title: {
+                      text: "تمارين الرياضة",
+                    },
+                  },
+                }}
+              />
+            </div>
+          </div>
+        )}
+      </div>
       {data?.line ? (
         <div className="p-5 w-full h-[600px] chart border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
           <Line
