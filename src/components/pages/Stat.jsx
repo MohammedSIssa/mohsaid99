@@ -53,7 +53,7 @@ const Stat = ({ latest = false }) => {
 
   return (
     <div className="md:p-10 pt-10 flex flex-col items-center justify-center text-2xl font-bold gap-10 pb-30">
-      <div className="flex w-full items-center justify-center flex-col md:flex-row gap-10 px-5 [&_div]:md:min-w-[50%]">
+      <div className="flex w-full items-center justify-center flex-col md:flex-row gap-10 md:px-5 [&_div]:md:min-w-[50%]">
         {data?.doughnut && (
           <div className="w-full md:max-w-[600px] flex flex-wrap gap-5 items-center justify-center">
             <div className="h-[600px] w-full chart p-10 border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
