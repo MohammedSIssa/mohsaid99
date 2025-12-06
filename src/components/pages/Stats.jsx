@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const Stats = () => {
   return (
     <div className="flex flex-col gap-5">
-      <Stories data={[...stats].reverse()} />
+      <Stories type={"stat"} data={[...stats].reverse()} />
       <Outlet context={{ latestStory: stats.length }} />
     </div>
   );
