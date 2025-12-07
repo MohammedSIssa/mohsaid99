@@ -8,23 +8,23 @@ export const stats = [
       data: [
         {
           label: "صدر",
-          value: 30,
+          value: 20,
         },
         {
           label: "كتاف وايدين",
-          value: 25,
-        },
-        {
-          label: "معدة",
           value: 15,
         },
         {
-          label: "ظهر",
+          label: "معدة",
           value: 10,
         },
         {
-          label: "رجلين",
+          label: "ظهر",
           value: 5,
+        },
+        {
+          label: "رجلين",
+          value: 10,
         },
       ],
     },
