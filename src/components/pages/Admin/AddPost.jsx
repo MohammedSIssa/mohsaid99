@@ -9,9 +9,7 @@ import { useAuth } from "../../hooks/useAuth";
 export default function AddPost({ id = null, fromType = null }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [storyid, setStroyid] = useState(id ?? 1);
   const [images, setImages] = useState("");
-  const [type, setType] = useState(fromType ?? "week");
   const [special, setSpecial] = useState(false);
   const [secret, setSecret] = useState(false);
 
@@ -22,8 +20,8 @@ export default function AddPost({ id = null, fromType = null }) {
 
   const API_CALL =
     import.meta.env.MODE !== "development"
-      ? `${API}/${type}/${storyid}`
-      : `${DEV_API}/${type}/${storyid}`;
+      ? `${API}/${fromType}/${id}`
+      : `${DEV_API}/${fromType}/${id}`;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -40,9 +38,9 @@ export default function AddPost({ id = null, fromType = null }) {
           body: JSON.stringify({
             title,
             body,
-            storyid: +storyid,
+            storyid: +id,
             images: images.trim() !== "" ? images.trim().split(" ") : [],
-            type,
+            type: fromType,
             special,
             secret,
           }),
@@ -77,52 +75,6 @@ export default function AddPost({ id = null, fromType = null }) {
         }}
         onSubmit={handleSubmit}
       >
-        {id === null && (
-          <>
-            <p className="text-xl text-green-200 font-bold">
-              فورم اضافة المنشورات
-            </p>
-            <hr className="border-zinc-800" />
-            <label htmlFor="type" dir="ltr">
-              Type: {type}
-            </label>
-            <select
-              name="type"
-              id="type"
-              onChange={(e) => setType(e.target.value)}
-              className="p-2 focus:border focus:outline-0 focus:border-zinc-600 disabled:opacity-20"
-              style={{
-                backgroundColor: "var(--bg-color)",
-                borderColor: "var(--story-border-color)",
-              }}
-              disabled={fromType !== null}
-            >
-              <option value={"week"}>Weeks</option>
-              <option value={"goal"}>Goals</option>
-              <option value={"blog"}>Blogs</option>
-              <option value={"stat"}>Stats</option>
-              <option value={"special"}>Special</option>
-            </select>
-            <label htmlFor="storyid" dir="ltr">
-              Story ID:{" "}
-            </label>
-            <input
-              name="storyid"
-              id="storyid"
-              value={storyid}
-              onChange={(e) => setStroyid(e.target.value)}
-              className="p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30"
-              dir="ltr"
-              type="number"
-              required
-              disabled={loading || id !== null}
-              style={{
-                backgroundColor: "var(--bg-color)",
-                borderColor: "var(--story-border-color)",
-              }}
-            />
-          </>
-        )}
         {id !== null && (
           <h1
             style={{ color: "var(--font-color)" }}
