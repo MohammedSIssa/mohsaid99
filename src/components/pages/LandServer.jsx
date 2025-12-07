@@ -1,20 +1,12 @@
 import { useOutletContext } from "react-router-dom";
-import { BsCalendar2MinusFill } from "react-icons/bs";
-import { TbTargetArrow } from "react-icons/tb";
+import Icon from "../Icon";
 
 function LandServer() {
   const { type } = useOutletContext();
   if (type === "goal") {
     return (
       <div className="flex flex-col gap-4 items-center p-15 relative h-[300px]">
-        <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-          <span className="md:hidden">
-            <TbTargetArrow size={90} className="opacity-10" />
-          </span>
-          <span className="hidden md:block">
-            <TbTargetArrow size={150} className="opacity-10" />
-          </span>
-        </div>
+        <Icon iconName={"goals"} />
         <div className="text-center text-pretty">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 [&_p]:mb-3">
             صفحة الأهداف
@@ -28,14 +20,7 @@ function LandServer() {
   if (type === "week") {
     return (
       <div className="flex flex-col gap-4 items-center p-15 relative h-[300px]">
-        <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-          <span className="md:hidden">
-            <BsCalendar2MinusFill size={90} className="opacity-10" />
-          </span>
-          <span className="hidden md:block">
-            <BsCalendar2MinusFill size={150} className="opacity-10" />
-          </span>
-        </div>
+        <Icon iconName={"weeks"} />
         <div className="text-center text-pretty">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 [&_p]:mb-3">
             صفحة الأسابيع أو اليوميات

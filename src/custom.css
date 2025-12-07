@@ -33,6 +33,30 @@
   --golden-post-images-slider-border: #c5a503;
 }
 
+.gift {
+  filter: drop-shadow(0 0 6px #c5a50348) drop-shadow(0 0 12px #c5470376)
+    drop-shadow(0 0 24px #c5a50351);
+}
+
+.book {
+  /* filter: drop-shadow(0 0 6px rgba(242, 255, 1, 0.127))
+    drop-shadow(0 0 12px #09a5ee76) drop-shadow(0 0 24px #ffd10370); */
+  animation: glowingBook 2s infinite;
+}
+
+@keyframes glowingBook {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 6px rgba(242, 255, 1, 0.127))
+      drop-shadow(0 0 12px #09a5ee76) drop-shadow(0 0 24px #ffd10370);
+  }
+  50% {
+    filter: drop-shadow(0 0 6px #09a5ee76)
+      drop-shadow(0 0 12px rgba(255, 238, 1, 0.355))
+      drop-shadow(0 0 24px #ffd10370);
+  }
+}
+
 .currently-learning {
   font-family: var(--story-count-font);
 }
