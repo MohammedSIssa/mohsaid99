@@ -19,6 +19,8 @@ import { useAuth } from "../hooks/useAuth";
 
 import { useNavigate } from "react-router-dom";
 
+import { useOutletContext } from "react-router-dom";
+
 export default function SpecialBox({ latest = false }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -29,7 +31,7 @@ export default function SpecialBox({ latest = false }) {
 
   const navigate = useNavigate();
 
-  // const { latestStory } = useOutletContext();
+  const { latestStory } = useOutletContext();
 
   const API_CALL =
     import.meta.env.MODE !== "development"
@@ -37,6 +39,7 @@ export default function SpecialBox({ latest = false }) {
       : `${DEV_API}/special/${id}`;
 
   useEffect(() => {
+    if (latest) navigate(`/special/${latestStory}`);
     async function getSpecials() {
       try {
         setLoading(true);
@@ -60,7 +63,7 @@ export default function SpecialBox({ latest = false }) {
     if (!latest) {
       getSpecials();
     }
-  }, [id, user?.username, API_CALL, latest]);
+  }, [id, user?.username, API_CALL, latest, latestStory, navigate]);
 
   useEffect(() => {
     if (latest && data) {

@@ -32,6 +32,9 @@ import RequireUnAuth from "./components/Auth/RequireUnAuth";
 
 import ServerContent from "./components/pages/ServerContent";
 import Content from "./components/pages/Content";
+import LandServer from "./components/pages/LandServer";
+import LandSpecial from "./components/pages/LandSpecial";
+import LandStats from "./components/pages/LandStats";
 
 function App() {
   const [user, setUser] = useState(loadUser);
@@ -43,13 +46,15 @@ function App() {
           <Route path="/" element={<Homepage />} />
 
           <Route path="/stats" element={<Stats />}>
-          	<Route path="latest" element={<Stat latest={true} />} />
+            <Route path="" element={<LandStats />} />
+            <Route path="latest" element={<Stat latest={true} />} />
             <Route path=":id" element={<Stat />} />
           </Route>
 
           <Route element={<RequireAuth role={2} />}>
             <Route path="special" element={<Special />}>
-            	<Route path="latest" element={<SpecialBox latest={true} />} />
+              <Route path="" element={<LandSpecial />} />
+              <Route path="latest" element={<SpecialBox latest={true} />} />
               <Route path=":id" element={<SpecialBox />} />
             </Route>
           </Route>
@@ -70,7 +75,8 @@ function App() {
 
           {/* Newer type id routes */}
           <Route path="/:type" element={<ServerContent />}>
-          	<Route path="latest" element={<Content latest={true} />} />
+            <Route path="latest" element={<Content latest={true} />} />
+            <Route path="" element={<LandServer />} />
             <Route path=":id" element={<Content />} />
           </Route>
 
