@@ -18,7 +18,7 @@ const NavBar = () => {
   const location = useLocation();
   const { user } = useAuth();
   return (
-    <div className="navbar flex items-center gap-5 fixed bottom-0 w-full justify-center md:top-0 md:right-0 md:translate-x-0 h-fit md:w-fit md:m-4 border-0 border-t md:border p-4 md:rounded-xl md:shadow-xl z-50">
+    <div className="navbar fixed bottom-0 z-50 flex h-fit w-full items-center justify-center gap-5 border-0 border-t p-4 md:top-0 md:right-0 md:m-4 md:w-fit md:translate-x-0 md:rounded-xl md:border md:shadow-xl">
       <NavLink to={"/"}>
         <FaHome size={30} />
       </NavLink>

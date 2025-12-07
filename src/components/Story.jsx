@@ -37,19 +37,19 @@ export default function Story({ item, idx }) {
   return (
     <>
       <NavLink
-        className={`story w-60 min-w-60 h-full border rounded-lg p-3 px-4 relative snap-start ${
+        className={`story relative h-full w-60 min-w-60 snap-start rounded-lg border p-3 px-4 ${
           goldStory ? "gold" : ""
         }`}
         key={idx}
         to={`/${item.type}${item.type !== "special" ? "s" : ""}/${item.count}`}
       >
         <h1 className="text-lg font-bold">{item.title}</h1>
-        <p className="text-xs mt-1">{item?.summary ? item.summary : "🔴"}</p>
-        <p className="italic absolute bottom-1 left-3 story-count font-bold">
+        <p className="mt-1 text-xs">{item?.summary ? item.summary : "🔴"}</p>
+        <p className="story-count absolute bottom-1 left-3 font-bold italic">
           #{item.count}
         </p>
         <p
-          className={`italic absolute top-[-21px] left-3 story-year skew-x-2 font-bold p-px px-2.5 rounded-md ${
+          className={`story-year absolute top-[-21px] left-3 skew-x-2 rounded-md p-px px-2.5 font-bold italic ${
             goldStory
               ? "bg-yellow-400 text-yellow-900"
               : "bg-rose-700 text-zinc-50"
@@ -61,11 +61,11 @@ export default function Story({ item, idx }) {
       {user?.role === 1 && (
         <>
           ↔️
-          <div className="w-5 flex flex-col gap-2 items-center justify-center">
+          <div className="flex w-5 flex-col items-center justify-center gap-2">
             <NavLink
               to={`/admin/update/story/${item.id}`}
               className={
-                "bg-blue-700 p-1 rounded hover:bg-white hover:text-blue-700 transition-all duration-300 hover:cursor-pointer"
+                "rounded bg-blue-700 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-700"
               }
             >
               <MdEdit />
@@ -73,7 +73,7 @@ export default function Story({ item, idx }) {
             <button
               onClick={deleteStory}
               className={
-                "bg-red-500 p-1 rounded hover:bg-white hover:text-red-500 transition-all duration-300 hover:cursor-pointer"
+                "rounded bg-red-500 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-red-500"
               }
             >
               <MdDelete />

@@ -41,17 +41,21 @@ const StoryContent = () => {
 
   if (isLoading) return <LoadingStories />;
   if (error) return <ErrorLoadingStories />;
-  if(data.length === 0) 
-  	return (
-  		<div className="flex h-dvh p-10 items-center justify-center">
-  			<h1 className="font-bold text-3xl" dir="ltr">Server Error :/</h1>
-  		</div>
-  	)
+  if (data.length === 0)
+    return (
+      <div className="flex h-dvh items-center justify-center p-10">
+        <h1 className="text-3xl font-bold" dir="ltr">
+          Server Error :/
+        </h1>
+      </div>
+    );
   if (data)
     return (
       <div className="flex flex-col gap-5">
         <Stories data={data} type={type.slice(0, -1)} />
-        <Outlet context={{ type: type.slice(0, -1), latestStory: data.length }} />
+        <Outlet
+          context={{ type: type.slice(0, -1), latestStory: data.length }}
+        />
       </div>
     );
 };

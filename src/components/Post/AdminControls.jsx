@@ -15,7 +15,7 @@ export default function AdminControls({ postId }) {
       : `${DEV_API}/posts/delete/${postId}`;
   async function deletePostById() {
     const confirmDelete = window.confirm(
-      `Are you sure you want to delete post ${postId}`
+      `Are you sure you want to delete post ${postId}`,
     );
     console.log(confirmDelete);
     if (confirmDelete) {
@@ -31,16 +31,16 @@ export default function AdminControls({ postId }) {
     }
   }
   return (
-    <p className="absolute left-2 px-3 py-1 top-[-50px] story-year flex gap-2 items-center">
+    <p className="story-year absolute top-[-50px] left-2 flex items-center gap-2 px-3 py-1">
       <NavLink
         to={`/admin/update/post/${postId}`}
-        className={"bg-blue-700 rounded-lg p-2"}
+        className={"rounded-lg bg-blue-700 p-2"}
       >
         <MdEdit />
       </NavLink>
       <button
         onClick={deletePostById}
-        className="hover:cursor-pointer hover:brightness-120 px-2 bg-red-500 text-white rounded-lg p-2"
+        className="rounded-lg bg-red-500 p-2 px-2 text-white hover:cursor-pointer hover:brightness-120"
       >
         <MdDelete />
       </button>

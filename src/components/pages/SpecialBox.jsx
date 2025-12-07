@@ -60,9 +60,7 @@ export default function SpecialBox() {
             postedAt={item.iat}
           />
         ))}
-        {user?.role === 1 && (
-          <AddPost id={id} fromType={"special"} />
-        )}
+        {user?.role === 1 && <AddPost id={id} fromType={"special"} />}
         <ScrollToTopButton />
       </>
     );

@@ -21,11 +21,11 @@ export default function Post({
   const { user } = useAuth();
   return (
     <div
-      className="flex items-center justify-center md:p-10 py-15 max-w-full"
+      className="flex max-w-full items-center justify-center py-15 md:p-10"
       style={secret && !user?.role ? { display: "none" } : {}}
     >
       <div
-        className={`post w-full border border-l-0 border-r-0 md:border-l md:border-r md:w-[80%] lg:w-[80%] xl:w-fit xl:max-w-[1200px] flex-col p-5 md:rounded-2xl relative${
+        className={`post w-full flex-col border border-r-0 border-l-0 p-5 md:w-[80%] md:rounded-2xl md:border-r md:border-l lg:w-[80%] xl:w-fit xl:max-w-[1200px] relative${
           special ? " special" : secret ? " secret" : ""
         }`}
         style={
@@ -35,12 +35,12 @@ export default function Post({
                 backgroundColor: "var(--gold-story-bg-color)",
               }
             : secret && user?.role
-            ? {
-                backgroundColor: "var(--secret-post-bg-color)",
-                color: "var(--secret-post-font-color)",
-                borderColor: "var(--secret-post-border-color)",
-              }
-            : {}
+              ? {
+                  backgroundColor: "var(--secret-post-bg-color)",
+                  color: "var(--secret-post-font-color)",
+                  borderColor: "var(--secret-post-border-color)",
+                }
+              : {}
         }
       >
         {user?.role === 1 && !fromAdmin && <AdminControls postId={postId} />}

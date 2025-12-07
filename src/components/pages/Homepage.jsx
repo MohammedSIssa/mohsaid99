@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col h-dvh items-center justify-center p-10 text-center [&_p]:mb-2 [&_p]:font-bold [&_p]:text-sm [&_p]:md:text-lg [&_p]:max-w-[600px]">
+    <div className="flex h-dvh flex-col items-center justify-center p-10 text-center [&_p]:mb-2 [&_p]:max-w-[600px] [&_p]:text-sm [&_p]:font-bold [&_p]:md:text-lg">
       <div className="flex w-[170px] text-right">
         <p>مرحبا،</p>
       </div>
@@ -29,7 +29,7 @@ const Homepage = () => {
         </p>
       </div>
       <div className="book mt-10">
-        <NavLink to='/weeks'>
+        <NavLink to="/weeks">
           <Book size="100px" />
         </NavLink>
       </div>

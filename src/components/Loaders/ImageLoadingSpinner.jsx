@@ -2,7 +2,7 @@ import { ImSpinner10 } from "react-icons/im";
 
 const ImageLoadingSpinner = () => {
   return (
-    <div className="loading-container flex items-center justify-center h-fit">
+    <div className="loading-container flex h-fit items-center justify-center">
       <div className="spinner">
         <ImSpinner10 size={50} />
       </div>

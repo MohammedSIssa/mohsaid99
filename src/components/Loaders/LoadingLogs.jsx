@@ -1,7 +1,5 @@
 const LoadingLogs = () => {
-  return (
-    <span className="pulsing"></span>
-  )
-}
+  return <span className="pulsing"></span>;
+};
 
-export default LoadingLogs
+export default LoadingLogs;

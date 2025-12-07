@@ -65,10 +65,10 @@ export default function AddPost({ id = null, fromType = null }) {
   }
 
   return (
-    <div className="flex flex-col gap-10 items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-10">
       <form
         method="POST"
-        className="flex flex-col gap-4 p-10 min-w-[300px] border border-l-0 border-r-0 md:border md:rounded-xl max-w-[500px]"
+        className="flex max-w-[500px] min-w-[300px] flex-col gap-4 border border-r-0 border-l-0 p-10 md:rounded-xl md:border"
         style={{
           backgroundColor: "var(--story-bg-color)",
           borderColor: "var(--story-border-color)",
@@ -95,7 +95,7 @@ export default function AddPost({ id = null, fromType = null }) {
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30 text-2xl font-bold"
+          className="rounded-lg p-2 px-5 text-2xl font-bold focus:outline-0 disabled:opacity-30"
           style={{
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
@@ -109,7 +109,7 @@ export default function AddPost({ id = null, fromType = null }) {
           id="body"
           value={body}
           onChange={(e) => setBody(e.target.value)}
-          className="p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30"
+          className="rounded-lg p-2 px-5 focus:outline-0 disabled:opacity-30"
           style={{
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
@@ -125,7 +125,7 @@ export default function AddPost({ id = null, fromType = null }) {
           id="images"
           value={images}
           onChange={(e) => setImages(e.target.value)}
-          className="p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30"
+          className="rounded-lg p-2 px-5 focus:outline-0 disabled:opacity-30"
           style={{
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
@@ -133,7 +133,7 @@ export default function AddPost({ id = null, fromType = null }) {
           dir="ltr"
           disabled={loading}
         ></textarea>
-        <div className="flex gap-4 items-center justify-center" dir="ltr">
+        <div className="flex items-center justify-center gap-4" dir="ltr">
           <label htmlFor="add_story_isSpecial" dir="ltr">
             Golden Post?
           </label>
@@ -146,7 +146,7 @@ export default function AddPost({ id = null, fromType = null }) {
             onChange={(e) => setSpecial(e.target.checked)}
           />
         </div>
-        <div className="flex gap-4 items-center justify-center" dir="ltr">
+        <div className="flex items-center justify-center gap-4" dir="ltr">
           <label htmlFor="add_story_isSecret" dir="ltr">
             Secret Post?
           </label>
@@ -168,7 +168,7 @@ export default function AddPost({ id = null, fromType = null }) {
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
           }}
-          className="bg-zinc-950 p-2 px-5 rounded-lg hover:bg-zinc-800 border border-zinc-950 hover:border hover:border-zinc-700 hover:cursor-pointer transition-all duration-100 disabled:opacity-30"
+          className="rounded-lg border border-zinc-950 bg-zinc-950 p-2 px-5 transition-all duration-100 hover:cursor-pointer hover:border hover:border-zinc-700 hover:bg-zinc-800 disabled:opacity-30"
         >
           Add Post
         </button>
@@ -178,15 +178,15 @@ export default function AddPost({ id = null, fromType = null }) {
             feedback === "Saved Data."
               ? "text-green-500"
               : feedback === "Adding to database.."
-              ? "text-zinc-100"
-              : "text-red-500"
+                ? "text-zinc-100"
+                : "text-red-500"
           }
         >
           {feedback}
         </p>
       </form>
 
-      <p className="text-xl text-green-200 font-bold">المنشور بعض الإضافة</p>
+      <p className="text-xl font-bold text-green-200">المنشور بعض الإضافة</p>
       <hr className="border-zinc-800" />
 
       <Post

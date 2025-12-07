@@ -5,10 +5,10 @@ function LandServer() {
   const { type } = useOutletContext();
   if (type === "goal") {
     return (
-      <div className="flex flex-col gap-4 items-center p-15 relative h-[300px]">
+      <div className="relative flex h-[300px] flex-col items-center gap-4 p-15">
         <Icon iconName={"goals"} />
         <div className="text-center text-pretty">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 [&_p]:mb-3">
+          <h1 className="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl [&_p]:mb-3">
             صفحة الأهداف
           </h1>
           <p>هنا بكتب أهداف كل ربع بالسنة</p>
@@ -19,10 +19,10 @@ function LandServer() {
   }
   if (type === "week") {
     return (
-      <div className="flex flex-col gap-4 items-center p-15 relative h-[300px]">
+      <div className="relative flex h-[300px] flex-col items-center gap-4 p-15">
         <Icon iconName={"weeks"} />
         <div className="text-center text-pretty">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 [&_p]:mb-3">
+          <h1 className="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl [&_p]:mb-3">
             صفحة الأسابيع أو اليوميات
           </h1>
           <p>هنا بكتب آخر الأحداث اللي بتصير معي</p>

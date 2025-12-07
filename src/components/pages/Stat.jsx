@@ -52,11 +52,11 @@ const Stat = ({ latest = false }) => {
   }, [id, user?.username, latest, latestStory, navigate]);
 
   return (
-    <div className="md:p-10 pt-10 flex flex-col items-center justify-center text-2xl font-bold gap-10 pb-30">
-      <div className="flex w-full items-center justify-center flex-col md:flex-row gap-10 md:px-5 [&_div]:md:min-w-[50%]">
+    <div className="flex flex-col items-center justify-center gap-10 pt-10 pb-30 text-2xl font-bold md:p-10">
+      <div className="flex w-full flex-col items-center justify-center gap-10 md:flex-row md:px-5 [&_div]:md:min-w-[50%]">
         {data?.doughnut && (
-          <div className="w-full md:max-w-[600px] flex flex-wrap gap-5 items-center justify-center">
-            <div className="h-[600px] w-full chart p-10 border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
+          <div className="flex w-full flex-wrap items-center justify-center gap-5 md:max-w-[600px]">
+            <div className="chart h-[600px] w-full border border-r-0 border-l-0 p-10 md:rounded-2xl md:border-r md:border-l">
               <Doughnut
                 data={{
                   labels: data.doughnut.data.map((d) => d.label),
@@ -85,8 +85,8 @@ const Stat = ({ latest = false }) => {
           </div>
         )}
         {data?.workout && (
-          <div className="w-full md:max-w-[600px] flex flex-wrap gap-5 items-center justify-center">
-            <div className="h-[600px] w-full chart p-10 border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
+          <div className="flex w-full flex-wrap items-center justify-center gap-5 md:max-w-[600px]">
+            <div className="chart h-[600px] w-full border border-r-0 border-l-0 p-10 md:rounded-2xl md:border-r md:border-l">
               <Pie
                 data={{
                   labels: data.workout.data.map((d) => d.label),
@@ -116,7 +116,7 @@ const Stat = ({ latest = false }) => {
         )}
       </div>
       {data?.line ? (
-        <div className="p-5 w-full h-[600px] chart border border-l-0 border-r-0 md:border-l md:border-r md:rounded-2xl">
+        <div className="chart h-[600px] w-full border border-r-0 border-l-0 p-5 md:rounded-2xl md:border-r md:border-l">
           <Line
             data={{
               labels: data.line.data.map((d) => d.label),

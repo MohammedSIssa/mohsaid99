@@ -7,12 +7,12 @@ const ScrollToTopButton = () => {
 
   return (
     <div
-      className="w-full py-5 pb-20 md:pb-5 flex items-center justify-center border-0 border-t-3 border-dashed"
+      className="flex w-full items-center justify-center border-0 border-t-3 border-dashed py-5 pb-20 md:pb-5"
       style={{ borderColor: "var(--story-bg-color)" }}
     >
       <button
         onClick={scrollToTop}
-        className="text-white p-3 w-fit h-fit rounded-full shadow-lg hover:brightness-125 hover:cursor-pointer transition"
+        className="h-fit w-fit rounded-full p-3 text-white shadow-lg transition hover:cursor-pointer hover:brightness-125"
         aria-label="Scroll to top"
         style={{ backgroundColor: "var(--story-border-color)" }}
       >

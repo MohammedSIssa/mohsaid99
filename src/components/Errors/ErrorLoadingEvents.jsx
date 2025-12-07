@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ErrorLoadingEvents = () => {
-  return (
-    <div>ErrorLoadingEvents</div>
-  )
-}
+  return <div>ErrorLoadingEvents</div>;
+};
 
-export default ErrorLoadingEvents
+export default ErrorLoadingEvents;

@@ -21,7 +21,7 @@ export default function Login() {
   const [failure, setFailure] = useState(false);
 
   const [message, setMessage] = useState(
-    user?.username ? "انت مسجل الدخول" : ""
+    user?.username ? "انت مسجل الدخول" : "",
   );
 
   async function login(e) {
@@ -65,9 +65,9 @@ export default function Login() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-dvh">
+    <div className="flex h-dvh flex-col items-center justify-center">
       <form
-        className="login-form flex flex-col gap-5 max-w-[300px] p-10 border rounded-lg transition-all duration-200"
+        className="login-form flex max-w-[300px] flex-col gap-5 rounded-lg border p-10 transition-all duration-200"
         onSubmit={login}
         style={
           success
@@ -76,11 +76,11 @@ export default function Login() {
                 borderColor: "var(--success-login-border-color)",
               }
             : failure
-            ? {
-                backgroundColor: "var(--failure-login-bg-color)",
-                borderColor: "var(--failure-login-border-color)",
-              }
-            : {}
+              ? {
+                  backgroundColor: "var(--failure-login-bg-color)",
+                  borderColor: "var(--failure-login-border-color)",
+                }
+              : {}
         }
       >
         {!success && (
@@ -93,7 +93,7 @@ export default function Login() {
               dir="ltr"
               name="username"
               id="username"
-              className="text-zinc-50 p-2 px-5 rounded-lg disabled:opacity-30 focus:border focus:outline-0"
+              className="rounded-lg p-2 px-5 text-zinc-50 focus:border focus:outline-0 disabled:opacity-30"
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -125,7 +125,7 @@ export default function Login() {
               name="password"
               autoComplete="off"
               id="password"
-              className="text-zinc-50 p-2 px-5 rounded-lg disabled:opacity-30 focus:border focus:outline-0"
+              className="rounded-lg p-2 px-5 text-zinc-50 focus:border focus:outline-0 disabled:opacity-30"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
@@ -161,7 +161,7 @@ export default function Login() {
                       borderColor: "var(--story-border-color)",
                     }
               }
-              className="p-2 px-5 rounded-lg border hover:brightness-125 hover:cursor-pointer transition-all duration-100 disabled:opacity-25 disabled:cursor-progress"
+              className="rounded-lg border p-2 px-5 transition-all duration-100 hover:cursor-pointer hover:brightness-125 disabled:cursor-progress disabled:opacity-25"
             >
               سجل الدخول
             </button>
@@ -169,7 +169,7 @@ export default function Login() {
         )}
         {logginIn && !success && <p>جار تسجيل الدخول..</p>}
         {success && (
-          <p className="font-bold text-green-300 text-2xl px-5">{message}</p>
+          <p className="px-5 text-2xl font-bold text-green-300">{message}</p>
         )}
         {failure && <p className="text-red-300">{message}</p>}
       </form>

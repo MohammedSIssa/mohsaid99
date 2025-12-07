@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 export default function Admin() {
   return (
     <div
-      className="w-full min-h-dvh flex flex-col flex-wrap gap-5 py-25 justify-center items-center"
+      className="flex min-h-dvh w-full flex-col flex-wrap items-center justify-center gap-5 py-25"
       dir="ltr"
     >
       <Outlet />

@@ -2,7 +2,7 @@ import { ImSpinner10 } from "react-icons/im";
 
 const LoadingEvents = () => {
   return (
-    <div className="loading-container flex items-center justify-center py-10 flex-col gap-5">
+    <div className="loading-container flex flex-col items-center justify-center gap-5 py-10">
       <div className="spinner">
         <ImSpinner10 size={50} />
       </div>
