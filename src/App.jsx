@@ -1,34 +1,25 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
-
-import Stats from "./components/pages/Stats";
-import Stat from "./components/pages/Stat";
-
-import Special from "./components/pages/Special";
-import SpecialBox from "./components/pages/SpecialBox";
+import "./custom.css";
 
 import Homepage from "./components/pages/Homepage";
 import NavBar from "./components/NavBar";
 import ErrorPage from "./components/Errors/ErrorPage";
 
-import { Admin } from "./components/pages/Admin/Admin";
-
-import "./custom.css";
+import Admin from "./components/pages/Admin/Admin";
+import Logs from "./components/pages/Admin/Logs";
 import AddPost from "./components/pages/Admin/AddPost";
 import AddStory from "./components/pages/Admin/AddStory";
 import UpdatePost from "./components/pages/Admin/UpdatePost";
 import UpdateStory from "./components/pages/Admin/UpdateStory";
 
-import Logs from "./components/pages/Admin/Logs";
-
 import { useState } from "react";
 import { UserContext } from "./context/UserContext";
-
-import Login from "./components/pages/Login";
 
 import { loadUser } from "./scripts/localStorage";
 
 import RequireAuth from "./components/Auth/RequireAuth";
 import RequireUnAuth from "./components/Auth/RequireUnAuth";
+import Login from "./components/pages/Login";
 
 import ServerContent from "./components/pages/ServerContent";
 import Content from "./components/pages/Content";
@@ -36,6 +27,12 @@ import Content from "./components/pages/Content";
 import LandServer from "./components/pages/LandServer";
 import LandSpecial from "./components/pages/LandSpecial";
 import LandStats from "./components/pages/LandStats";
+
+import Stats from "./components/pages/Stats";
+import Stat from "./components/pages/Stat";
+
+import Special from "./components/pages/Special";
+import SpecialBox from "./components/pages/SpecialBox";
 
 function App() {
   const [user, setUser] = useState(loadUser);
