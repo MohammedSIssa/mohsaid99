@@ -10,8 +10,6 @@ export function formatTimeAgo(dateString) {
   if (minutes < 60) return `${minutes}m ago`;
   const hours = Math.floor(minutes / 60);
   if (hours < 24) return `${hours}h ago`;
-  const days = Math.floor(hours / 24);
-  if (days < 3) return `${days}d ago`;
 
   return date.toLocaleString("en-US", {
     month: "short",
