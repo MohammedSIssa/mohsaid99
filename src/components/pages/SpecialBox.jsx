@@ -1,45 +1,28 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import LoadingEvents from "../../components/Loaders/LoadingEvents";
 import ErrorLoadingEvents from "../../components/Errors/ErrorLoadingStories";
 import ScrollToTopButton from "../../components/ScrollToTop";
 import AddPost from "./Admin/AddPost";
-
-// import { useOutletContext } from "react-router-dom";
-
 import { API, DEV_API } from "../../scripts/globals";
 import { logger } from "../../scripts/logger";
-
 import Post from "../../components/Post/Post";
-
 import { fetchWithCache } from "../../scripts/cache";
-
 import { useAuth } from "../hooks/useAuth";
 
-import { useNavigate } from "react-router-dom";
-
-import { useOutletContext } from "react-router-dom";
-
-export default function SpecialBox({ latest = false }) {
+export default function SpecialBox() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const { user } = useAuth();
   const { id } = useParams();
-
-  const navigate = useNavigate();
-
-  const { latestStory } = useOutletContext();
-
   const API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/special/${id}`
       : `${DEV_API}/special/${id}`;
 
   useEffect(() => {
-    if (latest) navigate(`/special/${latestStory}`);
     async function getSpecials() {
       try {
         setLoading(true);
@@ -59,17 +42,8 @@ export default function SpecialBox({ latest = false }) {
         setLoading(false);
       }
     }
-
-    if (!latest) {
-      getSpecials();
-    }
-  }, [id, user?.username, API_CALL, latest, latestStory, navigate]);
-
-  useEffect(() => {
-    if (latest && data) {
-      navigate(`/special/${data.length}`);
-    }
-  }, [latest, navigate, data]);
+    getSpecials();
+  }, [id, user?.username, API_CALL]);
 
   if (loading) return <LoadingEvents />;
   if (error) return <ErrorLoadingEvents />;
@@ -87,7 +61,7 @@ export default function SpecialBox({ latest = false }) {
           />
         ))}
         {user?.role === 1 && (
-          <AddPost id={latest ? data.length : id} fromType={"special"} />
+          <AddPost id={id} fromType={"special"} />
         )}
         <ScrollToTopButton />
       </>
