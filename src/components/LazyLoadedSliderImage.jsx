@@ -33,7 +33,7 @@ export default function LazyLoadedSliderImage({
         root: observerRoot, // <– pass your slider container here if needed
         rootMargin: "100px",
         threshold: 0.1,
-      }
+      },
     );
 
     if (imgRef.current) observer.observe(imgRef.current);
@@ -54,7 +54,7 @@ export default function LazyLoadedSliderImage({
           alt={alt}
           loading="lazy"
           onLoad={() => setIsLoaded(true)}
-          className={`transition-opacity duration-700 ease-in-out rounded-xl ${
+          className={`rounded-xl transition-opacity duration-700 ease-in-out ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
         />
