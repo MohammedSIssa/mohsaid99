@@ -4,14 +4,11 @@ import { MdEdit } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 import { API, DEV_API } from "../../scripts/globals";
-import { removeFromCache } from "../../scripts/cache";
 
-// import { useAuth } from "../hooks/useAuth";
-
-// import { removeFromCache } from "../../scripts/cache";
+import { useAuth } from "../hooks/useAuth";
 
 export default function AdminControls({ postId }) {
-  // const { user } = useAuth();
+  const { user } = useAuth();
   const API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/posts/delete/${postId}`
@@ -21,17 +18,15 @@ export default function AdminControls({ postId }) {
       `Are you sure you want to delete post ${postId}`,
     );
     if (confirmDelete) {
-      removeFromCache(location.href);
-      console.log(location.href);
-      // const res = await fetch(API_CALL, {
-      //   method: "delete",
-      //   headers: {
-      //     Authorization: `Bearer ${user.apikey}`,
-      //   },
-      // });
-      // if (res.ok) {
-      //   console.log("Remove from cache..");
-      // }
+      const res = await fetch(API_CALL, {
+        method: "delete",
+        headers: {
+          Authorization: `Bearer ${user.apikey}`,
+        },
+      });
+      if (res.ok) {
+        console.log("Remove from cache..");
+      }
     }
   }
   return (
