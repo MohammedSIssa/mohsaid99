@@ -4,6 +4,7 @@ import Post from "../../../components/Post/Post";
 import { useParams } from "react-router-dom";
 
 import { API, DEV_API } from "../../../scripts/globals";
+import { deleteFromCache } from "../../../scripts/cache";
 
 import { useAuth } from "../../hooks/useAuth";
 
@@ -27,6 +28,11 @@ export default function UpdatePost() {
     import.meta.env.MODE !== "development"
       ? `${API}/posts/${id}`
       : `${DEV_API}/posts/${id}`;
+
+  const url =
+    import.meta.env.MODE !== "development"
+      ? `${API}/${type}/${storyid}`
+      : `${DEV_API}/${type}/${storyid}`;
 
   useEffect(() => {
     async function fetchPostData() {
@@ -91,24 +97,25 @@ export default function UpdatePost() {
       setFeedback("Error happened");
       throw new Error("Unable to update post");
     } else {
+      deleteFromCache(url);
       setFeedback("Post updated successfully!");
       setIsLoading(false);
     }
   }
 
   return (
-    <div className="flex flex-col gap-10 items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-10">
       <form
         onSubmit={updatePost}
-        className="flex flex-col gap-4 p-10 min-w-[300px] border border-zinc-700 bg-zinc-900 rounded-xl max-w-[600px]"
+        className="flex max-w-[600px] min-w-[300px] flex-col gap-4 rounded-xl border border-zinc-700 bg-zinc-900 p-10"
         style={{
           backgroundColor: "var(--story-bg-color)",
           borderColor: "var(--story-border-color)",
         }}
       >
-        <p className="text-xl text-green-200 font-bold">فورم تحديث المنشورات</p>
+        <p className="text-xl font-bold text-green-200">فورم تحديث المنشورات</p>
         <hr style={{ borderColor: "var(--story-border-color)" }} />
-        <div className="flex gap-5 items-center flex-wrap" dir="ltr"></div>
+        <div className="flex flex-wrap items-center gap-5" dir="ltr"></div>
 
         <label htmlFor="post_type" dir="ltr">
           Type: {type}
@@ -118,7 +125,7 @@ export default function UpdatePost() {
           name="type"
           value={type}
           onChange={(e) => setType(e.target.value)}
-          className="bg-zinc-800 text-zinc-50 p-2 focus:border focus:outline-0 focus:border-zinc-600"
+          className="bg-zinc-800 p-2 text-zinc-50 focus:border focus:border-zinc-600 focus:outline-0"
           style={{
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
@@ -140,7 +147,7 @@ export default function UpdatePost() {
           id="story_id"
           value={storyid}
           onChange={(e) => setStoryid(e.target.value)}
-          className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30"
+          className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:outline-0 disabled:opacity-30"
           disabled={isLoading}
           style={{
             backgroundColor: "var(--bg-color)",
@@ -157,7 +164,7 @@ export default function UpdatePost() {
           id="post_title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30 font-bold text-xl"
+          className="rounded-lg bg-zinc-800 p-2 px-5 text-xl font-bold text-zinc-50 focus:outline-0 disabled:opacity-30"
           disabled={isLoading}
           style={{
             backgroundColor: "var(--bg-color)",
@@ -173,7 +180,7 @@ export default function UpdatePost() {
           id="post_body"
           value={body}
           onChange={(e) => setBody(e.target.value)}
-          className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30 min-h-fit"
+          className="min-h-fit rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:outline-0 disabled:opacity-30"
           disabled={isLoading}
           style={{
             backgroundColor: "var(--bg-color)",
@@ -190,7 +197,7 @@ export default function UpdatePost() {
           type="text"
           value={images}
           onChange={(e) => setImages(e.target.value)}
-          className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-30 min-h-fit"
+          className="min-h-fit rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:outline-0 disabled:opacity-30"
           disabled={isLoading}
           style={{
             backgroundColor: "var(--bg-color)",
@@ -198,7 +205,7 @@ export default function UpdatePost() {
           }}
           id="post_images"
         ></textarea>
-        <div className="flex gap-4 items-center justify-center" dir="ltr">
+        <div className="flex items-center justify-center gap-4" dir="ltr">
           <label htmlFor="add_story_isSpecial" dir="ltr">
             Golden Post?
           </label>
@@ -211,7 +218,7 @@ export default function UpdatePost() {
             onChange={(e) => setSpecial(e.target.checked)}
           />
         </div>
-        <div className="flex gap-4 items-center justify-center" dir="ltr">
+        <div className="flex items-center justify-center gap-4" dir="ltr">
           <label htmlFor="add_story_isSecret" dir="ltr">
             Secret Post?
           </label>
@@ -228,7 +235,7 @@ export default function UpdatePost() {
         <button
           onClick={updatePost}
           disabled={isLoading}
-          className="bg-zinc-950 p-2 px-5 rounded-lg hover:bg-zinc-800 border border-zinc-950 hover:border hover:border-zinc-700 hover:cursor-pointer transition-all duration-100"
+          className="rounded-lg border border-zinc-950 bg-zinc-950 p-2 px-5 transition-all duration-100 hover:cursor-pointer hover:border hover:border-zinc-700 hover:bg-zinc-800"
           style={{
             backgroundColor: "var(--bg-color)",
             borderColor: "var(--story-border-color)",
@@ -239,7 +246,7 @@ export default function UpdatePost() {
         <p dir="ltr">{feedback}</p>
       </form>
 
-      <p className="text-xl text-green-200 font-bold">المنشور بعض التعديلات</p>
+      <p className="text-xl font-bold text-green-200">المنشور بعض التعديلات</p>
       <hr className="border-zinc-800" />
 
       {isLoading || (

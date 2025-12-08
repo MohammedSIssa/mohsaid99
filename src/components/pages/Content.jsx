@@ -35,11 +35,19 @@ const Content = ({ latest = false }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  function onDeletePost(postId) {
+    setData((prev) => prev.filter((p) => p.id !== postId));
+  }
+
+  function onAddPost(post) {
+    setData((prev) => [...prev, post]);
+  }
+
   useEffect(() => {
     async function getData() {
       setIsLoading(true);
       try {
-        const raw = await fetchWithCache(API_CALL, location.href);
+        const raw = await fetchWithCache(API_CALL);
         setData(raw);
         if (latest) navigate(`/${type}s/${latestStory}`);
         if (
@@ -73,10 +81,17 @@ const Content = ({ latest = false }) => {
             special={item.special}
             secret={item.secret}
             postedAt={item.iat}
+            type={item.type}
+            storyId={item.storyid}
+            onDeletePost={() => onDeletePost(item.id)}
           />
         ))}
         {user?.role === 1 && (
-          <AddPost id={latest ? data.length : id} fromType={type} />
+          <AddPost
+            id={latest ? data.length : id}
+            fromType={type}
+            onAddPost={onAddPost}
+          />
         )}
         <ScrollToTopButton />
       </>

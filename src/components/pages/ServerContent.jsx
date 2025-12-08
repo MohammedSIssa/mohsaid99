@@ -15,6 +15,10 @@ const StoryContent = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  function onDeleteStory(storyId) {
+    setData((prev) => prev.filter((s) => s.id !== storyId));
+  }
+
   const { type } = useParams();
 
   let API_CALL =
@@ -26,7 +30,7 @@ const StoryContent = () => {
     async function getData() {
       try {
         setIsLoading(true);
-        const raw = await fetchWithCache(API_CALL, location.href);
+        const raw = await fetchWithCache(API_CALL);
         setData(raw);
       } catch (err) {
         setData(null);
@@ -52,7 +56,11 @@ const StoryContent = () => {
   if (data)
     return (
       <div className="flex flex-col gap-5">
-        <Stories data={data} type={type.slice(0, -1)} />
+        <Stories
+          data={data}
+          type={type.slice(0, -1)}
+          onDeleteStory={onDeleteStory}
+        />
         <Outlet
           context={{ type: type.slice(0, -1), latestStory: data.length }}
         />

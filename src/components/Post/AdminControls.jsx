@@ -6,27 +6,36 @@ import { NavLink } from "react-router-dom";
 import { API, DEV_API } from "../../scripts/globals";
 
 import { useAuth } from "../hooks/useAuth";
+import { deleteFromCache } from "../../scripts/cache";
 
-export default function AdminControls({ postId }) {
+export default function AdminControls({ postId, type, onDeletePost, storyId }) {
   const { user } = useAuth();
   const API_CALL =
     import.meta.env.MODE !== "development"
       ? `${API}/posts/delete/${postId}`
       : `${DEV_API}/posts/delete/${postId}`;
+
+  const url =
+    import.meta.env.MODE !== "development"
+      ? `${API}/${type}/${storyId}`
+      : `${DEV_API}/${type}/${storyId}`;
   async function deletePostById() {
     const confirmDelete = window.confirm(
       `Are you sure you want to delete post ${postId}`,
     );
     if (confirmDelete) {
-      const res = await fetch(API_CALL, {
+      console.log("Remove from cache..");
+      deleteFromCache(url);
+      onDeletePost();
+      await fetch(API_CALL, {
         method: "delete",
         headers: {
           Authorization: `Bearer ${user.apikey}`,
         },
       });
-      if (res.ok) {
-        console.log("Remove from cache..");
-      }
+      console.log("Remove from cache..");
+      deleteFromCache(url);
+      onDeletePost();
     }
   }
   return (

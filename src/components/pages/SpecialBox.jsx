@@ -22,11 +22,19 @@ export default function SpecialBox() {
       ? `${API}/special/${id}`
       : `${DEV_API}/special/${id}`;
 
+  function onDeletePost(postId) {
+    setData((prev) => prev.filter((p) => p.id !== postId));
+  }
+
+  function onAddPost(post) {
+    setData((prev) => [...prev, post]);
+  }
+
   useEffect(() => {
     async function getSpecials() {
       try {
         setLoading(true);
-        const raw = await fetchWithCache(API_CALL, location.href);
+        const raw = await fetchWithCache(API_CALL);
         setData(raw);
 
         if (
@@ -57,10 +65,17 @@ export default function SpecialBox() {
             body={item.body}
             images={item.images}
             postId={item.id}
+            special={item.special}
+            secret={item.secret}
             postedAt={item.iat}
+            type={item.type}
+            storyId={item.storyid}
+            onDeletePost={() => onDeletePost(item.id)}
           />
         ))}
-        {user?.role === 1 && <AddPost id={id} fromType={"special"} />}
+        {user?.role === 1 && (
+          <AddPost id={id} fromType={"special"} onAddPost={onAddPost} />
+        )}
         <ScrollToTopButton />
       </>
     );

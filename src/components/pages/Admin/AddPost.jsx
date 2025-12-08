@@ -6,7 +6,9 @@ import { API, DEV_API } from "../../../scripts/globals";
 
 import { useAuth } from "../../hooks/useAuth";
 
-export default function AddPost({ id = null, fromType = null }) {
+import { deleteFromCache } from "../../../scripts/cache";
+
+export default function AddPost({ id = null, fromType = null, onAddPost }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [images, setImages] = useState("");
@@ -49,6 +51,11 @@ export default function AddPost({ id = null, fromType = null }) {
         if (!res.ok) {
           throw new Error("Error saving data..");
         }
+        if (res.ok) {
+          const createdPost = await res.json();
+          console.log(createdPost);
+          onAddPost(createdPost);
+        }
       } else {
         setFeedback("Can't add a post with the current inputs");
       }
@@ -58,6 +65,7 @@ export default function AddPost({ id = null, fromType = null }) {
       setImages("");
       setLoading(false);
       setFeedback("Saved Data.");
+      deleteFromCache(API_CALL);
     } catch (error) {
       console.error(error);
       setFeedback("Error saving data");
