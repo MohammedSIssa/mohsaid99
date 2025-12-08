@@ -26,7 +26,7 @@ const StoryContent = () => {
     async function getData() {
       try {
         setIsLoading(true);
-        const raw = await fetchWithCache(API_CALL);
+        const raw = await fetchWithCache(API_CALL, location.href);
         setData(raw);
       } catch (err) {
         setData(null);

@@ -13,6 +13,14 @@ export async function fetchWithCache(url) {
   return data;
 }
 
+// export function removeFromCache(url) {
+// console.log(cache);
+// console.log(cache.has(url));
+// if (cache.has(url)) {
+//   return cache.delete(url);
+// }
+// }
+
 // export async function fetchWithLocalStorageCache(url) {
 //   if (loadData(url)) {
 //     return loadData(url);

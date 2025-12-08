@@ -26,7 +26,7 @@ export default function SpecialBox() {
     async function getSpecials() {
       try {
         setLoading(true);
-        const raw = await fetchWithCache(API_CALL);
+        const raw = await fetchWithCache(API_CALL, location.href);
         setData(raw);
 
         if (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function PostBody({ body, showAllText = false }) {
-  const [showMore, setShowMore] = useState(body.length < 60);
+  const [showMore, setShowMore] = useState(body?.length < 60);
 
   function detectDirection(text) {
     const arabicRegex = /[\u0600-\u06FF]/; // Arabic Unicode block
@@ -23,7 +23,7 @@ export default function PostBody({ body, showAllText = false }) {
         <div className="py-2">
           {!showAllText && (
             <pre dir={dir} className="max-w-full md:max-w-[700px]">
-              {body.slice(0, 60)}...{" "}
+              {body?.slice(0, 60)}...{" "}
               <button
                 className="text-zinc-500 hover:cursor-pointer hover:text-zinc-300"
                 onClick={() => setShowMore(true)}

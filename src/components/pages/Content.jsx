@@ -39,7 +39,7 @@ const Content = ({ latest = false }) => {
     async function getData() {
       setIsLoading(true);
       try {
-        const raw = await fetchWithCache(API_CALL);
+        const raw = await fetchWithCache(API_CALL, location.href);
         setData(raw);
         if (latest) navigate(`/${type}s/${latestStory}`);
         if (

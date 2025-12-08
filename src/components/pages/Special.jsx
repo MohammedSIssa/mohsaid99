@@ -21,7 +21,7 @@ const Special = () => {
   useEffect(() => {
     async function getSpecials() {
       try {
-        const raw = await fetchWithCache(API_CALL);
+        const raw = await fetchWithCache(API_CALL, location.href);
         setData(raw);
       } catch (err) {
         setData(null);
