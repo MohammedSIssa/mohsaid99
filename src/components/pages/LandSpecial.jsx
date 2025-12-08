@@ -3,7 +3,7 @@ import SpecialPerson from "../SpecialPerson";
 
 function LandSpecial() {
   return (
-    <div className="relative flex h-[300px] flex-col items-center gap-4 pt-15">
+    <div className="relative flex h-[300px] flex-col items-center gap-4 pt-15 pb-20">
       <Icon iconName={"special"} />
       <div className="flex flex-col items-center text-center text-pretty">
         <h1 className="mb-15 text-2xl font-bold md:text-3xl lg:text-4xl [&_p]:mb-3">
