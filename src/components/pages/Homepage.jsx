@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <div className="flex min-h-dvh flex-col items-center justify-center p-10 text-center [&_p]:mb-2 [&_p]:max-w-[600px] [&_p]:text-sm [&_p]:font-bold [&_p]:md:text-lg">
+    <div className="flex h-screen min-h-[300px] flex-col items-center justify-center p-10 pb-20 text-center [&_p]:mb-2 [&_p]:max-w-[600px] [&_p]:text-sm [&_p]:font-bold [&_p]:md:text-lg">
       <div className="flex w-[170px] text-right">
         <p>مرحبا،</p>
       </div>

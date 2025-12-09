@@ -5,7 +5,7 @@ function LandServer() {
   const { type } = useOutletContext();
   if (type === "goal") {
     return (
-      <div className="relative flex h-[300px] flex-col items-center gap-4 p-15 pb-20">
+      <div className="relative flex min-h-[300px] flex-col items-center gap-4 p-15 pb-20">
         <Icon iconName={"goals"} />
         <div className="text-center text-pretty">
           <h1 className="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl [&_p]:mb-3">
