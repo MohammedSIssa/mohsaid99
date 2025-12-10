@@ -34,6 +34,8 @@ import Stat from "./components/pages/Stat";
 import Special from "./components/pages/Special";
 import SpecialBox from "./components/pages/SpecialBox";
 
+import AppLayout from "./components/layouts/AppLayout";
+
 function App() {
   const [user, setUser] = useState(loadUser);
   return (
@@ -41,6 +43,7 @@ function App() {
       <HashRouter>
         <NavBar />
         <Routes>
+          {/* <Route element={<AppLayout />}> */}
           <Route path="/" element={<Homepage />} />
 
           <Route path="/stats" element={<Stats />}>
@@ -79,6 +82,7 @@ function App() {
           </Route>
 
           <Route path="/*" element={<ErrorPage />}></Route>
+          {/* </Route> */}
         </Routes>
       </HashRouter>
     </UserContext>
