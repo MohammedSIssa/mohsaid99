@@ -6,8 +6,9 @@ import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 
 import { useAuth } from "./hooks/useAuth";
+import { deleteFromCache } from "../scripts/cache";
 
-export default function Story({ item, idx }) {
+export default function Story({ item, idx, onDeleteStory }) {
   const goldStory = item.special;
   const { user } = useAuth();
 
@@ -16,17 +17,29 @@ export default function Story({ item, idx }) {
       ? API + "/delete/story/" + item.id
       : DEV_API + "/delete/story/" + item.id;
 
+  const url =
+    import.meta.env.MODE !== "development"
+      ? API + "/" + item.type + "/" + item.count
+      : DEV_API + "/" + item.type + "/" + item.count;
+
+  const typeUrl =
+    import.meta.env.MODE !== "development"
+      ? API + "/" + item.type
+      : DEV_API + "/" + item.type;
+
   async function deleteStory() {
     const confirmDelete = window.confirm(`Delete story?`);
     if (confirmDelete) {
+      onDeleteStory(item.id);
+      deleteFromCache(url);
+      deleteFromCache(typeUrl);
       const res = await fetch(API_CALL, {
         method: "DELETE",
         headers: { Authorization: `Bearer: ${user.apikey}` },
       });
 
       if (res.ok) {
-        alert("Deleted story successfully");
-        location.reload();
+        console.log("Deleted Successfully");
       }
       if (!res.ok) {
         alert("Could not delete the story");
@@ -67,6 +80,7 @@ export default function Story({ item, idx }) {
               className={
                 "rounded bg-blue-700 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-white hover:text-blue-700"
               }
+              state={{ type: item.type, count: item.count }}
             >
               <MdEdit />
             </NavLink>

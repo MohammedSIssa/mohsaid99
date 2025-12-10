@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import AddStoryBox from "./pages/Admin/AddStoryBox";
 
-const Stories = ({ data, type }) => {
+const Stories = ({ data, type, onDeleteStory }) => {
   const { user } = useContext(UserContext);
   return (
     <div
@@ -14,7 +14,7 @@ const Stories = ({ data, type }) => {
       {user?.role === 1 && <AddStoryBox type={type} count={data.length + 1} />}
 
       {[...data].reverse().map((item, idx) => (
-        <Story item={item} idx={idx} key={idx} />
+        <Story item={item} idx={idx} key={idx} onDeleteStory={onDeleteStory} />
       ))}
     </div>
   );

@@ -14,5 +14,6 @@ export async function fetchWithCache(url) {
 
 export function deleteFromCache(url) {
   console.log("Deleting from cache:", url);
+  console.log(cache.has(url));
   cache.delete(url);
 }

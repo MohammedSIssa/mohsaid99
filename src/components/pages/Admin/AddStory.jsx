@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import { API, DEV_API } from "../../../scripts/globals";
-
 import { useAuth } from "../../hooks/useAuth";
-
-import { useLocation } from "react-router-dom";
+import { deleteFromCache } from "../../../scripts/cache";
 
 export default function AddStory() {
   const [period, setPeriod] = useState("");
@@ -33,7 +32,8 @@ export default function AddStory() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      setFeedback("Adding data..");
+      setFeedback("Adding story..");
+      deleteFromCache(API_CALL);
       const res = await fetch(API_CALL, {
         method: "POST",
         headers: {
@@ -53,8 +53,6 @@ export default function AddStory() {
       if (!res.ok) {
         throw new Error("Failed to save data.");
       }
-
-      console.log("Saved data.");
       setPeriod("");
       setYear("");
       setSummary("");
@@ -69,16 +67,16 @@ export default function AddStory() {
   return (
     <form
       method="POST"
-      className="flex flex-col gap-4 p-10 min-w-[300px] border border-zinc-700 bg-zinc-900 rounded-xl"
+      className="flex min-w-[300px] flex-col gap-4 rounded-xl border border-zinc-700 bg-zinc-900 p-10"
       onSubmit={handleSubmit}
     >
-      <p className="text-xl text-green-200 font-bold">فورم اضافة الستوري</p>
+      <p className="text-xl font-bold text-green-200">فورم اضافة الستوري</p>
       <hr className="border-zinc-800" />
       <label htmlFor="add_story_type" dir="ltr">
         Type:
       </label>
       <select
-        className="bg-zinc-800 text-zinc-50 p-2 focus:border focus:outline-0 focus:border-zinc-600"
+        className="bg-zinc-800 p-2 text-zinc-50 focus:border focus:border-zinc-600 focus:outline-0"
         onChange={(e) => setType(e.target.value)}
         id="add_story_type"
         value={type}
@@ -98,7 +96,7 @@ export default function AddStory() {
         id="add_story_count"
         value={weekCount}
         onChange={(e) => setWeekCount(e.target.value)}
-        className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 focus:border-zinc-600 focus:border"
+        className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:border focus:border-zinc-600 focus:outline-0"
         autoComplete="off"
         dir="ltr"
         required
@@ -111,7 +109,7 @@ export default function AddStory() {
         id="add_story_period"
         value={period}
         onChange={(e) => setPeriod(e.target.value)}
-        className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 focus:border-zinc-600 focus:border"
+        className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:border focus:border-zinc-600 focus:outline-0"
         autoComplete="off"
         required
       />
@@ -123,7 +121,7 @@ export default function AddStory() {
         id="add_story_year"
         value={year}
         onChange={(e) => setYear(e.target.value)}
-        className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 focus:border-zinc-600 focus:border"
+        className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:border focus:border-zinc-600 focus:outline-0"
         autoComplete="off"
         dir="ltr"
         required
@@ -136,10 +134,10 @@ export default function AddStory() {
         id="add_story_summary"
         value={summary}
         onChange={(e) => setSummary(e.target.value)}
-        className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 focus:border-zinc-600 focus:border"
+        className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:border focus:border-zinc-600 focus:outline-0"
         autoComplete="off"
       />
-      <div className="flex gap-4 items-center justify-center" dir="ltr">
+      <div className="flex items-center justify-center gap-4" dir="ltr">
         <label htmlFor="add_story_isSpecial" dir="ltr">
           Golden Story?
         </label>
@@ -156,7 +154,7 @@ export default function AddStory() {
       <button
         type="submit"
         onClick={handleSubmit}
-        className="bg-zinc-950 p-2 px-5 rounded-lg hover:bg-zinc-800 border border-zinc-950 hover:border hover:border-zinc-700 hover:cursor-pointer transition-all duration-100"
+        className="rounded-lg border border-zinc-950 bg-zinc-950 p-2 px-5 transition-all duration-100 hover:cursor-pointer hover:border hover:border-zinc-700 hover:bg-zinc-800"
       >
         Add Story
       </button>

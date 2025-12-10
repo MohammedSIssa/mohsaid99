@@ -18,6 +18,10 @@ const Special = () => {
       ? API + "/special"
       : DEV_API + "/special";
 
+  function onDeleteStory(storyId) {
+    setData((prev) => prev.filter((s) => s.id !== storyId));
+  }
+
   useEffect(() => {
     async function getSpecials() {
       try {
@@ -39,7 +43,7 @@ const Special = () => {
 
   return (
     <div className="flex flex-col gap-5">
-      <Stories data={data} type={"special"} />
+      <Stories data={data} type={"special"} onDeleteStory={onDeleteStory} />
       <Outlet context={{ latestStory: data.length }} />
     </div>
   );

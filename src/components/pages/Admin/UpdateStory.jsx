@@ -5,6 +5,8 @@ import { API, DEV_API } from "../../../scripts/globals";
 
 import { useAuth } from "../../hooks/useAuth";
 
+import { deleteFromCache } from "../../../scripts/cache";
+
 export default function UpdateStory() {
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
@@ -16,7 +18,6 @@ export default function UpdateStory() {
   const [feedback, setFeedback] = useState("");
 
   const { user } = useAuth();
-
   const { id } = useParams();
 
   const API_CALL =
@@ -28,6 +29,15 @@ export default function UpdateStory() {
     import.meta.env.MODE !== "development"
       ? `${API}/update/story/${id}`
       : `${DEV_API}/update/story/${id}`;
+
+  const url =
+    import.meta.env.MODE !== "development"
+      ? `${API}/${type}/${count}`
+      : `${DEV_API}/${type}/${count}`;
+  const typeUrl =
+    import.meta.env.MODE !== "development"
+      ? `${API}/${type}`
+      : `${DEV_API}/${type}`;
   useEffect(() => {
     async function fetchStoryData() {
       try {
@@ -62,7 +72,7 @@ export default function UpdateStory() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      setFeedback("");
+      setFeedback("Updating...");
       const res = await fetch(PUT_API_CALL, {
         method: "PUT",
         headers: {
@@ -75,7 +85,8 @@ export default function UpdateStory() {
         setFeedback("Failed to Update");
         throw new Error("Failed to Update");
       }
-
+      deleteFromCache(url);
+      deleteFromCache(typeUrl);
       setFeedback("Updated Successfully");
     } catch (error) {
       console.error(error);
@@ -85,27 +96,27 @@ export default function UpdateStory() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 p-10 min-w-[300px] border border-zinc-700 bg-zinc-900 rounded-xl"
+      className="flex min-w-[300px] flex-col gap-4 rounded-xl border border-zinc-700 bg-zinc-900 p-10"
     >
-      <p className="text-xl text-green-200 font-bold">فورم تحديث الستوري</p>
+      <p className="text-xl font-bold text-green-200">فورم تحديث الستوري</p>
       <hr className="border-zinc-800" />
       <label htmlFor="up_story_count" dir="ltr">
         Count:
       </label>
-      <div className="flex gap-4 flex-wrap" dir="ltr">
+      <div className="flex flex-wrap gap-4" dir="ltr">
         <input
           type="number"
           id="up_story_count"
           name="count"
           value={count}
           dir="ltr"
-          className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-20"
+          className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:outline-0 disabled:opacity-20"
           onChange={(e) => setCount(e.target.value)}
         />
         <select
           value={type}
           onChange={(e) => setType(e.target.value)}
-          className="bg-zinc-800 text-zinc-50 p-2 focus:border focus:outline-0 focus:border-zinc-600"
+          className="bg-zinc-800 p-2 text-zinc-50 focus:border focus:border-zinc-600 focus:outline-0"
           id="up_story_type"
           name="up_story_type"
         >
@@ -126,7 +137,7 @@ export default function UpdateStory() {
         onChange={(e) => setTitle(e.target.value)}
         disabled={loading}
         autoComplete="off"
-        className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-20 font-bold"
+        className="rounded-lg bg-zinc-800 p-2 px-5 font-bold text-zinc-50 focus:outline-0 disabled:opacity-20"
       />
       <label htmlFor="up_story_summary" dir="ltr">
         Summary:
@@ -135,7 +146,7 @@ export default function UpdateStory() {
         id="up_story_summary"
         value={summary}
         name="summary"
-        className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-20"
+        className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:outline-0 disabled:opacity-20"
         onChange={(e) => setSummary(e.target.value)}
         disabled={loading}
         autoComplete="off"
@@ -149,10 +160,10 @@ export default function UpdateStory() {
         name="year"
         disabled={loading}
         autoComplete="off"
-        className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-20"
+        className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:outline-0 disabled:opacity-20"
         onChange={(e) => setYear(e.target.value)}
       />
-      <div className="flex gap-4 items-center justify-center">
+      <div className="flex items-center justify-center gap-4">
         <input
           type="checkbox"
           id="up_story_isSpecial"
@@ -160,7 +171,7 @@ export default function UpdateStory() {
           value={special}
           checked={special}
           disabled={loading}
-          className="bg-zinc-800 text-zinc-50 p-2 px-5 rounded-lg focus:outline-0 disabled:opacity-20"
+          className="rounded-lg bg-zinc-800 p-2 px-5 text-zinc-50 focus:outline-0 disabled:opacity-20"
           onChange={(e) => setSpecial(e.target.checked)}
         />
         <label htmlFor="up_story_isSpecial" dir="ltr">
@@ -170,7 +181,7 @@ export default function UpdateStory() {
       <button
         type="submit"
         onClick={handleSubmit}
-        className="bg-zinc-950 p-2 px-5 rounded-lg hover:bg-zinc-800 border border-zinc-950 hover:border hover:border-zinc-700 hover:cursor-pointer transition-all duration-100"
+        className="rounded-lg border border-zinc-950 bg-zinc-950 p-2 px-5 transition-all duration-100 hover:cursor-pointer hover:border hover:border-zinc-700 hover:bg-zinc-800"
       >
         Update Story
       </button>
@@ -180,8 +191,8 @@ export default function UpdateStory() {
           feedback === "Updated Successfully"
             ? "text-green-500"
             : feedback === "Failed to Update"
-            ? "text-red-500"
-            : ""
+              ? "text-red-500"
+              : ""
         }
       >
         {feedback}
