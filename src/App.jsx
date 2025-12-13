@@ -44,7 +44,7 @@ function App() {
         <NavBar />
 
         {/* Suspense handles all lazy-loaded routes */}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div></div>}>
           <Routes>
             {/* Home */}
             <Route path="/" element={<Homepage />} />
