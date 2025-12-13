@@ -12,8 +12,8 @@ const takenOutClassNames =
 const Homepage = () => {
   return (
     <div className="relative flex h-screen min-h-[300px] flex-col items-center justify-center bg-linear-to-br from-[#120b26] via-[#130d33] to-[#320e41] p-10 pb-20 text-center [&_p]:mb-2 [&_p]:max-w-[600px] [&_p]:text-sm [&_p]:font-bold [&_p]:md:text-lg">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.17),transparent_60%)]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(168,85,247,0.15),transparent_65%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.17),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(168,85,247,0.15),transparent_65%)]"></div>
       <div className="flex w-[170px] text-right">
         <TypingText
           text={"مرحبا،"}
