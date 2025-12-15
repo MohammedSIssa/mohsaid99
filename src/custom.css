@@ -89,10 +89,6 @@ body {
   border-color: var(--story-border-color);
 }
 
-pre {
-  font-family: var(--font);
-}
-
 @media (min-width: 760px) {
   .nav-bar {
     background-color: transparent !important;
@@ -360,6 +356,7 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   max-width: 80%;
+  font-family: var(--font);
 }
 
 @media (min-width: 1000px) {

@@ -13,7 +13,7 @@ const Stories = ({ data, type, onDeleteStory }) => {
     >
       {user?.role === 1 && <AddStoryBox type={type} count={data.length + 1} />}
 
-      {[...data].reverse().map((item, idx) => (
+      {[...data].map((item, idx) => (
         <Story item={item} idx={idx} key={idx} onDeleteStory={onDeleteStory} />
       ))}
     </div>
