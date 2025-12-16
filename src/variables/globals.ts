@@ -1,4 +1,4 @@
-export const API: string = import.meta.env.VITE_DEV_API;
+export const API: string = import.meta.env.VITE_PROD_API;
 
 // export const isAdmin = (role: number, apikey: string): boolean =>
 //   role === +import.meta.env.VITE_ADMIN_ROLE &&
