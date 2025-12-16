@@ -1,3 +1,3 @@
-# 3rd Version of my webiste
+# React + TypeScript + Vite
 
-built using React (vite) on the front-end & Express JS + PostgreSQL on the back-end
+This is my react tsx folder, every project will be in here
