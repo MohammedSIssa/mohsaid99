@@ -59,7 +59,7 @@ export default function PostBox({
 
   return (
     <div
-      className={`${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} post w-full max-w-full flex-col gap-2 border-t-2 border-b-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:w-fit md:max-w-[700px] md:min-w-[300px] md:rounded-xl md:border-2 lg:max-w-[900px]`}
+      className={`${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} ${post.special ? "border-yellow-300/30 bg-yellow-300/20 text-yellow-200" : ""} ${post.secret ? "text-fuchsia-300" : ""} post w-full max-w-full flex-col gap-2 border-t-2 border-b-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:w-fit md:max-w-[700px] md:min-w-[300px] md:rounded-xl md:border-2 lg:max-w-[900px]`}
     >
       {!isEditing && (
         <>
