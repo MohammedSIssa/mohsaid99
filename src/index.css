@@ -123,6 +123,10 @@ td {
   text-align: center;
 }
 
+.post:not(:has(img)) {
+  min-width: 500px;
+}
+
 .post.special::before {
   position: absolute;
   top: -14px;
