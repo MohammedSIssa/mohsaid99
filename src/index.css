@@ -133,8 +133,8 @@ td {
   right: 20px;
   width: 50px;
   height: 28px;
-  background-color: #4b3c17;
-  border-color: rgba(255, 207, 84, 0.238);
+  background-color: #4b4a4f;
+  border-color: #807741;
   border-width: 2px;
   content: "✨";
   border-radius: 8px;
@@ -153,9 +153,9 @@ td {
   right: 20px;
   width: 50px;
   height: 28px;
-  background-color: #422a2e;
+  background-color: #343c6e;
   border-width: 2px;
-  border-color: #c777d96d;
+  border-color: #5d658c;
   content: "🔒";
   border-radius: 8px;
   display: flex;
