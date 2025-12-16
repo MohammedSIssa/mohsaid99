@@ -122,3 +122,39 @@ th {
 td {
   text-align: center;
 }
+
+.post.special::before {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 50px;
+  height: 28px;
+  background-color: #4b3c17;
+  border-color: rgba(255, 207, 84, 0.238);
+  border-width: 2px;
+  content: "✨";
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post.secret {
+  border-width: 2px;
+}
+
+.post.secret::before {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 50px;
+  height: 28px;
+  background-color: #422a2e;
+  border-width: 2px;
+  border-color: #c777d96d;
+  content: "🔒";
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
