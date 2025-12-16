@@ -53,7 +53,7 @@ export default function NavBar() {
           <FiLogIn size={28} />
         </NavLink>
       )}
-      {(isAdmin() || isMonmon()) && (
+      {isLoggedIn() && (
         <NavLink
           to={"/special/"}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
