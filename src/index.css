@@ -92,6 +92,10 @@ pre {
   filter: brightness(1.25);
 }
 
+.slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 iframe {
   pointer-events: none;
   cursor: none;
