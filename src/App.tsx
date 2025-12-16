@@ -33,15 +33,15 @@ export default function App() {
               <Route path="logs" element={<Logs />} />
             </Route>
 
+            {/* Secret Routes */}
+            <Route element={<RequireAuth role={MONMON_ROLE} />}></Route>
+
             <Route path="stats" element={<Stats />} />
             <Route path="stats/:statid" element={<Stats />} />
 
             {/* Public Routes */}
             <Route path=":type" element={<Content />} />
             <Route path=":type/:storyid" element={<Content />} />
-
-            {/* Secret Routes */}
-            <Route element={<RequireAuth role={MONMON_ROLE} />}></Route>
           </Route>
         </Routes>
       </Suspense>

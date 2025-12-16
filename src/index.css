@@ -81,7 +81,7 @@ pre {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #201344;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(200, 200, 200, 0.3);
@@ -91,9 +91,7 @@ pre {
 ::-webkit-scrollbar-thumb:hover {
   filter: brightness(1.25);
 }
-::-webkit-scrollbar-corner {
-  background: #f1f1f1;
-}
+
 iframe {
   pointer-events: none;
   cursor: none;
