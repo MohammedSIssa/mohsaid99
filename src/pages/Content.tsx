@@ -12,7 +12,7 @@ import { API } from "../variables/globals";
 import useAuth from "../hooks/useAuth";
 import { logger } from "../variables/logger";
 
-export default function Content() {
+export default function Content({ toType = null }: { toType?: string | null }) {
   const [stories, setStories] = useState<Story[] | null>(null);
   const [posts, setPosts] = useState<Post[] | null>(null);
 
@@ -36,7 +36,7 @@ export default function Content() {
   useEffect(() => {
     async function getStories() {
       try {
-        const res = await fetch(API + "/stories/" + type);
+        const res = await fetch(API + "/stories/" + (toType ? toType : type));
         if (res.ok) {
           const data = await res.json();
           setStories(data);
@@ -50,23 +50,34 @@ export default function Content() {
         setLoadingStories(false);
       }
     }
-    if (type && ["week", "blog", "goal", "special"].includes(type)) {
+    if (toType) {
+      if (["week", "blog", "goal", "special"].includes(toType)) {
+        getStories();
+      }
+    }
+    if (!toType && type && ["week", "blog", "goal", "special"].includes(type)) {
       getStories();
     }
-  }, [type]);
+  }, [type, toType]);
 
   useEffect(() => {
     async function getPosts() {
+      console.log(toType);
       try {
         setLoadingPosts(true);
-        const res = await fetch(API + "/posts/" + type + "/" + storyid);
+        const res = await fetch(
+          API + "/posts/" + (toType ? toType : type) + "/" + storyid,
+        );
         if (res.ok) {
           const data = await res.json();
           setPosts(data);
           setPostsError(false);
 
           if (!isAdmin())
-            await logger(user?.username ?? "guest", `${type} - ${storyid}`);
+            await logger(
+              user?.username ?? "guest",
+              `${toType ? toType : type} - ${storyid}`,
+            );
         }
       } catch {
         setPostsError(true);
@@ -75,9 +86,13 @@ export default function Content() {
       }
     }
     if (storyid !== undefined) getPosts();
-  }, [type, storyid]);
+  }, [type, storyid, isAdmin, user?.username, toType]);
 
-  if (type && !allowedTypes.includes(type)) {
+  if (toType && !allowedTypes.includes(toType)) {
+    return <NotFoundPage />;
+  }
+
+  if (!toType && type && !allowedTypes.includes(type)) {
     return <NotFoundPage />;
   }
 
@@ -102,7 +117,7 @@ export default function Content() {
       {!loadingPosts && storyid !== undefined && (
         <Posts
           posts={posts ?? []}
-          type={type !== undefined ? type : ""}
+          type={!toType && type !== undefined ? type : toType ? toType : ""}
           storyid={storyid !== undefined ? parseInt(storyid) : 0}
         />
       )}

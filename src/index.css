@@ -96,6 +96,10 @@ pre {
   background: transparent;
 }
 
+.stories::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 iframe {
   pointer-events: none;
   cursor: none;
@@ -127,9 +131,10 @@ td {
   text-align: center;
 }
 
-.post:not(:has(img)) {
-  min-width: 500px;
-}
+/* .post:not(:has(img)) {
+  min-width: 350px;
+  max-width: 100% !important;
+} */
 
 .post.special::before {
   position: absolute;

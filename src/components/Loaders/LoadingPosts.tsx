@@ -1,7 +1,12 @@
+import useAuth from "../../hooks/useAuth";
+
 export default function LoadingPosts() {
+  const { isAdmin } = useAuth();
   const fakePosts = Array.from({ length: 5 });
   return (
-    <div className="flex w-full flex-col items-center gap-5 pt-30 md:pt-20">
+    <div
+      className={`flex w-full flex-col items-center gap-5 ${isAdmin() ? "pt-66" : "pt-38"} md:pt-25`}
+    >
       {fakePosts.map((_, idx) => (
         // Outer box
         <div

@@ -9,9 +9,7 @@ export default function RequireAuth({ role }: { role: number }) {
   useEffect(() => {
     if (isNotLoggedIn()) navigate("/login");
     if (isLoggedIn()) {
-      if (role === import.meta.env.VITE_MONMON_ROLE) {
-        if (!isMonmon() || !isAdmin()) navigate("/");
-      } else if (role === import.meta.env.VITE_ADMIN_ROLE) {
+      if (role === import.meta.env.VITE_ADMIN_ROLE) {
         if (!isAdmin()) navigate("/");
       }
     }

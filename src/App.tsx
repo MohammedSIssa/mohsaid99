@@ -34,7 +34,13 @@ export default function App() {
             </Route>
 
             {/* Secret Routes */}
-            <Route element={<RequireAuth role={MONMON_ROLE} />}></Route>
+            <Route element={<RequireAuth role={MONMON_ROLE} />}>
+              <Route path="special" element={<Content toType={"special"} />} />
+              <Route
+                path="special/:storyid"
+                element={<Content toType={"special"} />}
+              />
+            </Route>
 
             <Route path="stats" element={<Stats />} />
             <Route path="stats/:statid" element={<Stats />} />

@@ -3,6 +3,23 @@ import PostBox from "./Post/Post";
 import useAuth from "../hooks/useAuth";
 import AddPostForm from "./Admin/AddPostForm";
 
+type typesProp = {
+  week?: string;
+  goal?: string;
+  special?: string;
+  stat?: string;
+  blog?: string;
+  [key: string]: string | undefined;
+};
+
+const arabicTypes: typesProp = {
+  week: "الأسابيع",
+  goal: "الأهداف",
+  special: "خاص",
+  stat: "احصائيات",
+  blog: "المدونة",
+};
+
 export default function Posts({
   posts,
   type,
@@ -16,11 +33,12 @@ export default function Posts({
   return (
     <div className="flex w-full flex-col items-center pt-20">
       <div className="mx-auto mb-2 flex gap-2 md:hidden">
-        <p className="counter rounded border-2 border-white/20 bg-white/10 p-2 px-5 font-bold">
-          {storyid}
+        <p className="rounded border-2 border-white/20 bg-white/10 p-2 px-5 font-bold">
+          {arabicTypes[type]}
         </p>
         <p className="counter rounded border-2 border-white/20 bg-white/10 p-2 px-5 font-bold">
-          {type}
+          {"#"}
+          {storyid}
         </p>
       </div>
       <div className="mb-5">

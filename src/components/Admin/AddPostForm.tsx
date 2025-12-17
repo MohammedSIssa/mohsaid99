@@ -22,12 +22,15 @@ export default function AddPostForm({
   const [isVisible, setIsVisible] = useState(false);
 
   const [feedback, setFeedback] = useState<string>("");
+  const [isAdding, setIsAdding] = useState<boolean>(false);
 
   const { user } = useAuth();
 
   async function handleSave(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
+      setIsAdding(true);
+      setFeedback("Adding post..");
       const res = await fetch(API + "/posts/" + type + "/" + storyid, {
         method: "POST",
         headers: {
@@ -62,6 +65,8 @@ export default function AddPostForm({
     } catch (e) {
       console.error(e);
       setFeedback("Client Error!");
+    } finally {
+      setIsAdding(false);
     }
   }
 
@@ -81,7 +86,7 @@ export default function AddPostForm({
       <div className="mb-5 flex flex-col items-center gap-5">
         <form
           onSubmit={handleSave}
-          className="flex max-w-fit flex-col gap-1 rounded-xl border-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:min-w-[400px] [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-white/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-white/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
+          className="flex max-w-fit flex-col gap-1 rounded-xl border-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:min-w-[400px] [&]:disabled:opacity-35 [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-white/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-white/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
           dir="ltr"
         >
           <h1 className="font-bold" dir="ltr">
@@ -91,6 +96,7 @@ export default function AddPostForm({
             Title:{" "}
           </label>
           <input
+            disabled={isAdding}
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -100,6 +106,7 @@ export default function AddPostForm({
             Body:{" "}
           </label>
           <textarea
+            disabled={isAdding}
             id="body"
             value={body}
             onChange={(e) => setBody(e.target.value)}
@@ -109,6 +116,7 @@ export default function AddPostForm({
             Images:{" "}
           </label>
           <textarea
+            disabled={isAdding}
             id="images"
             dir="ltr"
             value={images}
@@ -131,6 +139,7 @@ export default function AddPostForm({
                 Special?
               </label>
               <input
+                disabled={isAdding}
                 id="special"
                 type="checkbox"
                 className="opacity-30"
@@ -159,7 +168,7 @@ export default function AddPostForm({
             type="submit"
             className="w-full cursor-pointer rounded-lg border-0 bg-linear-to-b from-[#5a36e9] via-[#805afe] to-[#5a36e9] p-1 px-2 font-bold hover:brightness-105 focus:outline-0"
           >
-            حفظ التعديلات
+            اضافة المنشور
           </button>
         </form>
         <PostBox
