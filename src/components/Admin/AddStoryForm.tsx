@@ -79,7 +79,7 @@ export default function AddStoryForm({
       <div className="flex w-full flex-col gap-2">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-2 rounded-lg border-2 border-white/20 bg-white/10 p-2 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/20 [&_input]:bg-white/20 [&_input]:p-1 [&_input]:focus:outline-0"
+          className="flex flex-col gap-2 rounded-lg border-2 border-white/20 bg-white/10 p-2 **:disabled:opacity-35 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/20 [&_input]:bg-white/20 [&_input]:p-1 [&_input]:focus:outline-0"
         >
           <label dir="ltr" htmlFor="title">
             Title:

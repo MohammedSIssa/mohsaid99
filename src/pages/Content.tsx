@@ -62,7 +62,6 @@ export default function Content({ toType = null }: { toType?: string | null }) {
 
   useEffect(() => {
     async function getPosts() {
-      console.log(toType);
       try {
         setLoadingPosts(true);
         const res = await fetch(

@@ -5,7 +5,7 @@ export default function LoadingPosts() {
   const fakePosts = Array.from({ length: 5 });
   return (
     <div
-      className={`flex w-full flex-col items-center gap-5 ${isAdmin() ? "pt-66" : "pt-38"} md:pt-25`}
+      className={`flex w-full flex-col items-center gap-5 overflow-y-hidden ${isAdmin() ? "pt-66 md:pt-53" : "pt-38 md:pt-25"}`}
     >
       {fakePosts.map((_, idx) => (
         // Outer box

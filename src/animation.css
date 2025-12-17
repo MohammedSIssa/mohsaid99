@@ -61,3 +61,22 @@
     border-color: transparent;
   }
 }
+
+@keyframes corner-pulse {
+  0%,
+  20% {
+    corner-shape: square;
+  }
+
+  100% {
+    corner-shape: notch;
+  }
+}
+
+.corner-pulse {
+  animation: corner-pulse infinite alternate 4s linear;
+}
+
+.animate-spin {
+  animation-duration: 2s;
+}

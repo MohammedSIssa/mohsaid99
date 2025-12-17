@@ -86,7 +86,7 @@ export default function AddPostForm({
       <div className="mb-5 flex flex-col items-center gap-5">
         <form
           onSubmit={handleSave}
-          className="flex max-w-fit flex-col gap-1 rounded-xl border-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:min-w-[400px] [&]:disabled:opacity-35 [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-white/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-white/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
+          className="flex max-w-fit flex-col gap-1 rounded-xl border-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl **:disabled:opacity-35 md:min-w-[400px] [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-white/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-white/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
           dir="ltr"
         >
           <h1 className="font-bold" dir="ltr">

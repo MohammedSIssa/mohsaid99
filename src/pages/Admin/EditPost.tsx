@@ -13,6 +13,8 @@ export default function EditPost({ post }: { post: Post }) {
   const [type, setType] = useState<string>(post.type ?? "");
   const [storyid, setStoryid] = useState<number>(post.storyid ?? 0);
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const [feedback, setFeedback] = useState<string>("");
 
   const { user } = useAuth();
@@ -20,6 +22,8 @@ export default function EditPost({ post }: { post: Post }) {
   async function handleSave(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
+      setFeedback("Updating...");
+      setIsLoading(true);
       const res = await fetch(
         API + "/posts/" + type + "/" + storyid + "/" + post.id,
         {
@@ -41,6 +45,7 @@ export default function EditPost({ post }: { post: Post }) {
       );
 
       if (res.ok) {
+        setIsLoading(false);
         setFeedback("Updated!");
       }
       if (res.status === 500) {
@@ -52,19 +57,21 @@ export default function EditPost({ post }: { post: Post }) {
     } catch (e) {
       console.error(e);
       setFeedback("Client Error!");
+      setIsLoading(false);
     }
   }
 
   return (
     <form
       onSubmit={handleSave}
-      className="flex flex-col gap-1 rounded-xl border-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-white/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-white/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
+      className="flex flex-col gap-1 rounded-xl border-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl **:disabled:opacity-35 [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-white/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-white/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
       dir="ltr"
     >
       <label htmlFor="title" dir="ltr">
         Title:{" "}
       </label>
       <input
+        disabled={isLoading}
         id="title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
@@ -74,6 +81,7 @@ export default function EditPost({ post }: { post: Post }) {
         Story Count:{" "}
       </label>
       <input
+        disabled={isLoading}
         id="storyid"
         type="number"
         value={storyid}
@@ -84,6 +92,7 @@ export default function EditPost({ post }: { post: Post }) {
         Type:{" "}
       </label>
       <select
+        disabled={isLoading}
         className="[&_option]:bg-black"
         value={type}
         onChange={(e) => setType(e.target.value)}
@@ -98,6 +107,7 @@ export default function EditPost({ post }: { post: Post }) {
         Body:{" "}
       </label>
       <textarea
+        disabled={isLoading}
         id="body"
         value={body}
         onChange={(e) => setBody(e.target.value)}
@@ -107,6 +117,7 @@ export default function EditPost({ post }: { post: Post }) {
         Images:{" "}
       </label>
       <textarea
+        disabled={isLoading}
         id="images"
         dir="ltr"
         value={images}
@@ -129,6 +140,7 @@ export default function EditPost({ post }: { post: Post }) {
             Special?
           </label>
           <input
+            disabled={isLoading}
             id="special"
             type="checkbox"
             className="opacity-30"
@@ -144,6 +156,7 @@ export default function EditPost({ post }: { post: Post }) {
             Secret?
           </label>
           <input
+            disabled={isLoading}
             id="secret"
             type="checkbox"
             className="opacity-30"
@@ -154,6 +167,7 @@ export default function EditPost({ post }: { post: Post }) {
       </div>
       <p dir="ltr">{feedback}</p>
       <button
+        disabled={isLoading}
         type="submit"
         className="w-full cursor-pointer rounded-lg border-0 bg-linear-to-b from-[#5a36e9] via-[#805afe] to-[#5a36e9] p-1 px-2 font-bold hover:brightness-105 focus:outline-0"
       >
