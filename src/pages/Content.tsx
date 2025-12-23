@@ -98,30 +98,32 @@ export default function Content({ toType = null }: { toType?: string | null }) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
+    <>
       {loadingStories && <SiteSkeleton />}
-      {storiesError && <h1></h1>}
-      {!loadingStories && (
-        <Stories stories={stories ?? []} onDeleteStory={onDeleteStory} />
-      )}
-      {loadingPosts && storyid !== undefined && <LoadingPosts />}
-      {storyid === undefined && (
-        <Land
-          type={
-            stories !== null && typeof stories[0].type === "string"
-              ? stories[0].type
-              : undefined
-          }
-        />
-      )}
-      {postsError && <h1></h1>}
-      {!loadingPosts && storyid !== undefined && (
-        <Posts
-          posts={posts ?? []}
-          type={!toType && type !== undefined ? type : toType ? toType : ""}
-          storyid={storyid !== undefined ? parseInt(storyid) : 0}
-        />
-      )}
-    </div>
+      <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
+        {storiesError && <h1></h1>}
+        {!loadingStories && (
+          <Stories stories={stories ?? []} onDeleteStory={onDeleteStory} />
+        )}
+        {loadingPosts && storyid !== undefined && <LoadingPosts />}
+        {storyid === undefined && (
+          <Land
+            type={
+              stories !== null && typeof stories[0].type === "string"
+                ? stories[0].type
+                : undefined
+            }
+          />
+        )}
+        {postsError && <h1></h1>}
+        {!loadingPosts && storyid !== undefined && (
+          <Posts
+            posts={posts ?? []}
+            type={!toType && type !== undefined ? type : toType ? toType : ""}
+            storyid={storyid !== undefined ? parseInt(storyid) : 0}
+          />
+        )}
+      </div>
+    </>
   );
 }
