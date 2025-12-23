@@ -9,6 +9,8 @@ import Land from "./Land";
 import NotFoundPage from "./NotFoundPage";
 import { API } from "../variables/globals";
 
+import SiteSkeleton from "../components/Loaders/SiteSkeleton";
+
 import useAuth from "../hooks/useAuth";
 import { logger } from "../variables/logger";
 
@@ -97,7 +99,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
 
   return (
     <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
-      {loadingStories && <h1></h1>}
+      {loadingStories && <SiteSkeleton />}
       {storiesError && <h1></h1>}
       {!loadingStories && (
         <Stories stories={stories ?? []} onDeleteStory={onDeleteStory} />
