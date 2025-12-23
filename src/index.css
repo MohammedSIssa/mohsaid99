@@ -63,8 +63,10 @@ pre {
   font-family: Montserrat, sans-serif;
 }
 
-.post img {
-  max-height: calc(100dvh - 200px);
+@media (min-width: 768px) {
+  .post img {
+    max-height: calc(100dvh - 200px);
+  }
 }
 
 .stories::-webkit-scrollbar {
