@@ -68,11 +68,11 @@ export const stats = [
         },
         {
           label: "الأسبوع الثالث",
-          value: 26,
+          value: 38,
         },
         {
           label: "الأسبوع الرابع",
-          value: null,
+          value: 7,
         },
       ],
     },
