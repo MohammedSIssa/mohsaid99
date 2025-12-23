@@ -9,8 +9,6 @@ import Land from "./Land";
 import NotFoundPage from "./NotFoundPage";
 import { API } from "../variables/globals";
 
-import SiteSkeleton from "../components/Loaders/SiteSkeleton";
-
 import useAuth from "../hooks/useAuth";
 import { logger } from "../variables/logger";
 
@@ -99,9 +97,11 @@ export default function Content({ toType = null }: { toType?: string | null }) {
 
   return (
     <>
-      {loadingStories && <SiteSkeleton />}
       <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
         {storiesError && <h1></h1>}
+        {loadingStories && (
+          <span className="h-20 w-20 animate-spin rounded-xl border-2 border-white/20 bg-white/20"></span>
+        )}
         {!loadingStories && (
           <Stories stories={stories ?? []} onDeleteStory={onDeleteStory} />
         )}
