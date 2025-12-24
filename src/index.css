@@ -69,6 +69,12 @@ pre {
   }
 }
 
+@media (max-width: 768px) {
+  .post img {
+    max-height: 400px
+  }
+}
+
 .stories::-webkit-scrollbar {
   width: 5px;
 }

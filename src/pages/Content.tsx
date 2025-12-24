@@ -100,7 +100,9 @@ export default function Content({ toType = null }: { toType?: string | null }) {
       <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
         {storiesError && <h1></h1>}
         {loadingStories && (
-          <span className="h-20 w-20 animate-spin rounded-xl border-2 border-white/20 bg-white/20"></span>
+          <div className="flex h-dvh items-center justify-center">
+          	<span className="h-20 w-20 animate-spin rounded-xl border-2 border-white/20 bg-white/20"></span>
+          </div>
         )}
         {!loadingStories && (
           <Stories stories={stories ?? []} onDeleteStory={onDeleteStory} />
