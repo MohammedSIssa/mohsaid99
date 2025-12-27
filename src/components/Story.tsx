@@ -62,7 +62,7 @@ export default function StoryBox({
         to={`/${story.type}/${story.count}`}
         onClick={handleLinkClick}
       >
-        {!isAdmin() && story.type !== "stats" && !story.seen && (
+        {!isAdmin() && !story.seen && (
           <span className="absolute -top-2 -right-1 text-yellow-300">
             <MdNewReleases size={18} />
           </span>

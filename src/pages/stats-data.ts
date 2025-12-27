@@ -4,6 +4,7 @@ export const stats = [
     title: "ديسمبر",
     year: 2025,
     type: "stats",
+    seen: true,
     workout: {
       data: [
         {
@@ -83,6 +84,7 @@ export const stats = [
     title: "نوفمبر",
     year: 2025,
     type: "stats",
+    seen: true,
     summary: "احصائيات شهر نوفمبر",
     doughnut: {
       data: [
@@ -138,6 +140,7 @@ export const stats = [
     title: "أكتوبر",
     year: 2025,
     type: "stats",
+    seen: true,
     summary: "احصائيات شهر اكتوبر",
     doughnut: {
       data: [
