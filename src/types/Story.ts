@@ -5,5 +5,6 @@ export type Story = {
   title: string;
   summary?: string;
   year: string | number;
-  special?: boolean;
+  special?: boolean | null;
+  seen?: boolean | null;
 };

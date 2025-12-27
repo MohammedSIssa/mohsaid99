@@ -65,7 +65,13 @@ export default function Content({ toType = null }: { toType?: string | null }) {
       try {
         setLoadingPosts(true);
         const res = await fetch(
-          API + "/posts/" + (toType ? toType : type) + "/" + storyid,
+          API +
+            "/posts/" +
+            (toType ? toType : type) +
+            "/" +
+            storyid +
+            "?user=" +
+            (user?.username ?? "guest"),
         );
         if (res.ok) {
           const data = await res.json();
@@ -85,7 +91,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
       }
     }
     if (storyid !== undefined) getPosts();
-  }, [type, storyid, isAdmin, user?.username, toType]);
+  }, [type, storyid, isAdmin, user?.username, toType, user]);
 
   if (toType && !allowedTypes.includes(toType)) {
     return <NotFoundPage />;
@@ -101,7 +107,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
         {storiesError && <h1></h1>}
         {loadingStories && (
           <div className="flex h-dvh items-center justify-center">
-          	<span className="h-20 w-20 animate-spin rounded-xl border-2 border-white/20 bg-white/20"></span>
+            <span className="h-20 w-20 animate-spin rounded-xl border-2 border-white/20 bg-white/20"></span>
           </div>
         )}
         {!loadingStories && (

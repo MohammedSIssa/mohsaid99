@@ -5,6 +5,8 @@ import useAuth from "../hooks/useAuth";
 import EditStoryPopup from "./EditStoryPopup";
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
+import { MdNewReleases } from "react-icons/md";
+
 import { API } from "../variables/globals";
 
 // Todo:
@@ -60,6 +62,11 @@ export default function StoryBox({
         to={`/${story.type}/${story.count}`}
         onClick={handleLinkClick}
       >
+        {!isAdmin() && !story.seen && (
+          <span className="absolute -top-2 -right-2 text-yellow-300">
+            <MdNewReleases size={18} />
+          </span>
+        )}
         <h1 className="text-xl font-bold">{story.title}</h1>
         <p
           className={`text-[14px] ${special ? "text-yellow-100/70" : "text-white/80"}`}

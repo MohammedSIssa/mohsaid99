@@ -72,7 +72,7 @@ export const stats = [
         },
         {
           label: "الأسبوع الرابع",
-          value: 18,
+          value: 27,
         },
       ],
     },
