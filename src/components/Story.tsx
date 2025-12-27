@@ -63,7 +63,7 @@ export default function StoryBox({
         onClick={handleLinkClick}
       >
         {!isAdmin() && !story.seen && (
-          <span className="absolute -top-2 -right-2 text-yellow-300">
+          <span className="absolute -top-2 -right-1 text-yellow-300">
             <MdNewReleases size={18} />
           </span>
         )}

@@ -5,6 +5,8 @@ import { FaTimes } from "react-icons/fa";
 import StoryBox from "./Story";
 import AddStoryForm from "./Admin/AddStoryForm";
 
+import useAuth from "../hooks/useAuth";
+
 import { useRef } from "react";
 
 export default function Stories({
@@ -25,6 +27,8 @@ export default function Stories({
     });
   };
 
+  const { isAdmin } = useAuth();
+
   return (
     <div className="relative w-full md:w-fit">
       <button
@@ -41,7 +45,7 @@ export default function Stories({
         ref={containerRef}
         className={`${isVisible ? "fixed flex" : "hidden"} stories top-20 z-50 h-screen max-h-[400px] w-full flex-col items-center gap-5 overflow-y-scroll border-2 border-white/20 bg-white/10 p-2 py-10 shadow-xl shadow-black/10 backdrop-blur-2xl md:py-0 md:pt-25 md:pb-5 lg:top-50 lg:left-5 lg:w-fit lg:overflow-y-auto lg:rounded-xl lg:py-5`}
       >
-        {stories && stories[0].type !== "stats" && (
+        {isAdmin() && stories && stories[0].type !== "stats" && (
           <AddStoryForm
             type={stories !== null && stories[0]?.type ? stories[0].type : ""}
             year={stories !== null && stories[0]?.year ? stories[0].year : ""}
