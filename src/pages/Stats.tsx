@@ -22,7 +22,7 @@ export default function Stats() {
       await logger(user?.username ?? "guest", `Stat - ${statid}`);
     }
 
-    if (!isAdmin() || statid) {
+    if (!isAdmin() && statid) {
       log();
     }
   }, [statid, isAdmin, user?.username]);
