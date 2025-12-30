@@ -6,6 +6,8 @@ export type Stat = {
   workout?: StatData;
   doughnut?: StatData;
   line?: StatData;
+  seen?: boolean | null;
+  summary?: string | null;
 };
 
 type StatData = {

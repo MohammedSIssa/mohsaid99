@@ -1,4 +1,6 @@
-export const stats = [
+import type { Stat } from "../types/Stat";
+
+export const stats: Stat[] = [
   {
     count: 3,
     title: "ديسمبر",
@@ -73,7 +75,7 @@ export const stats = [
         },
         {
           label: "الأسبوع الرابع",
-          value: 27,
+          value: 35,
         },
       ],
     },
