@@ -47,7 +47,7 @@ export default function Posts({
       {!isAdmin() && posts.length === 0 && (
         <h1 className="text-2xl font-bold">لا توجد منشورات</h1>
       )}
-      <div className="flex w-full flex-col items-center gap-5">
+      <div className="flex w-full flex-col items-center gap-17">
         {posts.map((post, idx) => (
           <PostBox key={idx} post={post} />
         ))}

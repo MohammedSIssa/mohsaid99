@@ -8,10 +8,11 @@ import Goals from "../Goals";
 
 import { API } from "../../variables/globals";
 
-import { MdEdit } from "react-icons/md";
+import { TbEdit } from "react-icons/tb";
+
 import { FaTimes } from "react-icons/fa";
 
-import { MdDelete } from "react-icons/md";
+import { HiTrash } from "react-icons/hi2";
 
 import EditPost from "../../pages/Admin/EditPost";
 
@@ -55,7 +56,7 @@ export default function PostBox({
 
   return (
     <div
-      className={`${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} ${post.special ? "special border-yellow-300/30 bg-yellow-300/20 text-yellow-200" : ""} ${post.secret ? "secret text-fuchsia-300" : ""} post w-full max-w-full flex-col gap-2 border-t-2 border-b-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:w-fit md:max-w-[700px] md:min-w-[350px] md:rounded-xl md:border-2 lg:max-w-[900px]`}
+      className={`${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} ${post.special ? "special border-yellow-300/30 bg-yellow-300/20 text-yellow-200" : ""} ${post.secret ? "secret text-fuchsia-300" : ""} post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:w-fit md:max-w-[700px] md:min-w-[350px] md:rounded-xl md:border-2 lg:max-w-[900px]`}
     >
       {!isEditing && (
         <>
@@ -77,18 +78,18 @@ export default function PostBox({
       )}
       {isEditing && <EditPost post={post} />}
       {isAdmin() && !isPerview && (
-        <div className="flex w-full gap-2">
+        <div className="absolute -top-15 left-2 flex gap-2 rounded-lg border-2 border-white/20 bg-black/20 p-2 px-3 shadow-xl shadow-black/10 [&_button]:cursor-pointer [&_button]:transition-all [&_button]:duration-200 [&_button]:hover:brightness-90">
           <button
-            className="place-items-center rounded-lg border-2 border-blue-200/30 bg-blue-600/70 p-2 px-3 text-white backdrop-blur-2xl"
+            className="place-items-center rounded-lg bg-blue-600 p-2 text-white backdrop-blur-2xl"
             onClick={() => setIsEditing(!isEditing)}
           >
-            {isEditing ? <FaTimes /> : <MdEdit />}
+            {isEditing ? <FaTimes size={18} /> : <TbEdit size={18} />}
           </button>
           <button
-            className="place-items-center rounded-lg border-2 border-red-200/30 bg-red-500/70 p-2 px-3 text-white backdrop-blur-2xl"
+            className="place-items-center rounded-lg bg-red-500 p-2 text-white backdrop-blur-2xl"
             onClick={deletePost}
           >
-            <MdDelete />
+            <HiTrash size={18} />
           </button>
         </div>
       )}
