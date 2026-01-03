@@ -18,11 +18,13 @@ export default function StoryBox({
   handleLinkClick,
   onToggleEditPopup,
   onDeleteStory,
+  currentYear,
 }: {
   story: Story;
   handleLinkClick: () => void;
   onToggleEditPopup: () => void;
   onDeleteStory: (id: number) => void;
+  currentYear: string | number;
 }) {
   const special = story.special;
   const [showPopup, setShowPopup] = useState(false);
@@ -35,7 +37,7 @@ export default function StoryBox({
     if (sure) {
       try {
         const res = await fetch(
-          API + "/stories/" + story.type + "/" + story.count,
+          `${API}/stories?type=${story.type}&count=${story.count}&year=${currentYear}&id=${story.id}`,
           {
             method: "DELETE",
             headers: {

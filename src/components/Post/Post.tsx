@@ -35,7 +35,7 @@ export default function PostBox({
       );
       if (confirm) {
         const res = await fetch(
-          API + "/posts/" + post.type + "/" + post.storyid + "/" + post.id,
+          `${API}/posts?type=${post.type}&storyid=${post.storyid}&id=${post.id}`,
           {
             method: "DELETE",
             headers: {
@@ -60,7 +60,7 @@ export default function PostBox({
       {!isEditing && (
         <>
           <PostTitle title={post?.title ?? ""} />
-          {(post?.id ?? 500) > 436 && !isPerview && (
+          {(post?.id ?? 500) > 436 && !isPerview && post?.type !== "goal" && (
             <PostTime time={post.iat ?? ""} />
           )}
           {post.type !== "goal" && (

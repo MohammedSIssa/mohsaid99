@@ -2,6 +2,86 @@ import type { Stat } from "../types/Stat";
 
 export const stats: Stat[] = [
   {
+    count: 4,
+    title: "يناير",
+    year: 2026,
+    type: "stats",
+    seen: true,
+    // workout: {
+    //   data: [
+    //     {
+    //       label: "صدر",
+    //       value: 20,
+    //     },
+    //     {
+    //       label: "كتاف وايدين",
+    //       value: 15,
+    //     },
+    //     {
+    //       label: "معدة",
+    //       value: 10,
+    //     },
+    //     {
+    //       label: "ظهر",
+    //       value: 5,
+    //     },
+    //     {
+    //       label: "رجلين",
+    //       value: 10,
+    //     },
+    //   ],
+    // },
+    doughnut: {
+      data: [
+        {
+          label: "نوم",
+          value: 8,
+        },
+        {
+          label: "شغل",
+          value: 8,
+        },
+        {
+          label: "مع الأهل",
+          value: 2,
+        },
+        {
+          label: "رياضة",
+          value: 1,
+        },
+        {
+          label: "وقت فراغ",
+          value: 3,
+        },
+      ],
+    },
+    line: {
+      data: [
+        {
+          label: "",
+          value: 0,
+        },
+        {
+          label: "الأسبوع الأول",
+          value: null,
+        },
+        {
+          label: "الأسبوع الثاني",
+          value: null,
+        },
+        {
+          label: "الأسبوع الثالث",
+          value: null,
+        },
+        {
+          label: "الأسبوع الرابع",
+          value: null,
+        },
+      ],
+    },
+    summary: "احصائيات شهر ديسمبر",
+  },
+  {
     count: 3,
     title: "ديسمبر",
     year: 2025,

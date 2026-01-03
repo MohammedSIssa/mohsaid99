@@ -31,7 +31,7 @@ export default function AddPostForm({
     try {
       setIsAdding(true);
       setFeedback("Adding post..");
-      const res = await fetch(API + "/posts/" + type + "/" + storyid, {
+      const res = await fetch(`${API}/posts?type=${type}&storyid=${storyid}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

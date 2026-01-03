@@ -16,6 +16,8 @@ export default function Content({ toType = null }: { toType?: string | null }) {
   const [stories, setStories] = useState<Story[] | null>(null);
   const [posts, setPosts] = useState<Post[] | null>(null);
 
+  const [currentYear, setCurrentYear] = useState<number>(2026);
+
   const [loadingStories, setLoadingStories] = useState<boolean>(true);
   const [storiesError, setStoriesError] = useState(false);
 
@@ -36,7 +38,11 @@ export default function Content({ toType = null }: { toType?: string | null }) {
   useEffect(() => {
     async function getStories() {
       try {
-        const res = await fetch(API + "/stories/" + (toType ? toType : type));
+        setLoadingStories(true);
+        const res = await fetch(
+          // API + "/stories/" + (toType ? toType : type) + "/" + currentYear,
+          `${API}/stories?type=${toType ? toType : type}&year=${currentYear}`,
+        );
         if (res.ok) {
           const data = await res.json();
           setStories(data);
@@ -58,20 +64,14 @@ export default function Content({ toType = null }: { toType?: string | null }) {
     if (!toType && type && ["week", "blog", "goal", "special"].includes(type)) {
       getStories();
     }
-  }, [type, toType]);
+  }, [type, toType, currentYear]);
 
   useEffect(() => {
     async function getPosts() {
       try {
         setLoadingPosts(true);
         const res = await fetch(
-          API +
-            "/posts/" +
-            (toType ? toType : type) +
-            "/" +
-            storyid +
-            "?user=" +
-            (user?.username ?? "guest"),
+          `${API}/posts?type=${toType ? toType : type}&storyid=${storyid}`,
         );
         if (res.ok) {
           const data = await res.json();
@@ -91,7 +91,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
       }
     }
     if (storyid !== undefined) getPosts();
-  }, [type, storyid, isAdmin, user?.username, toType, user]);
+  }, [type, storyid, isAdmin, user?.username, toType, user, currentYear]);
 
   if (toType && !allowedTypes.includes(toType)) {
     return <NotFoundPage />;
@@ -106,22 +106,22 @@ export default function Content({ toType = null }: { toType?: string | null }) {
       <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
         {storiesError && <h1></h1>}
         {loadingStories && (
-          <div className="flex h-dvh items-center justify-center">
+          <div className="flex items-center justify-center p-40">
             <span className="h-20 w-20 animate-spin rounded-xl border-2 border-white/20 bg-white/20"></span>
           </div>
         )}
         {!loadingStories && (
-          <Stories stories={stories ?? []} onDeleteStory={onDeleteStory} />
+          <Stories
+            type={toType ? toType : (type ?? "")}
+            stories={stories ?? []}
+            onDeleteStory={onDeleteStory}
+            currentYear={currentYear}
+            setCurrentYear={(year: string) => setCurrentYear(parseInt(year))}
+          />
         )}
         {loadingPosts && storyid !== undefined && <LoadingPosts />}
-        {storyid === undefined && (
-          <Land
-            type={
-              stories !== null && typeof stories[0].type === "string"
-                ? stories[0].type
-                : undefined
-            }
-          />
+        {!loadingStories && storyid === undefined && (
+          <Land type={stories?.[0]?.type as string | undefined} />
         )}
         {postsError && <h1></h1>}
         {!loadingPosts && storyid !== undefined && (

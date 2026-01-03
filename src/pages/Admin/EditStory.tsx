@@ -18,21 +18,24 @@ export default function EditStory({ story }: { story: Story }) {
   async function handleSave(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-      const res = await fetch(API + "/stories/" + type + "/" + story.id, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer: ${user?.apikey}`,
+      const res = await fetch(
+        `${API}/stories?storyid=${story.id}&fromyear=${story.year}&fromtype=${story.type}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer: ${user?.apikey}`,
+          },
+          body: JSON.stringify({
+            title,
+            summary,
+            special,
+            type,
+            year,
+            count,
+          }),
         },
-        body: JSON.stringify({
-          title,
-          summary,
-          special,
-          type,
-          year,
-          count,
-        }),
-      });
+      );
 
       if (res.ok) {
         setFeedback("Updated!");

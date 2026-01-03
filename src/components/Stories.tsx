@@ -4,20 +4,23 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTimes } from "react-icons/fa";
 import StoryBox from "./Story";
 import AddStoryForm from "./Admin/AddStoryForm";
-
+import { useRef } from "react";
 import useAuth from "../hooks/useAuth";
 
-import { useRef } from "react";
-
 export default function Stories({
+  type,
   stories,
   onDeleteStory,
+  currentYear,
+  setCurrentYear,
 }: {
+  type: string;
   stories: Story[];
   onDeleteStory: (id: number) => void;
+  currentYear: number;
+  setCurrentYear: (year: string) => void;
 }) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToTop = () => {
@@ -43,26 +46,47 @@ export default function Stories({
       </button>
       <div
         ref={containerRef}
-        className={`${isVisible ? "fixed flex" : "hidden"} stories top-20 z-50 h-screen max-h-[400px] w-full flex-col items-center gap-5 overflow-y-scroll border-2 border-white/20 bg-white/10 p-2 py-10 shadow-xl shadow-black/10 backdrop-blur-2xl md:py-0 md:pt-25 md:pb-5 lg:top-50 lg:left-5 lg:w-fit lg:overflow-y-auto lg:rounded-xl lg:py-5`}
+        className={`${isVisible ? "fixed flex" : "hidden"} stories top-20 z-50 h-[75%] w-full min-w-[300px] flex-col items-center gap-5 overflow-y-scroll border-t-2 border-b-2 border-white/20 bg-white/10 p-2 py-10 shadow-xl shadow-black/10 backdrop-blur-2xl md:py-0 md:pt-25 md:pb-5 lg:left-5 lg:max-h-[80%] lg:w-fit lg:overflow-y-auto lg:rounded-xl lg:border-2 lg:py-5`}
       >
-        {isAdmin() && stories && stories[0].type !== "stats" && (
+        {isAdmin() && stories && stories[0]?.type !== "stats" && (
           <AddStoryForm
-            type={stories !== null && stories[0]?.type ? stories[0].type : ""}
-            year={stories !== null && stories[0]?.year ? stories[0].year : ""}
-            count={stories.length + 1}
+            type={type}
+            year={
+              type !== "sepecial"
+                ? stories !== null && stories[0]?.year
+                  ? stories[0]?.year
+                  : ""
+                : currentYear
+            }
+            count={
+              stories.length > 0 ? stories[stories.length - 1].count + 1 : 1
+            }
           />
         )}
-        {stories.map((story, idx) => (
-          <StoryBox
-            key={idx}
-            onToggleEditPopup={scrollToTop}
-            story={story}
-            onDeleteStory={onDeleteStory}
-            handleLinkClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          />
-        ))}
+        {stories ? (
+          <>
+            <select
+              className="rounded-lg border-2 border-white/20 bg-white/10 p-2 px-5 font-bold shadow-xl shadow-black/10 focus:outline-0 [&_option]:bg-white/10 [&_option]:text-black"
+              value={currentYear}
+              onChange={(e) => setCurrentYear(e.target.value)}
+            >
+              <option value={"2026"}>2026</option>
+              <option value={"2025"}>2025</option>
+            </select>
+            {stories.map((story, idx) => (
+              <StoryBox
+                key={idx}
+                onToggleEditPopup={scrollToTop}
+                story={story}
+                currentYear={currentYear}
+                onDeleteStory={onDeleteStory}
+                handleLinkClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              />
+            ))}
+          </>
+        ) : null}
       </div>
     </div>
   );

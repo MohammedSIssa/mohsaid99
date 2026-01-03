@@ -10,13 +10,14 @@ import { FaLock } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 import { LuLogs } from "react-icons/lu";
+import { MdOutlineEmojiEvents } from "react-icons/md";
 
 import LogOutButton from "./LogOutButton";
 
 export default function NavBar() {
   const { isAdmin, isLoggedIn, isNotLoggedIn } = useAuth();
   return (
-    <div className="fixed bottom-2 left-1/2 z-50 flex h-fit w-[95%] -translate-x-1/2 items-center justify-center gap-5 rounded-xl border-2 border-white/20 bg-white/10 p-4 px-6 py-4 text-yellow-300 shadow-lg shadow-black/10 backdrop-blur-xl md:top-0 md:right-0 md:m-4 md:w-fit md:translate-x-0">
+    <div className="fixed bottom-2 left-1/2 z-50 flex h-fit w-[95%] -translate-x-1/2 items-center justify-center gap-5 rounded-xl border-2 border-white/20 bg-white/10 p-4 px-6 py-4 text-yellow-300 shadow-lg shadow-black/10 backdrop-blur-xl md:top-0 md:right-0 md:m-4 md:w-fit md:translate-x-0 [&_a]:transition-transform [&_a]:duration-200 [&_a]:hover:scale-110">
       <NavLink
         to={"/"}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -40,6 +41,9 @@ export default function NavBar() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <IoStatsChart size={25} />
+      </NavLink>
+      <NavLink to={"/highlight"} className={"pointer-events-none opacity-55"}>
+        <MdOutlineEmojiEvents size={30} />
       </NavLink>
       {/* <NavLink to={"/blogs"}>
         <HiMiniPencilSquare size={27} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} />

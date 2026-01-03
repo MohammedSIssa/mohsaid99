@@ -22,42 +22,39 @@ export default function AddStoryForm({
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [special, setSpecial] = useState(false);
-  const [newYear, setNewYear] = useState("");
+  const [newYear, setNewYear] = useState(year);
+
+  const [sCount, setSCount] = useState(count);
 
   const { user } = useAuth();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-      const res = await fetch(API + "/stories/" + type, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer: ${user?.apikey}`,
+      const res = await fetch(
+        `${API}/stories?type=${type}&year=${type !== "special" ? newYear : String(newYear).split("/")[2]}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer: ${user?.apikey}`,
+          },
+          body: JSON.stringify({
+            title,
+            summary,
+            year: type !== "special" ? newYear : String(newYear).split("/")[2],
+            count: sCount,
+            special,
+            type,
+          }),
         },
-        body: JSON.stringify({
-          title,
-          summary,
-          year: newYear.trim() === "" ? year : newYear,
-          count,
-          special,
-        }),
-      });
+      );
       if (res.ok) {
         setFeedback("Story added successfully");
       }
       if (!res.ok) {
         setFeedback("Error while adding story");
       }
-
-      console.log({
-        title,
-        summary,
-        year: newYear.trim() === "" ? year : newYear,
-        count,
-        special,
-        type,
-      });
     } catch {
       setFeedback("Error while adding story.");
     }
@@ -98,6 +95,13 @@ export default function AddStoryForm({
             dir="ltr"
             value={newYear}
             onChange={(e) => setNewYear(e.target.value)}
+          />
+
+          <label dir="ltr">Count:</label>
+          <input
+            dir="ltr"
+            value={sCount}
+            onChange={(e) => setSCount(Number(e.target.value))}
           />
 
           <div

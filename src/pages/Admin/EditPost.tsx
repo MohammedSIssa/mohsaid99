@@ -13,8 +13,10 @@ export default function EditPost({ post }: { post: Post }) {
   const [type, setType] = useState<string>(post.type ?? "");
   const [storyid, setStoryid] = useState<number>(post.storyid ?? 0);
 
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const fromType = post.type;
+  // const fromCount = post.storyid;
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [feedback, setFeedback] = useState<string>("");
 
   const { user } = useAuth();
@@ -25,7 +27,7 @@ export default function EditPost({ post }: { post: Post }) {
       setFeedback("Updating...");
       setIsLoading(true);
       const res = await fetch(
-        API + "/posts/" + type + "/" + storyid + "/" + post.id,
+        `${API}/posts?fromtype=${post.type}&fromcount=${post.storyid}&id=${post.id}`,
         {
           method: "PUT",
           headers: {
