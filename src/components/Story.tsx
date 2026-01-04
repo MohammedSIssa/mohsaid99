@@ -3,8 +3,12 @@ import { NavLink } from "react-router";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import EditStoryPopup from "./EditStoryPopup";
-import { FaEdit } from "react-icons/fa";
-import { MdDeleteForever } from "react-icons/md";
+// import { FaEdit } from "react-icons/fa";
+
+import { TbEdit } from "react-icons/tb";
+import { HiTrash } from "react-icons/hi2";
+
+// import { MdDeleteForever } from "react-icons/md";
 // import { MdNewReleases } from "react-icons/md";
 
 import { API } from "../variables/globals";
@@ -93,13 +97,13 @@ export default function StoryBox({
                 }}
                 className="rounded bg-linear-to-b from-blue-400 to-blue-700 p-1 px-2"
               >
-                <FaEdit />
+                <TbEdit />
               </button>
               <button
                 onClick={handleDeleteStory}
                 className="rounded bg-linear-to-b from-red-400 to-red-700 p-1 px-2"
               >
-                <MdDeleteForever />
+                <HiTrash />
               </button>
             </>
           </div>

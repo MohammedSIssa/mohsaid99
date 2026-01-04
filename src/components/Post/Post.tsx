@@ -8,11 +8,11 @@ import Goals from "../Goals";
 
 import { API } from "../../variables/globals";
 
+import { VscSparkleFilled } from "react-icons/vsc";
 import { TbEdit } from "react-icons/tb";
-
 import { FaTimes } from "react-icons/fa";
-
 import { HiTrash } from "react-icons/hi2";
+import { FaLock } from "react-icons/fa";
 
 import EditPost from "../../pages/Admin/EditPost";
 
@@ -32,7 +32,7 @@ export default function PostBox({
   async function deletePost() {
     try {
       const confirm = window.confirm(
-        `Are you sure you want to fetch(${"/posts/" + post.type + "/" + post.storyid + "/" + post.id})`,
+        `Are you sure you want to fetch("/posts?type=${post.type}&storyid=${post.storyid}&id=${post.id}"`,
       );
       if (confirm) {
         const res = await fetch(
@@ -56,8 +56,18 @@ export default function PostBox({
 
   return (
     <div
-      className={`${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} ${post.special ? "special border-yellow-300/30 bg-yellow-300/20 text-yellow-200" : ""} ${post.secret ? "secret text-fuchsia-300" : ""} post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl md:w-fit md:max-w-[700px] md:min-w-[350px] md:rounded-xl md:border-2 lg:max-w-[900px]`}
+      className={`${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} ${post.special ? "special border-yellow-200/70 from-yellow-400/20 to-yellow-400/10 text-yellow-200" : ""} ${post.secret ? "secret border-fuchsia-300/60 from-fuchsia-300/20 to-fuchsia-300/10 text-fuchsia-300" : ""} post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 ${!post.secret && !post.special ? "border-white/40 from-white/10 to-white/5" : ""} bg-linear-to-b p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-xs md:w-fit md:max-w-[700px] md:min-w-[350px] md:rounded-xl md:border-2 lg:max-w-[900px]`}
     >
+      {post.special && (
+        <span className="absolute top-2 left-2">
+          <VscSparkleFilled />
+        </span>
+      )}
+      {post.secret && (
+        <span className="absolute top-2 left-2">
+          <FaLock />
+        </span>
+      )}
       {!isEditing && (
         <>
           <PostTitle title={post?.title ?? ""} />

@@ -145,7 +145,7 @@ td {
   max-width: 100% !important;
 } */
 
-.post.special::before {
+/* .post.special::before {
   position: absolute;
   top: -14px;
   right: 20px;
@@ -159,13 +159,13 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.post.secret {
+/* .post.secret {
   border-width: 2px;
-}
+} */
 
-.post.secret::before {
+/* .post.secret::before {
   position: absolute;
   top: -14px;
   right: 20px;
@@ -179,4 +179,4 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
