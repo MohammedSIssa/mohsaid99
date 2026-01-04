@@ -60,7 +60,7 @@ export default function StoryBox({
   return (
     <>
       <NavLink
-        className={`${special ? "border-yellow-400/20 bg-yellow-400/40 text-yellow-100 shadow-xl shadow-yellow-400/10" : "border-white/20 bg-white/10 shadow-xl shadow-black/10"} relative w-full min-w-[300px] rounded-lg border-2 p-3 pb-8 md:max-w-70`}
+        className={` ${special ? "border-yellow-400/80 bg-linear-to-bl from-yellow-300/60 to-yellow-700 text-yellow-100 shadow-xl shadow-yellow-400/20" : "border-white/50 bg-linear-to-b from-white/30 via-white/10 to-white/0 shadow-xl shadow-black/10"} relative w-full min-w-[300px] rounded-lg border-2 p-3 pb-8 md:max-w-70`}
         to={`/${story.type}/${story.count}`}
         onClick={handleLinkClick}
       >
@@ -71,38 +71,39 @@ export default function StoryBox({
         )} */}
         <h1 className="text-xl font-bold">{story.title}</h1>
         <p
-          className={`text-[14px] ${special ? "text-yellow-100/70" : "text-white/80"}`}
+          className={`text-[13px] ${special ? "text-yellow-100/70" : "text-white/70"}`}
         >
           {story?.summary === "" ? "🔴" : story?.summary}
         </p>
-        <div
-          className="year absolute bottom-0 left-1 flex gap-2 font-bold"
-          dir="ltr"
+        <span
+          className={`year absolute -top-4 left-2 flex gap-2 rounded bg-linear-to-b ${special ? "from-yellow-700 to-yellow-900 text-yellow-200 shadow-yellow-900" : "bg-violet-500 text-[#f3f0ff] shadow-black/20"} px-2 font-bold shadow-md`}
         >
-          <span>{story.year}</span>
-          <span>#{story.count}</span>
-          <div className="admin-controls flex gap-2 pb-1">
-            {isAdmin() && story.type !== "stats" && (
+          {story.year}
+        </span>
+        <span className="year absolute bottom-0 left-1 font-bold">
+          #{story.count}
+        </span>
+        {isAdmin() && story.type !== "stats" && (
+          <div className="absolute right-1 -bottom-3 flex gap-1 rounded-lg bg-black/30 p-1 text-white [&_button]:cursor-pointer">
+            <>
               <button
                 onClick={() => {
                   setShowPopup(true);
                   onToggleEditPopup();
                 }}
-                className="rounded bg-blue-500 p-1 px-2"
+                className="rounded bg-linear-to-b from-blue-400 to-blue-700 p-1 px-2"
               >
                 <FaEdit />
               </button>
-            )}
-            {isAdmin() && story.type !== "stats" && (
               <button
                 onClick={handleDeleteStory}
-                className="rounded bg-red-500 p-1 px-2"
+                className="rounded bg-linear-to-b from-red-400 to-red-700 p-1 px-2"
               >
                 <MdDeleteForever />
               </button>
-            )}
+            </>
           </div>
-        </div>
+        )}
       </NavLink>
 
       {isAdmin() && showPopup && (

@@ -67,6 +67,7 @@ export default function Login() {
         <input
           className={inputsClassName}
           value={username}
+          dir="ltr"
           onChange={(e) => setUsername(e.target.value)}
           disabled={loggingIn}
           placeholder="اسم المستخدم"
@@ -75,6 +76,7 @@ export default function Login() {
         <input
           className={inputsClassName}
           type="password"
+          dir="ltr"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           disabled={loggingIn}

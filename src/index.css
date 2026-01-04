@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import url("./animation.css");
+@import url("./makeup.css");
 @import "tailwindcss";
 
 :root {
@@ -55,8 +56,8 @@ pre {
 .stories a.active::before {
   position: absolute;
   content: "👀";
-  top: 4px;
-  left: 4px;
+  top: 8px;
+  left: 6px;
 }
 
 .counter {
@@ -81,7 +82,7 @@ pre {
 
 .year {
   font-family: Montserrat, sans-serif;
-  transform: skewX(-5deg);
+  /* transform: skewX(-5deg); */
 }
 
 ::-webkit-scrollbar {

@@ -44,9 +44,17 @@ export default function Stories({
           <RxHamburgerMenu size={25} strokeWidth={1} />
         )}
       </button>
-      <div
+      {/* <div
         ref={containerRef}
         className={`${isVisible ? "fixed flex" : "hidden"} stories top-20 z-50 h-[75%] w-full min-w-[300px] flex-col items-center gap-5 overflow-y-scroll border-t-2 border-b-2 border-white/20 bg-white/10 p-2 py-10 shadow-xl shadow-black/10 backdrop-blur-2xl md:py-0 md:pt-25 md:pb-5 lg:left-5 lg:max-h-[80%] lg:w-fit lg:overflow-y-auto lg:rounded-xl lg:border-2 lg:py-5`}
+      > */}
+      <div
+        ref={containerRef}
+        className={`stories fixed top-20 z-50 flex h-[70%] w-full min-w-[300px] transform flex-col items-center gap-6 overflow-y-scroll border-t-2 border-b-2 border-white/20 bg-white/10 p-2 py-10 shadow-xl shadow-black/10 backdrop-blur-2xl transition-all duration-300 ease-out ${
+          isVisible
+            ? "pointer-events-auto translate-x-0 opacity-100"
+            : "pointer-events-none -translate-x-full opacity-0"
+        } md:py-0 md:pt-25 md:pb-5 lg:left-5 lg:max-h-[80%] lg:w-fit lg:overflow-y-auto lg:rounded-xl lg:border-2 lg:py-5`}
       >
         {isAdmin() && stories && stories[0]?.type !== "stats" && (
           <AddStoryForm
