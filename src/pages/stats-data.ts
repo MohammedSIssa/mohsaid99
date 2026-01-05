@@ -5,6 +5,7 @@ export const stats: Stat[] = [
     count: 4,
     title: "يناير",
     year: 2026,
+    summary: "احصائيات شهر يناير",
     type: "stats",
     seen: true,
     // workout: {
@@ -63,7 +64,7 @@ export const stats: Stat[] = [
         },
         {
           label: "الأسبوع الأول",
-          value: null,
+          value: 12,
         },
         {
           label: "الأسبوع الثاني",
@@ -79,7 +80,6 @@ export const stats: Stat[] = [
         },
       ],
     },
-    summary: "احصائيات شهر ديسمبر",
   },
   {
     count: 3,

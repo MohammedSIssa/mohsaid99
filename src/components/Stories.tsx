@@ -20,7 +20,7 @@ export default function Stories({
   currentYear: number;
   setCurrentYear: (year: string) => void;
 }) {
-  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToTop = () => {
