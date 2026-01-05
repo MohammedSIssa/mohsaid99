@@ -3,19 +3,10 @@ import { NavLink } from "react-router";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import EditStoryPopup from "./EditStoryPopup";
-// import { FaEdit } from "react-icons/fa";
+import { API } from "../variables/globals";
 
 import { TbEdit } from "react-icons/tb";
 import { HiTrash } from "react-icons/hi2";
-
-// import { MdDeleteForever } from "react-icons/md";
-// import { MdNewReleases } from "react-icons/md";
-
-import { API } from "../variables/globals";
-
-// Todo:
-// Make the edit story show input fields
-// making it the same size of the story
 
 export default function StoryBox({
   story,
@@ -65,7 +56,11 @@ export default function StoryBox({
     <>
       <NavLink
         className={` ${special ? "border-yellow-400/80 bg-linear-to-bl from-yellow-300/60 to-yellow-700 text-yellow-100 shadow-xl shadow-yellow-400/20" : "border-white/50 bg-linear-to-b from-white/30 via-white/10 to-white/0 shadow-xl shadow-black/10"} relative w-full min-w-[300px] rounded-lg border-2 p-3 pb-8 md:max-w-70`}
-        to={`/${story.type}/${story.count}`}
+        to={
+          story.type !== "highlight"
+            ? `/${story.type}/${story.count}`
+            : `/${story.type}/${story.year}`
+        }
         onClick={handleLinkClick}
       >
         {/* {!isAdmin() && !story.seen && (

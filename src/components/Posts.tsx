@@ -18,16 +18,19 @@ const arabicTypes: typesProp = {
   special: "خاص",
   stat: "احصائيات",
   blog: "المدونة",
+  highlight: "أبرز المنشورات",
 };
 
 export default function Posts({
   posts,
   type,
+  isHighlights,
   storyid,
 }: {
   posts: Post[];
   type: string;
   storyid: number;
+  isHighlights: boolean;
 }) {
   const { isAdmin } = useAuth();
   return (
@@ -49,7 +52,7 @@ export default function Posts({
       )}
       <div className="flex w-full flex-col items-center gap-17">
         {posts.map((post, idx) => (
-          <PostBox key={idx} post={post} />
+          <PostBox key={idx} post={post} isHighlight={isHighlights} />
         ))}
       </div>
     </div>

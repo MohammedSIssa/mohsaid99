@@ -8,7 +8,6 @@ import LoadingPosts from "../components/Loaders/LoadingPosts";
 import Land from "./Land";
 import NotFoundPage from "./NotFoundPage";
 import { API } from "../variables/globals";
-
 import useAuth from "../hooks/useAuth";
 import { logger } from "../variables/logger";
 
@@ -21,7 +20,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
   const [loadingStories, setLoadingStories] = useState<boolean>(true);
   const [storiesError, setStoriesError] = useState(false);
 
-  const [loadingPosts, setLoadingPosts] = useState<boolean>(true);
+  const [loadingPosts, setLoadingPosts] = useState<boolean>(false);
   const [postsError, setPostsError] = useState(false);
 
   const { type, storyid } = useParams();
@@ -29,18 +28,17 @@ export default function Content({ toType = null }: { toType?: string | null }) {
   const { isAdmin } = useAuth();
   const { user } = useAuth();
 
-  const allowedTypes = ["week", "blog", "goal", "special"];
-
   function onDeleteStory(id: number) {
     setStories((stories) => stories?.filter((s) => s.count !== id) ?? null);
   }
 
   useEffect(() => {
+    const allowedTypes = ["week", "blog", "goal", "special", "highlight"];
+
     async function getStories() {
       try {
         setLoadingStories(true);
         const res = await fetch(
-          // API + "/stories/" + (toType ? toType : type) + "/" + currentYear,
           `${API}/stories?type=${toType ? toType : type}&year=${currentYear}`,
         );
         if (res.ok) {
@@ -57,11 +55,11 @@ export default function Content({ toType = null }: { toType?: string | null }) {
       }
     }
     if (toType) {
-      if (["week", "blog", "goal", "special"].includes(toType)) {
+      if (allowedTypes.includes(toType)) {
         getStories();
       }
     }
-    if (!toType && type && ["week", "blog", "goal", "special"].includes(type)) {
+    if (!toType && type && allowedTypes.includes(type)) {
       getStories();
     }
   }, [type, toType, currentYear]);
@@ -90,8 +88,37 @@ export default function Content({ toType = null }: { toType?: string | null }) {
         setLoadingPosts(false);
       }
     }
-    if (storyid !== undefined) getPosts();
+
+    async function getHighlights() {
+      console.log(`${API}/posts?type=week&year=${storyid}&special=true`);
+      try {
+        setLoadingPosts(true);
+        const res = await fetch(
+          `${API}/posts?type=week&year=${storyid}&special=true`,
+        );
+        if (res.ok) {
+          const data = await res.json();
+          setPosts(data);
+          setPostsError(false);
+
+          if (!isAdmin())
+            await logger(
+              user?.username ?? "guest",
+              `${toType ? toType : type} - ${storyid}`,
+            );
+        }
+      } catch {
+        setPostsError(true);
+      } finally {
+        setLoadingPosts(false);
+      }
+    }
+
+    if (storyid !== undefined && type !== "highlight") getPosts();
+    if (storyid !== undefined && type === "highlight") getHighlights();
   }, [type, storyid, isAdmin, user?.username, toType, user, currentYear]);
+
+  const allowedTypes = ["week", "blog", "goal", "special", "highlight"];
 
   if (toType && !allowedTypes.includes(toType)) {
     return <NotFoundPage />;
@@ -129,6 +156,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
             posts={posts ?? []}
             type={!toType && type !== undefined ? type : toType ? toType : ""}
             storyid={storyid !== undefined ? parseInt(storyid) : 0}
+            isHighlights={type === "highlight"}
           />
         )}
       </div>

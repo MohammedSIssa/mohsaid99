@@ -42,7 +42,7 @@ export default function NavBar() {
       >
         <IoStatsChart size={25} />
       </NavLink>
-      <NavLink to={"/highlight"} className={"pointer-events-none opacity-55"}>
+      <NavLink to={"/highlight"}>
         <MdOutlineEmojiEvents size={30} />
       </NavLink>
       {/* <NavLink to={"/blogs"}>
