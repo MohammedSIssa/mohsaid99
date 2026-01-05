@@ -182,6 +182,7 @@ export default function AddPostForm({
             storyid,
           }}
           isPerview={true}
+          isHighlight={false}
         />
         <button
           className="cursor-pointer rounded-xl border-2 border-white/20 bg-white/10 p-10 px-25 transition-all duration-200 hover:brightness-150"
