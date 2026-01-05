@@ -8,6 +8,7 @@ import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
 import Goals from "../Goals";
 import EditPost from "../../pages/Admin/EditPost";
+import { NavLink } from "react-router";
 
 import { VscSparkleFilled } from "react-icons/vsc";
 import { TbEdit } from "react-icons/tb";
@@ -68,7 +69,10 @@ export default function PostBox({
         </span>
       )}
       {isHighlight && (
-        <span className="year absolute top-2 left-2 font-bold">{`#${post.storyid}`}</span>
+        <NavLink
+          to={`/week/${post.storyid}`}
+          className="year absolute top-2 left-2 font-bold"
+        >{`#${post.storyid}`}</NavLink>
       )}
       {!isEditing && (
         <>
