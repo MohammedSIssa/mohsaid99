@@ -12,6 +12,8 @@ import { MdLogout } from "react-icons/md";
 import { LuLogs } from "react-icons/lu";
 import { MdOutlineEmojiEvents } from "react-icons/md";
 
+import { IoMdSettings } from "react-icons/io";
+
 import LogOutButton from "./LogOutButton";
 
 export default function NavBar() {
@@ -57,6 +59,9 @@ export default function NavBar() {
           <FiLogIn size={28} />
         </NavLink>
       )}
+      <NavLink to={"/settings"}>
+        <IoMdSettings size={30} />
+      </NavLink>
       {isLoggedIn() && (
         <NavLink
           to={"/special/"}

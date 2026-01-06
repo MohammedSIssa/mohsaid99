@@ -80,12 +80,7 @@ export default function EditStory({ story }: { story: Story }) {
       <label htmlFor="year" dir="ltr">
         Story Year:{" "}
       </label>
-      <input
-        id="year"
-        type="number"
-        value={year}
-        onChange={(e) => setYear(e.target.value)}
-      />
+      <input id="year" value={year} onChange={(e) => setYear(e.target.value)} />
 
       <label htmlFor="type" dir="ltr">
         Type:{" "}
