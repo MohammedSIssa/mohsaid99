@@ -1,6 +1,9 @@
 import useSettings from "../hooks/useSettings";
 import { useState } from "react";
 import { saveSettings } from "../variables/localStorage";
+import { MdLogout } from "react-icons/md";
+import useAuth from "../hooks/useAuth";
+import LogOutButton from "../components/LogOutButton";
 
 export default function Settings() {
   const { settings, setSettings } = useSettings();
@@ -10,8 +13,9 @@ export default function Settings() {
     setSettings(() => ({ isHigh: isHigh }));
     saveSettings({ isHigh: isHigh });
   };
+  const { isLoggedIn } = useAuth();
   return (
-    <div className="flex items-center justify-center p-20">
+    <div className="flex flex-col items-center justify-center gap-5 p-20">
       <form className="flex flex-col gap-2" onSubmit={save}>
         <label className="font-bold">الجودة</label>
         <hr className="border border-white/20" />
@@ -28,11 +32,21 @@ export default function Settings() {
 
         <button
           type="submit"
-          className="cursor-pointer rounded bg-violet-500 p-2 px-5 font-bold text-white transition-all duration-150 hover:brightness-95"
+          className="cursor-pointer rounded border-2 border-violet-400 bg-violet-500 p-2 px-5 font-bold text-white transition-all duration-150 hover:brightness-95"
         >
           حفظ
         </button>
+        <hr className="mt-10 border border-white/20" />
       </form>
+
+      {isLoggedIn() && (
+        <>
+          <p className="font-bold">تسجيل الخروج</p>
+          <LogOutButton>
+            <MdLogout size={28} />
+          </LogOutButton>
+        </>
+      )}
     </div>
   );
 }

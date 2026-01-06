@@ -8,13 +8,10 @@ import { IoStatsChart } from "react-icons/io5";
 import { FaHome } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
-import { MdLogout } from "react-icons/md";
 import { LuLogs } from "react-icons/lu";
 import { MdOutlineEmojiEvents } from "react-icons/md";
 
 import { IoMdSettings } from "react-icons/io";
-
-import LogOutButton from "./LogOutButton";
 
 export default function NavBar() {
   const { isAdmin, isLoggedIn, isNotLoggedIn } = useAuth();
@@ -59,9 +56,7 @@ export default function NavBar() {
           <FiLogIn size={28} />
         </NavLink>
       )}
-      <NavLink to={"/settings"}>
-        <IoMdSettings size={30} />
-      </NavLink>
+
       {isLoggedIn() && (
         <NavLink
           to={"/special/"}
@@ -78,11 +73,9 @@ export default function NavBar() {
           <LuLogs size={28} />
         </NavLink>
       )}
-      {isLoggedIn() && (
-        <LogOutButton>
-          <MdLogout size={28} />
-        </LogOutButton>
-      )}
+      <NavLink to={"/settings"}>
+        <IoMdSettings size={30} />
+      </NavLink>
     </div>
   );
 }

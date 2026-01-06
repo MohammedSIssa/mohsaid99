@@ -12,7 +12,10 @@ export default function LogOutButton({
     setUser(null);
   }
   return (
-    <button className="hover:cursor-pointer" onClick={logout}>
+    <button
+      className="rounded-lg border-2 border-white/40 bg-white/10 p-2 px-5 hover:cursor-pointer"
+      onClick={logout}
+    >
       {children}
     </button>
   );
