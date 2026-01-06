@@ -146,7 +146,9 @@ export default function Content({ toType = null }: { toType?: string | null }) {
             setCurrentYear={(year: string) => setCurrentYear(parseInt(year))}
           />
         )}
-        {loadingPosts && storyid !== undefined && <LoadingPosts />}
+        {loadingPosts && !loadingStories && storyid !== undefined && (
+          <LoadingPosts />
+        )}
         {!loadingStories && storyid === undefined && (
           <Land type={stories?.[0]?.type as string | undefined} />
         )}
