@@ -5,7 +5,7 @@ import PostTitle from "./Title";
 import PostImages from "./Images";
 import type { Post } from "../../types/Post";
 import useAuth from "../../hooks/useAuth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Goals from "../Goals";
 import EditPost from "../../pages/Admin/EditPost";
 import { NavLink } from "react-router";
@@ -15,6 +15,8 @@ import { TbEdit } from "react-icons/tb";
 import { FaTimes } from "react-icons/fa";
 import { HiTrash } from "react-icons/hi2";
 import { FaLock } from "react-icons/fa";
+
+import useSettings from "../../hooks/useSettings";
 
 export default function PostBox({
   post,
@@ -29,6 +31,21 @@ export default function PostBox({
   const { isAdmin, isMonmon, user } = useAuth();
   const isVisible = post.secret && (isAdmin() || isMonmon());
 
+  const { settings } = useSettings();
+  const [theme, setTheme] = useState(
+    "border-white/40 from-white/10 to-white/5",
+  );
+
+  useEffect(() => {
+    function setThemee() {
+      if (settings?.isHigh) {
+        setTheme("bg-linear-to-b border-white/40 from-white/10 to-white/5");
+      } else {
+        setTheme("border-white/40 bg-white/10");
+      }
+    }
+    setThemee();
+  }, [settings?.isHigh]);
   async function deletePost() {
     try {
       const confirm = window.confirm(
@@ -56,7 +73,19 @@ export default function PostBox({
 
   return (
     <div
-      className={`${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} ${post.special && !isHighlight ? "special border-yellow-200/70 from-yellow-400/20 to-yellow-400/10 text-yellow-200" : ""} ${post.secret ? "secret border-fuchsia-300/60 from-fuchsia-300/20 to-fuchsia-300/10 text-fuchsia-300" : ""} post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 ${!post.secret && !post.special ? "border-white/40 from-white/10 to-white/5" : isHighlight ? "border-white/40 from-white/10 to-white/5" : ""} bg-linear-to-b p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-xs md:w-fit md:max-w-[700px] md:min-w-[350px] md:rounded-xl md:border-2 lg:max-w-[900px]`}
+      // prettier-ignore
+      className={
+        `${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} 
+         ${post.special && !isHighlight ? "special bg-linear-to-b border-yellow-200/70 from-yellow-400/20 to-yellow-400/10 text-yellow-200" : ""}
+         ${post.secret ? "secret border-fuchsia-300/60 from-fuchsia-300/20 to-fuchsia-300/10 text-fuchsia-300" : ""} 
+         ${!post.secret && !post.special ? theme : 
+          isHighlight ? theme : ""} 
+          post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 
+           p-3 py-5 
+          shadow-xl shadow-black/10 backdrop-blur-xs 
+          md:w-fit md:max-w-[700px] md:min-w-[350px] 
+          md:rounded-xl md:border-2 lg:max-w-[900px]`
+        }
     >
       {post.special && !isHighlight && (
         <span className="absolute top-2 left-2">
