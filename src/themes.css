@@ -13,8 +13,8 @@
 }
 
 .dark {
-  --font-color: #e3e3e3;
-  --primary-color: #1d1d1d;
+  --font-color: #e0e0e0;
+  --primary-color: #111;
   --border-color: #363636;
   --images-box-bg: #222222;
   --golden-post-bg: rgb(123, 74, 0);
@@ -43,6 +43,14 @@
 .special .slider {
   background-color: rgba(192, 131, 41, 0.181);
   border-color: rgba(255, 193, 100, 0.582);
+}
+
+.secret {
+  --font-color: pink;
+}
+
+.light .secret {
+  --font-color: rgb(53, 0, 53);
 }
 
 .light .special {

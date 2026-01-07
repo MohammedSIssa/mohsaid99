@@ -64,11 +64,11 @@ export default function PostBox({
       className={
         `${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} 
          ${post.special && !isHighlight ? "special border-yellow-200/70 bg-(--golden-post-bg)/30 text-yellow-200" : ""}
-         ${post.secret ? "secret border-fuchsia-300/60 bg-fuchsia-700 text-fuchsia-300" : ""} 
+         ${post.secret ? "secret border-fuchsia-300/60 bg-fuchsia-700/20 text-(--font-color)" : ""} 
          ${!post.secret && !post.special ? "border-(--border-color) bg-(--primary-color)/20" : 
           isHighlight ? "border-(--border-color) bg-(--primary-color)/20" : ""} 
           post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 
-           p-3 py-5
+          p-3 py-5
           shadow-xl shadow-black/10 backdrop-blur-xs 
           md:w-fit md:max-w-[700px] md:min-w-[350px] 
           md:rounded-xl md:border-2 lg:max-w-[900px]`

@@ -55,7 +55,7 @@ export default function StoryBox({
   return (
     <>
       <NavLink
-        className={` ${special ? "border-yellow-400/80 bg-linear-to-bl from-yellow-300/60 to-yellow-700 text-yellow-100 shadow-xl shadow-yellow-400/20" : "border-(--border-color)/70 bg-(--primary-color)/30 shadow-xl shadow-black/10"} relative w-full min-w-[300px] rounded-lg border-2 p-3 pb-8 md:max-w-70`}
+        className={` ${special ? "border-yellow-400/80 bg-linear-to-bl from-yellow-300/60 to-yellow-700 text-yellow-100 shadow-xl shadow-yellow-400/20" : "border-(--border-color)/70 bg-(--primary-color)/10 shadow-xl shadow-black/10"} relative w-full min-w-[300px] rounded-lg border-2 p-3 pb-8 md:max-w-70`}
         to={
           story.type !== "highlight"
             ? `/${story.type}/${story.count}`
