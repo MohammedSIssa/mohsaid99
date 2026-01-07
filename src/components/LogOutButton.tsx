@@ -13,7 +13,7 @@ export default function LogOutButton({
   }
   return (
     <button
-      className="rounded-lg border-2 border-white/40 bg-white/10 p-2 px-5 hover:cursor-pointer"
+      className="rounded-lg border-2 border-(--border-color) bg-(--primary-color)/40 p-2 px-5 hover:cursor-pointer"
       onClick={logout}
     >
       {children}

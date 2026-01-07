@@ -55,7 +55,7 @@ export default function StoryBox({
   return (
     <>
       <NavLink
-        className={` ${special ? "border-yellow-400/80 bg-linear-to-bl from-yellow-300/60 to-yellow-700 text-yellow-100 shadow-xl shadow-yellow-400/20" : "border-white/50 bg-linear-to-b from-white/30 via-white/10 to-white/0 shadow-xl shadow-black/10"} relative w-full min-w-[300px] rounded-lg border-2 p-3 pb-8 md:max-w-70`}
+        className={` ${special ? "border-yellow-400/80 bg-linear-to-bl from-yellow-300/60 to-yellow-700 text-yellow-100 shadow-xl shadow-yellow-400/20" : "border-(--border-color)/70 bg-(--primary-color)/30 shadow-xl shadow-black/10"} relative w-full min-w-[300px] rounded-lg border-2 p-3 pb-8 md:max-w-70`}
         to={
           story.type !== "highlight"
             ? `/${story.type}/${story.count}`
@@ -70,7 +70,7 @@ export default function StoryBox({
         )} */}
         <h1 className="text-xl font-bold">{story.title}</h1>
         <p
-          className={`text-[13px] ${special ? "text-yellow-100/70" : "text-white/70"}`}
+          className={`text-[13px] ${special ? "text-yellow-100/70" : "text-(--font-color)/70"}`}
         >
           {story?.summary === "" ? "🔴" : story?.summary}
         </p>

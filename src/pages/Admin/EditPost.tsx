@@ -66,7 +66,7 @@ export default function EditPost({ post }: { post: Post }) {
   return (
     <form
       onSubmit={handleSave}
-      className="flex flex-col gap-1 rounded-xl border-2 border-white/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl **:disabled:opacity-35 [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-white/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-white/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-white/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
+      className="flex flex-col gap-1 rounded-xl border-2 border-(--border-color)/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl **:disabled:opacity-35 [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-(--border-color)/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-(--border-color)/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-(--border-color)/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
       dir="ltr"
     >
       <label htmlFor="title" dir="ltr">
@@ -134,7 +134,7 @@ export default function EditPost({ post }: { post: Post }) {
         }}
       />
 
-      <div className="mb-2 flex items-center justify-center gap-2 [&_div]:rounded-xl [&_div]:border-2 [&_div]:border-white/10 [&_div]:p-2">
+      <div className="mb-2 flex items-center justify-center gap-2 [&_div]:rounded-xl [&_div]:border-2 [&_div]:border-(--border-color)/10 [&_div]:p-2">
         <div
           className={`flex items-center justify-center gap-2 ${special === true ? "bg-green-500/30" : "bg-red-500/30"}`}
         >

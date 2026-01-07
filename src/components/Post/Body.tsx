@@ -31,7 +31,7 @@ export default function PostBody({
             <pre dir={dir} className="max-w-full md:max-w-[700px]">
               {body?.slice(0, 60)}...{" "}
               <button
-                className="text-violet-300 hover:cursor-pointer hover:text-violet-200"
+                className="text-(--font-color)/40 hover:cursor-pointer"
                 onClick={() => setShowMore(true)}
               >
                 عرض المزيد

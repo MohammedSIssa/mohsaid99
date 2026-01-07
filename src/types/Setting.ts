@@ -1,3 +1,4 @@
 export type Setting = {
-  isHigh: boolean | null;
+  isHigh?: boolean | null;
+  theme?: string | null;
 };

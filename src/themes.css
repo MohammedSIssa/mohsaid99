@@ -1,0 +1,50 @@
+:root {
+  --font-color: white;
+  --primary-color: rgba(255, 255, 255);
+  --border-color: color-mix(in oklab, #fff 40%, transparent);
+  --images-box-bg: rgba(255, 255, 255);
+  --golden-post-bg: rgb(156, 75, 0);
+  --stars-color: rgba(255, 255, 255, 0.5);
+  --glowing-stars-color: rgba(250, 204, 21, 1);
+  --icons-color: oklab(89.702% -0.02701 0.18183);
+  --navbar-border-color: var(--icons-color);
+  --html-color: linear-gradient(#201344, #130d33, #48135f);
+  --scroll-bg: #201344;
+}
+
+.dark {
+  --font-color: #e3e3e3;
+  --primary-color: #1d1d1d;
+  --border-color: #363636;
+  --images-box-bg: #222222;
+  --golden-post-bg: rgb(123, 74, 0);
+  --stars-color: rgba(255, 255, 255, 0.5);
+  --glowing-stars-color: rgba(255, 255, 255, 0.25);
+  --icons-color: var(--font-color);
+  --navbar-border-color: var(--border-color);
+  --html-color: #222;
+  --scroll-bg: var(--primary-color);
+}
+
+.light {
+  --font-color: #111;
+  --primary-color: #e3e3e3;
+  --border-color: #404040;
+  --images-box-bg: #f3f3f3;
+  --golden-post-bg: rgb(120, 75, 7);
+  --stars-color: rgba(20, 20, 20, 0.85);
+  --glowing-stars-color: rgba(20, 20, 20, 1);
+  --icons-color: var(--font-color);
+  --navbar-border-color: var(--border-color);
+  --html-color: #e3e3e3;
+  --scroll-bg: var(--primary-color);
+}
+
+.special .slider {
+  background-color: rgba(192, 131, 41, 0.181);
+  border-color: rgba(255, 193, 100, 0.582);
+}
+
+.light .special {
+  color: rgb(47, 29, 0);
+}

@@ -35,7 +35,7 @@ export default function Stories({
   return (
     <div className="relative w-full md:w-fit">
       <button
-        className="fixed top-4 left-4 z-100 rounded-xl border-2 border-white/20 bg-white/10 p-3 backdrop-blur-3xl"
+        className="fixed top-4 left-4 z-100 rounded-xl border-2 border-(--border-color) bg-(--primary-color)/20 p-3 backdrop-blur-3xl"
         onClick={() => setIsVisible(!isVisible)}
       >
         {isVisible ? (
@@ -50,7 +50,7 @@ export default function Stories({
       > */}
       <div
         ref={containerRef}
-        className={`stories fixed top-20 z-50 flex h-[70%] w-full min-w-[300px] transform flex-col items-center gap-6 overflow-y-scroll border-t-2 border-b-2 border-white/20 bg-white/10 p-2 py-10 shadow-xl shadow-black/10 backdrop-blur-2xl transition-all duration-300 ease-out ${
+        className={`stories fixed top-20 z-50 flex h-[70%] w-full min-w-[300px] transform flex-col items-center gap-6 overflow-y-scroll border-t-2 border-b-2 border-(--border-color) bg-(--primary-color)/20 p-2 py-10 shadow-xl shadow-black/10 backdrop-blur-2xl transition-all duration-300 ease-out ${
           isVisible
             ? "pointer-events-auto translate-x-0 opacity-100"
             : "pointer-events-none -translate-x-full opacity-0"
@@ -74,7 +74,7 @@ export default function Stories({
         {stories ? (
           <>
             <select
-              className="rounded-lg border-2 border-white/20 bg-white/10 p-2 px-5 font-bold shadow-xl shadow-black/10 focus:outline-0 [&_option]:bg-white/10 [&_option]:text-black"
+              className="rounded-lg border-2 border-(--border-color)/30 bg-(--primary-color)/10 p-2 px-5 font-bold shadow-xl shadow-black/10 focus:outline-0 [&_option]:bg-white/10 [&_option]:text-black"
               value={currentYear}
               onChange={(e) => setCurrentYear(e.target.value)}
             >

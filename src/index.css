@@ -4,6 +4,7 @@
 /* Week counter font family */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("./themes.css");
 @import url("./animation.css");
 @import url("./makeup.css");
 @import "tailwindcss";
@@ -17,7 +18,7 @@
 
 body,
 html {
-  background: linear-gradient(#201344, #130d33, #48135f);
+  background: var(--html-color);
 }
 
 body {
@@ -90,7 +91,7 @@ pre {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #201344;
+  background: var(--scroll-bg);
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(200, 200, 200, 0.3);

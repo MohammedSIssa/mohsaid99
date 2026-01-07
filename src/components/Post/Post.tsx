@@ -5,7 +5,7 @@ import PostTitle from "./Title";
 import PostImages from "./Images";
 import type { Post } from "../../types/Post";
 import useAuth from "../../hooks/useAuth";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Goals from "../Goals";
 import EditPost from "../../pages/Admin/EditPost";
 import { NavLink } from "react-router";
@@ -16,7 +16,7 @@ import { FaTimes } from "react-icons/fa";
 import { HiTrash } from "react-icons/hi2";
 import { FaLock } from "react-icons/fa";
 
-import useSettings from "../../hooks/useSettings";
+// import useSettings from "../../hooks/useSettings";
 
 export default function PostBox({
   post,
@@ -31,21 +31,8 @@ export default function PostBox({
   const { isAdmin, isMonmon, user } = useAuth();
   const isVisible = post.secret && (isAdmin() || isMonmon());
 
-  const { settings } = useSettings();
-  const [theme, setTheme] = useState(
-    "border-white/40 from-white/10 to-white/5",
-  );
+  // const { settings } = useSettings();
 
-  useEffect(() => {
-    function setThemee() {
-      if (settings?.isHigh) {
-        setTheme("bg-linear-to-b border-white/40 from-white/10 to-white/5");
-      } else {
-        setTheme("border-white/40 bg-white/10");
-      }
-    }
-    setThemee();
-  }, [settings?.isHigh]);
   async function deletePost() {
     try {
       const confirm = window.confirm(
@@ -76,12 +63,12 @@ export default function PostBox({
       // prettier-ignore
       className={
         `${isVisible ? "flex" : !post.secret ? "flex" : "hidden"} 
-         ${post.special && !isHighlight ? "special bg-linear-to-b border-yellow-200/70 from-yellow-400/20 to-yellow-400/10 text-yellow-200" : ""}
-         ${post.secret ? "secret border-fuchsia-300/60 from-fuchsia-300/20 to-fuchsia-300/10 text-fuchsia-300" : ""} 
-         ${!post.secret && !post.special ? theme : 
-          isHighlight ? theme : ""} 
+         ${post.special && !isHighlight ? "special border-yellow-200/70 bg-(--golden-post-bg)/30 text-yellow-200" : ""}
+         ${post.secret ? "secret border-fuchsia-300/60 bg-fuchsia-700 text-fuchsia-300" : ""} 
+         ${!post.secret && !post.special ? "border-(--border-color) bg-(--primary-color)/20" : 
+          isHighlight ? "border-(--border-color) bg-(--primary-color)/20" : ""} 
           post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 
-           p-3 py-5 
+           p-3 py-5
           shadow-xl shadow-black/10 backdrop-blur-xs 
           md:w-fit md:max-w-[700px] md:min-w-[350px] 
           md:rounded-xl md:border-2 lg:max-w-[900px]`
@@ -123,7 +110,7 @@ export default function PostBox({
       )}
       {isEditing && <EditPost post={post} />}
       {isAdmin() && !isHighlight && !isPerview && (
-        <div className="absolute -top-15 left-2 flex gap-2 rounded-lg border-2 border-white/20 bg-black/20 p-2 px-3 shadow-xl shadow-black/10 [&_button]:cursor-pointer [&_button]:transition-all [&_button]:duration-200 [&_button]:hover:brightness-90">
+        <div className="absolute -top-15 left-2 flex gap-2 rounded-lg border-2 border-(--border-color)/20 bg-(--primary-color)/20 p-2 px-3 shadow-xl shadow-black/10 [&_button]:cursor-pointer [&_button]:transition-all [&_button]:duration-200 [&_button]:hover:brightness-90">
           <button
             className="place-items-center rounded-lg bg-blue-600 p-2 text-white backdrop-blur-2xl"
             onClick={() => setIsEditing(!isEditing)}
