@@ -19,7 +19,7 @@ export default function EditStory({ story }: { story: Story }) {
     e.preventDefault();
     try {
       const res = await fetch(
-        `${API}/stories?storyid=${story.id}&fromyear=${type === "special" ? (String(story.year).split("/")[2] ?? story.year) : story.year}&fromtype=${story.type}`,
+        `${API}/stories?storyid=${story.id}&fromyear=${String(story.year).split("/")[2] ?? story.year}&fromtype=${story.type}`,
         {
           method: "PUT",
           headers: {
