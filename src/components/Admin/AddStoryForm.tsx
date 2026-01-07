@@ -63,7 +63,7 @@ export default function AddStoryForm({
   if (!isVisible) {
     return (
       <button
-        className="flex w-full cursor-pointer items-center justify-center rounded-lg border-2 border-white/20 bg-white/10 p-8 shadow-xl shadow-black/10 transition-all duration-200 hover:brightness-150"
+        className="flex w-full cursor-pointer items-center justify-center rounded-lg border-2 border-(--border-color)/20 bg-white/10 p-8 shadow-xl shadow-black/10 transition-all duration-200 hover:brightness-150"
         onClick={() => setIsVisible(true)}
       >
         <FaPlus size={30} />

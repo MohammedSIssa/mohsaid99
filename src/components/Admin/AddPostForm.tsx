@@ -73,7 +73,7 @@ export default function AddPostForm({
   if (!isVisible) {
     return (
       <button
-        className="cursor-pointer rounded-xl border-2 border-white/20 bg-white/10 p-10 px-25 transition-all duration-200 hover:brightness-150"
+        className="cursor-pointer rounded-xl border-2 border-(--border-color)/20 bg-white/10 p-10 px-25 transition-all duration-200 hover:brightness-150"
         onClick={() => setIsVisible(true)}
       >
         <FaPlus size={30} />
