@@ -7,7 +7,7 @@ export default function PostImages({ images }: { images: string[] }) {
   const videoType = isVideo ? images[0].split(":")[1] : null;
 
   return (
-    <div className="slider flex max-h-full min-h-[200px] w-full max-w-full items-start justify-start gap-2 overflow-x-auto overflow-y-hidden rounded-2xl border-2 border-(--border-color) bg-(--images-box-bg)/20 p-4">
+    <div className="slider flex max-h-full min-h-[200px] w-full max-w-full items-start justify-start gap-2 overflow-x-auto overflow-y-hidden rounded-2xl border-2 border-(--border-color)/30 bg-(--images-box-bg)/20 p-4">
       {!isVideo && images.map((img, idx) => <LazyImage src={img} key={idx} />)}
       {isVideo && <YouTubePlayer type={videoType} videoId={videoId} />}
     </div>
