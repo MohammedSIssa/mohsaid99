@@ -134,7 +134,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
         {storiesError && <h1></h1>}
         {loadingStories && (
           <div className="flex items-center justify-center p-40">
-            <span className="h-20 w-20 animate-spin rounded-xl border-2 border-white/20 bg-white/20"></span>
+            <span className="h-20 w-20 animate-spin rounded-xl border-2 border-(--border-color)/20 bg-(--primary-color)/20"></span>
           </div>
         )}
         {!loadingStories && (
