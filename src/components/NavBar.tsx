@@ -16,7 +16,7 @@ import { IoMdSettings } from "react-icons/io";
 export default function NavBar() {
   const { isAdmin, isLoggedIn, isNotLoggedIn } = useAuth();
   return (
-    <div className="fixed bottom-2 left-1/2 z-50 flex h-fit w-[95%] -translate-x-1/2 items-center justify-center gap-5 rounded-xl border-2 border-(--border-color)/30 bg-(--primary-color)/10 p-4 px-6 py-4 text-(--icons-color) shadow-lg shadow-black/10 backdrop-blur-xl md:top-0 md:right-0 md:m-4 md:w-fit md:translate-x-0 [&_a]:transition-transform [&_a]:duration-200 [&_a]:hover:scale-110">
+    <div className="fixed bottom-2 left-1/2 z-50 flex h-fit w-[95%] -translate-x-1/2 items-center justify-center gap-5 rounded-xl border-2 border-(--border-color)/50 bg-(--primary-color)/10 p-4 px-6 py-4 text-(--icons-color) shadow-lg shadow-black/10 backdrop-blur-xl md:top-0 md:right-0 md:m-4 md:w-fit md:translate-x-0 [&_a]:transition-transform [&_a]:duration-200 [&_a]:hover:scale-110">
       <NavLink
         to={"/"}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

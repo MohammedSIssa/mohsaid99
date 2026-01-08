@@ -5,7 +5,7 @@ import HighlightLand from "./Lands/HighlightLand";
 
 export default function Land({ type }: { type?: string }) {
   return (
-    <div className="bg-stars">
+    <div>
       {type === "week" && <WeekLand />}
       {type === "goal" && <GoalLand />}
       {type === "special" && <SpecialLand />}

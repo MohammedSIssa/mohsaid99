@@ -31,7 +31,7 @@ export default function EditStory({ story }: { story: Story }) {
             summary,
             special,
             type,
-            year: String(year).split("/")[2] ?? year,
+            year,
             count,
           }),
         },

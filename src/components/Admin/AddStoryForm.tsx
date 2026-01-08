@@ -32,7 +32,7 @@ export default function AddStoryForm({
     e.preventDefault();
     try {
       const res = await fetch(
-        `${API}/stories?type=${type}&year=${type !== "special" ? newYear : String(newYear).split("/")[2]}`,
+        `${API}/stories?type=${type}&year=${String(newYear).split("/")[2] ?? newYear}`,
         {
           method: "POST",
           headers: {
@@ -42,7 +42,7 @@ export default function AddStoryForm({
           body: JSON.stringify({
             title,
             summary,
-            year: type !== "special" ? newYear : String(newYear).split("/")[2],
+            year: newYear,
             count: sCount,
             special,
             type,
