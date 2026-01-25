@@ -8,30 +8,30 @@ export const stats: Stat[] = [
     summary: "احصائيات شهر يناير",
     type: "stats",
     seen: true,
-    // workout: {
-    //   data: [
-    //     {
-    //       label: "صدر",
-    //       value: 20,
-    //     },
-    //     {
-    //       label: "كتاف وايدين",
-    //       value: 15,
-    //     },
-    //     {
-    //       label: "معدة",
-    //       value: 10,
-    //     },
-    //     {
-    //       label: "ظهر",
-    //       value: 5,
-    //     },
-    //     {
-    //       label: "رجلين",
-    //       value: 10,
-    //     },
-    //   ],
-    // },
+    workout: {
+      data: [
+        {
+          label: "صدر",
+          value: 20,
+        },
+        {
+          label: "كتاف وايدين",
+          value: 15,
+        },
+        {
+          label: "معدة",
+          value: 10,
+        },
+        {
+          label: "ظهر",
+          value: 5,
+        },
+        {
+          label: "رجلين",
+          value: 10,
+        },
+      ],
+    },
     doughnut: {
       data: [
         {
@@ -64,15 +64,15 @@ export const stats: Stat[] = [
         },
         {
           label: "الأسبوع الأول",
-          value: 28,
+          value: 32,
         },
         {
           label: "الأسبوع الثاني",
-          value: null,
+          value: 32,
         },
         {
           label: "الأسبوع الثالث",
-          value: null,
+          value: 12,
         },
         {
           label: "الأسبوع الرابع",

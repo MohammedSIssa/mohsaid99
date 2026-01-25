@@ -6,27 +6,36 @@ import Stories from "../components/Stories";
 
 import { logger } from "../variables/logger";
 import useAuth from "../hooks/useAuth";
-import { useEffect, useState } from "react";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useEffect, useState, useMemo } from "react";
 
 export default function Stats() {
   const { statid } = useParams();
   let data = null;
 
-  const [statsData, setStatsData] = useState(stats);
-
-  const [currentYear, setCurrentYear] = useState<number>(2026);
+  const [currentYear, setCurrentYear] = useState<number>(
+    new Date().getFullYear(),
+  );
   const { isAdmin, user } = useAuth();
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
+  const statsData = useMemo(
+    () => stats.filter((s) => s.year === currentYear),
+    [currentYear],
+  );
+
+  const storiesData = useMemo(
+    () =>
+      statsData.map((s) => ({
+        ...s,
+        year: s.year.toString(),
+        summary: s.summary ?? undefined,
+      })),
+    [statsData],
+  );
   if (statid) {
     data = stats.find((s) => s.count === +statid);
   }
-
-  useEffect(() => {
-    function setter() {
-      setStatsData(stats.filter((s) => s.year === currentYear));
-    }
-
-    setter();
-  }, [currentYear]);
 
   useEffect(() => {
     async function log() {
@@ -38,14 +47,12 @@ export default function Stats() {
     }
   }, [statid, isAdmin, user?.username]);
   return (
-    <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
+    <div
+      className={`flex ${isMobile ? "flex-col" : "flex-row"} items-center justify-center gap-2`}
+    >
       <Stories
         type="stats"
-        stories={statsData.map((s) => ({
-          ...s,
-          year: s.year.toString(),
-          summary: s.summary ?? undefined,
-        }))}
+        stories={storiesData}
         onDeleteStory={() => {}}
         currentYear={currentYear}
         setCurrentYear={(year) => setCurrentYear(+year)}

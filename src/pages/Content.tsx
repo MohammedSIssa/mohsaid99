@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import Stories from "../components/Stories";
 import Posts from "../components/Posts";
 import { useParams } from "react-router";
@@ -15,7 +15,9 @@ export default function Content({ toType = null }: { toType?: string | null }) {
   const [stories, setStories] = useState<Story[] | null>(null);
   const [posts, setPosts] = useState<Post[] | null>(null);
 
-  const [currentYear, setCurrentYear] = useState<number>(2026);
+  const [currentYear, setCurrentYear] = useState<number>(
+    new Date().getFullYear(),
+  );
 
   const [loadingStories, setLoadingStories] = useState<boolean>(true);
   const [storiesError, setStoriesError] = useState(false);
@@ -25,21 +27,43 @@ export default function Content({ toType = null }: { toType?: string | null }) {
 
   const { type, storyid } = useParams();
 
-  const { isAdmin } = useAuth();
-  const { user } = useAuth();
+  const { isAdmin, user } = useAuth();
 
-  function onDeleteStory(id: number) {
+  // Memoize complex computations
+  const currentType = useMemo(() => toType ?? type ?? "", [toType, type]);
+
+  const shouldShowStories = useMemo(() => !loadingStories, [loadingStories]);
+  const shouldShowPosts = useMemo(
+    () => !loadingPosts && storyid !== undefined,
+    [loadingPosts, storyid],
+  );
+  const shouldShowLand = useMemo(
+    () => !loadingStories && storyid === undefined,
+    [loadingStories, storyid],
+  );
+  const shouldShowPostsLoading = useMemo(
+    () => loadingPosts && !loadingStories && storyid !== undefined,
+    [loadingPosts, loadingStories, storyid],
+  );
+
+  const parsedStoryId = useMemo(
+    () => (storyid !== undefined ? parseInt(storyid) : 0),
+    [storyid],
+  );
+  const isHighlightType = useMemo(() => type === "highlight", [type]);
+
+  const onDeleteStory = useCallback((id: number) => {
     setStories((stories) => stories?.filter((s) => s.count !== id) ?? null);
-  }
+  }, []);
 
   useEffect(() => {
-    const allowedTypes = ["week", "blog", "goal", "special", "highlight"];
+    const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
 
     async function getStories() {
       try {
         setLoadingStories(true);
         const res = await fetch(
-          `${API}/stories?type=${toType ? toType : type}&year=${currentYear}`,
+          `${API}/stories?type=${currentType}&year=${currentYear}`,
         );
         if (res.ok) {
           const data = await res.json();
@@ -48,117 +72,96 @@ export default function Content({ toType = null }: { toType?: string | null }) {
         } else {
           setStoriesError(true);
         }
-      } catch {
+      } catch (error) {
         setStoriesError(true);
+        console.error("Failed to load stories:", error);
       } finally {
         setLoadingStories(false);
       }
     }
-    if (toType) {
-      if (allowedTypes.includes(toType)) {
-        getStories();
-      }
-    }
-    if (!toType && type && allowedTypes.includes(type)) {
+
+    if (ALLOWED_TYPES.includes(currentType)) {
       getStories();
     }
-  }, [type, toType, currentYear]);
+  }, [currentType, currentYear]);
 
   useEffect(() => {
-    async function getPosts() {
+    async function fetchPosts(endpoint: string) {
       try {
         setLoadingPosts(true);
-        const res = await fetch(
-          `${API}/posts?type=${toType ? toType : type}&storyid=${storyid}`,
-        );
+        const res = await fetch(endpoint);
         if (res.ok) {
           const data = await res.json();
           setPosts(data);
           setPostsError(false);
 
-          if (!isAdmin())
+          if (!isAdmin()) {
             await logger(
               user?.username ?? "guest",
-              `${toType ? toType : type} - ${storyid}`,
+              `${currentType} - ${storyid}`,
             );
+          }
         }
-      } catch {
+      } catch (error) {
         setPostsError(true);
+        console.error("Failed to load posts:", error);
       } finally {
         setLoadingPosts(false);
       }
     }
 
-    async function getHighlights() {
-      console.log(`${API}/posts?type=week&year=${storyid}&special=true`);
-      try {
-        setLoadingPosts(true);
-        const res = await fetch(
-          `${API}/posts?type=week&year=${storyid}&special=true`,
-        );
-        if (res.ok) {
-          const data = await res.json();
-          setPosts(data);
-          setPostsError(false);
+    if (storyid === undefined) return;
 
-          if (!isAdmin())
-            await logger(
-              user?.username ?? "guest",
-              `${toType ? toType : type} - ${storyid}`,
-            );
-        }
-      } catch {
-        setPostsError(true);
-      } finally {
-        setLoadingPosts(false);
-      }
-    }
+    const endpoint = isHighlightType
+      ? `${API}/posts?type=week&year=${storyid}&special=true`
+      : `${API}/posts?type=${currentType}&storyid=${storyid}`;
 
-    if (storyid !== undefined && type !== "highlight") getPosts();
-    if (storyid !== undefined && type === "highlight") getHighlights();
-  }, [type, storyid, isAdmin, user?.username, toType, user, currentYear]);
+    fetchPosts(endpoint);
+  }, [storyid, currentType, isHighlightType, isAdmin, user?.username]);
 
-  const allowedTypes = ["week", "blog", "goal", "special", "highlight"];
+  const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
 
-  if (toType && !allowedTypes.includes(toType)) {
+  if (toType && !ALLOWED_TYPES.includes(toType)) {
     return <NotFoundPage />;
   }
 
-  if (!toType && type && !allowedTypes.includes(type)) {
+  if (!toType && type && !ALLOWED_TYPES.includes(type)) {
     return <NotFoundPage />;
   }
 
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
-        {storiesError && <h1></h1>}
+        {storiesError && (
+          <div className="p-4 text-red-500">Failed to load stories</div>
+        )}
         {loadingStories && (
           <div className="flex items-center justify-center p-40">
             <span className="h-20 w-20 animate-spin rounded-xl border-2 border-(--border-color)/20 bg-(--primary-color)/20"></span>
           </div>
         )}
-        {!loadingStories && (
+        {shouldShowStories && (
           <Stories
-            type={toType ? toType : (type ?? "")}
+            type={currentType}
             stories={stories ?? []}
             onDeleteStory={onDeleteStory}
             currentYear={currentYear}
             setCurrentYear={(year: string) => setCurrentYear(parseInt(year))}
           />
         )}
-        {loadingPosts && !loadingStories && storyid !== undefined && (
-          <LoadingPosts />
-        )}
-        {!loadingStories && storyid === undefined && (
+        {shouldShowPostsLoading && <LoadingPosts />}
+        {shouldShowLand && (
           <Land type={stories?.[0]?.type as string | undefined} />
         )}
-        {postsError && <h1></h1>}
-        {!loadingPosts && storyid !== undefined && (
+        {postsError && (
+          <div className="p-4 text-red-500">Failed to load posts</div>
+        )}
+        {shouldShowPosts && (
           <Posts
             posts={posts ?? []}
-            type={!toType && type !== undefined ? type : toType ? toType : ""}
-            storyid={storyid !== undefined ? parseInt(storyid) : 0}
-            isHighlights={type === "highlight"}
+            type={currentType}
+            storyid={parsedStoryId}
+            isHighlights={isHighlightType}
           />
         )}
       </div>
