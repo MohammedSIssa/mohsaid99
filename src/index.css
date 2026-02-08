@@ -237,7 +237,7 @@ iframe {
   aspect-ratio: 16 / 9;
 }
 
-iframe.shorts {
+.shorts iframe {
   aspect-ratio: 9 / 16 !important;
   height: calc(100dvh - 200px);
   width: auto !important;

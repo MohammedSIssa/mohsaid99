@@ -1,20 +1,14 @@
 import useAuth from "../hooks/useAuth";
 import { NavLink } from "react-router";
 
-import Weeks from "../../public/icons/week.svg";
-import Goals from "../../public/icons/goals.svg";
-import Lock from "../../public/icons/lock.svg";
-import Cup from "../../public/icons/cup.svg";
-import Logs from "../../public/icons/logs.svg";
-import Home from "../../public/icons/home.svg";
-import LogIn from "../../public/icons/login.svg";
-import Settings from "../../public/icons/settings.svg";
-
-// import { FaHome } from "react-icons/fa";
-// import { FiLogIn } from "react-icons/fi";
-// import { LuLogs } from "react-icons/lu";
-
-// import { IoMdSettings } from "react-icons/io";
+import Weeks from "../assets/icons/week.svg";
+import Goals from "../assets/icons/goals.svg";
+import Lock from "../assets/icons/lock.svg";
+import Cup from "../assets/icons/cup.svg";
+import Logs from "../assets/icons/logs.svg";
+import Home from "../assets/icons/home.svg";
+import LogIn from "../assets/icons/login.svg";
+import Settings from "../assets/icons/settings.svg";
 
 export default function NavBar() {
   const { isAdmin, isLoggedIn, isNotLoggedIn } = useAuth();
