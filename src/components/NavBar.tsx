@@ -4,7 +4,7 @@ import { NavLink } from "react-router";
 import { BsCalendar2MinusFill } from "react-icons/bs";
 import { TbTargetArrow } from "react-icons/tb";
 // import { HiMiniPencilSquare } from "react-icons/hi2";
-import { IoStatsChart } from "react-icons/io5";
+// import { IoStatsChart } from "react-icons/io5";
 import { FaHome } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
@@ -35,12 +35,12 @@ export default function NavBar() {
       >
         <TbTargetArrow size={28} />
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to={"/stats"}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <IoStatsChart size={25} />
-      </NavLink>
+      </NavLink> */}
       <NavLink to={"/highlight"}>
         <MdOutlineEmojiEvents size={30} />
       </NavLink>
