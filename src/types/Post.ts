@@ -8,4 +8,5 @@ export type Post = {
   special: boolean;
   secret: boolean;
   iat?: string;
+  dir?: string;
 };

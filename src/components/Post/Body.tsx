@@ -1,42 +1,151 @@
 import { useState } from "react";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function PostBody({
   body,
+  dir,
   showAllText = false,
 }: {
   body: string;
   showAllText?: boolean;
+  dir: string;
 }) {
   const [showMore, setShowMore] = useState(body?.length < 60);
 
-  function detectDirection(text: string) {
-    const arabicRegex = /[\u0600-\u06FF]/; // Arabic Unicode block
-    return arabicRegex.test(text) ? "rtl" : "ltr";
-  }
-
-  const dir = detectDirection(body);
+  const markdownComponents = {
+    // paragraphs
+    p: ({ ...props }) => (
+      <p className="my-2 leading-7 text-(--font-color)" dir={dir} {...props} />
+    ),
+    // headings
+    h1: ({ ...props }) => (
+      <h1 className="my-3 text-2xl font-bold" {...props} dir={dir} />
+    ),
+    h2: ({ ...props }) => (
+      <h2 className="my-3 text-xl font-semibold" {...props} dir={dir} />
+    ),
+    h3: ({ ...props }) => (
+      <h3 className="my-2 text-lg font-semibold" {...props} dir={dir} />
+    ),
+    // lists
+    ul: ({ ...props }) => (
+      <ul className="my-2 list-inside list-disc" {...props} dir={dir} />
+    ),
+    ol: ({ ...props }) => (
+      <ol className="my-2 list-inside list-decimal" {...props} dir={dir} />
+    ),
+    li: ({ ...props }) => <li className="mb-1 ml-4" {...props} dir={dir} />,
+    // blockquote
+    blockquote: ({ ...props }) => (
+      <blockquote
+        className="my-2 border-l-2 border-gray-400 pl-4 text-gray-500 italic"
+        {...props}
+        dir={dir}
+      />
+    ),
+    // inline code
+    code: (props: React.HTMLAttributes<HTMLElement> & { inline?: boolean }) => {
+      const { inline, children, ...rest } = props;
+      return inline ? (
+        <code className="rounded px-1 text-sm" dir={dir} {...rest}>
+          {children}
+        </code>
+      ) : (
+        <SyntaxHighlighter
+          language="javascript"
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          style={dracula as any} // theme object
+          dir={dir}
+          customStyle={{
+            borderRadius: "12px",
+            padding: "1rem",
+            backgroundColor: "#282a36",
+            // backgroundColor: "#0f0f0f", // overrides theme bg
+          }}
+          children={String(children)}
+        />
+      );
+    },
+    // images
+    img: ({ ...props }) => (
+      <img className="my-2 max-w-full rounded-md" dir={dir} {...props} />
+    ),
+    hr: ({ ...props }) => (
+      <hr
+        className="my-6 border-t border-solid border-gray-400 opacity-50"
+        {...props}
+        dir={dir}
+      />
+    ),
+    // Table elements
+    table: ({ ...props }) => (
+      <table
+        className="my-4 w-full border-collapse border border-gray-400 text-sm"
+        {...props}
+        dir={dir}
+      />
+    ),
+    thead: ({ ...props }) => (
+      <thead
+        className="bg-gray-200 font-semibold text-gray-700"
+        dir={dir}
+        {...props}
+      />
+    ),
+    tbody: ({ ...props }) => <tbody {...props} dir={dir} />,
+    tr: ({ ...props }) => (
+      <tr className="odd:bg-white even:bg-gray-50" dir={dir} {...props} />
+    ),
+    th: ({ ...props }) => (
+      <th
+        className="border border-gray-300 px-3 py-1 text-left"
+        dir={dir}
+        {...props}
+      />
+    ),
+    td: ({ ...props }) => (
+      <td className="border border-gray-300 px-3 py-1" dir={dir} {...props} />
+    ),
+  };
 
   return (
     <>
       {(showMore || showAllText) && (
-        <div className={`flex flex-col gap-2 py-2`}>
-          <pre dir={dir} className="max-w-full md:max-w-[700px]">
-            {body}
-          </pre>
+        <div className={`not-prose block w-full py-2 ${dir}`}>
+          {/* <pre dir={dir} className="max-w-full md:max-w-[700px]"> */}
+          <Markdown
+            remarkPlugins={[remarkGfm]}
+            children={body}
+            components={markdownComponents}
+          />
+          {/* </pre> */}
         </div>
       )}
       {showMore || (
         <div className="py-2">
           {!showAllText && (
-            <pre dir={dir} className="max-w-full md:max-w-[700px]">
-              {body?.slice(0, 60)}...{" "}
+            // <pre dir={dir} className="max-w-full md:max-w-[700px]">
+            <>
+              <div className="not-prose w-full">
+                <Markdown
+                  remarkPlugins={[remarkGfm]}
+                  children={`${body?.slice(0, 60)}...`}
+                  components={markdownComponents}
+                />
+              </div>
               <button
                 className="text-(--font-color)/40 hover:cursor-pointer"
                 onClick={() => setShowMore(true)}
               >
                 عرض المزيد
               </button>
-            </pre>
+            </>
+
+            // </pre>
           )}
         </div>
       )}

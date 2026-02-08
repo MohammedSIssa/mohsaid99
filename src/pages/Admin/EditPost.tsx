@@ -13,6 +13,8 @@ export default function EditPost({ post }: { post: Post }) {
   const [type, setType] = useState<string>(post.type ?? "");
   const [storyid, setStoryid] = useState<number>(post.storyid ?? 0);
 
+  const [dir, setDir] = useState<string>(post.dir ?? "");
+
   // const fromType = post.type;
   // const fromCount = post.storyid;
 
@@ -42,6 +44,7 @@ export default function EditPost({ post }: { post: Post }) {
             secret,
             type,
             storyid,
+            dir,
           }),
         },
       );
@@ -66,7 +69,7 @@ export default function EditPost({ post }: { post: Post }) {
   return (
     <form
       onSubmit={handleSave}
-      className="flex flex-col gap-1 rounded-xl border-2 border-(--border-color)/20 bg-white/10 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl **:disabled:opacity-35 [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-(--border-color)/10 [&_input]:bg-white/10 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-(--border-color)/10 [&_select]:bg-white/10 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-(--border-color)/10 [&_textarea]:bg-white/10 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
+      className="flex w-full flex-col gap-1 rounded-xl border-2 border-(--border-color)/20 bg-black p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-2xl **:disabled:opacity-35 md:w-[600px] [&_input]:mb-4 [&_input]:rounded [&_input]:border-2 [&_input]:border-(--border-color)/10 [&_input]:bg-white/20 [&_input]:p-1 [&_input]:px-2 [&_input]:focus:outline-0 [&_select]:rounded [&_select]:border-2 [&_select]:border-(--border-color)/10 [&_select]:bg-white/20 [&_select]:p-1 [&_select]:px-2 [&_select]:focus:outline-0 [&_textarea]:mb-4 [&_textarea]:rounded [&_textarea]:border-2 [&_textarea]:border-(--border-color)/10 [&_textarea]:bg-white/20 [&_textarea]:p-1 [&_textarea]:px-2 [&_textarea]:focus:outline-0"
       dir="ltr"
     >
       <label htmlFor="title" dir="ltr">
@@ -105,6 +108,19 @@ export default function EditPost({ post }: { post: Post }) {
         <option value={"special"}>Special</option>
       </select>
 
+      <label htmlFor="dir" dir="ltr">
+        Direction:
+      </label>
+      <select
+        id="dir"
+        value={dir}
+        onChange={(e) => setDir(e.target.value)}
+        className="**:bg-black **:text-white"
+      >
+        <option value={"rtl"}>Arabic</option>
+        <option value={"ltr"}>English</option>
+      </select>
+
       <label htmlFor="body" dir="ltr">
         Body:{" "}
       </label>
@@ -112,6 +128,7 @@ export default function EditPost({ post }: { post: Post }) {
         disabled={isLoading}
         id="body"
         value={body}
+        dir={dir}
         onChange={(e) => setBody(e.target.value)}
       />
 

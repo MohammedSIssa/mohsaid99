@@ -4,6 +4,9 @@
 /* Week counter font family */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Quotes font */
+@import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap");
+
 @import url("./themes.css");
 @import url("./animation.css");
 @import url("./makeup.css");
@@ -14,6 +17,121 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset everything inside .not-prose */
+.not-prose * {
+  all: revert;
+}
+
+/* Code blocks */
+.not-prose pre {
+  /* padding: 0.75rem 1rem; */
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  /* color: white; */
+  border-radius: 12px;
+  overflow-x: auto;
+  font-family: monospace;
+}
+
+/* Inline code */
+.not-prose code {
+  padding: 0.1rem 0.3rem;
+  font-family: monospace;
+}
+
+/* Tables */
+.not-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.not-prose th,
+.not-prose td {
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.not-prose th {
+  background-color: #333;
+  font-weight: bold;
+  color: #ddd;
+}
+
+/* Blockquotes */
+.not-prose blockquote {
+  padding: 10px 0;
+  color: #e3e3e3;
+  border-radius: 12px;
+  background-color: #111;
+  font-style: italic;
+  margin: 1.75rem 0;
+}
+
+.not-prose.rtl blockquote {
+  border-right: 5px solid #6471ff !important;
+  border-left: none !important;
+  padding-right: 1.25rem !important;
+  padding-left: 0 !important;
+  font-family: "Amiri Quran", sans-serif, system-ui;
+  font-size: 20px;
+}
+
+.not-prose.ltr blockquote {
+  border-left: 5px solid #6471ff !important;
+  border-right: none !important;
+  padding-left: 1.25rem !important;
+  padding-right: 0 !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Horizontal rules */
+.not-prose hr {
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+  opacity: 0.5;
+  border-style: solid;
+}
+
+/* Headings */
+.not-prose h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.not-prose h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.8rem 0;
+}
+.not-prose h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.6rem 0;
+}
+
+/* Lists */
+.not-prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+.not-prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+.not-prose li {
+  margin-bottom: 0.25rem;
+}
+
+/* Images */
+.not-prose img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
 }
 
 body,
@@ -33,12 +151,12 @@ html,
 }
 
 [dir="ltr"] {
-  direction: ltr;
+  direction: ltr !important;
 }
 
 form textarea {
   resize: none;
-  min-height: 160px;
+  min-height: 180px;
 }
 
 pre {
