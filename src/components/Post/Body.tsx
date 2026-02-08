@@ -51,7 +51,7 @@ export default function PostBody({
     code: (props: React.HTMLAttributes<HTMLElement> & { inline?: boolean }) => {
       const { inline, children, ...rest } = props;
       return inline ? (
-        <code className="rounded px-1 text-sm" dir={dir} {...rest}>
+        <code className="rounded px-1 text-sm" dir={"ltr"} {...rest}>
           {children}
         </code>
       ) : (
@@ -59,7 +59,7 @@ export default function PostBody({
           language="javascript"
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           style={dracula as any} // theme object
-          dir={dir}
+          dir={"ltr"}
           customStyle={{
             borderRadius: "12px",
             padding: "1rem",
