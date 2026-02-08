@@ -8,11 +8,11 @@ import LogOutButton from "../components/LogOutButton";
 export default function Settings() {
   const { settings, setSettings } = useSettings();
   const [isHigh, setIsHigh] = useState(settings?.isHigh ?? false);
-  const [theme, setTheme] = useState(settings?.theme ?? "default");
+  // const [theme, setTheme] = useState(settings?.theme ?? "default");
   const save = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSettings(() => ({ isHigh: isHigh, theme }));
-    saveSettings({ isHigh: isHigh, theme });
+    setSettings(() => ({ isHigh: isHigh }));
+    saveSettings({ isHigh: isHigh });
   };
   const { isLoggedIn } = useAuth();
   return (
@@ -35,7 +35,7 @@ export default function Settings() {
             <option value={"low"}>منخفضة</option>
           </select>
 
-          <label className="mt-10 font-bold">الثيم</label>
+          {/* <label className="mt-10 font-bold">الثيم</label>
           <hr className="border border-(--border-color)/20" />
           <select
             onChange={(e) => setTheme(e.target.value)}
@@ -45,7 +45,7 @@ export default function Settings() {
             <option value={"dark"}>داكن</option>
             <option value={"light"}>فاتح</option>
             <option value={"default"}>ملون</option>
-          </select>
+          </select> */}
 
           <button
             type="submit"
