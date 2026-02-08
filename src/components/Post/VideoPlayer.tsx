@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from "react";
 
+import Mute from "../../assets/icons/mute.svg";
+import UnMute from "../../assets/icons/unmute.svg";
+
 declare global {
   interface Window {
     YT: any;
@@ -19,6 +22,7 @@ export default function YouTubePlayer({
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [load, setLoad] = useState(false);
   const [player, setPlayer] = useState<any>(null);
+  const [isMuted, setIsMuted] = useState(true); // track mute state
 
   // Lazy-load iframe
   useEffect(() => {
@@ -44,14 +48,24 @@ export default function YouTubePlayer({
       window.onYouTubeIframeAPIReady = () => {
         if (iframeRef.current) {
           const ytPlayer = new window.YT.Player(iframeRef.current, {
-            events: { onReady: () => setPlayer(ytPlayer) },
+            events: {
+              onReady: () => {
+                setPlayer(ytPlayer);
+                ytPlayer.mute(); // start muted
+              },
+            },
           });
         }
       };
     } else {
       if (iframeRef.current) {
         const ytPlayer = new window.YT.Player(iframeRef.current, {
-          events: { onReady: () => setPlayer(ytPlayer) },
+          events: {
+            onReady: () => {
+              setPlayer(ytPlayer);
+              ytPlayer.mute(); // start muted
+            },
+          },
         });
       }
     }
@@ -82,33 +96,58 @@ export default function YouTubePlayer({
 
     const state = player.getPlayerState();
     if (state === 1) {
-      // playing
       player.pauseVideo();
     } else {
-      // paused or ended
       player.playVideo();
+    }
+  };
+
+  // Toggle audio (mute/unmute)
+  const toggleAudio = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation(); // prevent triggering play/pause
+    if (!player) return;
+
+    if (player.isMuted()) {
+      player.unMute();
+      setIsMuted(false);
+    } else {
+      player.mute();
+      setIsMuted(true);
     }
   };
 
   if (!videoId) return null;
 
-  const src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&controls=0&loop=1&playlist=${videoId}&mute=0`;
+  const src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&controls=0&loop=1&playlist=${videoId}&mute=1&rel=0`;
 
   return (
     <div
       ref={containerRef}
-      className={`${type} rounded-2xl`}
-      onClick={handleClick} // ← click toggles play/pause
+      className={`${type} relative rounded-2xl`}
+      onClick={handleClick}
     >
       {load && (
-        <iframe
-          ref={iframeRef}
-          className="h-full w-full rounded-2xl"
-          src={src}
-          title="YouTube video player"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        />
+        <>
+          <iframe
+            ref={iframeRef}
+            className="h-full w-full rounded-2xl"
+            src={src}
+            title="YouTube video player"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          />
+          {/* Audio toggle button */}
+          <button
+            onClick={toggleAudio}
+            className="absolute bottom-2 left-2 z-10 rounded-full bg-black/50 p-2 text-white"
+          >
+            {isMuted ? (
+              <img src={UnMute} width={25} />
+            ) : (
+              <img src={Mute} width={25} />
+            )}
+          </button>
+        </>
       )}
     </div>
   );
