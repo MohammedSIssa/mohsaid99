@@ -118,7 +118,7 @@ export default function YouTubePlayer({
 
   if (!videoId) return null;
 
-  const src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&controls=0&loop=1&playlist=${videoId}&mute=1&rel=0`;
+  const src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&controls=0&loop=1&playlist=${videoId}&mute=1&rel=0&modestbranding=1`;
 
   return (
     <div
