@@ -7,6 +7,9 @@
 /* Quotes font */
 @import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap");
 
+/* Code font */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
 @import url("./themes.css");
 @import url("./animation.css");
 @import url("./makeup.css");
@@ -26,18 +29,23 @@
 
 /* Code blocks */
 .not-prose pre {
-  /* padding: 0.75rem 1rem; */
-  /* background-color: rgba(0, 0, 0, 0.85); */
-  /* color: white; */
-  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(30deg, #ffffff00, #ffffff33);
+  backdrop-filter: blur(10px);
+  color: #f3f5ff;
+  border-radius: 14px;
+  font-family: "Fira Code", monospace;
   overflow-x: auto;
-  font-family: monospace;
+  font-weight: 600;
+  text-align: left;
+  border: 2px solid #ffffff20;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3) inset;
 }
 
 /* Inline code */
 .not-prose code {
-  padding: 0.1rem 0.3rem;
-  font-family: monospace;
+  /* padding: 0.1rem 0.3rem; */
+  font-family: "Fira Code", monospace;
 }
 
 /* Tables */

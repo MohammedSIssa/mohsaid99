@@ -53,12 +53,13 @@ export default function PostBody({
           {children}
         </code>
       ) : (
-        <pre
+        <code
           dir="ltr"
-          className="my-3 overflow-x-auto rounded-xl bg-black p-4 text-sm text-white"
+          className="my-3 block overflow-x-auto rounded-xl bg-black p-4 text-sm text-white"
+          {...rest}
         >
-          <code {...rest}>{children}</code>
-        </pre>
+          {children}
+        </code>
       );
     },
     // images
