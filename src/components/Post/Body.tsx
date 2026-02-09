@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -119,6 +120,7 @@ export default function PostBody({
           {/* <pre dir={dir} className="max-w-full md:max-w-[700px]"> */}
           <Markdown
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
             children={body}
             components={markdownComponents}
           />
@@ -132,6 +134,7 @@ export default function PostBody({
             <>
               <div className="not-prose w-full">
                 <Markdown
+                  rehypePlugins={[rehypeRaw]}
                   remarkPlugins={[remarkGfm]}
                   children={`${body?.slice(0, 60)}...`}
                   components={markdownComponents}
