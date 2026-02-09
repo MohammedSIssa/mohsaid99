@@ -3,9 +3,6 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
-
 export default function PostBody({
   body,
   dir,
@@ -56,19 +53,12 @@ export default function PostBody({
           {children}
         </code>
       ) : (
-        <SyntaxHighlighter
-          language="javascript"
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          style={dracula as any} // theme object
-          dir={"ltr"}
-          customStyle={{
-            borderRadius: "12px",
-            padding: "1rem",
-            backgroundColor: "#282a36",
-            // backgroundColor: "#0f0f0f", // overrides theme bg
-          }}
-          children={String(children)}
-        />
+        <pre
+          dir="ltr"
+          className="my-3 overflow-x-auto rounded-xl bg-black p-4 text-sm text-white"
+        >
+          <code {...rest}>{children}</code>
+        </pre>
       );
     },
     // images
