@@ -68,6 +68,12 @@
   color: #ddd;
 }
 
+.not-prose tr > :nth-child(1) {
+  background-color: #262f95;
+  font-weight: bold;
+  color: #ddd;
+}
+
 /* Blockquotes */
 .not-prose blockquote {
   padding: 10px 0;
