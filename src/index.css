@@ -27,6 +27,12 @@
   all: revert;
 }
 
+.not-prose del {
+  text-decoration: line-through;
+  color: #00ff0080;
+  font-weight: bold; /* optional */
+}
+
 /* Code blocks */
 .not-prose pre {
   padding: 1.5rem 2rem;
