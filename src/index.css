@@ -13,6 +13,7 @@
 @import url("./themes.css");
 @import url("./animation.css");
 @import url("./makeup.css");
+
 @import "tailwindcss";
 
 :root {
@@ -27,10 +28,55 @@
   all: revert;
 }
 
+/* Strikethrough blocks */
 .not-prose del {
   text-decoration: line-through;
   color: #00ff0080;
   font-weight: bold; /* optional */
+}
+
+/* Check marks */
+.not-prose input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 1.4em;
+  height: 1.4em;
+
+  border: 2px solid #22c55e;
+  border-radius: 6px;
+  display: inline-grid;
+  place-content: center;
+
+  background-color: transparent;
+  cursor: default;
+  margin-right: 0.6rem;
+
+  vertical-align: middle; /* 🔥 the important one */
+  transform: translateY(-1px); /* tiny optical fix */
+}
+
+/* checkmark */
+.not-prose input[type="checkbox"]::before {
+  content: "";
+  width: 0.7em;
+  height: 0.4em;
+  border: solid white;
+  border-width: 0 0 3px 3px;
+  transform: rotate(-45deg) scale(0);
+  transition: transform 0.15s ease-in-out;
+}
+
+.not-prose input[type="checkbox"]:checked {
+  background-color: #22c55e;
+}
+
+.not-prose input[type="checkbox"]:checked::before {
+  transform: rotate(-45deg) scale(1);
+}
+
+.not-prose input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
 }
 
 /* Code blocks */
