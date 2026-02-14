@@ -43,7 +43,7 @@
   width: 1.4em;
   height: 1.4em;
 
-  border: 2px solid #22c55e;
+  border: 2px solid #fff;
   border-radius: 6px;
   display: inline-grid;
   place-content: center;
@@ -69,6 +69,7 @@
 
 .not-prose input[type="checkbox"]:checked {
   background-color: #22c55e;
+  border: 2px solid #22c55e;
 }
 
 .not-prose input[type="checkbox"]:checked::before {
