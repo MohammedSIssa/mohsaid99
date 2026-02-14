@@ -95,10 +95,18 @@
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3) inset;
 }
 
-/* Inline code */
-.not-prose code {
-  /* padding: 0.1rem 0.3rem; */
+/* Inline code (only code NOT inside pre) */
+.not-prose code:not(pre code) {
   font-family: "Fira Code", monospace;
+  color: #f3f5ff;
+  border: 2px solid #ffffff20;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 4px;
+  padding: 0.1rem 0.3rem;
+  font-weight: 500;
+  background: linear-gradient(30deg, #ffffff00, #ffffff33);
+  backdrop-filter: blur(10px);
+  font-size: 0.95em;
 }
 
 /* Tables */
@@ -134,23 +142,24 @@
   border-radius: 12px;
   background-color: #111;
   font-style: italic;
-  margin: 1.75rem 0;
+  margin: 1.75rem;
 }
 
 .not-prose.rtl blockquote {
   border-right: 5px solid #6471ff !important;
   border-left: none !important;
   padding-right: 1.25rem !important;
-  padding-left: 0 !important;
+  padding-left: 1.25rem !important;
   font-family: "Amiri Quran", sans-serif, system-ui;
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 2;
 }
 
 .not-prose.ltr blockquote {
   border-left: 5px solid #6471ff !important;
   border-right: none !important;
+  padding-right: 1.25rem !important;
   padding-left: 1.25rem !important;
-  padding-right: 0 !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
