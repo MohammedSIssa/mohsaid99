@@ -160,7 +160,8 @@
   border-right: none !important;
   padding-right: 1.25rem !important;
   padding-left: 1.25rem !important;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* Horizontal rules */

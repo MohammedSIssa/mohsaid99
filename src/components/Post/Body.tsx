@@ -39,11 +39,7 @@ export default function PostBody({
     li: ({ ...props }) => <li className="mb-1 ml-4" {...props} dir={dir} />,
     // blockquote
     blockquote: ({ ...props }) => (
-      <blockquote
-        className="my-2 border-l-2 border-gray-400 pl-4 text-gray-500 italic"
-        {...props}
-        dir={dir}
-      />
+      <blockquote className="my-2" {...props} dir={dir} />
     ),
     // inline code
     code: (props: React.HTMLAttributes<HTMLElement> & { inline?: boolean }) => {

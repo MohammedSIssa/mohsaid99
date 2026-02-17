@@ -5,10 +5,11 @@ import Weeks from "../assets/icons/week.svg";
 import Goals from "../assets/icons/goals.svg";
 import Lock from "../assets/icons/lock.svg";
 import Cup from "../assets/icons/cup.svg";
-import Logs from "../assets/icons/logs.svg";
+// import Logs from "../assets/icons/logs.svg";
 import Home from "../assets/icons/home.svg";
 import LogIn from "../assets/icons/login.svg";
 import Settings from "../assets/icons/settings.svg";
+import Blog from "../assets/icons/blog.svg";
 
 export default function NavBar() {
   const { isAdmin, isLoggedIn, isNotLoggedIn } = useAuth();
@@ -45,9 +46,10 @@ export default function NavBar() {
         {/* <MdOutlineEmojiEvents size={30} /> */}
         <img src={Cup} alt="" width="30" />
       </NavLink>
-      {/* <NavLink to={"/blogs"}>
-        <HiMiniPencilSquare size={27} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
-      </NavLink> */}
+
+      <NavLink className="pointer-events-none brightness-50" to="/blog">
+        <img src={Blog} alt="" width="28" />
+      </NavLink>
       {isNotLoggedIn() && (
         <NavLink
           to={"/login"}
@@ -68,14 +70,16 @@ export default function NavBar() {
         </NavLink>
       )}
       {isAdmin() && (
-        <NavLink
-          to={"/logs"}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          {/* <LuLogs size={28} /> */}
-          <img src={Logs} alt="" width="28" />
-        </NavLink>
+        <span className="hidden"></span>
+        // <NavLink
+        //   to={"/logs"}
+        //   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        // >
+        //   {/* <LuLogs size={28} /> */}
+        //   <img src={Logs} alt="" width="28" />
+        // </NavLink>
       )}
+
       <NavLink to={"/settings"}>
         {/* <IoMdSettings size={30} /> */}
         <img src={Settings} width={30} alt="" />

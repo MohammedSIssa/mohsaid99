@@ -11,6 +11,8 @@ import { API } from "../variables/globals";
 import useAuth from "../hooks/useAuth";
 import { logger } from "../variables/logger";
 
+import { ALLOWED_TYPES } from "../variables/globals";
+
 export default function Content({ toType = null }: { toType?: string | null }) {
   const [stories, setStories] = useState<Story[] | null>(null);
   const [posts, setPosts] = useState<Post[] | null>(null);
@@ -57,7 +59,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
   }, []);
 
   useEffect(() => {
-    const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
+    // const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
 
     async function getStories() {
       try {
@@ -119,7 +121,7 @@ export default function Content({ toType = null }: { toType?: string | null }) {
     fetchPosts(endpoint);
   }, [storyid, currentType, isHighlightType, isAdmin, user?.username]);
 
-  const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
+  // const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
 
   if (toType && !ALLOWED_TYPES.includes(toType)) {
     return <NotFoundPage />;
