@@ -36,7 +36,7 @@ export default function AuthProvider({
             setLoading(false);
           } else if (res.ok) {
             const data = await res.json();
-            setUser(data.user);
+            setUser(data.user.user);
             setToken(token);
             setIsAuthenticated(true);
 
