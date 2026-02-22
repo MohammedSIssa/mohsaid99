@@ -1,5 +1,7 @@
+import { lazy } from "react";
+
 import { LazyImage } from "./LazyImage";
-import YouTubePlayer from "./VideoPlayer";
+const YouTubePlayer = lazy(() => import("./VideoPlayer"));
 
 export default function PostMedia({ images }: { images: string[] }) {
   const isVideo = images[0].startsWith("video:");
