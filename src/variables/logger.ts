@@ -1,4 +1,4 @@
-import { API } from "./globals";
+import { API } from "./api";
 
 export const logger = async (username: string, url: string) => {
   const clock = new Date().toLocaleTimeString();

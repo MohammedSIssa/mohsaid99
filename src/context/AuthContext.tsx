@@ -1,13 +1,25 @@
 import { createContext } from "react";
-import { type User } from "../types/User";
 
 export type AuthContextType = {
-  user: User | null;
-  setUser: React.Dispatch<React.SetStateAction<User | null>>;
-  isAdmin: () => boolean;
-  isMonmon: () => boolean;
-  isLoggedIn: () => boolean;
-  isNotLoggedIn: () => boolean;
+  token: string | null;
+  user: any;
+  setUser: React.Dispatch<React.SetStateAction<any>>;
+  isAuthenticated?: boolean;
+  setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  loading: boolean;
+  isAdmin: boolean;
+  setToken?: React.Dispatch<React.SetStateAction<string | null>>;
+  setIsAdmin: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const AuthContext = createContext<AuthContextType | null>(null);
+export const AuthContext = createContext<AuthContextType>({
+  token: null,
+  user: null,
+  setUser: () => {},
+  isAuthenticated: false,
+  loading: true,
+  setIsAuthenticated: () => {},
+  isAdmin: false,
+  setToken: () => {},
+  setIsAdmin: () => {},
+});

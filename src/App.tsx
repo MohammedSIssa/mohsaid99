@@ -1,65 +1,45 @@
-import { Routes, Route } from "react-router";
 import { lazy, Suspense } from "react";
-
-import AuthProvider from "./context/AuthProvider";
-import SettingsProvider from "./context/SettingsProvider";
-
-// Static imports
-import AppLayout from "./layouts/AppLayout";
-import RequireAuth from "./components/RequireAuth";
-import RequireUnAuth from "./components/RequireUnAuth";
-import SiteSkeleton from "./components/Loaders/SiteSkeleton";
-import { ADMIN_ROLE, MONMON_ROLE } from "./variables/globals";
-
-// Dynamic imports
-const Login = lazy(() => import("./pages/Login"));
+import { Routes, Route } from "react-router";
+import AppLayout from "./layout/AppLayout";
+import Home from "./pages/Home";
 const Content = lazy(() => import("./pages/Content"));
-const Logs = lazy(() => import("./pages/Admin/Logs"));
-const Homepage = lazy(() => import("./pages/Homepage"));
-const Stats = lazy(() => import("./pages/Stats"));
-const Settings = lazy(() => import("./pages/Settings"));
+const Land = lazy(() => import("./pages/Land"));
+const Login = lazy(() => import("./pages/Login"));
+const Log = lazy(() => import("./pages/Log"));
+
+import Spinner from "./assets/icons/spinner.svg";
+
+import TypeProvider from "./context/TypeProvider";
+import AuthProvider from "./context/AuthProvider";
+
+import RequireAuth from "./components/RequireAuth";
 
 export default function App() {
   return (
     <AuthProvider>
-      <SettingsProvider>
-        <Suspense fallback={<SiteSkeleton />}>
+      <TypeProvider>
+        <Suspense
+          fallback={
+            <div className="h-dvh flex items-center justify-center">
+              <div className="w-7 h-7 animate-spin">
+                <img src={Spinner} width={28} height={28} />
+              </div>
+            </div>
+          }
+        >
           <Routes>
             <Route element={<AppLayout />}>
-              <Route path="" element={<Homepage />} />
-              <Route element={<RequireUnAuth />}>
-                <Route path="login" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              <Route element={<RequireAuth />}>
+                <Route path="/logs" element={<Log />} />
+                <Route path="/:type" element={<Land />} />
+                <Route path="/:type/:count" element={<Content />} />
               </Route>
-
-              <Route path="settings" element={<Settings />} />
-
-              {/* Admin routes */}
-              <Route element={<RequireAuth role={ADMIN_ROLE} />}>
-                <Route path="logs" element={<Logs />} />
-              </Route>
-
-              {/* Secret Routes */}
-              <Route element={<RequireAuth role={MONMON_ROLE} />}>
-                <Route
-                  path="special"
-                  element={<Content toType={"special"} />}
-                />
-                <Route
-                  path="special/:storyid"
-                  element={<Content toType={"special"} />}
-                />
-              </Route>
-
-              <Route path="stats" element={<Stats />} />
-              <Route path="stats/:statid" element={<Stats />} />
-
-              {/* Public Routes */}
-              <Route path=":type" element={<Content />} />
-              <Route path=":type/:storyid" element={<Content />} />
             </Route>
           </Routes>
         </Suspense>
-      </SettingsProvider>
+      </TypeProvider>
     </AuthProvider>
   );
 }

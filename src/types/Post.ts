@@ -1,12 +1,12 @@
 export type Post = {
   id?: number;
-  title: string;
-  body: string;
-  images?: string[];
+  title?: string;
+  body?: string;
   storyid: number;
+  images: string[] | null;
   type: string;
-  special: boolean;
-  secret: boolean;
+  special?: boolean;
+  secret?: boolean;
   iat?: string;
-  dir?: string;
+  dir: string;
 };

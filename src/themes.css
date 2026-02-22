@@ -5,7 +5,7 @@
   --images-box-bg: rgba(255, 255, 255);
   --golden-post-bg: rgb(156, 75, 0);
   --stars-color: rgba(255, 255, 255, 0.5);
-  --glowing-stars-color: rgba(250, 204, 21, 1);
+  --glowing-stars-color: #facc15;
   --icons-color: oklab(89.702% -0.02701 0.18183);
   --navbar-border-color: var(--icons-color);
   --html-color: linear-gradient(#201344, #130d33, #48135f);

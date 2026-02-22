@@ -1,7 +1,9 @@
-# Version 4 of my website
+# 6th version of my website
 
-This is the fourth version of my personal website
+This is the sixth version of my personal website
 
 Made with React + TypeScript, Express, PostgreSQL (pg)
 
-Back end hosted on render
+Back end hosted on Render
+
+Database hosted on Neon

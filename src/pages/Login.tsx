@@ -1,95 +1,122 @@
+import { useState } from "react";
+import { API } from "../variables/api";
 import useAuth from "../hooks/useAuth";
-import { useState, type FormEvent } from "react";
-import type { User } from "../types/User";
-import { saveUser } from "../variables/localStorage";
+import { setTokenLocal } from "../variables/authStorage";
+import Spinner from "../assets/icons/spinner.svg";
+import { useEffect } from "react";
 
-import { API } from "../variables/globals";
+import Success from "../assets/icons/success.svg";
 
-import { FaDoorOpen } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const {
+    setUser,
+    // setIsAuthenticated,
+    loading,
+    isAuthenticated,
+    setToken,
+  } = useAuth();
+  const navigate = useNavigate();
 
-  const [loggingIn, setLoggingIn] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
-  const [feedback, setFeedback] = useState<string>("");
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const inputsClassName: string = `border-2 border-white/10 bg-white/5 backdrop-blur-xl focus:outline-0 p-1 px-2 w-full rounded-lg ${
-    loggingIn ? "opacity-30" : ""
-  } ${error ? "border border-red-400" : "border-0"}`;
+  useEffect(() => {
+    if (isAuthenticated) {
+      setShowSuccess(true);
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+    }
+  }, [isAuthenticated, navigate]);
 
-  const { setUser } = useAuth();
+  if (showSuccess) {
+    return (
+      <div className="flex h-dvh items-center flex-col gap-5 justify-center">
+        <h1 className="text-2xl text-green-400 font-bold">
+          تم تسجيل الدخول بنجاح
+        </h1>
+        <img src={Success} width={120} height={120} />
+        <h1 className="font-bold text-lg capitalize text-violet-300">
+          {username}
+        </h1>
+        <p>جاري إعادة التوجيه إلى الصفحة الرئيسية...</p>
+      </div>
+    );
+  }
 
-  async function login(e: FormEvent<HTMLFormElement>) {
+  if (loading) {
+    return (
+      <div className="h-dvh flex flex-col items-center gap-5 justify-center">
+        <h1>جار توثيق المستخدم..</h1>
+        <div className="h-7 w-7 animate-spin">
+          <img src={Spinner} width={28} height={28} />
+        </div>
+      </div>
+    );
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-
-    if (!username.trim() || !password.trim()) return;
-
     try {
-      setFeedback("جار تسجيل الدخول");
-      setLoggingIn(true);
-      setError(false);
       const res = await fetch(`${API}/login`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ username, password }),
       });
-
-      if (!res.ok) {
-        throw new Error("Login failed");
+      if (res.ok) {
+        const data = await res.json();
+        setTokenLocal(data.token);
+        if (setToken) {
+          setToken(data.token);
+        }
+        setUser(data.user);
+      } else {
+        alert("Login failed");
       }
-
-      const user: User = await res.json();
-      setUser(user);
-      saveUser(user);
-    } catch (err) {
-      console.error(err);
-      setFeedback("خطأ في تسجيل الدخول");
-      setUsername("");
-      setError(true);
-      setPassword("");
-    } finally {
-      setLoggingIn(false);
+    } catch (error) {
+      alert("Network error");
     }
   }
 
-  return (
-    <div className="flex h-screen flex-col items-center justify-center md:h-fit md:p-20">
-      <form
-        onSubmit={login}
-        className="flex w-full flex-col items-center justify-center gap-4 border-t-2 border-b-2 border-white/20 bg-white/5 p-5 py-10 shadow-2xl shadow-black/20 backdrop-blur-xl md:w-[95%] md:max-w-[400px] md:rounded-xl md:border-2 [&_input]:shadow-xl [&_input]:shadow-black/10"
-      >
-        <FaDoorOpen
-          size={50}
-          className="mb-10 text-violet-200/80 drop-shadow-2xl drop-shadow-violet-500"
-        />
-        <input
-          className={inputsClassName}
-          value={username}
+  if (!isAuthenticated) {
+    return (
+      <div className="h-dvh flex items-center justify-center">
+        <form
           dir="ltr"
-          onChange={(e) => setUsername(e.target.value)}
-          disabled={loggingIn}
-          placeholder="اسم المستخدم"
-        />
-
-        <input
-          className={inputsClassName}
-          type="password"
-          dir="ltr"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          disabled={loggingIn}
-          placeholder="كلمة المرور"
-        />
-        <p>{feedback}</p>
-        <button
-          type="submit"
-          className="w-full cursor-pointer rounded-lg border-0 bg-linear-to-b from-[#5a36e9] via-[#805afe] to-[#5a36e9] p-1 px-2 hover:brightness-105 focus:outline-0"
+          className="bg-(--darker-bg-color) py-16 max-w-full rounded-lg border-2 border-(--border-color) flex flex-col gap-4 px-7"
+          onSubmit={handleSubmit}
         >
-          سجل الدخول
-        </button>
-      </form>
-    </div>
-  );
+          <h1 className="text-2xl font-bold text-center mb-4">تسجيل الدخول</h1>
+
+          <input
+            className="bg-(--bg-color) year border border-(--border-color) p-2 px-3 rounded focus:outline-0"
+            dir="ltr"
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            className="bg-(--bg-color) year border border-(--border-color) p-2 px-3 rounded focus:outline-0"
+            dir="ltr"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            className="bg-(--accent-color) p-2 px-3 rounded text-(--bg-color) year font-bold hover:brightness-110 transition-all duration-200 cursor-pointer"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    );
+  }
 }

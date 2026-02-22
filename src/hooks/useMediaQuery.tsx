@@ -1,24 +1,62 @@
-// hooks/useMediaQuery.ts
 import { useState, useEffect } from "react";
 
-export function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState(
-    () => window.matchMedia(query).matches,
-  );
-
-  useEffect(() => {
-    const media = window.matchMedia(query);
-
-    const listener = (e: MediaQueryListEvent) => setMatches(e.matches);
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, [query]);
-
-  return matches;
+export interface MediaQueryState {
+  isMobile: boolean;
+  isDesktop: boolean;
 }
 
-// Usage
-// const isMobile = useMediaQuery("(max-width: 767px)");
-// const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
-// const isLargeTablet = useMediaQuery("(min-width: 1024px) and (max-width: 1279px)");
-// const isDesktop = useMediaQuery("(min-width: 1280px)");
+export function useMediaQuery(): MediaQueryState {
+  const [state, setState] = useState<MediaQueryState>({
+    isMobile: false,
+    isDesktop: false,
+  });
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 768px)");
+    const desktopQuery = window.matchMedia("(min-width: 769px)");
+
+    const updateState = () => {
+      setState({
+        isMobile: mobileQuery.matches,
+        isDesktop: desktopQuery.matches,
+      });
+    };
+
+    // Set initial state
+    updateState();
+
+    // Add listeners for changes
+    const mobileListener = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        setState((prev) => ({ ...prev, isMobile: true, isDesktop: false }));
+      }
+    };
+
+    const desktopListener = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        setState((prev) => ({ ...prev, isMobile: false, isDesktop: true }));
+      }
+    };
+
+    // Handle older browsers that don't support addEventListener
+    if (mobileQuery.addEventListener) {
+      mobileQuery.addEventListener("change", mobileListener);
+      desktopQuery.addEventListener("change", desktopListener);
+    } else {
+      mobileQuery.addListener(mobileListener);
+      desktopQuery.addListener(desktopListener);
+    }
+
+    return () => {
+      if (mobileQuery.removeEventListener) {
+        mobileQuery.removeEventListener("change", mobileListener);
+        desktopQuery.removeEventListener("change", desktopListener);
+      } else {
+        mobileQuery.removeListener(mobileListener);
+        desktopQuery.removeListener(desktopListener);
+      }
+    };
+  }, []);
+
+  return state;
+}

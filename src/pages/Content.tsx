@@ -1,172 +1,162 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
-import Stories from "../components/Stories";
-import Posts from "../components/Posts";
 import { useParams } from "react-router";
-import type { Story } from "../types/Story";
+import { useType } from "../hooks/useType";
+import { useEffect, useState } from "react";
+import { useFavicon } from "../hooks/useFavicon";
+import { API } from "../variables/api";
 import type { Post } from "../types/Post";
-import LoadingPosts from "../components/Loaders/LoadingPosts";
-import Land from "./Land";
-import NotFoundPage from "./NotFoundPage";
-import { API } from "../variables/globals";
+import Spinner from "../assets/icons/spinner.svg";
+import PostBox from "../components/Post/Post";
 import useAuth from "../hooks/useAuth";
+import CreatePost from "../components/CreatePost";
+import Create from "../assets/icons/create.svg";
+
 import { logger } from "../variables/logger";
 
-import { ALLOWED_TYPES } from "../variables/globals";
+export default function Content() {
+  const { type, count } = useParams();
+  const { setType } = useType();
 
-export default function Content({ toType = null }: { toType?: string | null }) {
-  const [stories, setStories] = useState<Story[] | null>(null);
-  const [posts, setPosts] = useState<Post[] | null>(null);
+  const { token, isAdmin, user } = useAuth();
 
-  const [currentYear, setCurrentYear] = useState<number>(
-    new Date().getFullYear(),
-  );
+  const [showCreatePost, setShowCreatePost] = useState(false);
 
-  const [loadingStories, setLoadingStories] = useState<boolean>(true);
-  const [storiesError, setStoriesError] = useState(false);
-
-  const [loadingPosts, setLoadingPosts] = useState<boolean>(false);
-  const [postsError, setPostsError] = useState(false);
-
-  const { type, storyid } = useParams();
-
-  const { isAdmin, user } = useAuth();
-
-  // Memoize complex computations
-  const currentType = useMemo(() => toType ?? type ?? "", [toType, type]);
-
-  const shouldShowStories = useMemo(() => !loadingStories, [loadingStories]);
-  const shouldShowPosts = useMemo(
-    () => !loadingPosts && storyid !== undefined,
-    [loadingPosts, storyid],
-  );
-  const shouldShowLand = useMemo(
-    () => !loadingStories && storyid === undefined,
-    [loadingStories, storyid],
-  );
-  const shouldShowPostsLoading = useMemo(
-    () => loadingPosts && !loadingStories && storyid !== undefined,
-    [loadingPosts, loadingStories, storyid],
-  );
-
-  const parsedStoryId = useMemo(
-    () => (storyid !== undefined ? parseInt(storyid) : 0),
-    [storyid],
-  );
-  const isHighlightType = useMemo(() => type === "highlight", [type]);
-
-  const onDeleteStory = useCallback((id: number) => {
-    setStories((stories) => stories?.filter((s) => s.count !== id) ?? null);
-  }, []);
-
-  useEffect(() => {
-    // const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
-
-    async function getStories() {
-      try {
-        setLoadingStories(true);
-        const res = await fetch(
-          `${API}/stories?type=${currentType}&year=${currentYear}`,
-        );
-        if (res.ok) {
-          const data = await res.json();
-          setStories(data);
-          setStoriesError(false);
-        } else {
-          setStoriesError(true);
-        }
-      } catch (error) {
-        setStoriesError(true);
-        console.error("Failed to load stories:", error);
-      } finally {
-        setLoadingStories(false);
-      }
-    }
-
-    if (ALLOWED_TYPES.includes(currentType)) {
-      getStories();
-    }
-  }, [currentType, currentYear]);
-
-  useEffect(() => {
-    async function fetchPosts(endpoint: string) {
-      try {
-        setLoadingPosts(true);
-        const res = await fetch(endpoint);
-        if (res.ok) {
-          const data = await res.json();
-          setPosts(data);
-          setPostsError(false);
-
-          if (!isAdmin()) {
-            await logger(
-              user?.username ?? "guest",
-              `${currentType} - ${storyid}`,
-            );
-          }
-        }
-      } catch (error) {
-        setPostsError(true);
-        console.error("Failed to load posts:", error);
-      } finally {
-        setLoadingPosts(false);
-      }
-    }
-
-    if (storyid === undefined) return;
-
-    const endpoint = isHighlightType
-      ? `${API}/posts?type=week&year=${storyid}&special=true`
-      : `${API}/posts?type=${currentType}&storyid=${storyid}`;
-
-    fetchPosts(endpoint);
-  }, [storyid, currentType, isHighlightType, isAdmin, user?.username]);
-
-  // const ALLOWED_TYPES = ["week", "blog", "goal", "special", "highlight"];
-
-  if (toType && !ALLOWED_TYPES.includes(toType)) {
-    return <NotFoundPage />;
+  function handleCreatePost(post: Post) {
+    setContent((prev) => {
+      if (prev === null) return [post];
+      return [post, ...prev];
+    });
   }
 
-  if (!toType && type && !ALLOWED_TYPES.includes(type)) {
-    return <NotFoundPage />;
+  useEffect(() => {
+    if (!isAdmin && type) {
+      async function log() {
+        await logger(
+          user.username ?? "guest - ",
+          type && count ? `${type} - ${count}` : "Home",
+        );
+      }
+      log();
+    }
+  }, [type, count]);
+
+  useEffect(() => {
+    if (type) {
+      setType(type);
+    }
+  }, [type, setType]);
+
+  const [content, setContent] = useState<Post[] | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  // get story posts;
+  useEffect(() => {
+    // const sleep = (ms: number) =>
+    //   new Promise((resolve) => setTimeout(resolve, ms));
+    async function getContent() {
+      try {
+        setLoading(true);
+        setContent(null);
+        // ⏳ simulate network delay
+        // await sleep(2000);
+        const res = await fetch(`${API}/posts?type=${type}&count=${count}`, {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setContent(data);
+          setLoading(false);
+          setError("");
+        } else {
+          setLoading(false);
+          setError("Something went wrong.");
+          setContent(null);
+        }
+      } catch {
+        setContent(null);
+        setLoading(false);
+        setError("Server Error");
+      }
+    }
+
+    getContent();
+  }, [count]);
+
+  useFavicon("/mohsaid99/favicons/" + type + ".svg");
+
+  if (loading) {
+    return (
+      <div className="flex flex-1 h-dvh items-center justify-center">
+        <div className="animate-spin w-7 h-7">
+          <img src={Spinner} alt="spinning animation" width={28} />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        Error: {error}
+      </div>
+    );
+  }
+
+  if (content && content.length > 0) {
+    return (
+      <div className="flex flex-col md:pr-16 min-h-screen items-center justify-center py-25">
+        {isAdmin && (
+          <button
+            className="bg-(--accent-color) rounded-full flex items-center justify-center w-[60px] h-[60px]"
+            onClick={() => setShowCreatePost(!showCreatePost)}
+          >
+            {!showCreatePost ? <img src={Create} width={30} /> : null}
+          </button>
+        )}
+
+        {showCreatePost && isAdmin && (
+          <CreatePost
+            setShowCreatePost={setShowCreatePost}
+            handleCreatePost={handleCreatePost}
+            storyid={content[0].storyid}
+          />
+        )}
+
+        {content.map((post) => (
+          <PostBox
+            storyid={post?.storyid ?? 0}
+            id={post?.id ?? 0}
+            key={post.id}
+            title={post.title ?? ""}
+            time={post.iat ?? ""}
+            images={post?.images ?? []}
+            body={post.body ?? ""}
+            dir={post.dir}
+            type={post.type}
+            special={post.special ?? false}
+            secret={post.secret ?? false}
+            handleEditPost={(updatedPost) =>
+              setContent((prev) =>
+                prev
+                  ? prev.map((p) => (p.id === updatedPost.id ? updatedPost : p))
+                  : prev,
+              )
+            }
+            handleDeletePost={(id) =>
+              setContent(content.filter((p) => p.id !== id))
+            }
+          />
+        ))}
+      </div>
+    );
   }
 
   return (
-    <>
-      <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
-        {storiesError && (
-          <div className="p-4 text-red-500">Failed to load stories</div>
-        )}
-        {loadingStories && (
-          <div className="flex items-center justify-center p-40">
-            <span className="h-20 w-20 animate-spin rounded-xl border-2 border-(--border-color)/20 bg-(--primary-color)/20"></span>
-          </div>
-        )}
-        {shouldShowStories && (
-          <Stories
-            type={currentType}
-            stories={stories ?? []}
-            onDeleteStory={onDeleteStory}
-            currentYear={currentYear}
-            setCurrentYear={(year: string) => setCurrentYear(parseInt(year))}
-          />
-        )}
-        {shouldShowPostsLoading && <LoadingPosts />}
-        {shouldShowLand && (
-          <Land type={stories?.[0]?.type as string | undefined} />
-        )}
-        {postsError && (
-          <div className="p-4 text-red-500">Failed to load posts</div>
-        )}
-        {shouldShowPosts && (
-          <Posts
-            posts={posts ?? []}
-            type={currentType}
-            storyid={parsedStoryId}
-            isHighlights={isHighlightType}
-          />
-        )}
-      </div>
-    </>
+    <div className="flex h-screen items-center justify-center">
+      No content available.
+    </div>
   );
 }

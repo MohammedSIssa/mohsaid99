@@ -1,10 +1,10 @@
 export type Story = {
   id?: number;
   count: number;
-  type?: string | number;
+  type: string;
   title: string;
-  summary?: string;
-  year: string | number;
-  special?: boolean | null;
-  seen?: boolean | null;
+  year: string;
+  summary: string;
+  special: boolean;
+  seen?: boolean;
 };

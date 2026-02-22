@@ -1,140 +1,138 @@
-import { API } from "../../variables/globals";
-import PostBody from "./Body";
-import PostTime from "./Time";
-import PostTitle from "./Title";
-import PostImages from "./Images";
-import type { Post } from "../../types/Post";
-import useAuth from "../../hooks/useAuth";
-import { useState } from "react";
+import PostTitle from "./PostTitle";
+import PostDate from "./PostDate";
+import PostMedia from "./PostMedia";
+import PostBody from "./PostBody";
 import Goals from "../Goals";
-import EditPost from "../../pages/Admin/EditPost";
-import { NavLink } from "react-router";
 
-import { VscSparkleFilled } from "react-icons/vsc";
-import { TbEdit } from "react-icons/tb";
-import { FaTimes, FaLock } from "react-icons/fa";
-import { HiTrash } from "react-icons/hi2";
+import type { Post } from "../../types/Post";
+
+import Sparkle from "../../assets/icons/sparkle.svg";
+import Secret from "../../assets/icons/lock.svg";
+import Edit from "../../assets/icons/edit.svg";
+import Delete from "../../assets/icons/delete.svg";
+
+import EditPost from "../EditPost";
+import { useState } from "react";
+
+import useAuth from "../../hooks/useAuth";
+import { API } from "../../variables/api";
 
 export default function PostBox({
-  post,
-  isPerview = false,
-  isHighlight,
+  title,
+  id,
+  time,
+  images,
+  body,
+  dir,
+  type,
+  special,
+  secret,
+  storyid,
+  isEditting = false,
+  isCreating = false,
+  handleEditPost,
+  handleDeletePost,
 }: {
-  post: Post;
-  isPerview?: boolean;
-  isHighlight: boolean;
+  title: string;
+  id?: number;
+  time?: string;
+  images: string[];
+  body: string;
+  dir: string;
+  type: string;
+  special: boolean;
+  secret: boolean;
+  storyid: number;
+  isEditting?: boolean;
+  isCreating?: boolean;
+  handleDeletePost: (id: number) => void;
+  handleEditPost?: (post: Post) => void;
 }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const { isAdmin, isMonmon, user } = useAuth();
-  const isVisible = post.secret ? isAdmin() || isMonmon() : true;
+  const [showEditPost, setShowEditPost] = useState(false);
+  const { isAdmin, token } = useAuth();
 
-  async function deletePost() {
-    try {
-      const confirmed = window.confirm(
-        `Are you sure you want to delete post #${post.id}?`,
-      );
-      if (!confirmed) return;
+  async function deletePostById(id: number) {
+    if (!confirm("Delete post?")) return;
+    const res = await fetch(`${API}/posts/${id}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
 
-      const res = await fetch(
-        `${API}/posts?type=${post.type}&storyid=${post.storyid}&id=${post.id}`,
-        {
-          method: "DELETE",
-          headers: { authorization: `Bearer ${user?.apikey}` },
-        },
-      );
-
-      if (res.ok) alert("Deleted post!");
-      else alert("Could not delete post!");
-    } catch {
-      alert("Could not delete post!");
+    if (res.ok) {
+      handleDeletePost(id);
+      alert("Deleted!");
     }
   }
 
-  // === Class Names ===
-  const baseClass =
-    "post relative w-full max-w-full flex-col gap-2 border-t-2 border-b-2 p-3 py-5 shadow-xl shadow-black/10 backdrop-blur-xs md:w-fit md:max-w-[700px] md:min-w-[350px] md:rounded-xl md:border-2 lg:max-w-[900px]";
-
-  const specialClass =
-    post.special && !isHighlight
-      ? "special border-yellow-200/70 bg-[var(--golden-post-bg)]/30 text-yellow-200"
-      : "";
-
-  const secretClass = post.secret
-    ? "secret border-fuchsia-300/60 bg-fuchsia-700/20 text-[var(--font-color)]"
-    : "";
-
-  const normalClass =
-    !post.secret && !post.special
-      ? "border-[var(--border-color)]/50 bg-[var(--primary-color)]/20"
-      : isHighlight
-        ? "border-[var(--border-color)]/50 bg-[var(--primary-color)]/20"
-        : "";
-
-  const containerClass = `${isVisible ? "flex" : "hidden"} ${specialClass} ${secretClass} ${normalClass} ${baseClass}`;
-
   return (
-    <div className={containerClass}>
-      {/* Top icons */}
-      {post.special && !isHighlight && (
-        <span className="absolute top-2 left-2">
-          <VscSparkleFilled />
-        </span>
-      )}
-      {post.secret && (
-        <span className="absolute top-2 left-2">
-          <FaLock />
-        </span>
-      )}
-      {isHighlight && (
-        <NavLink
-          to={`/week/${post.storyid}`}
-          className="year absolute top-2 left-2 font-bold"
-        >
-          #{post.storyid}
-        </NavLink>
-      )}
-
-      {/* Post content */}
-      {!isEditing ? (
-        <>
-          {post.title?.trim() && <PostTitle title={post.title} />}
-          {post?.id && post?.id > 436 && !isPerview && post.type !== "goal" && (
-            <PostTime time={post.iat ?? ""} />
-          )}
-          {post.type !== "goal" ? (
-            <PostBody
-              body={post.body ?? ""}
-              dir={post.dir ?? ""}
-              showAllText={post.images?.length === 0}
-            />
-          ) : (
-            <Goals goals={post.body.split("\n")} />
-          )}
-          {post?.images && post.images?.length > 0 && (
-            <PostImages images={post.images} />
-          )}
-        </>
-      ) : (
-        <EditPost post={post} />
-      )}
-
-      {/* Admin controls */}
-      {isAdmin() && !isHighlight && !isPerview && (
-        <div className="absolute -top-15 left-2 flex gap-2 rounded-lg border-2 border-(--border-color)/20 bg-(--primary-color)/20 p-2 px-3 shadow-xl shadow-black/10 [&_button]:cursor-pointer [&_button]:transition-all [&_button]:duration-200 [&_button]:hover:brightness-90">
+    <div
+      className={`${special ? "text-yellow-200" : ""} 
+       ${secret ? "text-fuchsia-200" : ""} 
+       flex post relative px-3 flex-col items-start 
+       justify-start gap-4 w-full 
+       md:max-w-4xl border-b-2 
+       border-(--border-color) py-5 pt-10`}
+    >
+      {isAdmin && !isEditting && !isCreating && (
+        <div className="absolute left-2 top-8 bg-(--darker-bg-color) rounded-full p-2 px-4 border border-(--border-color)/50 flex gap-2">
           <button
-            className="place-items-center rounded-lg bg-blue-600 p-2 text-white backdrop-blur-2xl"
-            onClick={() => setIsEditing(!isEditing)}
+            className="cursor-pointer p-2 bg-(--accent-color) text-black rounded-full hover:brightness-95 transition"
+            onClick={() => setShowEditPost(true)}
           >
-            {isEditing ? <FaTimes size={18} /> : <TbEdit size={18} />}
+            <img src={Edit} width={20} height={20} />
           </button>
           <button
-            className="place-items-center rounded-lg bg-red-500 p-2 text-white backdrop-blur-2xl"
-            onClick={deletePost}
+            className="cursor-pointer p-2 bg-red-300 text-black rounded-full hover:brightness-95 transition"
+            onClick={() => {
+              deletePostById(id ?? 0);
+            }}
           >
-            <HiTrash size={18} />
+            <img src={Delete} width={20} height={20} />
           </button>
         </div>
       )}
+      {showEditPost && isAdmin && (
+        <EditPost
+          id={id ?? 0}
+          storyid={storyid}
+          post={{
+            storyid,
+            title,
+            body,
+            images,
+            dir,
+            type,
+            special,
+            secret,
+          }}
+          handleEditPost={handleEditPost || (() => {})}
+          setShowEditPost={setShowEditPost}
+        />
+      )}
+      {title.trim() !== "" && <PostTitle title={title} />}
+      <div className="flex gap-2 items-center justify-center">
+        {id && id > 436 && <PostDate time={time ? time : ""} />}
+
+        {special && (
+          <span className="bg-yellow-300/10 border-2 border-yellow-300/20 rounded-full p-2">
+            <img src={Sparkle} width={26} />
+          </span>
+        )}
+        {secret && (
+          <span className="bg-fuchsia-300/10 border-2 border-fuchsia-300/20 rounded-full p-2">
+            <img src={Secret} width={26} />
+          </span>
+        )}
+      </div>
+      {type === "goal" ? (
+        <Goals goals={body.split("\n")} />
+      ) : (
+        <PostBody body={body} dir={dir} showAllText={images?.length === 0} />
+      )}
+      {images && images.length > 0 && <PostMedia images={images} />}
     </div>
   );
 }

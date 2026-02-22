@@ -1,15 +1,33 @@
-import GoalLand from "./Lands/GoalLand";
-import WeekLand from "./Lands/WeekLand";
-import SpecialLand from "./Lands/SpecialLand";
-import HighlightLand from "./Lands/HighlightLand";
+import { useParams } from "react-router";
+import { useType } from "../hooks/useType";
+import { lazy, useEffect } from "react";
+import { useFavicon } from "../hooks/useFavicon";
+// import { API } from "../variables/api";
 
-export default function Land({ type }: { type?: string }) {
-  return (
-    <div>
-      {type === "week" && <WeekLand />}
-      {type === "goal" && <GoalLand />}
-      {type === "special" && <SpecialLand />}
-      {type === "highlight" && <HighlightLand />}
-    </div>
-  );
+const WeekLand = lazy(() => import("./Lands/WeekLand"));
+const GoalLand = lazy(() => import("./Lands/GoalLand"));
+const SpecialLand = lazy(() => import("./Lands/SpecialLand"));
+
+export default function Land() {
+  const { type } = useParams();
+  const { setType } = useType();
+
+  useEffect(() => {
+    if (type) {
+      setType(type);
+    }
+  }, [type, setType]);
+
+  useFavicon("/mohsaid99/favicons/" + type + ".svg");
+
+  switch (type) {
+    case "week":
+      return <WeekLand />;
+
+    case "goal":
+      return <GoalLand />;
+
+    case "special":
+      return <SpecialLand />;
+  }
 }

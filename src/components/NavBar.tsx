@@ -1,89 +1,96 @@
-import useAuth from "../hooks/useAuth";
-import { NavLink } from "react-router";
+import Hamburger from "../assets/icons/menu.svg";
+import Close from "../assets/icons/close.svg";
+import Login from "../assets/icons/login.svg";
+import Profile from "../assets/icons/profile.svg";
+import Logout from "../assets/icons/logout.svg";
 
-import Weeks from "../assets/icons/week.svg";
-import Goals from "../assets/icons/goals.svg";
-import Lock from "../assets/icons/lock.svg";
-import Cup from "../assets/icons/cup.svg";
-// import Logs from "../assets/icons/logs.svg";
-import Home from "../assets/icons/home.svg";
-import LogIn from "../assets/icons/login.svg";
-import Settings from "../assets/icons/settings.svg";
-import Blog from "../assets/icons/blog.svg";
+import NavIcons from "./NavIcons";
+
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useState } from "react";
+
+import { useType } from "../hooks/useType";
+
+import { NavLink } from "react-router";
+import useAuth from "../hooks/useAuth";
+
+import { removeToken } from "../variables/authStorage";
+
+import Stories from "./Stories";
 
 export default function NavBar() {
-  const { isAdmin, isLoggedIn, isNotLoggedIn } = useAuth();
+  const [showNav, setShowNav] = useState(false);
+  const { isMobile } = useMediaQuery();
+
+  const { isAuthenticated, loading, setIsAuthenticated, setUser } = useAuth();
+  const { type } = useType();
+
   return (
-    <div className="fixed bottom-2 left-1/2 z-50 flex h-fit w-[95%] -translate-x-1/2 items-center justify-center gap-3 rounded-xl border-2 border-(--border-color)/50 bg-(--primary-color)/10 p-4 px-6 py-4 text-(--icons-color) shadow-lg shadow-black/10 backdrop-blur-xl md:top-0 md:right-0 md:m-4 md:w-fit md:translate-x-0 md:gap-5 [&_a]:transition-transform [&_a]:duration-200 [&_a]:hover:scale-110">
-      <NavLink
-        to={"/"}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    <div>
+      <button
+        className="fixed top-2.5 right-4 z-900 hover:cursor-pointer"
+        onClick={() => setShowNav(!showNav)}
       >
-        {/* <FaHome size={30} /> */}
-        <img src={Home} width={32} alt="" />
-      </NavLink>
-      <NavLink
-        to={"/week"}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        {/* <BsCalendar2MinusFill size={24} /> */}
-        <img src={Weeks} width="30" alt="" />
-      </NavLink>
-      <NavLink
-        to={"/goal"}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        {/* <TbTargetArrow size={28} /> */}
-        <img src={Goals} alt="" width="26" />
-      </NavLink>
-      {/* <NavLink
-        to={"/stats"}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        <IoStatsChart size={25} />
-      </NavLink> */}
-      <NavLink to={"/highlight"}>
-        {/* <MdOutlineEmojiEvents size={30} /> */}
-        <img src={Cup} alt="" width="30" />
-      </NavLink>
+        <img
+          src={showNav ? Close : Hamburger}
+          alt="close icon"
+          width={27}
+          height={27}
+        />
+      </button>
+      <div
+        onClick={() => setShowNav(false)}
+        className={
+          showNav
+            ? "fixed top-0 left-0 w-dvw h-dvh z-800 bg-black opacity-20 transition-all duration-350"
+            : "opacity-0"
+        }
+      ></div>
+      {/* prettier-ignore */}
+      <nav
+  style={{ backgroundColor: 'var(--bg-color)', borderLeftColor: 'var(--border-color)' }}
+  className={`h-dvh flex flex-col z-850 pt-20
+             md:border-l
+             fixed top-0 right-0 transition-all 
+             ease-in-out duration-300 
+             ${showNav && isMobile ? "transform-x-0 w-full" 
+              : isMobile ? "translate-x-full" : ""} 
+              ${showNav && !isMobile ? "w-80" : "w-14"}`}
+>
+        <NavIcons showNav={showNav} />
 
-      <NavLink className="pointer-events-none brightness-50" to="/blog">
-        <img src={Blog} alt="" width="28" />
-      </NavLink>
-      {isNotLoggedIn() && (
-        <NavLink
-          to={"/login"}
-          state={{ path: location.pathname }}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          {/* <FiLogIn size={28} /> */}
-          <img src={LogIn} alt="" width={35} />
-        </NavLink>
-      )}
+        <Stories showNav={showNav} />
 
-      {isLoggedIn() && (
-        <NavLink
-          to={"/special/"}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          <img src={Lock} alt="" width="28" />
-        </NavLink>
-      )}
-      {isAdmin() && (
-        <span className="hidden"></span>
-        // <NavLink
-        //   to={"/logs"}
-        //   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        // >
-        //   {/* <LuLogs size={28} /> */}
-        //   <img src={Logs} alt="" width="28" />
-        // </NavLink>
-      )}
-
-      <NavLink to={"/settings"}>
-        {/* <IoMdSettings size={30} /> */}
-        <img src={Settings} width={30} alt="" />
-      </NavLink>
+        {!type && <div className="flex-1"></div>}
+        
+        <div className={`w-full h-15 mt-1 border-t border-t-(--border-color)`}>
+          {!loading && !isAuthenticated && (
+            <NavLink
+              to="/login"
+              className={`w-full h-full flex ${showNav ? "px-5 gap-5" : " justify-center"} items-center hover:bg-(--darker-bg-color) transition-colors duration-200`}
+            >
+              <img src={Login} width={27} height={27} />
+              <p
+          className={`
+    overflow-hidden whitespace-nowrap
+    transition-all duration-300 delay-200
+    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
+  `}
+        >تسجيل الدخول</p>
+            </NavLink>
+          )}
+          {!loading && isAuthenticated && (
+            <div
+              className={`w-full h-full flex items-center ${showNav ? "px-5 justify-between" : " justify-center hover:bg-(--darker-bg-color)"} transition-colors duration-200`}
+            >
+              <img src={Profile} width={27} height={27} />
+              {showNav && (
+                <button className="cursor-pointer flex gap-4 items-center" onClick={() => {removeToken(); setIsAuthenticated(false); setUser(null); window.location.reload();}}>
+                <p className="overflow-hidden whitespace-nowrap">تسجيل الخروج</p><img src={Logout} width={27} height={27} /></button>)}
+            </div>
+          )}
+        </div>
+      </nav>
     </div>
   );
 }

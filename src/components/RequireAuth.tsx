@@ -1,21 +1,24 @@
-import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router";
 import useAuth from "../hooks/useAuth";
+import { Outlet } from "react-router";
 
-export default function RequireAuth({ role }: { role: number }) {
-  const { isAdmin, isMonmon, isLoggedIn, isNotLoggedIn } = useAuth();
-  const navigate = useNavigate();
+export default function RequireAuth() {
+  const { isAuthenticated, loading } = useAuth();
 
-  useEffect(() => {
-    if (isNotLoggedIn()) navigate("/login");
-    if (isLoggedIn()) {
-      if (role === import.meta.env.VITE_ADMIN_ROLE) {
-        if (!isAdmin()) navigate("/");
-      }
-    }
-  }, [isNotLoggedIn, navigate, isLoggedIn, isMonmon, isAdmin, role]);
+  if (loading) {
+    return (
+      <div className="h-dvh flex items-center justify-center">
+        <h1>جار توثيق المستخدم..</h1>
+      </div>
+    );
+  }
 
-  if (isNotLoggedIn()) return null;
+  if (!isAuthenticated) {
+    return (
+      <div className="h-dvh flex items-center justify-center">
+        <h1>يجب تسجيل الدخول للوصول إلى هذه الصفحة</h1>
+      </div>
+    );
+  }
 
   return <Outlet />;
 }
