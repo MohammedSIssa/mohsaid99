@@ -12,6 +12,8 @@ import { useNavigate } from "react-router";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const [submitting, setSubmitting] = useState(false);
   const {
     setUser,
     // setIsAuthenticated,
@@ -58,9 +60,21 @@ export default function Login() {
     );
   }
 
+  if (submitting) {
+    return (
+      <div className="h-dvh flex flex-col items-center gap-5 justify-center">
+        <h1>جار تسجيل الدخول للمستخدم..</h1>
+        <div className="h-7 w-7 animate-spin">
+          <img src={Spinner} width={28} height={28} />
+        </div>
+      </div>
+    );
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     try {
+      setSubmitting(true);
       const res = await fetch(`${API}/login`, {
         method: "POST",
         headers: {
@@ -69,6 +83,7 @@ export default function Login() {
         body: JSON.stringify({ username, password }),
       });
       if (res.ok) {
+        setSubmitting(false);
         const data = await res.json();
         setTokenLocal(data.token);
         if (setToken) {
@@ -77,9 +92,11 @@ export default function Login() {
         setUser(data.user);
       } else {
         alert("Login failed");
+        setSubmitting(false);
       }
     } catch (error) {
       alert("Network error");
+      setSubmitting(false);
     }
   }
 
