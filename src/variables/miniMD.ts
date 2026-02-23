@@ -1,27 +1,53 @@
 export function miniMarkdownToHTML(md: string) {
   if (!md) return "";
 
-  let html = md
-    // Headers: #, ##, ###
+  // Step 1: Handle code blocks ```code```
+  const codeBlocks: string[] = [];
+  md = md.replace(/```([\s\S]*?)```/g, (_, code) => {
+    codeBlocks.push(code);
+    return `@@CODEBLOCK${codeBlocks.length - 1}@@`;
+  });
+
+  // Step 2: Handle images ![alt](url)
+  md = md.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" />');
+
+  // Step 3: Horizontal rules ---
+  md = md.replace(/^---$/gim, "<hr />");
+
+  // Step 4: Blockquotes > quote
+  md = md.replace(/^> (.*$)/gim, "<blockquote>$1</blockquote>");
+
+  // Step 5: Headers
+  md = md
     .replace(/^### (.*$)/gim, "<h3>$1</h3>")
     .replace(/^## (.*$)/gim, "<h2>$1</h2>")
-    .replace(/^# (.*$)/gim, "<h1>$1</h1>")
+    .replace(/^# (.*$)/gim, "<h1>$1</h1>");
 
-    // Bold: **text**
-    .replace(/\*\*(.*?)\*\*/gim, "<strong>$1</strong>")
+  // Step 6: Bold **text**
+  md = md.replace(/\*\*(.*?)\*\*/gim, "<strong>$1</strong>");
 
-    // Italic: *text*
-    .replace(/\*(.*?)\*/gim, "<em>$1</em>")
+  // Step 7: Italic *text*
+  md = md.replace(/\*(.*?)\*/gim, "<em>$1</em>");
 
-    // Lists: - item
-    .replace(/^\- (.*$)/gim, "<li>$1</li>")
-    .replace(/(<li>.*<\/li>)/gim, "<ul>$1</ul>")
+  // Step 8: Lists - item
+  md = md.replace(/^\- (.*$)/gim, "<li>$1</li>");
+  md = md.replace(/(<li>.*<\/li>)/gim, "<ul>$1</ul>");
 
-    // Links: [text](url)
-    .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>')
+  // Step 9: Links [text](url)
+  md = md.replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>');
 
-    // Line breaks
-    .replace(/\n/g, "<br />");
+  // Step 10: Line breaks
+  md = md.replace(/\n/g, "<br />");
 
-  return html;
+  // Step 11: Restore code blocks
+  md = md.replace(/@@CODEBLOCK(\d+)@@/g, (_, index) => {
+    const code = codeBlocks[parseInt(index, 10)];
+    const escaped = code
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    return `<pre><code>${escaped}</code></pre>`;
+  });
+
+  return md;
 }
