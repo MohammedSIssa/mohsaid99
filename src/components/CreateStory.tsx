@@ -67,7 +67,7 @@ export default function CreateStoryPopup({
     <div className="fixed inset-0 bg-(--bg-color) flex items-center justify-center z-950">
       <form
         onSubmit={handleSubmit}
-        className="bg-(--darker-bg-color) p-6 rounded-lg w-96 flex flex-col gap-4"
+        className="bg-(--darker-bg-color) min-w-[350px] min-h-[700px] p-6 rounded-lg w-96 flex flex-col gap-4"
       >
         <h2 className="text-xl font-bold">فورم إضافة ستوري جديد</h2>
 
