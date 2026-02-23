@@ -3,10 +3,7 @@ import Close from "../assets/icons/close.svg";
 import Login from "../assets/icons/login.svg";
 import Profile from "../assets/icons/profile.svg";
 import Logout from "../assets/icons/logout.svg";
-
 import NavIcons from "./NavIcons";
-
-import { API } from "../variables/api";
 
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { useState } from "react";
@@ -18,6 +15,8 @@ import useAuth from "../hooks/useAuth";
 
 import Stories from "./Stories";
 
+import { removeToken } from "../variables/authStorage";
+
 export default function NavBar() {
   const [showNav, setShowNav] = useState(false);
   const { isMobile } = useMediaQuery();
@@ -26,18 +25,10 @@ export default function NavBar() {
   const { type } = useType();
 
   async function handleLogout() {
-    try {
-      const res = await fetch(`${API}/logout`, {
-        method: "GET",
-      });
-      if (res.ok) {
-        setIsAuthenticated(false);
-        setUser(null);
-        window.location.reload();
-      }
-    } catch (error) {
-      alert("Failed to logout.");
-    }
+    setIsAuthenticated(false);
+    setUser(null);
+    removeToken();
+    window.location.reload();
   }
 
   return (

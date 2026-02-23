@@ -18,35 +18,36 @@ export default function AuthProvider({
   useEffect(() => {
     const token = getToken();
 
+    if (!token) {
+      setLoading(false);
+      return;
+    }
+
     if (token) {
-      // const sleep = (ms: number) =>
-      // new Promise((resolve) => setTimeout(resolve, ms));
       async function verifyToken() {
         try {
           setLoading(true);
-          // await sleep(2000);
           const res = await fetch(`${API}/auth/verify`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           });
+
           if (!res.ok) {
             // token is invalid, remove it
             localStorage.removeItem("token");
             setLoading(false);
-          } else if (res.ok) {
+          } else {
             const data = await res.json();
-            const newUser = data.user;
-            const newToken = data.token;
-            setUser(newUser);
-            setToken(newToken);
+            setUser(data.user);
+            setToken(token);
             setIsAuthenticated(true);
 
             const adminCheck =
-              Number(newUser.role) === Number(import.meta.env.VITE_ADMIN_ROLE);
+              Number(data.user.user.role) ===
+              Number(import.meta.env.VITE_ADMIN_ROLE);
 
             setIsAdmin(adminCheck);
-
             setLoading(false);
           }
         } catch (error) {

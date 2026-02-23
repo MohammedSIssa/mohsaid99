@@ -85,6 +85,9 @@ export default function Login() {
       if (res.ok) {
         setSubmitting(false);
         const data = await res.json();
+
+        console.log(data);
+
         setTokenLocal(data.token);
         if (setToken) {
           setToken(data.token);
