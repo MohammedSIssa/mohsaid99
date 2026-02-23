@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from "react";
 
+// Temporarily replace SVG imports with placeholders to ensure no Safari crash
 import Mute from "../../assets/icons/mute.svg";
 import UnMute from "../../assets/icons/unmute.svg";
-
 
 declare global {
   interface Window {
     YT: any;
-    onYouTubeIframeAPIReady: () => void;
+    onYouTubeIframeAPIReady?: () => void;
   }
 }
 
@@ -23,97 +23,116 @@ export default function YouTubePlayer({
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [load, setLoad] = useState(false);
   const [player, setPlayer] = useState<any>(null);
-  const [isMuted, setIsMuted] = useState(true); // track mute state
+  const [isMuted, setIsMuted] = useState(true);
 
-  // Lazy-load iframe
+  // Lazy-load when visible
   useEffect(() => {
-    const obs = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setLoad(true);
-        obs.disconnect();
-      }
-    });
-    if (containerRef.current) obs.observe(containerRef.current);
+    if (!containerRef.current || typeof IntersectionObserver === "undefined") {
+      setLoad(true);
+      return;
+    }
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoad(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    obs.observe(containerRef.current);
+
     return () => obs.disconnect();
   }, []);
 
-  // Load YouTube API dynamically
+  // Load YouTube API safely
   useEffect(() => {
-    if (!load) return;
+    if (!load || typeof window === "undefined") return;
 
-    if (!window.YT) {
+    const initPlayer = () => {
+      if (!iframeRef.current) return;
+      if (!window.YT?.Player) return;
+
+      const ytPlayer = new window.YT.Player(iframeRef.current, {
+        events: {
+          onReady: () => {
+            setPlayer(ytPlayer);
+            try {
+              ytPlayer.mute();
+            } catch {
+              /* silent fail */
+            }
+          },
+        },
+      });
+    };
+
+    if (!window.YT?.Player) {
       const tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
+      tag.async = true;
       document.body.appendChild(tag);
 
-      window.onYouTubeIframeAPIReady = () => {
-        if (iframeRef.current) {
-          const ytPlayer = new window.YT.Player(iframeRef.current, {
-            events: {
-              onReady: () => {
-                setPlayer(ytPlayer);
-                ytPlayer.mute(); // start muted
-              },
-            },
-          });
-        }
-      };
+      window.onYouTubeIframeAPIReady = initPlayer;
     } else {
-      if (iframeRef.current) {
-        const ytPlayer = new window.YT.Player(iframeRef.current, {
-          events: {
-            onReady: () => {
-              setPlayer(ytPlayer);
-              ytPlayer.mute(); // start muted
-            },
-          },
-        });
-      }
+      initPlayer();
     }
   }, [load]);
 
-  // Pause/play only when fully visible
+  // Play/pause based on visibility
   useEffect(() => {
     if (!player || !containerRef.current) return;
+    if (typeof IntersectionObserver === "undefined") return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio === 1) {
-          player.playVideo();
-        } else {
-          player.pauseVideo();
+        try {
+          if (entry.isIntersecting) {
+            player.playVideo?.();
+          } else {
+            player.pauseVideo?.();
+          }
+        } catch {
+          /* Safari may fail silently */
         }
       },
-      { threshold: [1] },
+      { threshold: 0.5 },
     );
 
     observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, [player]);
 
-  // Toggle play/pause on click
+  // Toggle play/pause
   const handleClick = () => {
     if (!player) return;
 
-    const state = player.getPlayerState();
-    if (state === 1) {
-      player.pauseVideo();
-    } else {
-      player.playVideo();
+    try {
+      const state = player.getPlayerState?.();
+      if (state === 1) player.pauseVideo?.();
+      else player.playVideo?.();
+    } catch {
+      /* ignore Safari crashes */
     }
   };
 
-  // Toggle audio (mute/unmute)
+  // Toggle audio
   const toggleAudio = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation(); // prevent triggering play/pause
+    e.stopPropagation();
     if (!player) return;
 
-    if (player.isMuted()) {
-      player.unMute();
-      setIsMuted(false);
-    } else {
-      player.mute();
-      setIsMuted(true);
+    try {
+      if (player.isMuted?.()) {
+        player.unMute?.();
+        setIsMuted(false);
+      } else {
+        player.mute?.();
+        setIsMuted(true);
+      }
+    } catch {
+      /* ignore Safari crashes */
     }
   };
 
@@ -137,7 +156,6 @@ export default function YouTubePlayer({
             allow="autoplay; encrypted-media"
             allowFullScreen
           />
-          {/* Audio toggle button */}
           <button
             onClick={toggleAudio}
             className="absolute bottom-2 left-2 z-10 rounded-full bg-black/50 p-2 text-white"
