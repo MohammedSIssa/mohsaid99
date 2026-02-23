@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { miniMarkdownToHTML } from "../../variables/miniMD";
 import SpinLoader from "../Spinner";
 
@@ -31,13 +31,13 @@ class ErrorBoundary extends React.Component<
 export default function PostBody({
   body,
   dir,
-  showAllText = false,
+  // showAllText = false,
 }: {
   body: string;
-  showAllText?: boolean;
+  // showAllText?: boolean;
   dir: string;
 }) {
-  const [showMore, setShowMore] = useState(body?.length < 60);
+  // const [showMore, setShowMore] = useState(body?.length < 60);
 
   const renderMarkdown = (content: string) => (
     <ErrorBoundary fallbackHTML={miniMarkdownToHTML(content)} dir={dir}>
@@ -49,13 +49,13 @@ export default function PostBody({
 
   return (
     <>
-      {(showMore || showAllText) && (
-        <div className={`not-prose block w-full py-2 ${dir}`}>
-          {renderMarkdown(body)}
-        </div>
-      )}
+      {/* {(showMore || showAllText) && ( */}
+      <div className={`not-prose block w-full py-2 ${dir}`}>
+        {renderMarkdown(body)}
+      </div>
+      {/* )} */}
 
-      {!(showMore || showAllText) && (
+      {/* {!(showMore || showAllText) && (
         <div className="py-2">
           {!showAllText && (
             <>
@@ -71,7 +71,7 @@ export default function PostBody({
             </>
           )}
         </div>
-      )}
+      )} */}
     </>
   );
 }
