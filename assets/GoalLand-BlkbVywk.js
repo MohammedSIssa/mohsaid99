@@ -1,0 +1,1 @@
+import{j as t}from"./index-D91_KnJi.js";function x(){return t.jsxs("div",{className:"pt-20 text-center text-pretty",children:[t.jsx("h1",{className:"mb-8 text-2xl font-bold md:text-3xl lg:text-4xl [&_p]:mb-3",children:"صفحة الأهداف"}),t.jsx("p",{children:"هنا بكتب أهداف كل ربع بالسنة"}),t.jsx("p",{children:"الهدف هنا التركيز على أهدافي ومحاولة تحقيقها"})]})}export{x as default};
