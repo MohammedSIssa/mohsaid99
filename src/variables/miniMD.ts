@@ -29,17 +29,26 @@ export function miniMarkdownToHTML(md: string) {
   // Step 7: Italic *text*
   md = md.replace(/\*(.*?)\*/gim, "<em>$1</em>");
 
-  // Step 8: Lists - item
+  // Step 8: Inline code `code`
+  md = md.replace(/`([^`]+)`/g, (_, code) => {
+    const escaped = code
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    return `<code>${escaped}</code>`;
+  });
+
+  // Step 9: Lists - item
   md = md.replace(/^\- (.*$)/gim, "<li>$1</li>");
   md = md.replace(/(<li>.*<\/li>)/gim, "<ul>$1</ul>");
 
-  // Step 9: Links [text](url)
+  // Step 10: Links [text](url)
   md = md.replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>');
 
-  // Step 10: Line breaks
+  // Step 11: Line breaks
   md = md.replace(/\n/g, "<br />");
 
-  // Step 11: Restore code blocks
+  // Step 12: Restore code blocks (triple-backtick code)
   md = md.replace(/@@CODEBLOCK(\d+)@@/g, (_, index) => {
     const code = codeBlocks[parseInt(index, 10)];
     const escaped = code
