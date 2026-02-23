@@ -23,13 +23,14 @@ export default function Home() {
           أنا <strong>مطور Full Stack</strong> ولسا بتعلّم، ومركز هالفترة على
           بناء تطبيقات حديثة، سهلة الاستخدام، وتكون مناسبة لكل الناس.
         </p>
+        <p className="mb-4">شغفي البرمجة وتطوير نفسي</p>
 
         <hr className="my-4 border-t-(--border-color) mb-10" />
 
         <h2 className="text-2xl font-semibold mb-3">🚀 إيش بتعلّم هالأيام</h2>
         <ul className="list-disc list-inside mb-4">
-          <li>TanStack Query</li>
           <li>System Design</li>
+          <li>TanStack Query</li>
           <li>مواضيع متقدمة في الفرونت إند والبك إند</li>
         </ul>
 
@@ -37,10 +38,10 @@ export default function Home() {
 
         <h2 className="text-2xl font-semibold mb-3">🛠️ الأدوات والتقنيات</h2>
         <ul className="list-disc list-inside mb-4">
-          <li>الفرونت إند: HTML، CSS، JavaScript، React</li>
+          <li>الفرونت إند: HTML، CSS، JavaScript، React, TypeScript</li>
           <li>البك إند: Node.js، Express</li>
           <li>قاعدة البيانات: PostgreSQL</li>
-          <li>أدوات ثانية: Git، GitHub، Vite</li>
+          <li>أدوات ثانية: Git، GitHub، Vite, Render, Neon</li>
         </ul>
 
         <hr className="my-4 border-t-(--border-color) mb-10" />
