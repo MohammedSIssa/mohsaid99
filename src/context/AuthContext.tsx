@@ -2,7 +2,7 @@ import { createContext } from "react";
 import type { User } from "../types/User";
 
 export type AuthContextType = {
-  // token: string | null;
+  token: string | null;
   user: User | null;
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
   isAuthenticated?: boolean;
@@ -14,7 +14,7 @@ export type AuthContextType = {
 };
 
 export const AuthContext = createContext<AuthContextType>({
-  // token: null,
+  token: null,
   user: null,
   setUser: () => {},
   isAuthenticated: false,

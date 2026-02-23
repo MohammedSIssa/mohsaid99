@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Story } from "../types/Story";
 import { API } from "../variables/api";
-// import useAuth from "../hooks/useAuth";
+import useAuth from "../hooks/useAuth";
 
 type CreateStoryPopupProps = {
   onClose: () => void;
@@ -23,7 +23,7 @@ export default function CreateStoryPopup({
   const [summary, setSummary] = useState("");
   const [special, setSpecial] = useState(false);
 
-  // const { token } = useAuth();
+  const { token } = useAuth();
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -42,9 +42,8 @@ export default function CreateStoryPopup({
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            // authorization: `Bearer ${token}`,
+            authorization: `Bearer ${token}`,
           },
-          credentials: "include",
           body: JSON.stringify(newStory),
         });
 
