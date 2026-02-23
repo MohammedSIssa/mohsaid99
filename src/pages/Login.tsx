@@ -16,7 +16,6 @@ export default function Login() {
   const [submitting, setSubmitting] = useState(false);
   const {
     setUser,
-    // setIsAuthenticated,
     loading,
     isAuthenticated,
     setToken,

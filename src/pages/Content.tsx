@@ -157,7 +157,14 @@ export default function Content() {
 
   return (
     <div className="flex h-screen items-center justify-center">
-      No content available.
+      {isAdmin && (
+        <button
+          className="bg-(--accent-color) rounded-full flex items-center justify-center w-[60px] h-[60px]"
+          onClick={() => setShowCreatePost(!showCreatePost)}
+        >
+          {!showCreatePost ? <img src={Create} width={30} /> : null}
+        </button>
+      )}
     </div>
   );
 }
