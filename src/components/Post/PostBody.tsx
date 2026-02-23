@@ -1,10 +1,11 @@
 import React, { useState, lazy, Suspense } from "react";
 import { supportsModernFeatures } from "../../variables/support";
+import { miniMarkdownToHTML } from "../../variables/miniMD";
 
 const MarkdownContent = lazy(() => import("../MarkdownContent"));
 
 class ErrorBoundary extends React.Component<
-  { children: React.ReactNode },
+  { children: React.ReactNode; fallbackHTML: string; dir: string },
   { hasError: boolean }
 > {
   state = { hasError: false };
@@ -15,7 +16,13 @@ class ErrorBoundary extends React.Component<
 
   render() {
     if (this.state.hasError) {
-      return <div>Content cannot be displayed on this device.</div>;
+      return (
+        <div
+          className="not-prose block w-full py-2"
+          dir={this.props.dir}
+          dangerouslySetInnerHTML={{ __html: this.props.fallbackHTML }}
+        />
+      );
     }
     return this.props.children;
   }
@@ -36,7 +43,7 @@ export default function PostBody({
     typeof window !== "undefined" && supportsModernFeatures();
 
   const renderMarkdown = (content: string) => (
-    <ErrorBoundary>
+    <ErrorBoundary fallbackHTML={miniMarkdownToHTML(content)} dir={dir}>
       <Suspense fallback={<p>Loading content...</p>}>
         <MarkdownContent dir={dir} content={content} />
       </Suspense>
