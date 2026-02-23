@@ -129,8 +129,10 @@ export default function PostBox({
       </div>
       {type === "goal" ? (
         <Goals goals={body.split("\n")} />
+      ) : id && id >= 676 ? (
+        <PostBody body={body} dir={dir} showAllText={true} />
       ) : (
-        <PostBody body={body} dir={dir} showAllText={images?.length === 0} />
+        <pre>{body}</pre>
       )}
       {images && images.length > 0 && <PostMedia images={images} />}
     </div>
