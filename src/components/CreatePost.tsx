@@ -73,14 +73,14 @@ export default function CreatePost({
     <div className="flex flex-col overflow-y-auto z-999 md:flex-row md:justify-center pt-10 bg-(--darker-bg-color) gap-5 fixed inset-0 w-full">
       <form
         onSubmit={handleSubmit}
-        className="flex relative min-w-[350px] min-h-[700px] overflow-y-auto pt-15 border border-(--border-color) h-fit bg-(--bg-color) flex-col gap-4 p-5"
+        className="flex relative min-w-[350px] min-h-fit overflow-y-auto pt-15 border border-(--border-color) h-fit bg-(--bg-color) flex-col gap-4 p-5"
       >
         <h1 className="text-xl font-bold">
           أنشئ منشور على الستوري رقم {storyid}
         </h1>
 
         <button
-          className="absolute top-4 right-4 cursor-pointer hover:brightness-110 transition"
+          className="absolute top-4 right-4 p-2 bg-red-300 cursor-pointer hover:brightness-110 transition"
           onClick={() => setShowCreatePost(false)}
         >
           <img src={Exit} width={25} height={25} />
