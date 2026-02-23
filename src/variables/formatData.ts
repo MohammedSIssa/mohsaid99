@@ -15,7 +15,7 @@ export function formatTimeAgo(dateString: string) {
   if (minutes === 2) {
     return "قبل دقيقتين";
   }
-  if (minutes >= 3 && minutes > 11) {
+  if (minutes >= 3 && minutes < 11) {
     return `قبل ${minutes} دقائق`;
   }
   if (minutes < 60) return `قبل ${minutes} دقيقة`;
