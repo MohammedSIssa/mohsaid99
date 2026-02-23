@@ -20,7 +20,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
   const { isAuthenticated, loading } = useAuth();
   return (
     <div
-      className={`icons ${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""} flex flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center text-white [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
+      className={`icons flex flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center text-white [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
     >
       <NavLink to="/" title="الصفحة الرئيسية">
         <img
@@ -40,7 +40,11 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
           الصفحة الرئيسية
         </p>
       </NavLink>
-      <NavLink to="/week" title="الأسابيع">
+      <NavLink
+        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
+        to="/week"
+        title="الأسابيع"
+      >
         <img
           className="min-w-[27px]"
           src={type === "week" ? Week : WeekOutline}
@@ -59,7 +63,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
         </p>
       </NavLink>
       <NavLink
-        className={"pointer-events-none opacity-35"}
+        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : "pointer-events-none opacity-35"}`}
         to="/blog"
         title="المدونات"
       >
@@ -80,7 +84,11 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
           المدونات
         </p>
       </NavLink>
-      <NavLink to="/goal" title="الأهداف">
+      <NavLink
+        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
+        to="/goal"
+        title="الأهداف"
+      >
         <img
           src={type === "goal" ? Goal : GoalOutline}
           alt="goals icon"
@@ -98,7 +106,11 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
           الأهداف
         </p>
       </NavLink>
-      <NavLink to="/special" title="المحتوى الخاص">
+      <NavLink
+        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
+        to="/special"
+        title="المحتوى الخاص"
+      >
         <img
           src={type === "special" ? Special : SpecialOutline}
           alt="special icon"
