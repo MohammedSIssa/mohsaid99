@@ -36,6 +36,8 @@ export default function AuthProvider({
         }
       } catch (error) {
         console.error("Error verifying user:", error);
+        setIsAuthenticated(false);
+        setIsAdmin(false);
       } finally {
         setLoading(false);
       }
@@ -82,7 +84,7 @@ export default function AuthProvider({
     // } else {
     //   setLoading(false);
     // }
-  }, []);
+  }, [isAuthenticated]);
 
   return (
     <AuthContext.Provider
