@@ -71,6 +71,7 @@ export default function CreatePost({
 
   return (
     <div className="flex flex-col overflow-y-auto z-999 md:flex-row md:justify-center pt-10 bg-(--darker-bg-color) gap-5 fixed inset-0 w-full">
+      <h1>أنشئ منشور على الستوري رقم {storyid}</h1>
       <form
         onSubmit={handleSubmit}
         className="flex relative min-w-[300px] overflow-y-auto pt-15 border border-(--border-color) h-fit bg-(--bg-color) flex-col gap-4 p-5"

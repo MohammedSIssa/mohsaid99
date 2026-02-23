@@ -165,6 +165,13 @@ export default function Content() {
           {!showCreatePost ? <img src={Create} width={30} /> : null}
         </button>
       )}
+      {showCreatePost && isAdmin && (
+        <CreatePost
+          setShowCreatePost={setShowCreatePost}
+          handleCreatePost={handleCreatePost}
+          storyid={Number(count)}
+        />
+      )}
     </div>
   );
 }
