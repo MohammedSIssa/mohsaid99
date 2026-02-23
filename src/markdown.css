@@ -8,10 +8,16 @@
   text-decoration: none;
 }
 
+.not-prose .spin-parent {
+  width: 28px;
+  height: 28px;
+}
+
 .not-prose .spin {
   width: 28px;
   height: 28px;
-  animation: spin infinite 1s;
+  transform-origin: center;
+  animation: spin infinite 1s linear;
 }
 
 @keyframes spin {
