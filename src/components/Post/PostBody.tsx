@@ -1,5 +1,6 @@
 import React, { useState, lazy, Suspense } from "react";
 import { miniMarkdownToHTML } from "../../variables/miniMD";
+import SpinLoader from "../Spinner";
 
 const MarkdownContent = lazy(() => import("../MarkdownContent"));
 
@@ -40,7 +41,7 @@ export default function PostBody({
 
   const renderMarkdown = (content: string) => (
     <ErrorBoundary fallbackHTML={miniMarkdownToHTML(content)} dir={dir}>
-      <Suspense fallback={<p>Loading content...</p>}>
+      <Suspense fallback={<SpinLoader />}>
         <MarkdownContent dir={dir} content={content} />
       </Suspense>
     </ErrorBoundary>
