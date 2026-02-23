@@ -1,9 +1,10 @@
 import { createContext } from "react";
+import type { User } from "../types/User";
 
 export type AuthContextType = {
   token: string | null;
-  user: any;
-  setUser: React.Dispatch<React.SetStateAction<any>>;
+  user: User | null;
+  setUser: React.Dispatch<React.SetStateAction<User | null>>;
   isAuthenticated?: boolean;
   setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
   loading: boolean;
