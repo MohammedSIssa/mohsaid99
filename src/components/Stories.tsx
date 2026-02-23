@@ -116,7 +116,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
       {/* Stories List */}
       {stories?.map((story, idx) => {
         const linkClasses = showNav
-          ? `${story.special ? "border-yellow-400/70 bg-yellow-900/50 text-yellow-200" : "border-(--border-color)"} p-2 h-fit min-h-16 relative transition-transform duration-300 opacity-100 max-w-full border-2  rounded-lg`
+          ? `${story.special ? "border-yellow-400/70 bg-yellow-900/50 text-yellow-200" : "border-(--border-color)"} p-2 h-fit min-h-fit relative transition-transform duration-300 opacity-100 max-w-full border-2  rounded-lg`
           : `${story.special ? "border-yellow-400/70 bg-yellow-900/50 text-yellow-200" : "border-(--border-color)"} p-1 py-2 year bg-(--darker-bg-color) rounded font-semibold text-center`;
 
         return (
