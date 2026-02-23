@@ -6,6 +6,8 @@ import Logout from "../assets/icons/logout.svg";
 
 import NavIcons from "./NavIcons";
 
+import { API } from "../variables/api";
+
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { useState } from "react";
 
@@ -13,8 +15,6 @@ import { useType } from "../hooks/useType";
 
 import { NavLink } from "react-router";
 import useAuth from "../hooks/useAuth";
-
-import { removeToken } from "../variables/authStorage";
 
 import Stories from "./Stories";
 
@@ -24,6 +24,21 @@ export default function NavBar() {
 
   const { isAuthenticated, loading, setIsAuthenticated, setUser } = useAuth();
   const { type } = useType();
+
+  async function handleLogout() {
+    try {
+      const res = await fetch(`${API}/logout`, {
+        method: "GET",
+      });
+      if (res.ok) {
+        setIsAuthenticated(false);
+        setUser(null);
+        window.location.reload();
+      }
+    } catch (error) {
+      alert("Failed to logout.");
+    }
+  }
 
   return (
     <div>
@@ -85,7 +100,7 @@ export default function NavBar() {
             >
               <img src={Profile} width={27} height={27} />
               {showNav && (
-                <button className="cursor-pointer flex gap-4 items-center" onClick={() => {removeToken(); setIsAuthenticated(false); setUser(null); window.location.reload();}}>
+                <button className="cursor-pointer flex gap-4 items-center" onClick={handleLogout}>
                 <p className="overflow-hidden whitespace-nowrap">تسجيل الخروج</p><img src={Logout} width={27} height={27} /></button>)}
             </div>
           )}

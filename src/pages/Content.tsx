@@ -16,7 +16,7 @@ export default function Content() {
   const { type, count } = useParams();
   const { setType } = useType();
 
-  const { token, isAdmin, user } = useAuth();
+  const { isAdmin, user } = useAuth();
 
   const [showCreatePost, setShowCreatePost] = useState(false);
 
@@ -61,9 +61,7 @@ export default function Content() {
         // await sleep(2000);
         const res = await fetch(`${API}/posts?type=${type}&count=${count}`, {
           method: "GET",
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
+          credentials: "include",
         });
         if (res.ok) {
           const data = await res.json();

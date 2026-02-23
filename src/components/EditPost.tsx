@@ -1,5 +1,5 @@
 import { API } from "../variables/api";
-import useAuth from "../hooks/useAuth";
+// import useAuth from "../hooks/useAuth";
 import PostBox from "./Post/Post";
 import { useState, type SetStateAction } from "react";
 import type { Post } from "../types/Post";
@@ -27,7 +27,7 @@ export default function EditPost({
   const [dir, setDir] = useState(post?.dir ?? "rtl");
   const [submitting, setSubmitting] = useState(false);
 
-  const { token } = useAuth();
+  // const { token } = useAuth();
   const { type } = useType();
 
   async function handleSubmit(e: React.FormEvent) {
@@ -51,8 +51,9 @@ export default function EditPost({
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          authorization: `Bearer ${token}`,
+          // authorization: `Bearer ${token}`,
         },
+        credentials: "include",
         body: JSON.stringify({
           ...newPost,
         }),

@@ -49,16 +49,17 @@ export default function PostBox({
   handleEditPost?: (post: Post) => void;
 }) {
   const [showEditPost, setShowEditPost] = useState(false);
-  const { isAdmin, token } = useAuth();
+  const { isAdmin } = useAuth();
 
   async function deletePostById(id: number) {
     if (!confirm("Delete post?")) return;
     const res = await fetch(`${API}/posts/${id}`, {
       method: "DELETE",
       headers: {
-        authorization: `Bearer ${token}`,
+        // authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
+      credentials: "include",
     });
 
     if (res.ok) {

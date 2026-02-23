@@ -1,6 +1,6 @@
 import type { Log } from "../types/Log";
 import { useEffect, useState } from "react";
-import useAuth from "../hooks/useAuth";
+// import useAuth from "../hooks/useAuth";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { API } from "../variables/api";
 import Spinner from "../assets/icons/spinner.svg";
@@ -10,7 +10,7 @@ export default function Logs() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
 
-  const { token } = useAuth();
+  // const { token } = useAuth();
   const { isMobile, isDesktop } = useMediaQuery();
 
   useEffect(() => {
@@ -19,7 +19,8 @@ export default function Logs() {
         setLoading(true);
         const res = await fetch(API + "/log", {
           method: "GET",
-          headers: { authorization: `Bearer ${token}` },
+          // headers: { authorization: `Bearer ${token}` },
+          credentials: "include",
         });
 
         if (res.ok) {
@@ -42,7 +43,7 @@ export default function Logs() {
     }
 
     getLogs();
-  }, [token]);
+  }, []);
 
   if (error) return <h1>Error loading logs</h1>;
   if (loading)

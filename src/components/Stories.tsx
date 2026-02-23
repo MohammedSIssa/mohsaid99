@@ -21,7 +21,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
   const [editingStory, setEditingStory] = useState<Story | null>(null);
   const [latestStory, setLatestStory] = useState(1);
 
-  const { isAdmin, token } = useAuth();
+  const { isAdmin } = useAuth();
 
   useEffect(() => {
     if (!type) return setStories(null);
@@ -29,7 +29,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
     setLoading(true);
     fetch(`${API}/stories?type=${type}&year=${year}`, {
       method: "GET",
-      headers: { authorization: `Bearer ${token}` },
+      credentials: "include",
     })
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
@@ -49,9 +49,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
     try {
       const res = await fetch(`${API}/stories/${id}`, {
         method: "DELETE",
-        headers: {
-          authorization: `Bearer ${token}`,
-        },
+        credentials: "include",
       });
 
       if (res.ok) {

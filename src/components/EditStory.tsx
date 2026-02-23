@@ -2,7 +2,7 @@
 import { useState } from "react";
 import type { Story } from "../types/Story";
 import { API } from "../variables/api";
-import useAuth from "../hooks/useAuth";
+// import useAuth from "../hooks/useAuth";
 
 type EditStoryPopupProps = {
   story: Story;
@@ -24,7 +24,7 @@ export default function EditStoryPopup({
 
   const [submitting, setSubmitting] = useState(false);
 
-  const { token } = useAuth();
+  // const { token } = useAuth();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -35,8 +35,9 @@ export default function EditStoryPopup({
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          authorization: `Bearer ${token}`,
+          // authorization: `Bearer ${token}`,
         },
+        credentials: "include",
         body: JSON.stringify({
           title,
           type,
