@@ -80,7 +80,7 @@ export default function CreatePost({
         </h1>
 
         <button
-          className="absolute top-4 right-4 p-2 bg-red-300 cursor-pointer hover:brightness-110 transition"
+          className="absolute top-4 right-4 cursor-pointer hover:brightness-110 transition"
           onClick={() => setShowCreatePost(false)}
         >
           <img src={Exit} width={25} height={25} />
