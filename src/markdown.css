@@ -8,6 +8,21 @@
   text-decoration: none;
 }
 
+.not-prose .spin {
+  width: 28px;
+  height: 28px;
+  animation: spin infinite 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Strikethrough blocks */
 .not-prose del {
   text-decoration: line-through;
