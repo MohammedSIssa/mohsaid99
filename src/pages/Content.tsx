@@ -31,7 +31,7 @@ export default function Content() {
     if (!isAdmin && type) {
       async function log() {
         await logger(
-          user.username ?? "guest - ",
+          user?.username ?? "guest - ",
           type && count ? `${type} - ${count}` : "Home",
         );
       }
