@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react";
 import { miniMarkdownToHTML } from "../../variables/miniMD";
-import SpinLoader from "../Spinner";
 
 const MarkdownContent = lazy(() => import("../MarkdownContent"));
 
@@ -24,54 +23,25 @@ class ErrorBoundary extends React.Component<
         />
       );
     }
+
     return this.props.children;
   }
 }
 
-export default function PostBody({
-  body,
-  dir,
-  // showAllText = false,
-}: {
-  body: string;
-  // showAllText?: boolean;
-  dir: string;
-}) {
-  // const [showMore, setShowMore] = useState(body?.length < 60);
-
-  const renderMarkdown = (content: string) => (
-    <ErrorBoundary fallbackHTML={miniMarkdownToHTML(content)} dir={dir}>
-      <Suspense fallback={<SpinLoader />}>
-        <MarkdownContent dir={dir} content={content} />
-      </Suspense>
-    </ErrorBoundary>
-  );
+export default function PostBody({ body, dir }: { body: string; dir: string }) {
+  const fallbackHTML = miniMarkdownToHTML(body);
 
   return (
-    <>
-      {/* {(showMore || showAllText) && ( */}
-      <div className={`not-prose block w-full py-2 ${dir}`}>
-        {renderMarkdown(body)}
-      </div>
-      {/* )} */}
-
-      {/* {!(showMore || showAllText) && (
-        <div className="py-2">
-          {!showAllText && (
-            <>
-              <div className="not-prose w-full">
-                {renderMarkdown(body.slice(0, 60))}
-              </div>
-              <button
-                className="text-(--font-color)/40 hover:cursor-pointer"
-                onClick={() => setShowMore(true)}
-              >
-                عرض المزيد
-              </button>
-            </>
-          )}
-        </div>
-      )} */}
-    </>
+    <div className={`not-prose block w-full py-2 ${dir}`}>
+      <ErrorBoundary fallbackHTML={fallbackHTML} dir={dir}>
+        <Suspense
+          fallback={
+            <div dir={dir} dangerouslySetInnerHTML={{ __html: fallbackHTML }} />
+          }
+        >
+          <MarkdownContent dir={dir} content={body} />
+        </Suspense>
+      </ErrorBoundary>
+    </div>
   );
 }

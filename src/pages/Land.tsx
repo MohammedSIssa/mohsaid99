@@ -7,6 +7,7 @@ import { useFavicon } from "../hooks/useFavicon";
 const WeekLand = lazy(() => import("./Lands/WeekLand"));
 const GoalLand = lazy(() => import("./Lands/GoalLand"));
 const SpecialLand = lazy(() => import("./Lands/SpecialLand"));
+const BlogLand = lazy(() => import("./Lands/BlogLand"));
 
 export default function Land() {
   const { type } = useParams();
@@ -29,5 +30,8 @@ export default function Land() {
 
     case "special":
       return <SpecialLand />;
+
+    case "blog":
+      return <BlogLand />;
   }
 }
