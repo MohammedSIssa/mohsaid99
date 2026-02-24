@@ -130,7 +130,6 @@ export default function PostBox({
       {type === "goal" ? (
         <Goals goals={body.split("\n")} />
       ) : isCreating || isEditting || (id && id >= 676) ? (
-        // <PostBody body={body} dir={dir} showAllText={true} />
         <PostBody body={body} dir={dir} />
       ) : (
         <pre>{body}</pre>

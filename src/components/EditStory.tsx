@@ -128,6 +128,7 @@ export default function EditStoryPopup({
           className={`${submitting ? "pointer-events-none opacity-45" : ""} flex items-center gap-3 cursor-pointer`}
           onClick={() => setSpecial(!special)}
         >
+          ✨
           <div
             className={`w-10 h-5 rounded-full transition ${
               special ? "bg-(--accent-color)" : "bg-gray-400/50"

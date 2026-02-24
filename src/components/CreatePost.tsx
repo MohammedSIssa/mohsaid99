@@ -129,6 +129,7 @@ export default function CreatePost({
           className="flex items-center gap-3 cursor-pointer select-none"
           onClick={() => setSpecial(!special)}
         >
+          ✨
           <div
             className={`w-10 h-5 rounded-full transition-colors duration-300 ${
               special ? "bg-(--accent-color)" : "bg-gray-400/50"
@@ -148,6 +149,7 @@ export default function CreatePost({
           className="flex items-center gap-3 cursor-pointer select-none"
           onClick={() => setSecret(!secret)}
         >
+          🔒
           <div
             className={`w-10 h-5 rounded-full transition-colors duration-300 ${
               secret ? "bg-(--accent-color)" : "bg-gray-400/50"
