@@ -7,6 +7,8 @@ import { useEffect } from "react";
 
 import Success from "../assets/icons/success.svg";
 
+import AcceptAuth from "../assets/auth-success.wav";
+
 import { useNavigate } from "react-router";
 
 export default function Login() {
@@ -14,12 +16,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const [submitting, setSubmitting] = useState(false);
-  const {
-    setUser,
-    loading,
-    isAuthenticated,
-    setToken,
-  } = useAuth();
+  const { setUser, loading, isAuthenticated, setToken } = useAuth();
   const navigate = useNavigate();
 
   const [showSuccess, setShowSuccess] = useState(false);
@@ -85,7 +82,10 @@ export default function Login() {
         setSubmitting(false);
         const data = await res.json();
 
-        console.log(data);
+        const successAudio = new Audio(AcceptAuth);
+
+        successAudio.currentTime = 0;
+        successAudio.play();
 
         setTokenLocal(data.token);
         if (setToken) {

@@ -4,6 +4,8 @@ import type { Story } from "../types/Story";
 import { API } from "../variables/api";
 import useAuth from "../hooks/useAuth";
 
+import { useEffect } from "react";
+
 type EditStoryPopupProps = {
   story: Story;
   onClose: () => void;
@@ -24,6 +26,14 @@ export default function EditStoryPopup({
 
   const [submitting, setSubmitting] = useState(false);
 
+  const [fromType, setFromType] = useState(story.type);
+  const [fromYear, setFromYear] = useState(story.year);
+
+  useEffect(() => {
+    setFromType(story.type);
+    setFromYear(story.year);
+  }, []);
+
   const { token } = useAuth();
 
   async function handleSubmit(e: React.FormEvent) {
@@ -31,21 +41,24 @@ export default function EditStoryPopup({
 
     try {
       setSubmitting(true);
-      const res = await fetch(`${API}/stories/${story.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${token}`,
+      const res = await fetch(
+        `${API}/stories/${story.id}?fromType=${fromType}&fromYear=${fromYear}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            title,
+            type,
+            year,
+            count,
+            summary,
+            special,
+          }),
         },
-        body: JSON.stringify({
-          title,
-          type,
-          year,
-          count,
-          summary,
-          special,
-        }),
-      });
+      );
 
       if (res.ok) {
         const data = await res.json();

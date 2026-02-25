@@ -15,14 +15,24 @@ import { NavLink } from "react-router";
 
 import { useType } from "../hooks/useType";
 
+import NavigateSound from "../assets/navigate.mp3";
+
 export default function NavIcons({ showNav }: { showNav: boolean }) {
   const { type } = useType();
   const { isAuthenticated, loading } = useAuth();
+
+  const navigateAudio = new Audio(NavigateSound);
+
+  function handleNavClick() {
+    navigateAudio.currentTime = 0;
+    navigateAudio.play();
+  }
+
   return (
     <div
       className={`icons flex flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center text-white [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
     >
-      <NavLink to="/" title="الصفحة الرئيسية">
+      <NavLink onClick={handleNavClick} to="/" title="الصفحة الرئيسية">
         <img
           src={!type ? Home : HomeOutline}
           alt="home icon"
@@ -41,6 +51,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
         </p>
       </NavLink>
       <NavLink
+        onClick={handleNavClick}
         className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
         to="/week"
         title="الأسابيع"
@@ -63,6 +74,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
         </p>
       </NavLink>
       <NavLink
+        onClick={handleNavClick}
         className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : "pointer-events-none opacity-35"}`}
         to="/blog"
         title="المدونات"
@@ -85,6 +97,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
         </p>
       </NavLink>
       <NavLink
+        onClick={handleNavClick}
         className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
         to="/goal"
         title="الأهداف"
@@ -107,6 +120,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
         </p>
       </NavLink>
       <NavLink
+        onClick={handleNavClick}
         className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
         to="/special"
         title="المحتوى الخاص"

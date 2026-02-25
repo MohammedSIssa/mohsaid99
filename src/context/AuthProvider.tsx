@@ -16,49 +16,45 @@ export default function AuthProvider({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = getToken();
+    // const token = getToken();
 
     if (!token) {
       setLoading(false);
       return;
     }
 
-    if (token) {
-      async function verifyToken() {
-        try {
-          setLoading(true);
-          const res = await fetch(`${API}/auth/verify`, {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
+    async function verifyToken() {
+      try {
+        setLoading(true);
+        const res = await fetch(`${API}/auth/verify`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
-          if (!res.ok) {
-            // token is invalid, remove it
-            localStorage.removeItem("token");
-            setLoading(false);
-          } else {
-            const data = await res.json();
-            setUser(data.user);
-            setToken(token);
-            setIsAuthenticated(true);
+        if (!res.ok) {
+          // token is invalid, remove it
+          localStorage.removeItem("token");
+          setLoading(false);
+        } else {
+          const data = await res.json();
+          setUser(data.user);
+          setToken(token);
+          setIsAuthenticated(true);
 
-            const adminCheck =
-              Number(data.user.user.role) ===
-              Number(import.meta.env.VITE_ADMIN_ROLE);
+          const adminCheck =
+            Number(data.user.user.role) ===
+            Number(import.meta.env.VITE_ADMIN_ROLE);
 
-            setIsAdmin(adminCheck);
-            setLoading(false);
-          }
-        } catch (error) {
-          // network error, do nothing
+          setIsAdmin(adminCheck);
           setLoading(false);
         }
+      } catch (error) {
+        // network error, do nothing
+        setLoading(false);
       }
-      verifyToken();
-    } else {
-      setLoading(false);
     }
+    verifyToken();
   }, [token]);
 
   return (
