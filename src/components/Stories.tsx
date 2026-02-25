@@ -137,7 +137,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
               <>
                 <h1 className="font-bold">{story.title}</h1>
                 <small
-                  className={`${story.special ? "text-yellow-500" : "text-(--font-color)/70"} text-xs max-w-[50%]`}
+                  className={`${story.special ? "text-yellow-500" : "text-(--accent-color)"} text-xs`}
                 >
                   {story.type !== "special"
                     ? story.summary?.trim() || "🔴"

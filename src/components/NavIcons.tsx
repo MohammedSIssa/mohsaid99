@@ -122,7 +122,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
 
   return (
     <div
-      className={`icons flex pt-20 flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
+      className={`icons flex pt-20 flex-col gap-2 [&>a]:border-b [&>a]:flex [&>a]:items-center [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
     >
       {navItems.map((item) => {
         if (item.adminOnly && !isAdmin) return null;
