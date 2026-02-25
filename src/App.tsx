@@ -6,6 +6,7 @@ const Content = lazy(() => import("./pages/Content"));
 const Land = lazy(() => import("./pages/Land"));
 const Login = lazy(() => import("./pages/Login"));
 const Log = lazy(() => import("./pages/Log"));
+const Redis = lazy(() => import("./pages/Redis"));
 
 import Spinner from "./assets/icons/spinner.svg";
 
@@ -32,6 +33,7 @@ export default function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<Home />} />
               <Route element={<RequireAuth />}>
+                <Route path="/redis" element={<Redis />} />
                 <Route path="/logs" element={<Log />} />
                 <Route path="/:type" element={<Land />} />
                 <Route path="/:type/:count" element={<Content />} />

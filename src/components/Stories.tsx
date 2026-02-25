@@ -12,6 +12,8 @@ import Create from "../assets/icons/create.svg";
 import Edit from "../assets/icons/edit.svg";
 import Delete from "../assets/icons/delete.svg";
 
+import StorySelect from "../assets/storySelect.wav";
+
 export default function Stories({ showNav }: { showNav: boolean }) {
   const { type } = useType();
   const [stories, setStories] = useState<Story[] | null>(null);
@@ -22,6 +24,13 @@ export default function Stories({ showNav }: { showNav: boolean }) {
   const [latestStory, setLatestStory] = useState(1);
 
   const { isAdmin, token } = useAuth();
+  const selectAudio = new Audio(StorySelect);
+
+  const handleStoryClickSound = () => {
+    selectAudio.currentTime = 0;
+    selectAudio.volume = 0.5;
+    selectAudio.play();
+  };
 
   useEffect(() => {
     if (!type) return setStories(null);
@@ -121,6 +130,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
           <NavLink
             key={idx}
             to={`${story.type}/${story.count}`}
+            onClick={handleStoryClickSound}
             className={linkClasses}
           >
             {showNav ? (

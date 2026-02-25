@@ -8,6 +8,8 @@ import Week from "../assets/icons/week.svg";
 import WeekOutline from "../assets/icons/week-outline.svg";
 import Goal from "../assets/icons/goal.svg";
 import GoalOutline from "../assets/icons/goal-outline.svg";
+import RedisOutline from "../assets/icons/redis-outline.svg";
+import Redis from "../assets/icons/redis.svg";
 
 import useAuth from "../hooks/useAuth";
 
@@ -19,18 +21,19 @@ import NavigateSound from "../assets/navigate.mp3";
 
 export default function NavIcons({ showNav }: { showNav: boolean }) {
   const { type } = useType();
-  const { isAuthenticated, loading } = useAuth();
+  const { isAuthenticated, loading, isAdmin } = useAuth();
 
   const navigateAudio = new Audio(NavigateSound);
 
   function handleNavClick() {
     navigateAudio.currentTime = 0;
+    navigateAudio.volume = 0.3;
     navigateAudio.play();
   }
 
   return (
     <div
-      className={`icons flex flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center text-white [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
+      className={`icons flex flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
     >
       <NavLink onClick={handleNavClick} to="/" title="الصفحة الرئيسية">
         <img
@@ -142,6 +145,31 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
           المحتوى الخاص
         </p>
       </NavLink>
+      {isAdmin && (
+        <NavLink
+          onClick={handleNavClick}
+          className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
+          to="/redis"
+          title="Redis"
+        >
+          <img
+            src={type === "redis" ? Redis : RedisOutline}
+            alt="redis icon"
+            className="min-w-[26px]"
+            width={26}
+            height={26}
+          />
+          <p
+            className={`
+    overflow-hidden whitespace-nowrap
+    transition-all duration-300 delay-200
+    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
+  `}
+          >
+            Redis
+          </p>
+        </NavLink>
+      )}
     </div>
   );
 }
