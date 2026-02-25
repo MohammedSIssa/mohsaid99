@@ -78,7 +78,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
 
   if (loading)
     return (
-      <div className="flex justify-center h-10 mt-4">
+      <div className="flex flex-1 justify-center h-10 mt-4">
         <img className="animate-spin w-7 h-7" src={Spinner} alt="loading" />
       </div>
     );
