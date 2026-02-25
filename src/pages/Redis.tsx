@@ -58,7 +58,7 @@ export default function ReactControls() {
       if (!res.ok) throw new Error("Failed to fetch keys");
       handleSuccess();
       const data = await res.json();
-      setKeys(data);
+      setKeys(Array.isArray(data) ? data.flat() : []);
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -129,24 +129,26 @@ export default function ReactControls() {
           {keys.length === 0 && !loading && (
             <p className="text-gray-400">No keys found.</p>
           )}
-          <ul className="flex flex-col gap-2">
-            {keys.flat().map((key) => (
-              <li
-                key={key}
-                className={`flex justify-between items-center p-2 rounded cursor-pointer transition
+          {Array.isArray(keys) && (
+            <ul className="flex flex-col gap-2">
+              {keys.flat().map((key) => (
+                <li
+                  key={key}
+                  className={`flex justify-between items-center p-2 rounded cursor-pointer transition
         ${selectedKey === key ? "bg-blue-700" : ""}`}
-              >
-                <span
-                  className="truncate max-w-[180px]"
-                  onClick={() => fetchValue(key)}
-                  title={key}
                 >
-                  {key}
-                </span>
-                {isAdmin && <DeleteButton onClick={() => deleteKey(key)} />}
-              </li>
-            ))}
-          </ul>
+                  <span
+                    className="truncate max-w-[180px]"
+                    onClick={() => fetchValue(key)}
+                    title={key}
+                  >
+                    {key}
+                  </span>
+                  {isAdmin && <DeleteButton onClick={() => deleteKey(key)} />}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* Selected Key Value */}

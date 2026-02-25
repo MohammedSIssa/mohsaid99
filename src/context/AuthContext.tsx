@@ -9,6 +9,7 @@ export type AuthContextType = {
   setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
   loading: boolean;
   isAdmin: boolean;
+  isVIP: boolean;
   setToken?: React.Dispatch<React.SetStateAction<string | null>>;
   setIsAdmin: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -19,6 +20,7 @@ export const AuthContext = createContext<AuthContextType>({
   setUser: () => {},
   isAuthenticated: false,
   loading: true,
+  isVIP: false,
   setIsAuthenticated: () => {},
   isAdmin: false,
   setToken: () => {},

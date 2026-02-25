@@ -4,6 +4,8 @@ import Login from "../assets/icons/login.svg";
 import Profile from "../assets/icons/profile.svg";
 import Logout from "../assets/icons/logout.svg";
 import NavIcons from "./NavIcons";
+import Admin from "../assets/icons/admin.svg";
+import VIP from "../assets/icons/vip.svg";
 
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { useState } from "react";
@@ -21,7 +23,14 @@ export default function NavBar() {
   const [showNav, setShowNav] = useState(false);
   const { isMobile } = useMediaQuery();
 
-  const { isAuthenticated, loading, setIsAuthenticated, setUser } = useAuth();
+  const {
+    isAuthenticated,
+    loading,
+    setIsAuthenticated,
+    setUser,
+    isAdmin,
+    isVIP,
+  } = useAuth();
   const { type } = useType();
 
   async function handleLogout() {
@@ -89,7 +98,7 @@ export default function NavBar() {
             <div
               className={`w-full h-full flex items-center ${showNav ? "px-5 justify-between" : " justify-center hover:bg-(--darker-bg-color)"} transition-colors duration-200`}
             >
-              <img src={Profile} width={27} height={27} />
+              <img src={isAdmin ? Admin : isVIP ? VIP : Profile} width={27} height={27} />
               {showNav && (
                 <button className="cursor-pointer flex gap-4 items-center" onClick={handleLogout}>
                 <p className="overflow-hidden whitespace-nowrap">تسجيل الخروج</p><img src={Logout} width={27} height={27} /></button>)}
