@@ -64,7 +64,7 @@ export default function NavBar() {
       {/* prettier-ignore */}
       <nav
   style={{ backgroundColor: 'var(--bg-color)', borderLeftColor: 'var(--border-color)' }}
-  className={`h-dvh flex flex-col z-850 pt-20
+  className={`h-dvh flex flex-col z-850
              md:border-l
              fixed top-0 right-0 transition-all 
              ease-in-out duration-300 

@@ -12,164 +12,149 @@ import RedisOutline from "../assets/icons/redis-outline.svg";
 import Redis from "../assets/icons/redis.svg";
 
 import useAuth from "../hooks/useAuth";
-
 import { NavLink } from "react-router";
-
 import { useType } from "../hooks/useType";
-
 import NavigateSound from "../assets/navigate.mp3";
+
+import { useRef } from "react";
+
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function NavIcons({ showNav }: { showNav: boolean }) {
   const { type } = useType();
-  const { isAuthenticated, loading, isAdmin } = useAuth();
+  const { isAdmin } = useAuth();
 
-  const navigateAudio = new Audio(NavigateSound);
+  const navigateAudio = useRef(new Audio(NavigateSound));
+
+  const navItems = [
+    {
+      to: "/",
+      label: "الصفحة الرئيسية",
+      icon: Home,
+      iconOutline: HomeOutline,
+      requiresAuth: false,
+      typeValue: null,
+      ready: true,
+    },
+    {
+      to: "/week",
+      label: "الأسابيع",
+      icon: Week,
+      iconOutline: WeekOutline,
+      requiresAuth: true,
+      typeValue: "week",
+      ready: true,
+    },
+    {
+      to: "/blog",
+      label: "المدونات",
+      icon: Blog,
+      iconOutline: BlogOutline,
+      requiresAuth: true,
+      ready: false,
+      typeValue: "blog",
+    },
+    {
+      to: "/goal",
+      label: "الأهداف",
+      icon: Goal,
+      iconOutline: GoalOutline,
+      requiresAuth: true,
+      ready: true,
+      typeValue: "goal",
+    },
+    {
+      to: "/special",
+      label: "المحتوى الخاص",
+      icon: Special,
+      iconOutline: SpecialOutline,
+      requiresAuth: true,
+      ready: true,
+      typeValue: "special",
+    },
+    {
+      to: "/redis",
+      label: "Redis",
+      icon: Redis,
+      iconOutline: RedisOutline,
+      requiresAuth: true,
+      typeValue: "redis",
+      ready: true,
+      adminOnly: true,
+    },
+  ];
+
+  const { isMobile } = useMediaQuery();
 
   function handleNavClick() {
-    navigateAudio.currentTime = 0;
-    navigateAudio.volume = 0.3;
-    navigateAudio.play();
+    navigateAudio.current.currentTime = 0;
+    navigateAudio.current.volume = 0.3;
+    navigateAudio.current.play();
+  }
+
+  // Filter for mobile display
+  const mobileNavItems = navItems.filter((item) => !item.adminOnly || isAdmin);
+
+  if (isMobile) {
+    return (
+      <div className="grid grid-cols-3 pt-15">
+        {mobileNavItems.map((item) => {
+          return (
+            <NavLink
+              key={item.to}
+              onClick={handleNavClick}
+              to={item.to}
+              title={item.label}
+              className={`${!item.ready ? "pointer-events-none opacity-25" : ""} flex flex-col items-center gap-2 p-2 rounded-lg transition`}
+            >
+              <img
+                src={type === item.typeValue ? item.icon : item.iconOutline}
+                alt={`${item.label} icon`}
+                className="w-8 h-8"
+              />
+              {/* <span className="text-sm">{item.label}</span> */}
+            </NavLink>
+          );
+        })}
+      </div>
+    );
   }
 
   return (
     <div
-      className={`icons flex flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
+      className={`icons flex pt-20 flex-col gap-5 [&>a]:border-b [&>a]:flex [&>a]:items-center [&>a]:gap-5 [&>a]:pb-2 [&>a]:pr-4`}
     >
-      <NavLink onClick={handleNavClick} to="/" title="الصفحة الرئيسية">
-        <img
-          src={!type ? Home : HomeOutline}
-          alt="home icon"
-          className="min-w-[27px]"
-          width={27}
-          height={27}
-        />
-        <p
-          className={`
-    overflow-hidden whitespace-nowrap
-    transition-all duration-300 delay-200
-    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
-  `}
-        >
-          الصفحة الرئيسية
-        </p>
-      </NavLink>
-      <NavLink
-        onClick={handleNavClick}
-        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
-        to="/week"
-        title="الأسابيع"
-      >
-        <img
-          className="min-w-[27px]"
-          src={type === "week" ? Week : WeekOutline}
-          alt="weeks icon"
-          width={27}
-          height={27}
-        />
-        <p
-          className={`
-    overflow-hidden whitespace-nowrap
-    transition-all duration-300 delay-200
-    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
-  `}
-        >
-          الأسابيع
-        </p>
-      </NavLink>
-      <NavLink
-        onClick={handleNavClick}
-        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : "pointer-events-none opacity-35"}`}
-        to="/blog"
-        title="المدونات"
-      >
-        <img
-          src={type === "blog" ? Blog : BlogOutline}
-          alt="blogs icon"
-          className="min-w-[26px]"
-          width={26}
-          height={26}
-        />
-        <p
-          className={`
-    overflow-hidden whitespace-nowrap
-    transition-all duration-300 delay-200
-    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
-  `}
-        >
-          المدونات
-        </p>
-      </NavLink>
-      <NavLink
-        onClick={handleNavClick}
-        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
-        to="/goal"
-        title="الأهداف"
-      >
-        <img
-          src={type === "goal" ? Goal : GoalOutline}
-          alt="goals icon"
-          className="min-w-[26px]"
-          width={26}
-          height={26}
-        />
-        <p
-          className={`
-    overflow-hidden whitespace-nowrap
-    transition-all duration-300 delay-200
-    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
-  `}
-        >
-          الأهداف
-        </p>
-      </NavLink>
-      <NavLink
-        onClick={handleNavClick}
-        className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
-        to="/special"
-        title="المحتوى الخاص"
-      >
-        <img
-          src={type === "special" ? Special : SpecialOutline}
-          alt="special icon"
-          className="min-w-[26px]"
-          width={26}
-          height={26}
-        />
-        <p
-          className={`
-    overflow-hidden whitespace-nowrap
-    transition-all duration-300 delay-200
-    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
-  `}
-        >
-          المحتوى الخاص
-        </p>
-      </NavLink>
-      {isAdmin && (
-        <NavLink
-          onClick={handleNavClick}
-          className={`${!isAuthenticated && !loading ? "opacity-35 pointer-events-none" : ""}`}
-          to="/redis"
-          title="Redis"
-        >
-          <img
-            src={type === "redis" ? Redis : RedisOutline}
-            alt="redis icon"
-            className="min-w-[26px]"
-            width={26}
-            height={26}
-          />
-          <p
-            className={`
-    overflow-hidden whitespace-nowrap
-    transition-all duration-300 delay-200
-    ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
-  `}
+      {navItems.map((item) => {
+        if (item.adminOnly && !isAdmin) return null;
+        // const disabled = item.requiresAuth && !isAuthenticated && !loading;
+
+        return (
+          <NavLink
+            key={item.to}
+            onClick={handleNavClick}
+            to={item.to}
+            title={item.label}
+            className={`${!item.ready ? "pointer-events-none opacity-25" : ""}`}
           >
-            Redis
-          </p>
-        </NavLink>
-      )}
+            <img
+              src={type === item.typeValue ? item.icon : item.iconOutline}
+              alt={`${item.label} icon`}
+              className="min-w-[26px]"
+              width={26}
+              height={26}
+            />
+            <p
+              className={`
+          overflow-hidden whitespace-nowrap
+          transition-all duration-300 delay-200
+          ${showNav ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"}
+        `}
+            >
+              {item.label}
+            </p>
+          </NavLink>
+        );
+      })}
     </div>
   );
 }

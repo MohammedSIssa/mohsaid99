@@ -74,7 +74,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
     }
   }
 
-  if (!type) return null;
+  if (!type || type === "redis") return <div className="flex-1"></div>;
 
   if (loading)
     return (
@@ -123,7 +123,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
       {/* Stories List */}
       {stories?.map((story, idx) => {
         const linkClasses = showNav
-          ? `${story.special ? "border-yellow-400/70 bg-yellow-900/50 text-yellow-200" : "border-(--border-color)"} p-2 h-fit min-h-16 relative transition-transform duration-300 opacity-100 max-w-full border-2  rounded-lg`
+          ? `${story.special ? "border-yellow-400/70 bg-yellow-900/50 text-yellow-200" : "border-(--border-color)"} p-2 relative transition-transform duration-300 opacity-100 max-w-full border-2  rounded-lg`
           : `${story.special ? "border-yellow-400/70 bg-yellow-900/50 text-yellow-200" : "border-(--border-color)"} p-1 py-2 year bg-(--darker-bg-color) rounded font-semibold text-center`;
 
         return (
@@ -137,7 +137,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
               <>
                 <h1 className="font-bold">{story.title}</h1>
                 <small
-                  className={`${story.special ? "text-yellow-500" : "text-(--accent-color)"} text-xs`}
+                  className={`${story.special ? "text-yellow-500" : "text-(--font-color)/70"} text-xs max-w-[50%]`}
                 >
                   {story.type !== "special"
                     ? story.summary?.trim() || "🔴"
