@@ -73,7 +73,7 @@ export default function PostBox({
        ${secret ? "text-fuchsia-200" : ""} 
        flex post relative px-3 flex-col items-start 
        justify-start gap-4 w-full 
-       md:max-w-4xl border-b-2 
+       md:max-w-4xl border-b-2 h-fit
        border-(--border-color) py-5 pt-10`}
     >
       {isAdmin && !isEditting && !isCreating && (
