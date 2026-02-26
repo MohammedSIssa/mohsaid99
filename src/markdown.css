@@ -90,7 +90,7 @@
   border-radius: 14px;
   font-family: "Fira Code", monospace;
   overflow-x: auto;
-  font-weight: 600;
+  font-weight: 400;
   text-align: left;
   border: 2px solid var(--border-color);
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3) inset;
