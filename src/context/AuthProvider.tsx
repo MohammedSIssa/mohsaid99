@@ -17,6 +17,8 @@ export default function AuthProvider({
 
   const [isVIP, setIsVIP] = useState(false);
 
+  console.log({ token });
+
   useEffect(() => {
     // const token = getToken();
 
@@ -40,19 +42,19 @@ export default function AuthProvider({
           setLoading(false);
         } else {
           const data = await res.json();
+
+          console.log({ data });
           setUser(data.user);
           setToken(token);
           setIsAuthenticated(true);
 
           const adminCheck =
-            Number(data.user.user.role) ===
-            Number(import.meta.env.VITE_ADMIN_ROLE);
+            Number(data.user.role) === Number(import.meta.env.VITE_ADMIN_ROLE);
 
           setIsAdmin(adminCheck);
 
           const vipCheck =
-            Number(data.user.user.role) ===
-            Number(import.meta.env.VITE_MONMON_ROLE);
+            Number(data.user.role) === Number(import.meta.env.VITE_MONMON_ROLE);
 
           setIsVIP(vipCheck);
           setLoading(false);

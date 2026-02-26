@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { API } from "../variables/api";
 import Delete from "../assets/icons/delete.svg";
-import { useType } from "../hooks/useType";
+import { useEffect } from "react";
 
 import SuccessAudio from "../assets/auth-success.wav";
 import SelectAudio from "../assets/storySelect.wav";
@@ -42,12 +42,6 @@ export default function ReactControls() {
 
   const BASE_URL = `${API}/redis`;
   const { token, isAdmin } = useAuth();
-
-  const { setType } = useType();
-
-  useEffect(() => {
-    setType("redis");
-  }, []);
 
   const fetchKeys = async () => {
     try {
