@@ -74,5 +74,51 @@ export function miniMarkdownToHTML(md: string) {
     '<li><input type="checkbox" checked disabled /> $1</li>',
   );
 
+  // Step X: Tables
+md = md.replace(
+  /((?:\|.*\|\n)+)/g,
+  (tableBlock) => {
+    const lines = tableBlock.trim().split("\n");
+
+    if (lines.length < 2) return tableBlock;
+
+    const headerLine = lines[0];
+    const separatorLine = lines[1];
+
+    // must contain dashes to be a valid table
+    if (!separatorLine.includes("---")) return tableBlock;
+
+    const headers = headerLine
+      .split("|")
+      .slice(1, -1)
+      .map((h) => h.trim());
+
+    const rows = lines.slice(2);
+
+    let thead = "<thead><tr>";
+    headers.forEach((h) => {
+      thead += `<th>${h}</th>`;
+    });
+    thead += "</tr></thead>";
+
+    let tbody = "<tbody>";
+    rows.forEach((row) => {
+      const cells = row
+        .split("|")
+        .slice(1, -1)
+        .map((c) => c.trim());
+
+      tbody += "<tr>";
+      cells.forEach((cell) => {
+        tbody += `<td>${cell}</td>`;
+      });
+      tbody += "</tr>";
+    });
+    tbody += "</tbody>";
+
+    return `<table>${thead}${tbody}</table>`;
+  }
+);
+
   return md;
 }
