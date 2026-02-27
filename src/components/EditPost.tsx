@@ -1,3 +1,5 @@
+// Todo: Add switching post type and count.
+
 import { API } from "../variables/api";
 import useAuth from "../hooks/useAuth";
 import PostBox from "./Post/Post";

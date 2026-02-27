@@ -23,6 +23,11 @@ export function miniMarkdownToHTML(md: string) {
     .replace(/^## (.*$)/gim, "<h2>$1</h2>")
     .replace(/^# (.*$)/gim, "<h1>$1</h1>");
 
+  md = md.replace(
+    /^\- \[x\] (.*$)/gim,
+    '<li><input type="checkbox" checked disabled /> $1</li>',
+  );
+
   // Step 6: Bold **text**
   md = md.replace(/\*\*(.*?)\*\*/gim, "<strong>$1</strong>");
 
@@ -57,6 +62,17 @@ export function miniMarkdownToHTML(md: string) {
       .replace(/>/g, "&gt;");
     return `<pre><code>${escaped}</code></pre>`;
   });
+
+  // Step 9: Task lists - [ ] and [x]
+  md = md.replace(
+    /^\- \[ \] (.*$)/gim,
+    '<li><input type="checkbox" disabled /> $1</li>',
+  );
+
+  md = md.replace(
+    /^\- \[x\] (.*$)/gim,
+    '<li><input type="checkbox" checked disabled /> $1</li>',
+  );
 
   return md;
 }
