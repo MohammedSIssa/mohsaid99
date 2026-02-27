@@ -117,7 +117,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
               onClick={handleNavClick}
               to={item.to}
               title={item.label}
-              className={`${item.isVIP && (!isVIP || !isAdmin) ? "hidden" : ""} ${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : "flex flex-col"}  items-center gap-2 p-2 rounded-lg transition`}
+              className={`${item.isVIP && !isVIP && !isAdmin ? "hidden" : !item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : "flex flex-col"}  items-center gap-2 p-2 rounded-lg transition`}
             >
               <img
                 src={type === item.typeValue ? item.icon : item.iconOutline}
@@ -145,8 +145,9 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
             key={item.to}
             onClick={handleNavClick}
             to={item.to}
+            className={`${item.isVIP && !isVIP && !isAdmin ? "hidden" : !item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""}`}
             title={item.label}
-            className={`${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""}`}
+            // className={`${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""}`}
           >
             <img
               src={type === item.typeValue ? item.icon : item.iconOutline}
