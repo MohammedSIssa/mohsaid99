@@ -123,7 +123,7 @@
 .not-prose td {
   border: 1px solid var(--border-color);
   padding: 0.5rem 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .not-prose th {
