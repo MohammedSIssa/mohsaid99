@@ -136,13 +136,13 @@ export default function Stories({ showNav }: { showNav: boolean }) {
             {showNav ? (
               <>
                 <h1 className="font-bold">{story.title}</h1>
-                <small
-                  className={`${story.special ? "text-yellow-500" : "text-(--accent-color)"} text-xs`}
+                <pre
+                  className={`${story.special ? "text-yellow-500" : "text-(--accent-color)"} text-[10px] whitespace-pre-wrap`}
                 >
                   {story.type !== "special"
                     ? story.summary?.trim() || "🔴"
                     : story.summary}
-                </small>
+                </pre>
                 {isAdmin && (
                   <button
                     onClick={(e) => {

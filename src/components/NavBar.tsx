@@ -70,7 +70,7 @@ export default function NavBar() {
              ease-in-out duration-300 
              ${showNav && isMobile ? "transform-x-0 w-full" 
               : isMobile ? "translate-x-full" : ""} 
-              ${showNav && !isMobile ? "w-80" : "w-14"}`}
+              ${showNav && !isMobile ? "w-100" : "w-14"}`}
 >
         <NavIcons showNav={showNav} />
 
