@@ -24,7 +24,7 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function NavIcons({ showNav }: { showNav: boolean }) {
   const { type } = useType();
-  const { isAdmin, isAuthenticated, isVIP } = useAuth();
+  const { isAdmin, isAuthenticated } = useAuth();
 
   const navigateAudio = useRef(new Audio(NavigateSound));
 
@@ -117,14 +117,16 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
               onClick={handleNavClick}
               to={item.to}
               title={item.label}
-              className={`${item.isVIP && !isVIP && !isAdmin ? "hidden" : !item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : "flex flex-col"}  items-center gap-2 p-2 rounded-lg transition`}
+              className={`${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""} flex flex-col items-center justify-center gap-2 p-2 rounded-lg transition`}
+              // className={`${!item.ready ? "pointer-events-none opacity-25" : ""} flex flex-col items-center gap-2 p-2 rounded-lg transition`}
+              // className={`${item.isVIP && !isVIP && !isAdmin ? "hidden" : !item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : "flex flex-col"}  items-center gap-2 p-2 rounded-lg transition`}
             >
               <img
                 src={type === item.typeValue ? item.icon : item.iconOutline}
                 alt={`${item.label} icon`}
-                className="w-8 h-8"
+                className="w-6 h-6"
               />
-              {/* <span className="text-sm">{item.label}</span> */}
+              <span className="text-xs">{item.label}</span>
             </NavLink>
           );
         })}
@@ -145,9 +147,9 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
             key={item.to}
             onClick={handleNavClick}
             to={item.to}
-            className={`${item.isVIP && !isVIP && !isAdmin ? "hidden" : !item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""}`}
+            // className={`${item.isVIP && !isVIP && !isAdmin ? "hidden" : !item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : "flex flex-col"}`}
             title={item.label}
-            // className={`${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""}`}
+            className={`${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""}`}
           >
             <img
               src={type === item.typeValue ? item.icon : item.iconOutline}
