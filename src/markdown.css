@@ -11,6 +11,8 @@
   direction: ltr;
 }
 
+
+
 .not-prose li del {
   color: #00ff0080;
   font-weight: bold; /* optional */
@@ -96,6 +98,7 @@
 
 /* Code blocks */
 .not-prose pre {
+  direction: ltr !important;
   padding: 1.5rem 2rem;
   background: linear-gradient(30deg, #ffffff00, var(--border-color));
   backdrop-filter: blur(10px);
@@ -116,6 +119,7 @@
   border: 2px solid var(--border-color);
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3) inset;
   border-radius: 4px;
+  direction: ltr !important;
   padding: 0.1rem 0.3rem;
   font-weight: 500;
   background: linear-gradient(30deg, #ffffff00, var(--border-color));
