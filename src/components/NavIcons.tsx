@@ -24,7 +24,7 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function NavIcons({ showNav }: { showNav: boolean }) {
   const { type } = useType();
-  const { isAdmin } = useAuth();
+  const { isAdmin, isAuthenticated, isVIP } = useAuth();
 
   const navigateAudio = useRef(new Audio(NavigateSound));
 
@@ -72,6 +72,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
       iconOutline: SpecialOutline,
       requiresAuth: true,
       ready: true,
+      isVIP: true,
       typeValue: "special",
     },
     {
@@ -116,7 +117,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
               onClick={handleNavClick}
               to={item.to}
               title={item.label}
-              className={`${!item.ready ? "pointer-events-none opacity-25" : ""} flex flex-col items-center gap-2 p-2 rounded-lg transition`}
+              className={`${item.isVIP && (!isVIP || !isAdmin) ? "hidden" : ""} ${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : "flex flex-col"}  items-center gap-2 p-2 rounded-lg transition`}
             >
               <img
                 src={type === item.typeValue ? item.icon : item.iconOutline}
@@ -145,7 +146,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
             onClick={handleNavClick}
             to={item.to}
             title={item.label}
-            className={`${!item.ready ? "pointer-events-none opacity-25" : ""}`}
+            className={`${!item.ready || (item.requiresAuth && !isAuthenticated) ? "pointer-events-none opacity-25" : ""}`}
           >
             <img
               src={type === item.typeValue ? item.icon : item.iconOutline}
