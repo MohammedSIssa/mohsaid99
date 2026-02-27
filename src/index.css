@@ -69,7 +69,7 @@ pre {
 .stories a.active {
   transition: all 200ms;
   transform: scale(1.025);
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid;
 }
 /* 
 a.active p {
