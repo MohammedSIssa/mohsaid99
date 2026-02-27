@@ -3,6 +3,19 @@
   all: revert;
 }
 
+.not-prose[dir="rtl"] * {
+  direction: rtl;
+}
+
+.not-prose[dir="ltr"] * {
+  direction: ltr;
+}
+
+.not-prose li del {
+  color: #00ff0080;
+  font-weight: bold; /* optional */
+}
+
 .not-prose a {
   color: var(--accent-color);
   text-decoration: none;
@@ -32,8 +45,6 @@
 /* Strikethrough blocks */
 .not-prose del {
   text-decoration: line-through;
-  color: #00ff0080;
-  font-weight: bold; /* optional */
 }
 
 /* Check marks */
