@@ -126,7 +126,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
                 alt={`${item.label} icon`}
                 className="w-6 h-6"
               />
-              <span className="text-xs">{item.label}</span>
+              {showNav && <span className="text-xs">{item.label}</span>}
             </NavLink>
           );
         })}
