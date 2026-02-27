@@ -1,10 +1,11 @@
 import React, { lazy, Suspense } from "react";
-import { miniMarkdownToHTML } from "../../variables/miniMD";
+// import { miniMarkdownToHTML } from "../../variables/miniMD";
+import Marked from "../Marked";
 
 const MarkdownContent = lazy(() => import("../MarkdownContent"));
 
 class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallbackHTML: string; dir: string },
+  { children: React.ReactNode; fallback: React.ReactNode },
   { hasError: boolean }
 > {
   state = { hasError: false };
@@ -15,13 +16,7 @@ class ErrorBoundary extends React.Component<
 
   render() {
     if (this.state.hasError) {
-      return (
-        <div
-          className="not-prose block w-full py-2"
-          dir={this.props.dir}
-          dangerouslySetInnerHTML={{ __html: this.props.fallbackHTML }}
-        />
-      );
+      return this.props.fallback;
     }
 
     return this.props.children;
@@ -29,16 +24,12 @@ class ErrorBoundary extends React.Component<
 }
 
 export default function PostBody({ body, dir }: { body: string; dir: string }) {
-  const fallbackHTML = miniMarkdownToHTML(body);
+  // const fallbackHTML = miniMarkdownToHTML(body);
 
   return (
     <div className={`not-prose block w-full py-2 ${dir}`}>
-      <ErrorBoundary fallbackHTML={fallbackHTML} dir={dir}>
-        <Suspense
-          fallback={
-            <div dir={dir} dangerouslySetInnerHTML={{ __html: fallbackHTML }} />
-          }
-        >
+      <ErrorBoundary fallback={<Marked content={body} dir={dir} />}>
+        <Suspense fallback={<Marked content={body} dir={dir} />}>
           <MarkdownContent dir={dir} content={body} />
         </Suspense>
       </ErrorBoundary>
