@@ -80,7 +80,7 @@ export default function EditStoryPopup({
     <div className="fixed inset-0 bg-(--bg-color) flex items-center justify-center z-950">
       <form
         onSubmit={handleSubmit}
-        className="bg-(--darker-bg-color) min-w-[350px] min-h-fit p-6 rounded-lg w-96 flex flex-col gap-4"
+        className="bg-(--darker-bg-color) min-w-[450px] max-w-full min-h-fit p-6 rounded-lg w-96 flex flex-col gap-4"
       >
         <h2 className="text-xl font-bold">تعديل الستوري</h2>
 
@@ -102,10 +102,21 @@ export default function EditStoryPopup({
           className="p-2 rounded border border-(--border-color)"
           required
         >
-          <option value="week">أسبوع</option>
-          <option value="blog">مدونة</option>
-          <option value="goal">هدف</option>
-          <option value="special">خاصة</option>
+          <option className="bg-(--darker-bg-color)" value="week">
+            أسبوع
+          </option>
+          <option className="bg-(--darker-bg-color)" value="blog">
+            مدونة
+          </option>
+          <option className="bg-(--darker-bg-color)" value="goal">
+            هدف
+          </option>
+          <option className="bg-(--darker-bg-color)" value="special">
+            خاصة
+          </option>
+          <option className="bg-(--darker-bg-color)" value="projects">
+            مشاريع
+          </option>
         </select>
 
         <input

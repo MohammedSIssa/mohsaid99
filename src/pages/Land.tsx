@@ -8,6 +8,7 @@ const WeekLand = lazy(() => import("./Lands/WeekLand"));
 const GoalLand = lazy(() => import("./Lands/GoalLand"));
 const SpecialLand = lazy(() => import("./Lands/SpecialLand"));
 const BlogLand = lazy(() => import("./Lands/BlogLand"));
+const ProjectsLand = lazy(() => import("./Lands/ProjectsLand"));
 
 export default function Land() {
   const { type } = useParams();
@@ -33,5 +34,8 @@ export default function Land() {
 
     case "blog":
       return <BlogLand />;
+
+    case "projects":
+      return <ProjectsLand />;
   }
 }

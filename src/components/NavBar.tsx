@@ -67,7 +67,7 @@ export default function NavBar() {
   className={`h-dvh flex flex-col z-850
              md:border-l
              fixed top-0 right-0 transition-all 
-             ease-in-out duration-300 
+             ease-in-out duration-300 max-w-full
              ${showNav && isMobile ? "transform-x-0 w-full" 
               : isMobile ? "translate-x-full" : ""} 
               ${showNav && !isMobile ? "w-100" : "w-14"}`}

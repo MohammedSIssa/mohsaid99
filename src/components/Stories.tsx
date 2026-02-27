@@ -76,12 +76,51 @@ export default function Stories({ showNav }: { showNav: boolean }) {
 
   if (!type || type === "redis") return <div className="flex-1"></div>;
 
+  function YearSelector() {
+    return (
+      <div className="flex gap-5 items-center justify-between px-1 mb-2">
+        <select
+          className="year font-bold bg-(--darker-bg-color) p-2 rounded border border-(--border-color) focus:outline-0"
+          value={year}
+          onChange={(e) => setYear(+e.target.value)}
+        >
+          {[2026, 2025].map((y) => (
+            <option key={y} value={y}>
+              {y}
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+  }
+
   if (loading)
     return (
       <div className="flex flex-1 justify-center h-10 mt-4">
         <img className="animate-spin w-7 h-7" src={Spinner} alt="loading" />
       </div>
     );
+
+  if (stories && stories.length === 0) {
+    return (
+      <div className="flex flex-1 flex-col items-center gap-3 mt-10">
+        {showNav && (
+          <>
+            <YearSelector />
+            <h2 className="text-lg font-bold">لا يوجد ستوريات لسنة {year}</h2>
+          </>
+        )}
+        {isAdmin && showNav && (
+          <button
+            onClick={() => setShowPopup(true)}
+            className="px-3 py-1 rounded bg-(--accent-color) cursor-pointer hover:brightness-110 transition"
+          >
+            <img src={Create} width={20} />
+          </button>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div

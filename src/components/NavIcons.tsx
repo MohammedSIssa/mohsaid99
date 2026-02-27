@@ -10,6 +10,8 @@ import Goal from "../assets/icons/goal.svg";
 import GoalOutline from "../assets/icons/goal-outline.svg";
 import RedisOutline from "../assets/icons/redis-outline.svg";
 import Redis from "../assets/icons/redis.svg";
+import Projects from "../assets/icons/projects.svg";
+import ProjectsOutline from "../assets/icons/projects-outline.svg";
 
 import useAuth from "../hooks/useAuth";
 import { NavLink } from "react-router";
@@ -51,7 +53,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
       icon: Blog,
       iconOutline: BlogOutline,
       requiresAuth: true,
-      ready: false,
+      ready: true,
       typeValue: "blog",
     },
     {
@@ -81,6 +83,15 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
       typeValue: "redis",
       ready: true,
       adminOnly: true,
+    },
+    {
+      to: "/projects",
+      label: "المشاريع",
+      icon: Projects,
+      iconOutline: ProjectsOutline,
+      requiresAuth: true,
+      typeValue: "projects",
+      ready: true,
     },
   ];
 

@@ -17,7 +17,6 @@ export default function AuthProvider({
 
   const [isVIP, setIsVIP] = useState(false);
 
-  console.log({ token });
 
   useEffect(() => {
     // const token = getToken();
@@ -43,7 +42,6 @@ export default function AuthProvider({
         } else {
           const data = await res.json();
 
-          console.log({ data });
           setUser(data.user);
           setToken(token);
           setIsAuthenticated(true);
