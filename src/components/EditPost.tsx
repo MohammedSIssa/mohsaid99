@@ -141,45 +141,47 @@ export default function EditPost({
           rows={5}
           disabled={submitting}
         />
-        <div
-          className="flex items-center gap-3 cursor-pointer select-none"
-          onClick={() => setSpecial(!special)}
-        >
-          ✨
+        <div className="flex gap-2 justify-between">
           <div
-            className={`w-10 h-5 rounded-full transition-colors duration-300 ${
-              special ? "bg-(--accent-color)" : "bg-gray-400/50"
-            } relative`}
+            className="flex bg-(--darker-bg-color) p-2 px-3 border-2 border-(--border-color) rounded-full items-center gap-3 cursor-pointer select-none"
+            onClick={() => setSpecial(!special)}
           >
-            <span
-              className={`block w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 absolute top-0.5 ${
-                special ? "left-5" : "left-0.5"
-              }`}
-            ></span>
+            ✨
+            <div
+              className={`w-10 h-5 rounded-full transition-colors duration-300 ${
+                special ? "bg-(--accent-color)" : "bg-gray-400/50"
+              } relative`}
+            >
+              <span
+                className={`block w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 absolute top-0.5 ${
+                  special ? "left-5" : "left-0.5"
+                }`}
+              ></span>
+            </div>
+            <span className="font-semibold text-sm">
+              {special ? "Special" : "Normal"}
+            </span>
           </div>
-          <span className="font-semibold text-sm">
-            {special ? "Special" : "Normal"}
-          </span>
-        </div>
-        <div
-          className="flex items-center gap-3 cursor-pointer select-none"
-          onClick={() => setSecret(!secret)}
-        >
-          🔒
           <div
-            className={`w-10 h-5 rounded-full transition-colors duration-300 ${
-              secret ? "bg-(--accent-color)" : "bg-gray-400/50"
-            } relative`}
+            className="flex bg-(--darker-bg-color) p-2 px-3 border-2 border-(--border-color) rounded-full items-center gap-3 cursor-pointer select-none"
+            onClick={() => setSecret(!secret)}
           >
-            <span
-              className={`block w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 absolute top-0.5 ${
-                secret ? "left-5" : "left-0.5"
-              }`}
-            ></span>
+            🔒
+            <div
+              className={`w-10 h-5 rounded-full transition-colors duration-300 ${
+                secret ? "bg-(--accent-color)" : "bg-gray-400/50"
+              } relative`}
+            >
+              <span
+                className={`block w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 absolute top-0.5 ${
+                  secret ? "left-5" : "left-0.5"
+                }`}
+              ></span>
+            </div>
+            <span className="font-semibold text-sm">
+              {secret ? "Secret" : "Normal"}
+            </span>
           </div>
-          <span className="font-semibold text-sm">
-            {secret ? "Secret" : "Normal"}
-          </span>
         </div>
         <button
           type="submit"
