@@ -89,7 +89,7 @@ export default function EditPost({
     <div className="flex edit-post flex-col overflow-y-auto z-900 md:flex-row md:justify-center pt-10 bg-(--darker-bg-color) gap-5 fixed top-0 left-0 h-dvh w-full">
       <form
         onSubmit={handleSubmit}
-        className="flex relative min-w-[450px] max-w-full min-h-fit overflow-y-auto pt-15 border border-(--border-color) h-fit bg-(--bg-color) flex-col gap-4 p-5"
+        className="flex relative w-full min-h-[500px] min-w-[450px] max-w-full overflow-y-auto pt-15 border border-(--border-color) h-fit bg-(--bg-color) flex-col gap-4 p-5"
       >
         <small>سكشن {typess[type ?? ""]}</small>
 
