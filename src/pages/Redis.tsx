@@ -106,9 +106,9 @@ export default function ReactControls() {
     <div className="p-6 font-sans mx-10 redis" dir="ltr">
       <h2 className="text-2xl font-bold mb-4">Redis Admin Panel</h2>
 
-      <div className="flex gap-6">
+      <div className="flex gap-6 md:flex-row flex-col">
         {/* Keys List */}
-        <div className="w-1/3 bg-(--darker-bg-color) shadow rounded p-4 max-h-[500px] overflow-y-auto">
+        <div className="md:w-1/3 bg-(--darker-bg-color) shadow rounded p-4 max-h-[500px] overflow-y-auto">
           <div className="flex justify-between items-center mb-3">
             <h3 className="text-lg font-semibold">Keys</h3>
             <button
@@ -148,7 +148,7 @@ export default function ReactControls() {
         {/* Selected Key Value */}
         <div
           dir="ltr"
-          className="w-2/3 bg-(--darker-bg-color) border-2 border-(--border-color) shadow rounded p-4 max-h-[500px] overflow-auto"
+          className="md:w-2/3 bg-(--darker-bg-color) border-2 border-(--border-color) shadow rounded p-4 max-h-[500px] overflow-auto"
         >
           <h3 dir="ltr" className="text-lg font-semibold mb-2">
             Value
