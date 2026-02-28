@@ -24,7 +24,7 @@ import Marked from "../Marked";
 
 export default function PostBody({ body, dir }: { body: string; dir: string }) {
   return (
-    <div className={`not-prose block w-full py-2 ${dir}`} dir={dir}>
+    <div className={`not-prose block w-full py-2 ${dir} [&>table]:rotate-90 md:[&_table]:rotate-0`} dir={dir}>
       <Marked content={body} dir={dir} />
     </div>
   );

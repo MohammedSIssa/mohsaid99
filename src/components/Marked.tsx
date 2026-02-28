@@ -5,6 +5,7 @@ const Marked = ({ content, dir }: { content: string; dir: string }) => {
 
   return (
     <div
+      className="markdown"
       dir={dir}
       dangerouslySetInnerHTML={{ __html: html }}
       style={{ lineHeight: "1.6" }}

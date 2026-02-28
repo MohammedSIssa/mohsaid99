@@ -11,8 +11,6 @@
   direction: ltr;
 }
 
-
-
 .not-prose li del {
   color: #00ff0080;
   font-weight: bold; /* optional */
@@ -130,8 +128,19 @@
 /* Tables */
 .not-prose table {
   width: 100%;
+  max-width: max(100vw, 100%);
   border-collapse: collapse;
   margin: 1rem 0;
+}
+
+@media (max-width: 760px) {
+  .not-prose table {
+    width: 100%;
+    max-width: max(100vw, 100%);
+    border-collapse: collapse;
+    font-size: 10px;
+    /* margin: 1rem 0; */
+  }
 }
 
 .not-prose th,
@@ -141,16 +150,29 @@
   text-align: center;
 }
 
-.not-prose th {
+.not-prose table > thead > tr > th {
   background-color: var(--darker-bg-color);
   font-weight: bold;
   color: #ddd;
 }
 
-.not-prose tr > :nth-child(1) {
+.not-prose table > tbody > tr > td:nth-child(1) {
   background-color: var(--darker-bg-color);
   font-weight: bold;
   color: #ddd;
+}
+
+.not-prose table > thead > tr > th:has(span) {
+  position: relative;
+  height: 160px;
+}
+
+.not-prose table > thead > tr > th > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  white-space: nowrap;
 }
 
 /* Blockquotes */
@@ -213,3 +235,37 @@
   border-radius: 8px;
   margin: 1rem 0;
 }
+
+/* 
+.not-prose table {
+  border-collapse: collapse;
+}
+
+.not-prose th,
+.not-prose td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.not-prose thead th:first-child {
+  text-align: right;
+  font-weight: bold;
+}
+
+.not-prose thead th:not(:first-child) {
+  height: 140px;
+  position: relative;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+.not-prose thead th:not(:first-child) span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: bottom left;
+  white-space: nowrap;
+  display: inline-block;
+} */
