@@ -49,7 +49,7 @@ export default function PostBox({
   handleEditPost?: (post: Post) => void;
 }) {
   const [showEditPost, setShowEditPost] = useState(false);
-  const { isAdmin, token } = useAuth();
+  const { isAdmin, token, isVIP } = useAuth();
 
   async function deletePostById(id: number) {
     if (!confirm("Delete post?")) return;
@@ -65,6 +65,14 @@ export default function PostBox({
       handleDeletePost(id);
       alert("Deleted!");
     }
+  }
+
+  if (!isAdmin && !isVIP && secret) {
+    return (
+      <div className="relative text-fuchsia-300 max-w-fit px-15 my-3 text-center w-full py-10 border rounded-lg border-(--border-color) bg-(--darker-bg-color)">
+        منشور خاص.
+      </div>
+    );
   }
 
   return (
