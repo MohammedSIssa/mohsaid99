@@ -53,7 +53,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
       icon: Blog,
       iconOutline: BlogOutline,
       requiresAuth: true,
-      ready: true,
+      ready: false,
       typeValue: "blog",
     },
     {
