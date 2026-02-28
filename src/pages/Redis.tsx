@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useAuth from "../hooks/useAuth";
 import { API } from "../variables/api";
 import Delete from "../assets/icons/delete.svg";
-import { useEffect } from "react";
 
 import SuccessAudio from "../assets/auth-success.wav";
 import SelectAudio from "../assets/storySelect.wav";
@@ -24,6 +23,7 @@ export default function ReactControls() {
   const [value, setValue] = useState<RedisValue | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState(""); // <-- new state for search
 
   const successAudio = new Audio(SuccessAudio);
   const selectAudio = new Audio(SelectAudio);
@@ -102,6 +102,11 @@ export default function ReactControls() {
     fetchKeys();
   }, []);
 
+  // Filter keys based on search term
+  const filteredKeys = keys.filter((key) =>
+    key.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="p-6 font-sans mx-10 redis" dir="ltr">
       <h2 className="text-2xl font-bold mb-4">Redis Admin Panel</h2>
@@ -118,31 +123,40 @@ export default function ReactControls() {
               Refresh
             </button>
           </div>
+
+          {/* Search Bar */}
+          <input
+            type="text"
+            placeholder="Search keys..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full mb-3 p-2 border rounded bg-(--bg-color) border-(--border-color)"
+          />
+
           {loading && <p className="text-gray-500">Loading...</p>}
           {error && <p className="text-red-500">{error}</p>}
-          {keys.length === 0 && !loading && (
+          {!loading && filteredKeys.length === 0 && (
             <p className="text-gray-400">No keys found.</p>
           )}
-          {Array.isArray(keys) && (
-            <ul className="flex flex-col gap-2">
-              {keys.flat().map((key) => (
-                <li
-                  key={key}
-                  className={`flex justify-between items-center p-2 rounded cursor-pointer transition
+
+          <ul className="flex flex-col gap-2">
+            {filteredKeys.map((key) => (
+              <li
+                key={key}
+                className={`flex justify-between items-center p-2 rounded cursor-pointer transition
         ${selectedKey === key ? "bg-blue-700" : ""}`}
+              >
+                <span
+                  className="truncate max-w-[180px]"
+                  onClick={() => fetchValue(key)}
+                  title={key}
                 >
-                  <span
-                    className="truncate max-w-[180px]"
-                    onClick={() => fetchValue(key)}
-                    title={key}
-                  >
-                    {key}
-                  </span>
-                  {isAdmin && <DeleteButton onClick={() => deleteKey(key)} />}
-                </li>
-              ))}
-            </ul>
-          )}
+                  {key}
+                </span>
+                {isAdmin && <DeleteButton onClick={() => deleteKey(key)} />}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Selected Key Value */}
