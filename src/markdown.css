@@ -156,6 +156,15 @@
   color: #ddd;
 }
 
+.not-prose table > tbody > tr > td.done {
+  background-color: rgb(0, 40, 0);
+}
+
+
+.not-prose table > tbody > tr > td.undone {
+  background-color: rgb(40, 0, 0);
+}
+
 .not-prose table > tbody > tr > td:nth-child(1) {
   background-color: var(--darker-bg-color);
   font-weight: bold;
