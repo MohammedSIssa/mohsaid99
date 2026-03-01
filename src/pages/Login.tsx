@@ -118,7 +118,7 @@ export default function Login() {
             type="text"
             placeholder="Username"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value.toLowerCase())}
           />
           <input
             className="bg-(--bg-color) year border border-(--border-color) p-2 px-3 rounded focus:outline-0"

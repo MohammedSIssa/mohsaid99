@@ -129,7 +129,7 @@ export default function ReactControls() {
             type="text"
             placeholder="Search keys..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
             className="w-full mb-3 p-2 border rounded bg-(--bg-color) border-(--border-color)"
           />
 
@@ -140,7 +140,7 @@ export default function ReactControls() {
           )}
 
           <ul className="flex flex-col gap-2">
-            {filteredKeys.map((key) => (
+            {filteredKeys.sort().map((key) => (
               <li
                 key={key}
                 className={`flex justify-between items-center p-2 rounded cursor-pointer transition
