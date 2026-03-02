@@ -23,7 +23,7 @@ export default function Content() {
   function handleCreatePost(post: Post) {
     setContent((prev) => {
       if (prev === null) return [post];
-      return [post, ...prev];
+      return type === "week" ? [post, ...prev] : [...prev, post];
     });
   }
 
@@ -48,6 +48,7 @@ export default function Content() {
   const [content, setContent] = useState<Post[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
 
   // get story posts;
   useEffect(() => {
