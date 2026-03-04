@@ -6,6 +6,8 @@ export function formatTimeAgo(dateString: string) {
     (now.getTime() - date.getTime()) / 1000,
   );
 
+  if (diffInSeconds <= 0) return "الآن";
+
   if (diffInSeconds < 60) return `قبل ${diffInSeconds} ثانية`;
 
   const minutes = Math.floor(diffInSeconds / 60);

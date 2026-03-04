@@ -63,9 +63,10 @@ export default function CreatePost({
       });
 
       if (res.ok) {
+        const theNewPost = await res.json();
         setTitle("");
         setBody("");
-        handleCreatePost(newPost);
+        handleCreatePost(theNewPost.rows[0]);
         setShowCreatePost(false);
       } else {
         alert("Failed to create post.");

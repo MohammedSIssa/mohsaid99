@@ -70,9 +70,10 @@ export default function EditPost({
       });
 
       if (res.ok) {
+        const theUpdatedPost = await res.json();
         setTitle("");
         setBody("");
-        handleEditPost(newPost);
+        handleEditPost(theUpdatedPost.rows[0]);
         setShowEditPost(false);
       } else {
         alert("Failed to edit post.");
