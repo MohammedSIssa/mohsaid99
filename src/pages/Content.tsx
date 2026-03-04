@@ -10,6 +10,12 @@ import useAuth from "../hooks/useAuth";
 import CreatePost from "../components/CreatePost";
 import Create from "../assets/icons/create.svg";
 
+import InvalidType from "./InvalidType";
+
+import {
+  ALLOWED_TYPES,
+} from "../variables/allowedTypes";
+
 import { logger } from "../variables/logger";
 
 export default function Content() {
@@ -48,7 +54,7 @@ export default function Content() {
   const [content, setContent] = useState<Post[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-
+  const [invalid, setInvalid] = useState(false);
 
   // get story posts;
   useEffect(() => {
@@ -84,10 +90,16 @@ export default function Content() {
       }
     }
 
-    getContent();
-  }, [count]);
+    if (ALLOWED_TYPES.includes(type as any)) {
+      getContent();
+    } else {
+      setInvalid(true);
+    }
+  }, [type, count, token]);
 
   useFavicon("/mohsaid99/favicons/" + type + ".svg");
+
+  if (invalid) return <InvalidType />;
 
   if (loading) {
     return (

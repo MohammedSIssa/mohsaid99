@@ -12,6 +12,8 @@ import Create from "../assets/icons/create.svg";
 import Edit from "../assets/icons/edit.svg";
 import Delete from "../assets/icons/delete.svg";
 
+import { ALLOWED_TYPES } from "../variables/allowedTypes";
+
 import StorySelect from "../assets/storySelect.wav";
 
 export default function Stories({ showNav }: { showNav: boolean }) {
@@ -34,6 +36,8 @@ export default function Stories({ showNav }: { showNav: boolean }) {
 
   useEffect(() => {
     if (!type) return setStories(null);
+
+    if (!ALLOWED_TYPES.includes(type as any)) return;
 
     setLoading(true);
     fetch(`${API}/stories?type=${type}&year=${year}`, {

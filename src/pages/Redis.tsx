@@ -6,6 +6,9 @@ import Delete from "../assets/icons/delete.svg";
 import SuccessAudio from "../assets/auth-success.wav";
 import SelectAudio from "../assets/storySelect.wav";
 
+import { useType } from "../hooks/useType";
+import { useFavicon } from "../hooks/useFavicon";
+
 type RedisValue = any;
 
 const DeleteButton = ({ onClick }: { onClick: () => void }) => (
@@ -27,6 +30,14 @@ export default function ReactControls() {
 
   const successAudio = new Audio(SuccessAudio);
   const selectAudio = new Audio(SelectAudio);
+
+  const { setType } = useType();
+
+  useFavicon("/mohsaid99/favicons/redis.svg");
+  
+  useEffect(() => {
+    setType("redis");
+  }, [setType]);
 
   const handleSelect = () => {
     selectAudio.currentTime = 0;
@@ -104,7 +115,7 @@ export default function ReactControls() {
 
   // Filter keys based on search term
   const filteredKeys = keys.filter((key) =>
-    key.toLowerCase().includes(searchTerm.toLowerCase())
+    key.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (
