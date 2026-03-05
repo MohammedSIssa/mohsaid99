@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { useType } from "../hooks/useType";
 import { lazy, useEffect } from "react";
 import { useFavicon } from "../hooks/useFavicon";
+import InvalidType from "./InvalidType";
 // import { API } from "../variables/api";
 
 const WeekLand = lazy(() => import("./Lands/WeekLand"));
@@ -37,5 +38,8 @@ export default function Land() {
 
     case "projects":
       return <ProjectsLand />;
+
+    default:
+      return <InvalidType />;
   }
 }

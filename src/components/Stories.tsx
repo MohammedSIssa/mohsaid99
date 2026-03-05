@@ -11,6 +11,7 @@ import Spinner from "../assets/icons/spinner.svg";
 import Create from "../assets/icons/create.svg";
 import Edit from "../assets/icons/edit.svg";
 import Delete from "../assets/icons/delete.svg";
+import Warning from "../assets/icons/warning.svg";
 
 import { ALLOWED_TYPES } from "../variables/allowedTypes";
 
@@ -125,6 +126,20 @@ export default function Stories({ showNav }: { showNav: boolean }) {
       </div>
     );
   }
+
+  if (!ALLOWED_TYPES.includes(type as any))
+    return (
+      <div className="flex-1">
+        <div className="flex items-center justify-center h-full">
+          <img
+            src={Warning}
+            className="transition-all duration-300"
+            width={showNav ? 70 : 35}
+            height={showNav ? 70 : 35}
+          />
+        </div>
+      </div>
+    );
 
   return (
     <div
