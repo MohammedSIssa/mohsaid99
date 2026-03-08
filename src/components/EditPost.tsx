@@ -43,11 +43,11 @@ export default function EditPost({
 
   const typess: Record<string, string> = {
     "": "",
-    week: "الأسابيع",
+    week: "الأسبوع",
     blog: "المدونة",
-    projects: "المشاريع",
+    projects: "المشروع",
     special: "الخاص",
-    goal: "الأهداف",
+    goal: "الهدف",
   };
 
   async function handleSubmit(e: React.FormEvent) {
