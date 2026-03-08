@@ -112,6 +112,13 @@ a.active p {
   width: 5px;
   height: 5px;
 }
+
+.slider::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
 }
