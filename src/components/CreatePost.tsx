@@ -219,7 +219,7 @@ export default function CreatePost({
           </button>
         </div>
 
-        <div className="w-full relative overflow-y-auto lg:w-3/4 h-full md:h-full border-2 border-(--border-color) bg-(--bg-color) rounded-lg p-2 md:p-4 lg:p-6 flex flex-col gap-2">
+        <div className="w-full  min-h-[650px] relative overflow-y-auto lg:w-3/4 h-full md:h-full border-2 border-(--border-color) bg-(--bg-color) rounded-lg p-2 md:p-4 lg:p-6 flex flex-col gap-2">
           <div
             onClick={() => setPreview(!preview)}
             className="absolute select-none top-2.5 right-6 p-2 bg-(--darker-bg-color) flex items-center justify-center rounded-lg border-2 border-(--border-color)"
