@@ -6,6 +6,9 @@ import type { Post } from "../types/Post";
 import { useType } from "../hooks/useType";
 import Exit from "../assets/icons/exit.svg";
 import Marked from "./Marked";
+import { getDraft, setDraft, delDraft } from "../variables/drafts";
+import { useEffect } from "react";
+import ClosePopup from "./ClosePopup";
 
 import Preview from "../assets/icons/preview.svg";
 import Text from "../assets/icons/text.svg";
@@ -22,7 +25,6 @@ export default function CreatePost({
   setShowCreatePost: React.Dispatch<SetStateAction<boolean>>;
 }) {
   const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
   const [images, setImages] = useState<string[] | null>(null);
   const [special, setSpecial] = useState(false);
   const [secret, setSecret] = useState(false);
@@ -32,8 +34,14 @@ export default function CreatePost({
   const [preview, setPreview] = useState(false);
   const [showPost, setShowPost] = useState(false);
 
+  const [showClosePopup, setShowClosePopup] = useState(false);
+
   const { token } = useAuth();
   const { type } = useType();
+
+  const draftKey = `create:${type}:${storyid}`;
+
+  const [body, setBody] = useState(() => getDraft(draftKey) ?? "");
 
   const typess: Record<string, string> = {
     "": "",
@@ -43,6 +51,14 @@ export default function CreatePost({
     special: "الخاص",
     goal: "الهدف",
   };
+
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setDraft(draftKey, body);
+    }, 800);
+
+    return () => clearTimeout(id);
+  }, [body, draftKey]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -75,6 +91,8 @@ export default function CreatePost({
         const theNewPost = await res.json();
         setTitle("");
         setBody("");
+        delDraft(draftKey);
+
         handleCreatePost(theNewPost.rows[0]);
         setShowCreatePost(false);
       } else {
@@ -88,6 +106,26 @@ export default function CreatePost({
     }
   }
 
+  const closePopup = () => {
+    setShowCreatePost(false);
+  };
+
+  const handleDiscard = () => {
+    // Delete from localstorage.
+    delDraft(draftKey);
+    closePopup();
+  };
+
+  const handleSaveClick = () => {
+    closePopup();
+    // Do nothing else.
+  };
+
+  const handleCancelClick = () => {
+    setShowClosePopup(false);
+    // Do nothing else.
+  };
+
   if (showPost) {
     return (
       <div className="z-999 pr-24 px-5 bg-(--bg-color) fixed overflow-y-auto inset-0">
@@ -98,13 +136,8 @@ export default function CreatePost({
           >
             <img src={Edit} alt="Preview" width={20} />
           </button>
-          <button
-            className="bg-(--bg-color) p-2 border-2 border-(--border-color) rounded-lg cursor-pointer"
-            onClick={() => setShowCreatePost(false)}
-          >
-            <img src={Exit} alt="Exit" width={20} />
-          </button>
         </div>
+
         <PostBox
           title={title}
           body={body}
@@ -265,11 +298,20 @@ export default function CreatePost({
         </div>
 
         <button
+          type="button"
           className="absolute top-8 left-8 cursor-pointer hover:brightness-110 transition"
-          onClick={() => setShowCreatePost(false)}
+          onClick={() => setShowClosePopup(true)}
         >
           <img src={Exit} width={25} height={25} />
         </button>
+
+        {showClosePopup && (
+          <ClosePopup
+            handleCancel={handleCancelClick}
+            handleDiscard={handleDiscard}
+            handleSave={handleSaveClick}
+          />
+        )}
       </form>
     </div>
   );
