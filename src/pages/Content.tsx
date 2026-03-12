@@ -12,9 +12,7 @@ import Create from "../assets/icons/create.svg";
 
 import InvalidType from "./InvalidType";
 
-import {
-  ALLOWED_TYPES,
-} from "../variables/allowedTypes";
+import { ALLOWED_TYPES } from "../variables/allowedTypes";
 
 import { logger } from "../variables/logger";
 
@@ -137,6 +135,50 @@ export default function Content() {
             handleCreatePost={handleCreatePost}
             storyid={content[0].storyid}
           />
+        )}
+
+        {!["special", "blog"].includes(content[0].type) && (
+          <div
+            className={
+              content.some((item) => item.title?.trim() !== "")
+                ? "p-5 md:p-15 border-b border-(--border-color) w-full mb-30"
+                : "hidden"
+            }
+          >
+            <h1 className="text-2xl font-bold mb-8">مخلص الأحداث</h1>
+
+            <div className="flex gap-2 w-full max-w-[320px] flex-wrap">
+              {["week", "goal"].includes(content[0].type) &&
+                [...content].reverse().map((post) => (
+                  <div
+                    className={`flex-1 min-w-fit ${post.title?.trim() === "" ? "hidden" : "flex items-center justify-center"} 
+                  ${
+                    post.special
+                      ? "bg-yellow-900 border-2 border-yellow-400 text-yellow-300"
+                      : "bg-(--darker-bg-color) border-2 border-(--border-color)"
+                  } 
+                  p-2 px-3 rounded-md`}
+                  >
+                    <h1>{post.title}</h1>
+                  </div>
+                ))}
+
+              {["projects"].includes(content[0].type) &&
+                content.map((post) => (
+                  <div
+                    className={`flex-1 min-w-fit ${post.title?.trim() === "" ? "hidden" : "flex items-center justify-center"} 
+                  ${
+                    post.special
+                      ? "bg-yellow-900 border-2 border-yellow-400 text-yellow-300"
+                      : "bg-(--darker-bg-color) border-2 border-(--border-color)"
+                  } 
+                  p-2 px-3 rounded-md`}
+                  >
+                    <h1>{post.title}</h1>
+                  </div>
+                ))}
+            </div>
+          </div>
         )}
 
         {content.map((post) => (

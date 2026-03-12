@@ -82,7 +82,7 @@ export default function PostBox({
        flex post mb-10 relative px-3 flex-col items-start 
        justify-start gap-4 w-full max-w-full 
        md:max-w-4xl lg:max-w-6xl border-b border-(--border-color)/60
-       h-fit py-5 pt-10`}
+       h-fit py-5 pt-10 scroll-mt-76`}
     >
       {isAdmin && !isEditting && !isCreating && (
         <div className="absolute left-2 top-8 bg-(--darker-bg-color) rounded-full p-2 px-4 border border-(--border-color)/50 flex gap-2">
