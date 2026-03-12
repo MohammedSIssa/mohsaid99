@@ -165,7 +165,6 @@
   background-color: rgb(0, 40, 0);
 }
 
-
 .not-prose table > tbody > tr > td.undone {
   background-color: rgb(40, 0, 0);
 }
@@ -192,15 +191,22 @@
 /* Blockquotes */
 .not-prose blockquote {
   padding: 25px 2rem;
-  border-radius: 14px;
-  background-color: #111;
-  box-shadow: 0 0 12px 8px rgb(124, 124, 255, 0.025);
-  font-style: italic;
-  margin: 1.75rem;
-  font-family: "Noto Naskh Arabic", sans-serif, system-ui;
-  border: 2px solid var(--border-color);
+  /* border-radius: 14px; */
+  /* background-color: #111; */
+  /* box-shadow: 0 0 12px 8px rgb(124, 124, 255, 0.025); */
+  /* border: 2px solid var(--border-color); */
   font-size: 18px;
   line-height: 1.75;
+}
+
+.not-prose[dir="ltr"] blockquote {
+  border-left: 5px solid var(--border-color);
+  background-color: var(--darker-bg-color);
+}
+
+.not-prose[dir="rtl"] blockquote {
+  background-color: var(--darker-bg-color);
+  border-right: 5px solid var(--border-color);
 }
 
 /* Horizontal rules */
