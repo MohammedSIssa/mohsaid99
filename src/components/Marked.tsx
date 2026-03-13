@@ -7,8 +7,15 @@ const Marked = ({ content, dir }: { content: string; dir: string }) => {
   useEffect(() => {
     const parseMarkdown = async () => {
       const parsedHtml = await marked.parse(content);
-      const processUnChecked = parsedHtml.replace(/<td>(\s*⛔\s*)<\/td>/g, `<td class="undone">$1</td>`);
-      const processChecked = processUnChecked.replace(/<td>(\s*✅\s*)<\/td>/g, `<td class="done">$1</td>`);
+      console.log(parsedHtml);
+      const processUnChecked = parsedHtml.replace(
+        /<td>(\s*⛔\s*)<\/td>/g,
+        `<td class="undone">$1</td>`,
+      );
+      const processChecked = processUnChecked.replace(
+        /<td>(\s*✅\s*)<\/td>/g,
+        `<td class="done">$1</td>`,
+      );
       setHtml(processChecked);
     };
     parseMarkdown();
@@ -23,5 +30,20 @@ const Marked = ({ content, dir }: { content: string; dir: string }) => {
     />
   );
 };
+
+export async function md2html({ md }: { md: string }) {
+  const parsedHtml = await marked.parse(md);
+
+  const processUnChecked = parsedHtml.replace(
+    /<td>(\s*⛔\s*)<\/td>/g,
+    `<td class="undone">$1</td>`,
+  );
+  const processChecked = processUnChecked.replace(
+    /<td>(\s*✅\s*)<\/td>/g,
+    `<td class="done">$1</td>`,
+  );
+
+  return processChecked;
+}
 
 export default Marked;
