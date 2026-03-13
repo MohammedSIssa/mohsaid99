@@ -7,7 +7,6 @@ const Marked = ({ content, dir }: { content: string; dir: string }) => {
   useEffect(() => {
     const parseMarkdown = async () => {
       const parsedHtml = await marked.parse(content);
-      console.log(parsedHtml);
       const processUnChecked = parsedHtml.replace(
         /<td>(\s*⛔\s*)<\/td>/g,
         `<td class="undone">$1</td>`,

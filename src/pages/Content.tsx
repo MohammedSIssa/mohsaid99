@@ -185,6 +185,7 @@ export default function Content() {
           <PostBox
             storyid={post?.storyid ?? 0}
             id={post?.id ?? 0}
+            body_html={post?.body_html ?? ""}
             key={post.id}
             title={post.title ?? ""}
             time={post.iat ?? ""}

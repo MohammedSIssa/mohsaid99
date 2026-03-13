@@ -9,4 +9,5 @@ export type Post = {
   secret?: boolean;
   iat?: string;
   dir: string;
+  body_html?: string | null;
 };

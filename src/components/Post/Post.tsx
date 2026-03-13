@@ -23,6 +23,7 @@ export default function PostBox({
   time,
   images,
   body,
+  body_html,
   dir,
   type,
   special,
@@ -38,6 +39,7 @@ export default function PostBox({
   time?: string;
   images: string[];
   body: string;
+  body_html: string | null;
   dir: string;
   type: string;
   special: boolean;
@@ -138,7 +140,7 @@ export default function PostBox({
       {type === "goal" ? (
         <Goals goals={body.split("\n")} />
       ) : isCreating || isEditting || (id && id >= 676) ? (
-        <PostBody body={body} dir={dir} />
+        <PostBody body={body_html ?? ""} dir={dir} />
       ) : (
         <pre>{body}</pre>
       )}
