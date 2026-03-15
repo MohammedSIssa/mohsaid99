@@ -111,6 +111,16 @@
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3) inset;
 }
 
+.not-prose pre:has(.hljs) {
+  background: none;
+  font-weight: bold;
+  background-color: black;
+}
+
+.not-prose pre .hljs {
+  all: revert;
+}
+
 /* Inline code (only code NOT inside pre) */
 .not-prose code:not(pre code) {
   font-family: "Fira Code", monospace;
