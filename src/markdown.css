@@ -138,7 +138,7 @@
 
 /* Tables */
 .not-prose table {
-  width: 100%;
+  width: fit-content;
   max-width: max(100vw, 100%);
   border-collapse: collapse;
   margin: 1rem 0;
@@ -161,8 +161,17 @@
 .not-prose th,
 .not-prose td {
   border: 1px solid var(--border-color);
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .not-prose th,
+.not-prose td {
+  border: 1px solid var(--border-color);
   padding: 0.25rem;
   text-align: center;
+}
 }
 
 .not-prose table > thead > tr > th {
