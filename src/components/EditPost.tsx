@@ -115,7 +115,6 @@ export default function EditPost({
         <PostBox
           title={title}
           body={body}
-          body_html={""}
           storyid={storyid}
           dir={dir}
           images={images ? images : []}

@@ -39,7 +39,7 @@ export default function PostBox({
   time?: string;
   images: string[];
   body: string;
-  body_html: string | null;
+  body_html?: string | null;
   dir: string;
   type: string;
   special: boolean;
