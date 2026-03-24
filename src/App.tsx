@@ -8,6 +8,8 @@ const Login = lazy(() => import("./pages/Login"));
 const Log = lazy(() => import("./pages/Log"));
 const Redis = lazy(() => import("./pages/Redis"));
 
+import Temporary from "./pages/Temporary";
+
 import Spinner from "./assets/icons/spinner.svg";
 
 import TypeProvider from "./context/TypeProvider";
@@ -35,6 +37,8 @@ export default function App() {
               <Route element={<RequireAuth />}>
                 <Route path="/redis" element={<Redis />} />
                 <Route path="/logs" element={<Log />} />
+                <Route path="/special" element={<Temporary />} />
+                <Route path="/special/:count" element={<Temporary />} />
                 <Route path="/:type" element={<Land />} />
                 <Route path="/:type/:count" element={<Content />} />
               </Route>
