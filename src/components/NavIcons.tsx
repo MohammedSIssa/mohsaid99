@@ -71,7 +71,7 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
       icon: Special,
       iconOutline: SpecialOutline,
       requiresAuth: true,
-      ready: true,
+      ready: false,
       isVIP: true,
       typeValue: "special",
     },
