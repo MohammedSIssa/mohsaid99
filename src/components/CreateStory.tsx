@@ -106,6 +106,9 @@ export default function CreateStoryPopup({
           <option className="bg-(--darker-bg-color)" value="projects">
             مشاريع
           </option>
+          <option className="bg-(--darker-bg-color)" value="courses">
+            دورات
+          </option>
         </select>
 
         <input

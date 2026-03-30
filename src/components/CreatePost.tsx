@@ -50,6 +50,7 @@ export default function CreatePost({
     projects: "المشروع",
     special: "الخاص",
     goal: "الهدف",
+    courses: "دورة"
   };
 
   useEffect(() => {

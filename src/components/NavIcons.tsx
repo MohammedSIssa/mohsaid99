@@ -12,6 +12,8 @@ import RedisOutline from "../assets/icons/redis-outline.svg";
 import Redis from "../assets/icons/redis.svg";
 import Projects from "../assets/icons/projects.svg";
 import ProjectsOutline from "../assets/icons/projects-outline.svg";
+import Courses from "../assets/icons/courses.svg";
+import CoursesOutline from "../assets/icons/coursesOutline.svg";
 
 import useAuth from "../hooks/useAuth";
 import { NavLink } from "react-router";
@@ -45,6 +47,15 @@ export default function NavIcons({ showNav }: { showNav: boolean }) {
       iconOutline: WeekOutline,
       requiresAuth: true,
       typeValue: "week",
+      ready: true,
+    },
+    {
+      to: "/courses",
+      label: "الدورات",
+      icon: Courses,
+      iconOutline: CoursesOutline,
+      requiresAuth: true,
+      typeValue: "courses",
       ready: true,
     },
     {

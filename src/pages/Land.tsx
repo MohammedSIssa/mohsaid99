@@ -10,6 +10,7 @@ const GoalLand = lazy(() => import("./Lands/GoalLand"));
 const SpecialLand = lazy(() => import("./Lands/SpecialLand"));
 const BlogLand = lazy(() => import("./Lands/BlogLand"));
 const ProjectsLand = lazy(() => import("./Lands/ProjectsLand"));
+const CoursesLand = lazy(() => import("./Lands/CoursesLand"));
 
 export default function Land() {
   const { type } = useParams();
@@ -38,6 +39,9 @@ export default function Land() {
 
     case "projects":
       return <ProjectsLand />;
+
+    case "courses":
+      return <CoursesLand />;
 
     default:
       return <InvalidType />;

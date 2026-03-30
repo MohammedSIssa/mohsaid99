@@ -137,7 +137,7 @@ export default function Content() {
           />
         )}
 
-        {!["special", "blog"].includes(content[0].type) && (
+        {!["special", "blog", "courses"].includes(content[0].type) && (
           <div
             className={
               content.some((item) => item.title?.trim() !== "")
