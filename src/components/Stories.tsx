@@ -229,11 +229,11 @@ export default function Stories({ showNav }: { showNav: boolean }) {
                   >
                     {story.type === "special" || story.type === "blog"
                       ? story.year
-                      : `#${story.count}`}
+                      : `#${stories.length - idx}`}
                   </small>
                   {story.type === "special" || story.type === "blog" ? (
                     <small className="year bg-(--accent-color) font-bold text-white rounded-full p-1 px-2 text-xs">
-                      #{story.count}
+                      #{stories.length - idx}
                     </small>
                   ) : null}
                 </div>
@@ -241,7 +241,7 @@ export default function Stories({ showNav }: { showNav: boolean }) {
             ) : (
               <>
                 <span className="text-xs">#</span>
-                {story.count}
+                {stories.length - idx}
               </>
             )}
           </NavLink>
